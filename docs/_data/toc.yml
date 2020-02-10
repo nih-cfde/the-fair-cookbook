@@ -22,13 +22,24 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Home
+- title: FAIR cookbook
   url: /intro
   not_numbered: true
 
+# A chapter w/ a collection of sections beneath it
+- title: Recipes
+  url: /recipes/recipes
+  not_numbered: true
+  expand_sections: true
+  sections:
+  - title: Recipe Template
+    url: /recipes/recipe-template
+    not_numbered: false 
+
+
 # External link
 - title: GitHub repository
-  url: https://github.com/jupyter/jupyter-book
+  url: https://github.com/nih-cfde/the-fair-cookbook
   external: true
   not_numbered: true
 
@@ -40,7 +51,34 @@
 - divider: true
 
 # Add a header and sample content section
-- header: Demo textbook
+- header: FAIR Cookbook
+
+
+
+# Contribution section
+- title: Contributing
+  url: Contributing
+  not_numbered: true
+
+# Governance section
+- title: Governance
+  url: Governance
+  not_numbered: true 
+
+# license section
+- title: License
+  url: license
+  not_numbered: true    
+
+# disclaimer section
+- title: Disclaimer
+  url: disclaimer
+  not_numbered: true  
+
+# Code of Conduct section
+- title: Code of Conduct
+  url: code_of_conduct
+  not_numbered: true 
 
 # A chapter w/ a collection of sections beneath it
 - title: Features and customization
