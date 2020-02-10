@@ -26,22 +26,16 @@
   url: /intro
   not_numbered: true
 
-# A chapter w/ a collection of sections beneath it
-- title: Recipes
-  url: /recipes/recipes
-  not_numbered: true
-  expand_sections: true
-  sections:
-  - title: Recipe Template
-    url: /recipes/recipe-template
-    not_numbered: false 
-
 
 # External link
 - title: GitHub repository
   url: https://github.com/nih-cfde/the-fair-cookbook
   external: true
   not_numbered: true
+
+
+# Divider for meta-pages and content page
+- divider: true
 
 # Adds a searchbar link
 - title: Search
@@ -53,7 +47,18 @@
 # Add a header and sample content section
 - header: FAIR Cookbook
 
+# A chapter w/ a collection of sections beneath it
+- title: Recipes
+  url: /recipes/recipes
+  not_numbered: true
+  expand_sections: true
+  sections:
+  - title: Recipe Template
+    url: /recipes/recipe-template
+    not_numbered: false 
 
+# Divider for meta-pages and content page
+- divider: true
 
 # Contribution section
 - title: Contributing
@@ -79,6 +84,9 @@
 - title: Code of Conduct
   url: code_of_conduct
   not_numbered: true 
+
+# Divider for meta-pages and content page
+- divider: true
 
 # A chapter w/ a collection of sections beneath it
 - title: Features and customization
