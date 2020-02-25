@@ -1,6 +1,8 @@
 # The FAIR Cookbook
 
 ## Running Locally
+
+### Setup
 ```bash
 # Setup python environment
 python3 -m venv venv
@@ -9,6 +11,15 @@ pip3 install -r requirements.txt
 
 # Setup Ruby environment
 bundle install --path vendor/bundle
+```
+
+### Using
+```bash
+# compile book with
+make book
+
+# serve book locally with
+make serve
 ```
 
 ## Modifying things
