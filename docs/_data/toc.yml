@@ -22,7 +22,7 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Home
+- title: FAIR cookbook
   url: /intro
   not_numbered: true
 
@@ -35,7 +35,49 @@
 # Divider for meta-pages and content page
 - divider: true
 
-- header: Recipes
+# Add a header and sample content section
+- header: FAIR Cookbook
+
+# A chapter w/ a collection of sections beneath it
+- title: Recipes
+  url: /recipes/recipes
+  not_numbered: true
+  expand_sections: true
+  sections:
+  - title: Recipe Template
+    url: /recipes/recipe-template
+    not_numbered: false
+
+# Divider for meta-pages and content page
+- divider: true
+
+# Contribution section
+- title: Contributing
+  url: /contributing
+  not_numbered: true
+
+# Governance section
+- title: Governance
+  url: /governance
+  not_numbered: true 
+
+# license section
+- title: License
+  url: /license
+  not_numbered: true
+
+# disclaimer section
+- title: Disclaimer
+  url: /disclaimer
+  not_numbered: true
+
+# Code of Conduct section
+- title: Code of Conduct
+  url: /code_of_conduct
+  not_numbered: true 
+
+# Divider for meta-pages and content page
+- divider: true
 
 # A chapter w/ a collection of sections beneath it
 - title: Features and customization
