@@ -33,14 +33,6 @@
   external: true
   not_numbered: true
 
-
-# Divider for meta-pages and content page
-- divider: true
-
-# Adds a searchbar link
-- title: Search
-  search: true
-
 # Divider for meta-pages and content page
 - divider: true
 
@@ -55,34 +47,34 @@
   sections:
   - title: Recipe Template
     url: /recipes/recipe-template
-    not_numbered: false 
+    not_numbered: false
 
 # Divider for meta-pages and content page
 - divider: true
 
 # Contribution section
 - title: Contributing
-  url: Contributing
+  url: /contributing
   not_numbered: true
 
 # Governance section
 - title: Governance
-  url: Governance
+  url: /governance
   not_numbered: true 
 
 # license section
 - title: License
-  url: license
-  not_numbered: true    
+  url: /license
+  not_numbered: true
 
 # disclaimer section
 - title: Disclaimer
-  url: disclaimer
-  not_numbered: true  
+  url: /disclaimer
+  not_numbered: true
 
 # Code of Conduct section
 - title: Code of Conduct
-  url: code_of_conduct
+  url: /code_of_conduct
   not_numbered: true 
 
 # Divider for meta-pages and content page

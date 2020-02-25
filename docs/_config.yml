@@ -30,7 +30,7 @@ url: YOUR URL                  # the base hostname & protocol for your site, e.g
 # Jupyter Book settings
 
 # Main page settings
-footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/"><img src="/the-fair-cookbook/assets/images/logo/nih.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
+footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/"><img src="assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
   This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
   Jupyter Book Community</a>
 
