@@ -16,11 +16,11 @@
 
 #######################################################################################
 # Jekyll site settings
-title: THE FAIR COOKBOOK
-author: YOUR AUTHOR NAME
+title: THE CFDE FAIR COOKBOOK
+author: CFDE
 email: YOUR EMAIL
 description: >-
-  A Jupyterbook powered Book of protocols for generated FAIR data from various data sources used in the NIH CFDE program
+  A cookbook of protocols for promoting FAIR data from CF data sources
 
 baseurl: /  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 url: YOUR URL                  # the base hostname & protocol for your site, e.g. http://example.com
@@ -31,8 +31,6 @@ url: YOUR URL                  # the base hostname & protocol for your site, e.g
 
 # Main page settings
 footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/"><img src="/the-fair-cookbook/assets/images/logo/nih.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
-  This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
-  Jupyter Book Community</a>
 
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
