@@ -1,19 +1,12 @@
 # CFDE FAIR Cookbook
 
-Jupyter Book lets you build an online book using a collection of Jupyter Notebooks
-and Markdown files. Its output is similar to the excellent [Bookdown](https://bookdown.org/yihui/bookdown/) tool,
-and adds extra functionality for people running a Jupyter stack.
+The [Common Fund Data Ecosystem (CFDE)](https://nih-cfde.org) aims to assist the [Common Fund (CF)](https://commonfund.nih.gov/) Data Coordination Centers (DCC) with the process of making the digital objects that the host and produce better adhere to the [Findable, Accessible, Interoperable, and Reusable (FAIR) principles](https://www.nature.com/articles/sdata201618).
 
-For an example of a book built with Jupyter Book, see the [textbook for Data 100](https://www.textbook.ds100.org/) at UC Berkeley.
+This FAIR cookbook provides introductory materials about various aspects of FAIRness, including practical guides that show how to enhance digital objects by adhering them to community accepted standards. This includes, for example, documenting and implementing tools with the OpenAPI standards, structuring metadata in DATS format, providing schema.org specification on data and tool hosting websites, and converting datasets from DATS to frictionless for CFDE ingestion.
 
-Here are a few features of Jupyter Book
+CFDE FAIR cookbook recipes are provided with executable code and example data to guide DCCs through the various ways FAIRness improvements can be achieved. The cookbook is open source and encourages contributions from the community to improve its quality and enrich its depth and coverage.  
 
-* All course content is written in markdown and Jupyter Notebooks, stored in `notebooks/`
-* The Jupyter Book repo comes packaged with helper scripts to convert these into Jekyll pages (in `scripts/`) that can be hosted for free on GitHub
-* Pages can have [Binder](https://mybinder.org) or JupyterHub links automatically added for interactivity.
-* The website itself is based on Jekyll, and is highly extensible and can be freely-hosted on GitHub.
-* There are lots of nifty HTML features under-the-hood, such as Turbolinks fast-navigation and
-  click-to-copy in code cells.
+The cookbook also describes how to perform FAIR assessment of the digital objects hosted by each DCC with FAIRshake. The vision is that FAIR scores will improve after the DCC will follow the recipes to improve the FAIRness of their resources and this will be reflected in improved FAIR evaluation. 
 
 ## Getting started
 
