@@ -17,20 +17,20 @@
 #######################################################################################
 # Jekyll site settings
 title: THE FAIR COOKBOOK
-author: YOUR AUTHOR NAME
+author: 
 email: YOUR EMAIL
 description: >-
   A Jupyterbook powered Book of protocols for generated FAIR data from various data sources used in the NIH CFDE program
 
-baseurl: /  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: YOUR URL                  # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /the-fair-cookbook # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+url: https://nih-cfde.github.io                  # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #######################################################################################
 # Jupyter Book settings
 
 # Main page settings
-footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/"><img src="/the-fair-cookbook/assets/images/logo/nih.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
+footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/"><img src="/the-fair-cookbook/assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
   This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
   Jupyter Book Community</a>
 
@@ -69,8 +69,8 @@ jupyterhub_interact_text: Interact             # The text that interact buttons 
 use_binder_button: true                 # If 'true', add a binder button for interactive links
 binderhub_url: https://mybinder.org                        # The URL for your BinderHub. If no URL, use ""
 binder_repo_base: https://github.com/                     # The site on which the textbook repository is hosted
-binder_repo_org: YOUR-ORG                     # The username or organization that owns this repository
-binder_repo_name: YOUR-REPO                        # The name of the repository on the web
+binder_repo_org: nih-cfde                     # The username or organization that owns this repository
+binder_repo_name: the-fair-cookbook                        # The name of the repository on the web
 binder_repo_branch: gh-pages                   # The branch on which your textbook is hosted.
 binderhub_interact_text: Interact              # The text that interact buttons will contain.
 

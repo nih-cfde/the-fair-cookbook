@@ -12,4 +12,4 @@ The purpose of this document is to formalize the governance process that the FAI
 
 ## License of Governance Documents
 
-To the extent possible under law, FAIR Cookbook project has waived all copyright and related or neighboring rights to the main Governance documents, in accordance with the Creative Commons [CC0 license](http://creativecommons.org/publicdomain/zero/1.0/). This work is published from the European Union and the United Kingdom.  See the LICENSE.md file in this repository for details.
+To be decided following discussion.

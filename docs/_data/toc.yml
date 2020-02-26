@@ -32,6 +32,7 @@
   external: true
   not_numbered: false
 
+
 # Divider for meta-pages and content page
 - divider: true
 
@@ -146,6 +147,7 @@
 - title: mermaidsetup
   url: /1/mermaidsetup  
 
+
 # Divider for meta-pages and content page
 - divider: true
 
@@ -154,12 +156,12 @@
 
 # Contribution section
 - title: Contributing
-  url: /Contributing
+  url: /contributing
   not_numbered: true
 
 # Governance section
 - title: Governance
-  url: /Governance
+  url: /governance
   not_numbered: true 
 
 # license section
@@ -167,10 +169,12 @@
   url: /license
   not_numbered: true    
 
+
 # disclaimer section
 - title: Disclaimer
   url: /disclaimer
   not_numbered: true  
+
 
 # Code of Conduct section
 - title: Code of Conduct
