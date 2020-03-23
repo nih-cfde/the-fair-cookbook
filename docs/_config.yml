@@ -30,7 +30,7 @@ url: https://nih-cfde.github.io                  # the base hostname & protocol 
 # Jupyter Book settings
 
 # Main page settings
-footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/"><img src="/the-fair-cookbook/assets/images/logo/nih.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
+footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/dataecosystem"><img src="/the-fair-cookbook/assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
 
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
