@@ -11,6 +11,9 @@ pip3 install -r requirements.txt
 
 # Setup Ruby environment
 bundle install --path vendor/bundle
+
+# Setup jupyter book
+make install
 ```
 
 ### Using
@@ -20,6 +23,9 @@ make book
 
 # serve book locally with
 make serve
+
+# deploy master branch to gh-pages
+make deploy
 ```
 
 ## Modifying things
