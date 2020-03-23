@@ -4,7 +4,11 @@ set -x
 set -e
 set -o pipefail
 
-URL=$(git config --get remote.origin.url)
+if [ "$#" -eq 0 ]; then
+  URL=$(git config --get remote.origin.url)
+else
+  URL=$1
+fi
 BRANCH=gh-pages
 BRANCH_FROM=master
 SRC=$(pwd)
