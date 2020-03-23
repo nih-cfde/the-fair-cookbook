@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Search the site</title>
+  <meta name="description" content="        ">
+
+  <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/search">
+  <link rel="alternate" type="application/rss+xml" title="THE CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
+
+  <meta property="og:url"         content="https://nih-cfde.github.io/the-fair-cookbook/search" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Search the site" />
+<meta property="og:description" content="        " />
+<meta property="og:image"       content="https://nih-cfde.github.io/the-fair-cookbook/images/logo/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/search",
+  "headline": "Search the site",
+  "datePublished": "2020-03-23T13:57:13-04:00",
+  "dateModified": "2020-03-23T13:57:13-04:00",
+  "description": "        ",
+  "author": {
+    "@type": "Person",
+    "name": "CFDE"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nih-cfde.github.io/the-fair-cookbook",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://nih-cfde.github.io/the-fair-cookbook",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/the-fair-cookbook/assets/css/styles.css">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/the-fair-cookbook/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
+    },
+    
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
+
+  <!-- DOM updating function -->
+  <script src="/the-fair-cookbook/assets/js/page/dom-update.js"></script>
+
+  <!-- Selectors for elements on the page -->
+  <script src="/the-fair-cookbook/assets/js/page/documentSelectors.js"></script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/the-fair-cookbook';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/the-fair-cookbook/assets/js/page/anchors.js" async></script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+<!-- Display Thebelab button in each code cell -->
+<script>
+/**
+ * Set up thebelab button for code blocks
+ */
+
+const thebelabCellButton = id =>
+  `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
+    <img src="/the-fair-cookbook/assets/images/edit-button.svg" alt="Start thebelab interactive mode">
+  </a>`
+
+
+const addThebelabButtonToCodeCells =  () => {
+
+  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.getElementById("thebelab-cell-button-" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', thebelabCellButton(id));
+    }
+  })
+}
+
+initFunction(addThebelabButtonToCodeCells);
+</script>
+
+
+<script src="https://unpkg.com/thebelab@latest/lib/index.js" async></script>
+<script>
+    /**
+     * Add attributes to Thebelab blocks
+     */
+
+    const initThebelab = () => {
+        const addThebelabToCodeCells = () => {
+            console.log("Adding thebelab to code cells...");
+            // If Thebelab hasn't loaded, wait a bit and try again. This
+            // happens because we load ClipboardJS asynchronously.
+            if (window.thebelab === undefined) {
+                setTimeout(addThebelabToCodeCells, 250)
+            return
+            }
+
+            // If we already detect a Thebelab cell, don't re-run
+            if (document.querySelectorAll('div.thebelab-cell').length > 0) {
+                return;
+            }
+
+            // Find all code cells, replace with Thebelab interactive code cells
+            const codeCells = document.querySelectorAll('.input_area pre')
+            codeCells.forEach((codeCell, index) => {
+                const id = codeCellId(index)
+
+                // Clean up the language to make it work w/ CodeMirror and add it to the cell
+                dataLanguage = ""
+                dataLanguage = detectLanguage(dataLanguage);
+                codeCell.setAttribute('data-language', dataLanguage)
+                codeCell.setAttribute('data-executable', 'true')
+
+                // If the code cell is hidden, show it
+                var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
+                if (inputCheckbox !== null) {
+                    setCodeCellVisibility(inputCheckbox, 'visible');
+                }
+            });
+
+            // Remove the event listener from the page so keyboard press doesn't
+            // Change page
+            document.removeEventListener('keydown', initPageNav)
+            keyboardListener = false;
+
+            // Init thebelab
+            thebelab.bootstrap();
+
+            // Remove copy buttons since they won't work anymore
+            const copyAndThebeButtons = document.querySelectorAll('.copybtn, .thebebtn')
+            copyAndThebeButtons.forEach((button, index) => {
+                button.remove();
+            });
+
+            // Remove outputs since they'll be stale
+            const outputs = document.querySelectorAll('.output *, .output')
+            outputs.forEach((output, index) => {
+                output.remove();
+            });
+
+            // Find any cells with an initialization tag and ask ThebeLab to run them when ready
+            var thebeInitCells = document.querySelectorAll('div.tag_thebelab-init');
+            thebeInitCells.forEach((cell) => {
+                console.log("Initializing ThebeLab with cell: " + cell.id);
+                cell.querySelector('.thebelab-run-button').click();
+            });
+        }
+
+        // Add event listener for the function to modify code cells
+        const thebelabButtons = document.querySelectorAll('[id^=thebelab], [id$=thebelab]')
+        thebelabButtons.forEach((thebelabButton,index) => {
+            if (thebelabButton === null) {
+                setTimeout(initThebelab, 250)
+                return
+            };
+            thebelabButton.addEventListener('click', addThebelabToCodeCells);
+        });
+    }
+
+    // Initialize Thebelab
+    initFunction(initThebelab);
+
+// Helper function to munge the language name
+var detectLanguage = (language) => {
+    if (language.indexOf('python') > -1) {
+        language = "python";
+    }
+    return language;
+}
+</script>
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.1/tocbot.min.js" async></script>
+  <script src="/the-fair-cookbook/assets/js/page/tocbot.js"></script>
+
+
+
+<!-- using mermaid for rendering Diagram and flow chart -->
+ <script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
+ <script>mermaid.initialize({startOnLoad:true});</script>
+<!--  <script src="/the-fair-cookbook/assets/js/mermaid.js"></script>-->
+
+
+
+  <!-- Google analytics -->
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
+
+  <!-- Load custom website scripts -->
+  <script src="/the-fair-cookbook/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/the-fair-cookbook/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/the-fair-cookbook/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+<script>
+/**
+  * To auto-embed hub URLs in interact links if given in a RESTful fashion
+ */
+
+function getJsonFromUrl(url) {
+  var query = url.split('?');
+  if (query.length < 2) {
+    // No queries so just return false
+    return false;
+  }
+  query = query[1];
+  // Collect REST params into a dictionary
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+    
+function dict2param(dict) {
+    params = Object.keys(dict).map(function(k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(dict[k])
+    });
+    return params.join('&')
+}
+
+// Parse a Binder URL, converting it to the string needed for JupyterHub
+function binder2Jupyterhub(url) {
+  newUrl = {};
+  parts = url.split('v2/gh/')[1];
+  // Grab the base repo information
+  repoinfo = parts.split('?')[0];
+  var [org, repo, ref] = repoinfo.split('/');
+  newUrl['repo'] = ['https://github.com', org, repo].join('/');
+  newUrl['branch'] = ref
+  // Grab extra parameters passed
+  params = getJsonFromUrl(url);
+  if (params['filepath'] !== undefined) {
+    newUrl['subPath'] = params['filepath']
+  }
+  return dict2param(newUrl);
+}
+
+// Filter out potentially unsafe characters to prevent xss
+function safeUrl(url)
+{
+   return String(encodeURIComponent(url))
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+function addParamToInternalLinks(hub) {
+  var links = document.querySelectorAll("a").forEach(function(link) {
+    var href = link.href;
+    // If the link is an internal link...
+    if (href.search("https://nih-cfde.github.io") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+      // Assume we're an internal link, add the hub param to it
+      var params = getJsonFromUrl(href);
+      if (params !== false) {
+        // We have REST params, so append a new one
+        params['jupyterhub'] = hub;
+      } else {
+        // Create the REST params
+        params = {'jupyterhub': hub};
+      }
+      // Update the link
+      var newHref = href.split('?')[0] + '?' + dict2param(params);
+      link.setAttribute('href', decodeURIComponent(newHref));
+    }
+  });
+  return false;
+}
+
+
+// Update interact links
+function updateInteractLink() {
+    // hack to make this work since it expects a ? in the URL
+    rest = getJsonFromUrl("?" + location.search.substr(1));
+    jupyterHubUrl = rest['jupyterhub'];
+    var hubType = null;
+    var hubUrl = null;
+    if (jupyterHubUrl !== undefined) {
+      hubType = 'jupyterhub';
+      hubUrl = jupyterHubUrl;
+    }
+
+    if (hubType !== null) {
+      // Sanitize the hubUrl
+      hubUrl = safeUrl(hubUrl);
+
+      // Add HTTP text if omitted
+      if (hubUrl.indexOf('http') < 0) {hubUrl = 'http://' + hubUrl;}
+      var interactButtons = document.querySelectorAll("button.interact-button")
+      var lastButton = interactButtons[interactButtons.length-1];
+      var link = lastButton.parentElement;
+
+      // If we've already run this, skip the link updating
+      if (link.nextElementSibling !== null) {
+        return;
+      }
+
+      // Update the link and add context div
+      var href = link.getAttribute('href');
+      if (lastButton.id === 'interact-button-binder') {
+        // If binder links exist, we need to re-work them for jupyterhub
+        if (hubUrl.indexOf('http%3A%2F%2Flocalhost') > -1) {
+          // If localhost, assume we're working from a local Jupyter server and remove `/hub`
+          first = [hubUrl, 'git-sync'].join('/')
+        } else {
+          first = [hubUrl, 'hub', 'user-redirect', 'git-sync'].join('/')
+        }
+        href = first + '?' + binder2Jupyterhub(href);
+      } else {
+        // If interact button isn't binderhub, assume it's jupyterhub
+        // If JupyterHub links, we only need to replace the hub url
+        href = href.replace("", hubUrl);
+        if (hubUrl.indexOf('http%3A%2F%2Flocalhost') > -1) {
+          // Assume we're working from a local Jupyter server and remove `/hub`
+          href = href.replace("/hub/user-redirect", "");
+        }
+      }
+      link.setAttribute('href', decodeURIComponent(href));
+
+      // Add text after interact link saying where we're launching
+      hubUrlNoHttp = decodeURIComponent(hubUrl).replace('http://', '').replace('https://', '');
+      link.insertAdjacentHTML('afterend', '<div class="interact-context">on ' + hubUrlNoHttp + '</div>');
+
+      // Update internal links so we retain the hub url
+      addParamToInternalLinks(hubUrl);
+    }
+}
+
+runWhenDOMLoaded(updateInteractLink)
+document.addEventListener('turbolinks:load', updateInteractLink)
+</script>
+
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/the-fair-cookbook/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/the-fair-cookbook/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/the-fair-cookbook/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
+</head>
+
+  <body>
+    <!-- Include the ThebeLab config so it gets reloaded on each page -->
+    <script type="text/x-thebe-config">{
+    requestKernel: true,
+    binderOptions: {
+    repo: "nih-cfde/the-fair-cookbook",
+    ref: "gh-pages",
+    },
+    codeMirrorConfig: {
+    theme: "abcdef",
+    mode: "python"
+    },
+    kernelOptions: {
+    kernelName: "python3",
+    path: ""
+    }
+}
+</script>
+
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="https://nih-cfde.github.io/the-fair-cookbook/intro.html"><img src="/the-fair-cookbook/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">THE CFDE FAIR COOKBOOK</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="intro">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/intro.html"
+        >
+          
+          
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="https://github.com/nih-cfde/the-fair-cookbook">
+        <a class="c-sidebar__entry"
+          href="https://github.com/nih-cfde/the-fair-cookbook"
+        >
+          
+            1.
+          
+          GitHub repository
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">FAIR Cookbook</li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/recipes/recipes-overview">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/recipes/recipes-overview.html"
+        >
+          
+          Recipes overview
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/recipe-template">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/recipe-template.html"
+              >
+                
+                Recipe Template
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/fair-principles">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/fair-principles.html"
+              >
+                
+                FAIR
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/fair-cfde">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/fair-cfde.html"
+              >
+                
+                FAIR in the context of NIH CDFE
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/cfde">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/cfde.html"
+              >
+                
+                Working with the CFDE
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/cataloguing">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/cataloguing.html"
+              >
+                
+                Finding datasets - cataloguing resources
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/c2m2">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/c2m2.html"
+              >
+                
+                NIH Crosscut metadata (C2M2) data model
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/deriva-frictionless">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/deriva-frictionless.html"
+              >
+                
+                Implementing C2M2 with Deriva and Frictionless Data Packages
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/identifiers">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/identifiers.html"
+              >
+                
+                The need for identifiers
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/pids">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/pids.html"
+              >
+                
+                Recommendations for minting persistent and resolvable identifiers
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/minids">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/minids.html"
+              >
+                
+                Understanding MINIDs
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/doi">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/doi.html"
+              >
+                
+                Examples of implementing DOIs
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/finding">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/finding.html"
+              >
+                
+                Finding digital objects - Terminologies and query expansion
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/ontologies">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/ontologies.html"
+              >
+                
+                Understanding Ontologies
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/onto-services">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/onto-services.html"
+              >
+                
+                Ontology services
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/cfde-terminologies">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/cfde-terminologies.html"
+              >
+                
+                NIH CFDE selected terminologies
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/etl">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/etl.html"
+              >
+                
+                ETL processes - Learnings and recommendations
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/hmp">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/hmp.html"
+              >
+                
+                Experience from HMP
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/mw">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/mw.html"
+              >
+                
+                Experience from the Metabolomics Workbench
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/gtex">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/gtex.html"
+              >
+                
+                Experience from GTEx
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/lincs">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/lincs.html"
+              >
+                
+                Experience from LINCS
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/ethics">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/ethics.html"
+              >
+                
+                Privacy protection and Ethics concerns
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/licensing">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/licensing.html"
+              >
+                
+                Choosing a license for data and metadata
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/fair-api">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/fair-api.html"
+              >
+                
+                Developing FAIR API
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/fairshake">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/fairshake.html"
+              >
+                
+                Evaluating FAIRness with FAIRshake
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/cloud">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/cloud.html"
+              >
+                
+                Hosting databases and tools in the cloud
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/notebooks-workflows">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/notebooks-workflows.html"
+              >
+                
+                Jupyter notebooks and CF data processing workflows
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/seo">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/seo.html"
+              >
+                
+                Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/assets-to-dats">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/assets-to-dats.html"
+              >
+                
+                Converting Assets to DATS
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Help Section and Demonstration</li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/1/frictionless">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/1/frictionless.html"
+        >
+          
+            2.
+          
+          frictionless
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/1/testnb/0-rose-metabolites-Python-data-handling">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/1/testnb/0-rose-metabolites-Python-data-handling.html"
+              >
+                
+                  2.1
+                
+                1
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/1/testnb/1-rose-metabolites-Python-analysis">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/1/testnb/1-rose-metabolites-Python-analysis.html"
+              >
+                
+                  2.2
+                
+                2
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/1/testnb/3-rose-metabolites-R-analysis">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/1/testnb/3-rose-metabolites-R-analysis.html"
+              >
+                
+                  2.3
+                
+                3
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html"
+              >
+                
+                  2.4
+                
+                4
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/1/mermaidsetup">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/1/mermaidsetup.html"
+        >
+          
+            3.
+          
+          mermaidsetup
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/contributing">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/contributing.html"
+        >
+          
+          Contributing
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/governance">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/governance.html"
+        >
+          
+          Governance
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/license">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/license.html"
+        >
+          
+          License
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/disclaimer">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/disclaimer.html"
+        >
+          
+          Disclaimer
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/code_of_conduct">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/code_of_conduct.html"
+        >
+          
+          Code of Conduct
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/features/features">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/features/features.html"
+        >
+          
+          Features and customization
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/features/markdown">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/features/markdown.html"
+              >
+                
+                Markdown files
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/features/notebooks">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/features/notebooks.html"
+              >
+                
+                Jupyter notebooks
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
+
+      
+    
+  </ul>
+  <p class="sidebar_footer">Powered by <a href="https://jupyterbook.org">Jupyter Book</a></p>
+</nav>
+
+      
+      <div class="c-topbar" id="top-navbar">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/the-fair-cookbook/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
+    </div>
+</div>
+
+
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/the-fair-cookbook/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/the-fair-cookbook/search.html" class="topbar-right-button" id="search-button">
+    <img src="/the-fair-cookbook/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+              <div class="search-content__inner-wrap">
+    <input type="text" id="lunr_search" class="search-input" tabindex="-1" placeholder="'Enter your search term...''" />
+    <div id="results" class="results"></div>
+</div>
+
+<script>
+    // Add the lunr store since we will now search it
+    var store = [{
+        "title": "frictionless",
+        
+        "excerpt": "data fairsharing org c objectives b edamontology table fairification mermaid d maturity example div operation import stroke main recipe capability license paragraph text graph lr acquisition input output structure file sdf ewv annotation orcid frictionless tabular graphical overview inputs outputs standards executable code notebook create workflow figures name class raw fair design yes standard compliant e vendor locked level calculation human phenotype ontology kbttf conversion open format automatic style fill width px university oxford readiness group writing creativecommons png package contents mainfairificationobjectives graphicaloverviewofthefairificationrecipeobjectives fairificationobjectives inputsandoutputs capabilitymaturitytable tableofdatastandards executablecodeinnotebook howtocreateworkflowfigures third fourth www fourthexample com purpose making self describing using tools",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/1/frictionless.html",
+        "teaser":null},{
+        "title": "mermaidsetup",
+        
+        "excerpt": "mermaid js jekyll github com library d following div diagrams file unpkg dist pages javascript plugin config distribution section diagram still gantt task data stroke flow core open ruby path min curl o chart script does class moving another enable served jekyllrb docs graphical overview processes since recipes via documentation here gem need install bash edit yml add files default jsurl src work site head html template include state crash display input b conversion format c automatic annotation output style fill width px gh information found document sequence popular mean provide fairification strong requirement enhance such allowing generate charts graphs",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/1/mermaidsetup.html",
+        "teaser":null},{
+        "title": "1",
+        
+        "excerpt": "data pandas package file p m rose python dataframe s tabular table r metabolites analysis ipynb values j json information doi org function field new notebooks l f c frictionless using packages set excel chebi reading row fields chemical not libchebi retrieve layout step bendahmane fair scent supplementary philippe rocca serra e results such metabolite profiling easily libraries show create validate against definition allow descriptors independent variables easy zenodo following manual start take extract axis columns index name match api does transformation library widetolong reference position solve writing setting empty uri requires order also output convert dataset plot rdf querying",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/1/testnb/0-rose-metabolites-Python-data-handling.html",
+        "teaser":null},{
+        "title": "2",
+        
+        "excerpt": "data p m package s tabular r j python ggplot such dataset same l f c scent packages using org datasets simply file generated bendahmane plotnine philippe rocca serra profiling libraries graphical lets read relevant generate barplot similar both rosa structure another shows studies compounds x y caissard jc vergne dubois raymond o baudino roses science doi h exploring comparing rose profiles stored port oerc ox ac uk university oxford e research centre background experimental results metabolite published straightfowardly reported okfn frictionlessdata io specs components easily parsed frames exploiting visualization purpose implementing grammar concepts here show equivalent rich tidyverse few",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/1/testnb/1-rose-metabolites-Python-analysis.html",
+        "teaser":null},{
+        "title": "4",
+        
+        "excerpt": "rose sparql function lets using philippe rocca serra following ask query exploring garden oerc ox ac uk university oxford e research centre credits bob du charme www snee com bobdc blog jupyter aka ipytho html read rdf graph generated dtpkgrdf py python script saved disk turtle file independent variables levels display results declared earlier biological technical replicates used compute mean concentration chemical compounds detected forming signature fragrance once invoked pretty printing",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html",
+        "teaser":null},{
+        "title": "3",
+        
+        "excerpt": "data p m s tabular package r such j ggplot same l f c scent packages library org datasets simply dataset generated bendahmane philippe rocca serra profiling using into lets additional file generate barplot both rosa structure another shows studies compounds x y caissard jc vergne dubois raymond o baudino roses science doi h exploring comparing rose profiles stored oerc ox ac uk university oxford e research centre background experimental results metabolite published straightfowardly reported okfn frictionlessdata io specs components easily parsed exploited rich graphical libraries well tidyverse few line codes allow query rapidly explore information importantly rapid exploration possible",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/1/testnb/3-rose-metabolites-R-analysis.html",
+        "teaser":null},{
+        "title": "Code of Conduct",
+        
+        "excerpt": "community conduct not org code us our take behavior person someone faircookbook please any fair cookbook disagreement online language follow reporting members others report enforcement often problems into where processes productive harassment help work feel mailto form guidelines md includes ability jupyter those violent information respectful world open communities healthy welcome solutions excuse personally easily cultural human here principles free everyone things participate friendly de escalate dont emailing goo gl forms someform details new spaces project violations affect persons welcoming limited status social sexual physical turn remember poor frustration cannot personal choose another posting terms stop expectations question try understand",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/code_of_conduct.html",
+        "teaser":null},{
+        "title": "Contributing",
+        
+        "excerpt": "github cookbook fair com issues pull project please issue request help requests changes contributors work labels new articles markdown io contributing youre code img shields badge svg team documentation repository here linkissues following understanding contributions bug enhancement question jupyter development fork master any opening need linkgithub already joining conversation through milestones boards making change recognizing open conduct git working think formatting page linkhelpwanted member thats similar existing book keep review doc www html welcome excited contribute guidelines possible involved questions arent discussed below before youll account linksignupinstructions guide place linkcoc linkgit useful text example bold italics link rickroll dqwwwgxcq getting",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/contributing.html",
+        "teaser":null},{
+        "title": "Disclaimer",
+        
+        "excerpt": "any disclaimer communication reflects views authors neither nih associated partners liable made information contained herein",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/disclaimer.html",
+        "teaser":null},{
+        "title": "Features and customization",
+        
+        "excerpt": "content textbook jupyter markdown notebooks called book repository click chapter left section features short demonstration show general layout style textbooks built jekyll files page others generated scripts generatetextbook py script run contained folder books combination rendered into here begin sections sidebar demonstrates simple functionality while following chapters contain subset foundations data science inferentialthinking com quickstart shows couple ways add course headers next button below order read further",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/features/features.html",
+        "teaser":null},{
+        "title": "Markdown files",
+        
+        "excerpt": "markdown media content files file headers level heres images copied jekyll sidebar automatically page section third header adding relative movies gif giphy creating book kinds contain course jupyter notebooks contained folder referenced data toc yml front matter yaml added parse sidebars notice theres right screen wide enough generated present capture nd rd best designate characters beginning line here purely demonstrate rendered embedding reference external paths continue work point thats inside repository image site root c podroid png even embed references web example little com yojcaoczhslxvw included website built",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/features/markdown.html",
+        "teaser":null},{
+        "title": "Jupyter notebooks",
+        
+        "excerpt": "jupyter content notebooks code notebook also blocks book markdown original github com blob master jupyterbook minimal features ipynb only outputs math image output below well display python interactive page jekyll embed images html align textbooks example note before publishing remove cell generated map work create current contained folder repository means include export address etc into posts cool jpg add begin mbox mean la tex end sure escape dollar signs want keep site heres sample matplotlib above captured displayed removing web used still show here pandas dataframe again configure text uses modifying books config yml file even same material using ipyleaflet",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/features/notebooks.html",
+        "teaser":null},{
+        "title": "Governance",
+        
+        "excerpt": "governance md document process fair cookbook profit papers purpose formalize project relying clarifies decisions made various elements our community interact including relationship between open source collaborative development work funded non entities table contents main maingovernance code conduct codeofconduct current steering council institutional partners new subproject incubation newsubprojects authoring related academic license documents decided following discussion",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/governance.html",
+        "teaser":null},{
+        "title": "FAIR cookbook",
+        
+        "excerpt": "fair cfde cookbook data org digital objects fairness specification schema improve common fund nih dcc www nature com articles sdata various community example io dats recipes dccs its fairshake ecosystem aims assist cf commonfund gov coordination centers process making host produce better adhere findable accessible interoperable reusable principles provides introductory materials aspects including practical guides show enhance adhering accepted standards includes documenting implementing tools openapi swagger docs structuring metadata format providing tool hosting websites converting datasets frictionless frictionlessdata specs table ingestion provided executable code guide through ways improvements achieved open source encourages contributions quality enrich depth coverage also describes perform",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/intro.html",
+        "teaser":null},{
+        "title": "License",
+        
+        "excerpt": "license book decided following discussion",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/license.html",
+        "teaser":null},{
+        "title": "Converting Assets to DATS",
+        
+        "excerpt": "com github cfde dats nih master blob specifications documentation draft cfdeglossary glossary md metadata schema dataset json type identifier file record fair our assets datasets fields name model org own kidsfirst several existing table its note study license data datatagsuite such rdf ld google search cm api definition recipes also size case repository format access formats including able created convert manifest into need get here sense cases example everything code auto completion field should missing images ss png weve organization id serialization daniel j b clarke described irrespective consistent permit identifiers authorship citation well interoperability strict obo future docs fairness",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/assets-to-dats.html",
+        "teaser":null},{
+        "title": "NIH Crosscut metadata (C2M2) data model",
+        
+        "excerpt": "step cm model process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/c2m2.html",
+        "teaser":null},{
+        "title": "Finding datasets - cataloguing resources",
+        
+        "excerpt": "step finding datasets cataloguing resources authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/cataloguing.html",
+        "teaser":null},{
+        "title": "NIH CFDE selected terminologies",
+        
+        "excerpt": "step nih cfde selected terminologies authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/cfde-terminologies.html",
+        "teaser":null},{
+        "title": "Working with the CFDE",
+        
+        "excerpt": "step fair context nih cdfe authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/cfde.html",
+        "teaser":null},{
+        "title": "Hosting databases and tools in the cloud",
+        
+        "excerpt": "step hosting databases tools cloud authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/cloud.html",
+        "teaser":null},{
+        "title": "Implementing C2M2 with Deriva and Frictionless Data Packages",
+        
+        "excerpt": "step implementing cm deriva frictionless data packages authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/deriva-frictionless.html",
+        "teaser":null},{
+        "title": "Examples of implementing DOIs",
+        
+        "excerpt": "step examples implementing dois authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/doi.html",
+        "teaser":null},{
+        "title": "Privacy protection and Ethics concerns",
+        
+        "excerpt": "step privacy protection ethics concerns authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/ethics.html",
+        "teaser":null},{
+        "title": "ETL processes - Learnings and recommendations",
+        
+        "excerpt": "step etl processes learnings recommendations authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/etl.html",
+        "teaser":null},{
+        "title": "Developing FAIR API",
+        
+        "excerpt": "step developing fair api authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/fair-api.html",
+        "teaser":null},{
+        "title": "FAIR in the context of NIH CDFE",
+        
+        "excerpt": "step working nih cdfe authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/fair-cfde.html",
+        "teaser":null},{
+        "title": "FAIR",
+        
+        "excerpt": "step fair principles authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/fair-principles.html",
+        "teaser":null},{
+        "title": "Evaluating FAIRness with FAIRshake",
+        
+        "excerpt": "step evaluating fairness fairshake authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/fairshake.html",
+        "teaser":null},{
+        "title": "Finding digital objects - Terminologies and query expansion",
+        
+        "excerpt": "step finding digital objects terminologies query expansion authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/finding.html",
+        "teaser":null},{
+        "title": "Experience from GTEx",
+        
+        "excerpt": "step experience gtex authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/gtex.html",
+        "teaser":null},{
+        "title": "Experience from HMP",
+        
+        "excerpt": "step experience hmp authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/hmp.html",
+        "teaser":null},{
+        "title": "The need for identifiers",
+        
+        "excerpt": "step need identifiers authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/identifiers.html",
+        "teaser":null},{
+        "title": "Choosing a license for data and metadata",
+        
+        "excerpt": "step license choosing data metadata authors maintainers version objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/licensing.html",
+        "teaser":null},{
+        "title": "Experience from LINCS",
+        
+        "excerpt": "step experience lincs authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/lincs.html",
+        "teaser":null},{
+        "title": "Understanding MINIDs",
+        
+        "excerpt": "step understanding minids authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/minids.html",
+        "teaser":null},{
+        "title": "Experience from the Metabolomics Workbench",
+        
+        "excerpt": "step experience metabolomics workbench authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/mw.html",
+        "teaser":null},{
+        "title": "Jupyter notebooks and CF data processing workflows",
+        
+        "excerpt": "step jupyter notebooks cf data processing workflows authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/notebooks-workflows.html",
+        "teaser":null},{
+        "title": "Ontology services",
+        
+        "excerpt": "step ontology services authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/onto-services.html",
+        "teaser":null},{
+        "title": "Understanding Ontologies",
+        
+        "excerpt": "step understanding ontologies authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/ontologies.html",
+        "teaser":null},{
+        "title": "Recommendations for minting persistent and resolvable identifiers",
+        
+        "excerpt": "step recommendations minting persistent resolvable identifiers authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/pids.html",
+        "teaser":null},{
+        "title": "Recipe Template",
+        
+        "excerpt": "step data identifier recipe anonymizing patient authors maintainers version license ingredients schema metadata model vocabularies terminologies format tools software objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/recipe-template.html",
+        "teaser":null},{
+        "title": "Recipes overview",
+        
+        "excerpt": "recipes text",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/recipes-overview.html",
+        "teaser":null},{
+        "title": "Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS",
+        
+        "excerpt": "step schema org bioschemas jsonschema json ld dats authors maintainers version license objectives process",
+        "categories": [],
+        "tags": [],
+        "url": "https://nih-cfde.github.io/the-fair-cookbook/recipes/seo.html",
+        "teaser":null},]
+</script>
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+              
+<nav class="c-page__nav">
+  
+
+  
+</nav>
+
+              <footer>
+  <p class="footer">This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/dataecosystem"><img src="/the-fair-cookbook/assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a></p>
+</footer>
+
+            </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
