@@ -6,7 +6,7 @@ set -o pipefail
 
 URL=$(git config --get remote.origin.url)
 BRANCH=gh-pages
-BRANCH_FROM=new
+BRANCH_FROM=master
 SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
 trap "rm -rf ${TEMP}" EXIT
