@@ -1,29 +1,38 @@
-# Identifier Minting Service with Minid
+# Identifier Minting Service with Minid Client
 
 
 ## Table of Contents
-1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+1. [Main Objectives](#Main%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
-4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-5. [Table of Data Standards](#Table%20of%20Data%20Standards)
-6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
-7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
-
+3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
+4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
+5. [Installing the minid 2.0 client](#Installing%20the%20minid%202.0%20client)
+6. [Minid Client Configuration](#Minid%20Client%20Configuration)
+7. [Minid Client Usage](#Minid%20Client%20Usage)
+8. [Authors](#Authors)
+9. [License](#License)
 ---
 
 ## Main Objectives
 
 The main purpose of this recipe is:
 
-> Making self describing tabular data using Frictionless tools instead of dumping Excel files.
+> To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release 
 
 ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
+one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
+
+```
+graph LR;
+    A[file creation] -->B(New File)
+    B --> C{need for a stable identifier?}
+    C -->|Yes| D[invoke MINID minting service]
+    C -->|No| E[no findable data]
+```
 
 ___
 
@@ -39,31 +48,27 @@ ___
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [minting]()  | []()  | [guid](http://edamontology.org/data_0976)  |
-
-
-
-## Table of Data Standards
-
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| []()  | []()  | []()  |
-
-
+| [service invokation](http://edamontology.org/operation_3763)  | [file](http://purl.obolibrary.org/obo/STATO_0000002)  | [guid](http://edamontology.org/data_0976)  |
 ___
 
 
-## Executable Code in Notebook
 
-[minid github repository](https://github.com/fair-research/minid)
-
-## installing the minid 2.0 client
+## Installing the minid 2.0 client
 
 This is a prerequisite to be able to call the minid API hosted on a server at the following url [http://minid.bd2k.org/minid](http://minid.bd2k.org/minid)
+
+### installing with pip
 
 ```python
 pip3 install --pre minid
 ```
+
+### building from source:
+
+use the dev branch to obtain to source
+[minid github repository](https://github.com/fair-research/minid)
+
+
 ## Configuration
 -------------
 1. prerequisite: create a minig-config.cfg file
@@ -129,7 +134,9 @@ The CLI supports the following simple operations (Note: the `--test` flag create
 ```
 $ minid check hdl:20.500.12633/1HK1DTv1wPt3a
 ```
+
 if everything is setup correctly, the command will return:
+
 ```
 Minid:               hdl:20.500.12633/1HK1DTv1wPt3a
 Title:
@@ -142,26 +149,27 @@ Locations:           http://example.com/foo.txt
 
 * Create a new identifier (the `--location` option, if provided, must be at the end).
 
-```$ minid --register [--title <title>] <file_name> [--locations <loc1>..<locN>]```
+```
+$ minid --register [--title <title>] <file_name> [--locations <loc1>..<locN>]
+```
     
-
-
-* Update metadata about an identifier:: 
+* Update metadata about an identifier: 
 
 ```
 $ minid --update [--title <title>] [--status <status>] [--obsoleted_by <minid>] [--locations <loc1> <loc2>] <identifier>
 ```
     
-*  View all minid options:: 
+*  View all minid options: 
 ```
 $ minid -h
 ```
-Landing pages are accessible via the minid website: minid.bd2k.org/minid/landingpage/<identifier>. 
+
+Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>). 
 
 
-# file manifest format
---------------------
-Minids can only be assigned to a single file. In order to assign a minid to a collection of files we recommend using a `BDBag <https://github.com/ini-bdds/bdbag>`_ or the minid file manifest format. 
+### file manifest format
+------------------------
+Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a `BDBag <https://github.com/ini-bdds/bdbag>`_ or the minid file manifest format. 
 
 The minid file manifest format is a JSON-based format that enumerates a list of files as JSON objects that have the following attributes:
 
@@ -171,17 +179,18 @@ The minid file manifest format is a JSON-based format that enumerates a list of 
 
 * One or more (only one of each) of the following `algorithm:checksum` key-value pairs:
   
-  * md5:<md5 hex value>
+  * md5:\<md5 hex value\>
   
-  * sha256:<sha256 hex value>
+  * sha256:\<sha256 hex value\>
   
-  * sha512:<sha512 hex value>
+  * sha512:\<sha512 hex value\>
 
 * url: the URL to the file.
 
 The manifest may be used to create a minid for a collection of files or alternatively as input to the minid batch-register command. 
 
-Below is a sample file manifest configuration file::
+Below is a sample file manifest configuration file:
+
 ```
   [
       {
@@ -201,20 +210,6 @@ Below is a sample file manifest configuration file::
 ```
 ___
 
-## How to create workflow figures
-
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
-
-```
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-```
-
-___
-
 ## Bibliography:
 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
 
@@ -222,11 +217,9 @@ ___
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
+| Mike D'Arcy   | Information Sciences Institute, University of Southern California, Los Angeles, California, United States of America|[0000-0003-2280-917X](http://orcid.org/0000-0003-2280-917X)| Software writing |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
-
-
 ___
-
 
 ## License:
 
