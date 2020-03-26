@@ -17,5 +17,16 @@ jobs:
         python -m pip install --upgrade pip
     - name: Set up Ruby 2.6
       uses: actions/setup-ruby@v1
+    - name: Building site
+      run: |
+        python3 -m venv venv
+        source venv/bin/activate
+        pip3 install -r requirements.txt
+        bundle install --path vendor/bundle
+        make install
+        make site
     - name: Deploy
-      run: bash deploy.sh git@github.com:nih-cfde/the-fair-cookbook.git
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
