@@ -35,4 +35,4 @@ site: build
 	touch _site/.nojekyll
 
 deploy:
-	sh deploy.sh
+	bash deploy.sh
