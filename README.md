@@ -23,9 +23,6 @@ make book
 
 # serve book locally with
 make serve
-
-# deploy master branch to gh-pages
-make deploy
 ```
 
 ## Modifying things
