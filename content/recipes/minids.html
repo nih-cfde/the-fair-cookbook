@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Understanding MINIDs</title>
-  <meta name="description" content="# Understanding MINIDs**authors****maintainers****version****license**        ## Objectives:## Step by Step Process:### Step1:    ### Step2:    ### Step3:  #...">
+  <title>Identifier Minting Service with Minid Client</title>
+  <meta name="description" content="# Identifier Minting Service with Minid Client## Table of Contents1. [Main Objectives](#Main%20Objectives)2. [Graphical Overview of the FAIRification Recipe ...">
 
   <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/minids.html">
   <link rel="alternate" type="application/rss+xml" title="THE CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
 
   <meta property="og:url"         content="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/minids.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Understanding MINIDs" />
-<meta property="og:description" content="# Understanding MINIDs**authors****maintainers****version****license**        ## Objectives:## Step by Step Process:### Step1:    ### Step2:    ### Step3:  #..." />
+<meta property="og:title"       content="Identifier Minting Service with Minid Client" />
+<meta property="og:description" content="# Identifier Minting Service with Minid Client## Table of Contents1. [Main Objectives](#Main%20Objectives)2. [Graphical Overview of the FAIRification Recipe ..." />
 <meta property="og:image"       content="https://nih-cfde.github.io/the-fair-cookbook/images/logo/logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -25,10 +25,10 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/content/recipes/minids.html",
-  "headline": "Understanding MINIDs",
-  "datePublished": "2020-03-26T15:10:12+00:00",
-  "dateModified": "2020-03-26T15:10:12+00:00",
-  "description": "# Understanding MINIDs**authors****maintainers****version****license**        ## Objectives:## Step by Step Process:### Step1:    ### Step2:    ### Step3:  #...",
+  "headline": "Identifier Minting Service with Minid Client",
+  "datePublished": "2020-03-26T22:30:37+00:00",
+  "dateModified": "2020-03-26T22:30:37+00:00",
+  "description": "# Identifier Minting Service with Minid Client## Table of Contents1. [Main Objectives](#Main%20Objectives)2. [Graphical Overview of the FAIRification Recipe ...",
   "author": {
     "@type": "Person",
     "name": "CFDE"
@@ -1667,29 +1667,259 @@ initFunction(initPrint)
 
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
-              <h1 id="understanding-minids">Understanding MINIDs</h1>
+              <h1 id="identifier-minting-service-with-minid-client">Identifier Minting Service with Minid Client</h1>
 
-<p><strong>authors</strong></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+  <li><a href="#Main%20Objectives">Main Objectives</a></li>
+  <li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+  <li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+  <li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+  <li><a href="#Installing%20the%20minid%202.0%20client">Installing the minid 2.0 client</a></li>
+  <li><a href="#Minid%20Client%20Configuration">Minid Client Configuration</a></li>
+  <li><a href="#Minid%20Client%20Usage">Minid Client Usage</a></li>
+  <li><a href="#Authors">Authors</a></li>
+  <li>
+    <h2 id="license"><a href="#License">License</a></h2>
+  </li>
+</ol>
 
-<p><strong>maintainers</strong></p>
+<h2 id="main-objectives">Main Objectives</h2>
 
-<p><strong>version</strong></p>
+<p>The main purpose of this recipe is:</p>
 
-<p><strong>license</strong></p>
+<blockquote>
+  <p>To create a <strong>persistent</strong>, <strong>globally unique</strong> and <strong>resolvable identifier</strong> using the <strong><em>Minid client</em></strong> accessing the Minid 2.0 release</p>
+</blockquote>
 
-<h2 id="objectives">Objectives:</h2>
+<hr />
 
-<h2 id="step-by-step-process">Step by Step Process:</h2>
+<h2 id="graphical-overview-of-the-fairification-recipe-objectives">Graphical Overview of the FAIRification Recipe Objectives</h2>
 
-<h3 id="step1">Step1:</h3>
+<p>one may use the following <strong><a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> syntax:</p>
 
-<h3 id="step2">Step2:</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>graph LR;
+    A[file creation] --&gt;B(New File)
+    B --&gt; C{need for a stable identifier?}
+    C --&gt;|Yes| D[invoke MINID minting service]
+    C --&gt;|No| E[no findable data]
+</code></pre></div></div>
 
-<h3 id="step3">Step3:</h3>
+<hr />
 
-<h3 id="step4">Step4:</h3>
+<h2 id="capability--maturity-table">Capability &amp; Maturity Table</h2>
 
-<h3 id="step5">Step5:</h3>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Capability</th>
+      <th style="text-align: left">Initial Maturity Level</th>
+      <th style="text-align: left">Final Maturity Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">identifier minting</td>
+      <td style="text-align: left">minimal</td>
+      <td style="text-align: left">repeatable</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="fairification-objectives-inputs-and-outputs">FAIRification Objectives, Inputs and Outputs</h2>
+
+<p>| Actions.Objectives.Tasks  | Input | Output  |
+| :————- | :————- | :————- |
+| <a href="http://edamontology.org/operation_3763">service invokation</a>  | <a href="http://purl.obolibrary.org/obo/STATO_0000002">file</a>  | <a href="http://edamontology.org/data_0976">guid</a>  |
+___</p>
+
+<h2 id="installing-the-minid-20-client">Installing the minid 2.0 client</h2>
+
+<p>This is a prerequisite to be able to call the minid API hosted on a server at the following url <a href="http://minid.bd2k.org/minid">http://minid.bd2k.org/minid</a></p>
+
+<h3 id="installing-with-pip">installing with pip</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">pre</span> <span class="n">minid</span>
+</code></pre></div></div>
+
+<h3 id="building-from-source">building from source:</h3>
+
+<p>use the dev branch to obtain to source
+<a href="https://github.com/fair-research/minid">minid github repository</a></p>
+
+<h2 id="configuration">Configuration</h2>
+<hr />
+<ol>
+  <li>prerequisite: create a minig-config.cfg file</li>
+</ol>
+
+<p>As a convenience you need specify this information in a minid configuration file (<code class="language-plaintext highlighter-rouge">~/.minid/minid-config.cfg</code>)
+To do so from the command line, issue the following:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir ~/Users/philippe/.minid
+$ cd .minid
+$ touch minid-config.cfg
+</code></pre></div></div>
+<p>Failing to create the minid-config.cfg file, will result in the following error when trying the minid login command and authenticating with the globus id.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Errno 2] No such file or directory: '/Users/philippe/.minid/minid-config.cfg'
+</code></pre></div></div>
+
+<ol>
+  <li>Create a GlobusID account</li>
+</ol>
+
+<p>Before using the API you first need to create a <a href="https://www.globusid.org/create">globus account</a></p>
+
+<p><img src="https://i.imgur.com/B5UbkpF.png" alt="" /></p>
+
+<p>and validate your email address, as part of the registration process. A unique code will be sent to your email address. You must present this code along with your email address when accessing the API.</p>
+
+<ol>
+  <li>Accessing minid service from the command line</li>
+</ol>
+
+<p>With the completion of the previous steps, you are now ready to use the minid service. The first thing to do is to invoke to <code class="language-plaintext highlighter-rouge">minid login</code> command</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ minid login
+</code></pre></div></div>
+
+<p>This will open the GlobusID login page.Simply enter your credentials obtained from 2.</p>
+
+<p><img src="https://i.imgur.com/2OZFcJa.png" alt="" /></p>
+
+<p>followed by:</p>
+
+<p><img src="https://i.imgur.com/avzyAFZ.png" alt="" /></p>
+
+<p>if all goes well, the following browser screen will be shown:</p>
+
+<p><img src="https://i.imgur.com/THYPg4E.png" alt="" /></p>
+
+<p>While the terminal will show the following:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You have been logged in.
+</code></pre></div></div>
+
+<p>This means you are now ready to use the minid service from the command line.</p>
+
+<h2 id="usage">Usage</h2>
+<hr />
+
+<p>The CLI supports the following simple operations (Note: the <code class="language-plaintext highlighter-rouge">--test</code> flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.):</p>
+
+<ul>
+  <li>Check a known minid identifier</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ minid check hdl:20.500.12633/1HK1DTv1wPt3a
+</code></pre></div></div>
+
+<p>if everything is setup correctly, the command will return:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Minid:               hdl:20.500.12633/1HK1DTv1wPt3a
+Title:
+Checksums:           e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 (sha256)
+Created:
+Landing Page:        https://identifiers.fair-research.org/hdl:20.500.12633/1HK1DTv1wPt3a
+EZID Landing Page:   https://ezid.cdlib.org/id/hdl:20.500.12633/1HK1DTv1wPt3a
+Locations:           http://example.com/foo.txt
+</code></pre></div></div>
+
+<ul>
+  <li>Create a new identifier (the <code class="language-plaintext highlighter-rouge">--location</code> option, if provided, must be at the end).</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ minid --register [--title &lt;title&gt;] &lt;file_name&gt; [--locations &lt;loc1&gt;..&lt;locN&gt;]
+</code></pre></div></div>
+
+<ul>
+  <li>Update metadata about an identifier:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ minid --update [--title &lt;title&gt;] [--status &lt;status&gt;] [--obsoleted_by &lt;minid&gt;] [--locations &lt;loc1&gt; &lt;loc2&gt;] &lt;identifier&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>View all minid options:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ minid -h
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Landing pages are accessible via the minid website: <a href="http://minid.bd2k.org/minid/landingpage/\&lt;identifier\&gt;">http://minid.bd2k.org/minid/landingpage/&lt;identifier&gt;</a>.</p>
+
+<h3 id="file-manifest-format">file manifest format</h3>
+<hr />
+<p>Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a <code class="language-plaintext highlighter-rouge">BDBag &lt;https://github.com/ini-bdds/bdbag&gt;</code>_ or the minid file manifest format.</p>
+
+<p>The minid file manifest format is a JSON-based format that enumerates a list of files as JSON objects that have the following attributes:</p>
+
+<ul>
+  <li>
+    <p>length: The length of the file in bytes.</p>
+  </li>
+  <li>
+    <p>filename: The filename (or path) relative to the manifest file.</p>
+  </li>
+  <li>
+    <p>One or more (only one of each) of the following <code class="language-plaintext highlighter-rouge">algorithm:checksum</code> key-value pairs:</p>
+
+    <ul>
+      <li>
+        <p>md5:&lt;md5 hex value&gt;</p>
+      </li>
+      <li>
+        <p>sha256:&lt;sha256 hex value&gt;</p>
+      </li>
+      <li>
+        <p>sha512:&lt;sha512 hex value&gt;</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>url: the URL to the file.</p>
+  </li>
+</ul>
+
+<p>The manifest may be used to create a minid for a collection of files or alternatively as input to the minid batch-register command.</p>
+
+<p>Below is a sample file manifest configuration file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [
+      {
+          "length":321,
+          "filename":"file1.txt",
+          "md5":"5bbf5a52328e7439ae6e719dfe712200",
+          "sha256":"2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806",
+          "url" : "globus://ddb59aef-6d04-11e5-ba46-22000b92c6ec/share/godata/file1.txt"
+      },
+      {
+          "length": 632860,
+          "filename": "minid_v0.1_Nov_2015.pdf",
+          "sha256": "cacc1abf711425d3c554277a5989df269cefaa906d27f1aaa72205d30224ed5f",
+          "url" : "http://bd2k.ini.usc.edu/assets/all-hands-meeting/minid_v0.1_Nov_2015.pdf"
+      }
+  ]
+</code></pre></div></div>
+<hr />
+
+<h2 id="bibliography">Bibliography:</h2>
+<ol>
+  <li>Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013</li>
+</ol>
+
+<h2 id="authors">Authors:</h2>
+
+<p>| Name | Affiliation  | orcid | CrediT role  |
+| :————- | :————- | :————- |:————- |
+| Mike D’Arcy   | Information Sciences Institute, University of Southern California, Los Angeles, California, United States of America|<a href="http://orcid.org/0000-0003-2280-917X">0000-0003-2280-917X</a>| Software writing |
+| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| <a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a> | Writing - Original Draft |
+___</p>
+
+<h2 id="license-1">License:</h2>
+
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20" /></a></p>
+
 
             </div>
             <div class="c-textbook__footer" id="textbook_footer">
