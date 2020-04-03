@@ -1,6 +1,5 @@
 # Identifier Minting Service with Minid Client
 
-
 ## Table of Contents
 1. [Main Objectives](#Main%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
@@ -17,7 +16,7 @@
 
 The main purpose of this recipe is:
 
-> To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release 
+> To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release
 
 ___
 
@@ -26,13 +25,15 @@ ___
 
 one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
 
-```
+<div class="mermaid">
 graph LR;
     A[file creation] -->B(New File)
     B --> C{need for a stable identifier?}
     C -->|Yes| D[invoke MINID minting service]
     C -->|No| E[no findable data]
-```
+</div>
+
+
 
 ___
 
@@ -87,9 +88,9 @@ Failing to create the minid-config.cfg file, will result in the following error 
 
 2. Create a GlobusID account
 
-Before using the API you first need to create a [globus account](https://www.globusid.org/create) 
-
-![](https://i.imgur.com/B5UbkpF.png)
+Before using the API you first need to create a [globus account](https://www.globusid.org/create)
+<kbd>![](./images/globus/globus-account-create.png)<kbd/>
+<!-- ![](https://i.imgur.com/B5UbkpF.png) -->
 
 
 
@@ -103,17 +104,17 @@ With the completion of the previous steps, you are now ready to use the minid se
 $ minid login
 ```
 
-This will open the GlobusID login page.Simply enter your credentials obtained from 2. 
-
-![](https://i.imgur.com/2OZFcJa.png)
+This will open the GlobusID login page.Simply enter your credentials obtained from 2.
+![](./images/globus/globus-account-login.png)
+<!-- ![](https://i.imgur.com/2OZFcJa.png) -->
 
 followed by:
-
-![](https://i.imgur.com/avzyAFZ.png)
+![](./images/globus/globus-account-allow.png)
+<!-- ![](https://i.imgur.com/avzyAFZ.png) -->
 
 if all goes well, the following browser screen will be shown:
-
-![](https://i.imgur.com/THYPg4E.png)
+![](./images/globus/globus-account-login-success.png)
+<!-- ![](https://i.imgur.com/THYPg4E.png) -->
 
 While the terminal will show the following:
 ```
@@ -127,7 +128,7 @@ This means you are now ready to use the minid service from the command line.
 ## Usage
 -----
 
-The CLI supports the following simple operations (Note: the `--test` flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.): 
+The CLI supports the following simple operations (Note: the `--test` flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.):
 
 * Check a known minid identifier
 
@@ -152,24 +153,24 @@ Locations:           http://example.com/foo.txt
 ```
 $ minid --register [--title <title>] <file_name> [--locations <loc1>..<locN>]
 ```
-    
-* Update metadata about an identifier: 
+
+* Update metadata about an identifier:
 
 ```
 $ minid --update [--title <title>] [--status <status>] [--obsoleted_by <minid>] [--locations <loc1> <loc2>] <identifier>
 ```
-    
-*  View all minid options: 
+
+*  View all minid options:
 ```
 $ minid -h
 ```
 
-Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>). 
+Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>).
 
 
 ### file manifest format
 ------------------------
-Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a `BDBag <https://github.com/ini-bdds/bdbag>`_ or the minid file manifest format. 
+Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a `BDBag <https://github.com/ini-bdds/bdbag>`_ or the minid file manifest format.
 
 The minid file manifest format is a JSON-based format that enumerates a list of files as JSON objects that have the following attributes:
 
@@ -178,16 +179,16 @@ The minid file manifest format is a JSON-based format that enumerates a list of 
 * filename: The filename (or path) relative to the manifest file.
 
 * One or more (only one of each) of the following `algorithm:checksum` key-value pairs:
-  
+
   * md5:\<md5 hex value\>
-  
+
   * sha256:\<sha256 hex value\>
-  
+
   * sha512:\<sha512 hex value\>
 
 * url: the URL to the file.
 
-The manifest may be used to create a minid for a collection of files or alternatively as input to the minid batch-register command. 
+The manifest may be used to create a minid for a collection of files or alternatively as input to the minid batch-register command.
 
 Below is a sample file manifest configuration file:
 
@@ -224,5 +225,3 @@ ___
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
-
-
