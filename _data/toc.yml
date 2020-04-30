@@ -114,9 +114,6 @@
 - title: Experience from LINCS
   url: /recipes/15/4/lincs
   not_numbered: false
-- title: Converting Assets to DATS
-  url: /recipes/15/5/assets-to-dats
-  not_numbered: false
 - title: Developing FAIR API
   url: /recipes/16/fair-api
   not_numbered: false
