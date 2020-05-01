@@ -3,7 +3,7 @@ _build
 _site
 .bundle
 .DS_Store
-.gitignore~
 .sass-cache
+*~
 vendor
 venv

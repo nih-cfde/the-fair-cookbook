@@ -32,4 +32,3 @@ build:
 site: build
 	bundle exec jekyll build
 	touch _site/.nojekyll
-:Q
