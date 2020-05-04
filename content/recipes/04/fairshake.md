@@ -12,13 +12,13 @@
 
 All projects that are part of the Common Fund Data Ecosystem (CFDE) are evaluated using the CFDE FAIR Rubric, which is a set of 17 metrics that evaluate the Findability, Accessibility, Interoperability, and Reusability (FAIR) of each datasets across the different CF data coordination centers (DCCs). This Rubric is available via the [FAIRshake tool](https://fairshake.cloud/rubric/36/) and it is described in detail below. It should be noted that this Rubric is an initial draft and can be adjusted based on feedback and input from the DCCs.
 
-![CFDE FAIR Rubric](https://github.com/nih-cfde/the-fair-cookbook/tree/dev/content/recipes/04/images/cfde_fair_rubric.png) 
+![CFDE FAIR Rubric](images/image_0.png) 
 
 ## Understanding the FAIRshake Insignia
 
 The FAIRshake insignia (pictured above) is a visual representation of a score given to a digital object based on a scoring rubric composed of metrics. It offers users a quick graphical view of the evaluation of the FAIR principles for that object. The number of colored boxes (non-gray) corresponds to the number of metrics in the rubric, whereas the color of the box indicates how well a metric adheres to FAIR principles (blue means full adherence and red not). Users can hover over the boxes to observe the score for each metric. The image below is from the [FAIRshake documentation page](https://fairshake.cloud/documentation/).
 
-![FAIRshake Insignia](https://github.com/nih-cfde/the-fair-cookbook/tree/dev/content/recipes/04/images/fairshake_insignia.png)
+![FAIRshake Insignia](images/image_1.png)
 
 ## FAIR Principles and Metrics Resources
 
@@ -443,7 +443,7 @@ Provide a URL to the license that governs the use of the digital resource.
     <td>A Landing Page Exists and is Accessible</td>
     <td>(F4),A1</td>
     <td>Access Protocol (FM-A1.1)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.yDJci5</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.yDJci5">https://doi.org/10.25504/FAIRsharing.yDJci5</a></td>
     <td>
 
 <a href="https://raw.githubusercontent.com/FAIRMetrics/Metrics/master/FM_A1.1">https://raw.githubusercontent.com/FAIRMetrics/Metrics/master/FM_A1.1</a></td>
@@ -452,73 +452,71 @@ Provide a URL to the license that governs the use of the digital resource.
     <td>Open, Free, Standardized Access Protocol</td>
     <td>A1</td>
     <td>Access Protocol (FM-A1.1)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.yDJci5</td>
-    <td>https://purl.org/fair-metrics/FM_A1.1
-(Link is broken)
-https://raw.githubusercontent.com/FAIRMetrics/Metrics/master/FM_A1.1</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.yDJci5">https://doi.org/10.25504/FAIRsharing.yDJci5</a></td>
+    <td><a href="https://raw.githubusercontent.com/FAIRMetrics/Metrics/master/FM_A1.1">https://raw.githubusercontent.com/FAIRMetrics/Metrics/master/FM_A1.1</a></td>
   </tr>
   <tr>
     <td>A Biological Assay is Present and Resolvable in the BioAssay Ontology</td>
     <td>I1,I2,I3</td>
     <td>Use a Knowledge Representation Language (FM-I1); Use FAIR Vocabularies (FM-I2); Use Qualified References (FM-I3)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.jLpL6i; https://doi.org/10.25504/FAIRsharing.0A9kNV; https://doi.org/10.25504/FAIRsharing.B2sbNh</td>
-    <td>https://purl.org/fair-metrics/FM_I1; https://purl.org/fair-metrics/FM_I2; https://purl.org/fair-metrics/FM_I3</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.jLpL6i">https://doi.org/10.25504/FAIRsharing.jLpL6i</a>; <a href="https://doi.org/10.25504/FAIRsharing.0A9kNV">https://doi.org/10.25504/FAIRsharing.0A9kNV</a>; <a href="https://doi.org/10.25504/FAIRsharing.B2sbNh">https://doi.org/10.25504/FAIRsharing.B2sbNh</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_I1">https://purl.org/fair-metrics/FM_I1</a>; <a href="https://purl.org/fair-metrics/FM_I2">https://purl.org/fair-metrics/FM_I2</a>; <a href="https://purl.org/fair-metrics/FM_I3">https://purl.org/fair-metrics/FM_I3</a></td>
   </tr>
   <tr>
     <td>A Relevant Anatomical Part is Present and Resolvable in the UBERON Ontology</td>
     <td>I1,I2,I3</td>
     <td>Use a Knowledge Representation Language (FM-I1); Use FAIR Vocabularies (FM-I2); Use Qualified References (FM-I3)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.jLpL6i; https://doi.org/10.25504/FAIRsharing.0A9kNV; https://doi.org/10.25504/FAIRsharing.B2sbNh</td>
-    <td>https://purl.org/fair-metrics/FM_I1; https://purl.org/fair-metrics/FM_I2; https://purl.org/fair-metrics/FM_I3</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.jLpL6i">https://doi.org/10.25504/FAIRsharing.jLpL6i</a>; <a href="https://doi.org/10.25504/FAIRsharing.0A9kNV">https://doi.org/10.25504/FAIRsharing.0A9kNV</a>; <a href="https://doi.org/10.25504/FAIRsharing.B2sbNh">https://doi.org/10.25504/FAIRsharing.B2sbNh</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_I1">https://purl.org/fair-metrics/FM_I1</a>; <a href="https://purl.org/fair-metrics/FM_I2">https://purl.org/fair-metrics/FM_I2</a>; <a href="https://purl.org/fair-metrics/FM_I3">https://purl.org/fair-metrics/FM_I3</a></td>
   </tr>
   <tr>
     <td>A Relevant Disease is Present and Resolvable in the MONDO Ontology</td>
     <td>I1,I2,I3</td>
     <td>Use a Knowledge Representation Language (FM-I1); Use FAIR Vocabularies (FM-I2); Use Qualified References (FM-I3)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.jLpL6i; https://doi.org/10.25504/FAIRsharing.0A9kNV; https://doi.org/10.25504/FAIRsharing.B2sbNh</td>
-    <td>https://purl.org/fair-metrics/FM_I1; https://purl.org/fair-metrics/FM_I2; https://purl.org/fair-metrics/FM_I3</td>
+    <<td><a href="https://doi.org/10.25504/FAIRsharing.jLpL6i">https://doi.org/10.25504/FAIRsharing.jLpL6i</a>; <a href="https://doi.org/10.25504/FAIRsharing.0A9kNV">https://doi.org/10.25504/FAIRsharing.0A9kNV</a>; <a href="https://doi.org/10.25504/FAIRsharing.B2sbNh">https://doi.org/10.25504/FAIRsharing.B2sbNh</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_I1">https://purl.org/fair-metrics/FM_I1</a>; <a href="https://purl.org/fair-metrics/FM_I2">https://purl.org/fair-metrics/FM_I2</a>; <a href="https://purl.org/fair-metrics/FM_I3">https://purl.org/fair-metrics/FM_I3</a></td>
   </tr>
   <tr>
     <td>A Relevant File Type is Present and Resolvable in the EDAM Ontology</td>
     <td>I1,I2,I3</td>
     <td>Use a Knowledge Representation Language (FM-I1); Use FAIR Vocabularies (FM-I2); Use Qualified References (FM-I3)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.jLpL6i; https://doi.org/10.25504/FAIRsharing.0A9kNV; https://doi.org/10.25504/FAIRsharing.B2sbNh</td>
-    <td>https://purl.org/fair-metrics/FM_I1; https://purl.org/fair-metrics/FM_I2; https://purl.org/fair-metrics/FM_I3</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.jLpL6i">https://doi.org/10.25504/FAIRsharing.jLpL6i</a>; <a href="https://doi.org/10.25504/FAIRsharing.0A9kNV">https://doi.org/10.25504/FAIRsharing.0A9kNV</a>; <a href="https://doi.org/10.25504/FAIRsharing.B2sbNh">https://doi.org/10.25504/FAIRsharing.B2sbNh</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_I1">https://purl.org/fair-metrics/FM_I1</a>; <a href="https://purl.org/fair-metrics/FM_I2">https://purl.org/fair-metrics/FM_I2</a>; <a href="https://purl.org/fair-metrics/FM_I3">https://purl.org/fair-metrics/FM_I3</a></td>
   </tr>
   <tr>
     <td>A Relevant Taxonomy is Present and Resolvable in the NCBI Taxon Ontology</td>
     <td>I1,I2,I3</td>
     <td>Use a Knowledge Representation Language (FM-I1); Use FAIR Vocabularies (FM-I2); Use Qualified References (FM-I3)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.jLpL6i; https://doi.org/10.25504/FAIRsharing.0A9kNV; https://doi.org/10.25504/FAIRsharing.B2sbNh</td>
-    <td>https://purl.org/fair-metrics/FM_I1; https://purl.org/fair-metrics/FM_I2; https://purl.org/fair-metrics/FM_I3</td>
+    <<td><a href="https://doi.org/10.25504/FAIRsharing.jLpL6i">https://doi.org/10.25504/FAIRsharing.jLpL6i</a>; <a href="https://doi.org/10.25504/FAIRsharing.0A9kNV">https://doi.org/10.25504/FAIRsharing.0A9kNV</a>; <a href="https://doi.org/10.25504/FAIRsharing.B2sbNh">https://doi.org/10.25504/FAIRsharing.B2sbNh</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_I1">https://purl.org/fair-metrics/FM_I1</a>; <a href="https://purl.org/fair-metrics/FM_I2">https://purl.org/fair-metrics/FM_I2</a>; <a href="https://purl.org/fair-metrics/FM_I3">https://purl.org/fair-metrics/FM_I3</a></td>
   </tr>
   <tr>
     <td>A Relevant Cell Line is Present and Resolvable in the Cellosaurus Ontology</td>
     <td>I1,I2,I3</td>
     <td>Use a Knowledge Representation Language (FM-I1); Use FAIR Vocabularies (FM-I2); Use Qualified References (FM-I3)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.jLpL6i; https://doi.org/10.25504/FAIRsharing.0A9kNV; https://doi.org/10.25504/FAIRsharing.B2sbNh</td>
-    <td>https://purl.org/fair-metrics/FM_I1; https://purl.org/fair-metrics/FM_I2; https://purl.org/fair-metrics/FM_I3</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.jLpL6i">https://doi.org/10.25504/FAIRsharing.jLpL6i</a>; <a href="https://doi.org/10.25504/FAIRsharing.0A9kNV">https://doi.org/10.25504/FAIRsharing.0A9kNV</a>; <a href="https://doi.org/10.25504/FAIRsharing.B2sbNh">https://doi.org/10.25504/FAIRsharing.B2sbNh</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_I1">https://purl.org/fair-metrics/FM_I1</a>; <a href="https://purl.org/fair-metrics/FM_I2">https://purl.org/fair-metrics/FM_I2</a>; <a href="https://purl.org/fair-metrics/FM_I3">https://purl.org/fair-metrics/FM_I3</a></td>
   </tr>
   <tr>
     <td>Contact Information is Provided for the Creator(s) of the Dataset</td>
     <td>R1.2</td>
     <td>Detailed Provenance (FM-R1.2)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.qcziIV</td>
-    <td>https://purl.org/fair-metrics/FM_R1.2</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.qcziIV">https://doi.org/10.25504/FAIRsharing.qcziIV</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_R1.2">https://purl.org/fair-metrics/FM_R1.2</a></td>
   </tr>
   <tr>
     <td>Digital Resource License</td>
     <td>R1.1</td>
     <td>Accessible Usage License (FM-R1.1)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.fsB7NK</td>
-    <td>https://purl.org/fair-metrics/FM_R1.1</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.fsB7NK">https://doi.org/10.25504/FAIRsharing.fsB7NK</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_R1.1">https://purl.org/fair-metrics/FM_R1.1</a></td>
   </tr>
   <tr>
     <td>Metadata License</td>
     <td>R/R1.1</td>
     <td>Accessible Usage License (FM-R1.1)</td>
-    <td>https://doi.org/10.25504/FAIRsharing.fsB7NK</td>
-    <td>https://purl.org/fair-metrics/FM_R1.1</td>
+    <td><a href="https://doi.org/10.25504/FAIRsharing.fsB7NK">https://doi.org/10.25504/FAIRsharing.fsB7NK</a></td>
+    <td><a href="https://purl.org/fair-metrics/FM_R1.1">https://purl.org/fair-metrics/FM_R1.1</a></td>
   </tr>
 </table>
 
