@@ -1,14 +1,16 @@
 # Recommendations for minting persistent and resolvable identifiers
 
-**authors**
+**authors**: [Philippe Rocca-Serra]()
 
-**maintainers**
+**maintainers**:
 
-**version**
+**version**: initial draft
 
-**license**
+**license**: 
 
 ## Objectives:
+
+> The main objective of this recipe is to provide a set 
 
 ## Step by Step Process:
 
