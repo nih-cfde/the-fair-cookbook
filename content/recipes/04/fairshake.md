@@ -182,13 +182,46 @@ Ultimately this can become a command line application that we run in parallel on
 
 
 #### Publishing codified FAIRshake metrics and resolvers for assessment reproducibility
-It is useful for reproducibility purposes but also for reusability purposes for automated FAIR assessment code to be shared publicly. To that end, a repository for storing that code and its association with the FAIRshake metrics was developed and can be found [here](https://github.com/MaayanLab/fairshake-assessments). This catalog and the code in it can also be used to perform future FAIR assessments that use the same metrics, rubrics, or resolvers. Pull requests are welcome but existing automated mechanisms can immediately be used by installing the package and using some of the core functions.
+It is useful for reproducibility purposes but also for reusability purposes for automated FAIR assessment code to be shared publicly. To that end, a repository for storing that code and its association with the FAIRshake metrics was developed and can be found [here](https://github.com/MaayanLab/fairshake-assessments). This catalog and the code in it can also be used to perform future FAIR assessments that use the same metrics, rubrics, or resolvers. Pull requests are welcome but existing automated mechanisms can immediately be used by installing the package and using some of the core functions. Performing this assessment with that repository works like so:
+
+```python
+#!/bin/python
+# assumption: DATS objects are generated line by line
+# usage: assess.py < input_dats.txt > output_assessments.txt
+
+import sys, json
+from fairshake_assessments.core import assess_many_async
+from fairshake_assessments.rubrics.rubric_36_nih_cfde import rubric_36_nih_cfde
+
+for assessment in assess_many_async(map(json.loads, sys.stdin)):
+  print(json.dumps(assessment))
+```
+
+Note that other rubrics, metrics, and resolvers (e.g. ways of finding DATS from a `url`) are available in the `fairshake-assessments` and are associated with some of the FAIRshake metrics.
 
 ### Registering assessments on FAIRshake
 Now that we've performed our assessment, we should publish these results on FAIRshake for us and the world to see where improvements can be made. It is important to note that the assessment results are a function of all parties (the digital object, the standard, the underlying repository or system that serves the digital object) and as such must be compared relative to the same baseline.
 
 ```python
-# TODO: insert CFDE assessment.py in a consumable form here
+#!/bin/python
+# assumption: DATS objects are generated line by line
+# usage: register.py < output_assessments.txt
+
+import sys, json
+from fairshake_assessments.core import (
+  get_fairshake_client,
+  find_or_create_fairshake_digital_object,
+  publish_fairshake_assessment,
+)
+
+# assumption: DATS objects are generated line by line
+# usage: API_KEY='' assess.py < input_dats.txt > output_assessments.txt
+# see https://fairshake.cloud/accounts/api_access/ for an API_KEY
+
+fairshake = get_fairshake_client(api_key=os.environ['API_KEY'])
+for assessment in map(json.loads, sys.stdin):
+  target = find_or_create_fairshake_digital_object(fairshake=fairshake, **assessment['target'])
+  publish_fairshake_assessment(fairshake=fairshake, **target)
 ```
 
 ## Conclusion
