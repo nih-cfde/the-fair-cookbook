@@ -31,7 +31,7 @@ url: https://nih-cfde.github.io                  # the base hostname & protocol 
 
 # Main page settings
 footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/dataecosystem"><img src="/the-fair-cookbook/assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
-
+ <script>mermaid.init();</script>
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar

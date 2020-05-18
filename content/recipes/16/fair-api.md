@@ -1,8 +1,8 @@
 # Developing FAIR API
 
-**Authors**: Daniel J. B. Clarke
+**Authors**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
-**Maintainers**: Daniel J. B. Clarke
+**Maintainers**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
 **Version**: 1.0
 
@@ -25,8 +25,14 @@ We will look at the existing REST service provided by the Metabolomics Workbench
 
 Though OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#JSON) that is equivalent), it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
 
-![An example endpoint in an OpenAPI Editor](./images/ss1.png)
-![A real response in an OpenAPI Editor](./images/ss2.png)
+<!-- ![An example endpoint in an OpenAPI Editor](./images/ss1.png) -->
+An example endpoint in an OpenAPI Editor:
+<br/>
+<div><img src="./images/ss1.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
+
+<!-- ![A real response in an OpenAPI Editor](./images/ss2.png) -->
+A real response in an OpenAPI Editor:<br/>
+<div><img src="./images/ss2.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
 
 ## Recipe
@@ -71,7 +77,7 @@ paths:
 
 The path is relative to the server url, and `get` refers to the REST method (`GET` as opposed to `POST`, `PUT`, `DELETE`, ...), in REST `GET` refers to reading a resource and is what happens when you send the following packet to a web server:
 
-```
+```bash
 GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
 Host: www.metabolomicsworkbench.org
 Content-Type: application/json
@@ -80,7 +86,7 @@ Content-Type: application/json
 
 Note that your web browser does the same, albeit with a few more headers.
 
-```
+```bash
 GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
 Host: www.metabolomicsworkbench.org
 Content-Type: text/html
@@ -201,7 +207,8 @@ Again, each of these parameters is validatable with JSONSchema, in our current e
 
 Finally, we've included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
 
-![](./images/ss2.png)
+<!-- ![](./images/ss2.png) -->
+<div><img src="./images/ss2.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
 With the output, we can complete our path by annotating the response:
 
@@ -405,7 +412,7 @@ But you can also produce interactive documentation much like the output seen in 
 
 It is even possible to automatically generate statically or dynamically code in many different programming languages for API clients or Server stubs (i.e. for API first or compatibility) with the [openapi-generator](https://github.com/OpenAPITools/openapi-generator).
 
-An [initiative by IBM](https://github.com/IBM/openapi-to-graphql) provides a mechanism for interoperating an OpenAPI documented endpoint with GraphQL.
+An [initiative by IBM](https://github.com/IBM/openapi-to-graphql) provides a mechanism for interoperating an OpenAPI documented endpoint with [GraphQL](https://graphql.org/).
 
 These various capabilities make an API extremely accessible, lowering many barriers to entry for interoperability and reusability of your API.
 
