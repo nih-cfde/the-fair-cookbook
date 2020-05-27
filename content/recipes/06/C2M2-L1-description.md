@@ -5,17 +5,17 @@ pdf_options:
 
 # Conceptual Description of the Level 1 C2M2
 
-This is a conceptual and narrative description of the Level 1 C2M2. It
+This is a conceptual and narrative description of the Level 1 crosscut metadata model (C2M2). It
 covers the things (proper nouns) in the Level 1 C2M2 and their
-relationships, along with the a description of the tables used to
+relationships, and describes the tables used to
 represent them. The last section covers the internal controlled vocabularies used for
-a few attributes. These notes don't go heavily into things like the
+a few attributes. These notes do not go heavily into things like the
 format (syntax) of the columns or the specific primary key and foreign
 key relationships.
 
 ## Things (Proper Nouns) Described
 
-The Level 1 C2M2 includes tables to describe the following things (entities), and the relationships between them.
+The Level 1 C2M2 includes tables to describe the following things (entities), and the relationships among them.
 
  * Namespaces
  * Project
@@ -28,12 +28,14 @@ This section has descriptions of each thing and a list of its attributes (fields
 
 ### Namespaces
 
-These are logical groupings of things so that the names DCCs use don't
-collide. Unless we think a DCC will have names for things like
-biosamples or files that could collide, then a single namespace for
-DCC is all that's needed. The unique names for things in the C2M2 are
-a combination of namespace and a local id, like (namespace, id) for
-collections.
+A namespace is a logical groupings of things, used to avoid collisions among the names used by different DCCs.
+We assume that each DCC assigns a unique local name to each thing that it manages.
+(If this assumption is violated--if, for example, biosamples and files may be assigned the same local name--then additional local structure may be needed.)
+Then, any thing from any DCC can be given a unique global name by concatenating the namespace id for the DCC from which
+the thing originates with the local name assigned to the thing by that DCC.
+Thus, for example, two things originating from DCC1 and DCC2, and each assigned a local name Sample1, 
+will have distinct C2M2 names: DCC1:Sample1 and DCC2:Sample1.
+
 
 #### Attributes
 
@@ -160,7 +162,7 @@ A table linking a subject, a subject_role (a named organism-level constituent co
  * **subject**
    - **namespace** The namespaec of the subject
    - **id** The ID of this subject
- * **role** The role assigned to this organism-level constituent component of this subject (see Subject Role under Controlled Vocabularies). One of
+ * **role** The role assigned to this organism-level constituent component of this subject (see Subject Role under Controlled Vocabularies). One of:
    - single organism
    - host
    - symbiont
