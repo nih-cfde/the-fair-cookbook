@@ -1,4 +1,4 @@
-# Developing FAIR API
+# Developing FAIR API for the Web
 
 **Authors**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
@@ -23,7 +23,7 @@ While a slew of standards exist for web API development and documentation, each 
 ## Objectives
 We will look at the existing REST service provided by the Metabolomics Workbench catalog: <https://www.metabolomicsworkbench.org/tools/mw_rest.php>. This API is described for human consumption including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.
 
-Though OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#JSON) that is equivalent), it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
+Though OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#JSON) that is equivalent), it is helpful to use an OpenAPI editor like <https://swagger.io/tools/swagger-editor/>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
 
 <!-- ![An example endpoint in an OpenAPI Editor](./images/ss1.png) -->
 An example endpoint in an OpenAPI Editor:
@@ -380,7 +380,7 @@ paths:
                     description: Verbose protein name
                   seqlength:
                     type: string
-                    descrition: Length of the sequence
+                    description: Length of the sequence
                   seq:
                     type: string
                     description: The protein sequence itself
