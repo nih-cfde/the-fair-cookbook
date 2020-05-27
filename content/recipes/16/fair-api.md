@@ -75,37 +75,30 @@ paths:
       description: Fetch summary information for all studies
 ```
 
-The path is relative to the server url, and `get` refers to the REST method (`GET` as opposed to `POST`, `PUT`, `DELETE`, ...), in REST `GET` refers to reading a resource and is what happens when you send the following packet to a web server:
+The path is relative to the server url, and `get` refers to the REST method (`GET` as opposed to `POST`, `PUT`, `DELETE`, ...), in REST `GET` refers to reading a resource and is what happens when you send the following packet to a web server. These packets can be crafted using `curl`, the `-v` flag helps see input and output packets and the `-X` flag allows you to set the method (`GET`, `POST`, ...), the `-H` flag lets you specify headers.
 
 ```bash
-GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
-Host: www.metabolomicsworkbench.org
-Content-Type: application/json
-
+curl -v -X GET -H 'Content-Type: application/json' https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available
 ```
-
-Note that your web browser does the same, albeit with a few more headers.
-
-```bash
-GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
-Host: www.metabolomicsworkbench.org
-Content-Type: text/html
-User-Agent: Mozilla/5.0 ...
-Accept-language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-
-```
-
-The `GET` at the start is changed to `POST` or another value when sending actual data (at the bottom of the packet)
-
-So let's submit this packet to the webserver, or visit it in our web browser. The result is shown below:
 
 ```raw
-HTTP/1.1 200 OK
-Server: Apache
-Content-Type: application/json
-Content-Length: 16158
-
+...
+> GET /rest/study/study_id/ST/available HTTP/1.1 # PATH HERE
+> Host: www.metabolomicsworkbench.org            # REQUEST HEADERS HERE
+> User-Agent: curl/7.70.0
+> Accept: */*
+> Content-Type: application/json
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK                                # RESPONSE STATUS CODE HERE
+< Date: Wed, 27 May 2020 14:29:27 GMT            # RESPONSE HEADERS HERE
+< Server: Apache/2.4.6 (CentOS)
+< X-Frame-Options: SAMEORIGIN
+< Vary: Accept-Encoding
+< X-XSS-Protection: 1; mode=block
+< Transfer-Encoding: chunked
+< Content-Type: application/json
+<                                                # BODY HERE
 {
   "1": {
     "project_id":"PR000001",
@@ -124,9 +117,22 @@ Content-Length: 16158
     "analysis_id":"AN002271"
   }
 }
+...
 ```
 
-Note your web browser will only show you the bottom part, but the top part includes the `response code` `200` and the `response headers` before the body.
+Note that your web browser does the same, albeit with a few different headers for end-to-end compression and browser information for webpage optimization.
+
+```bash
+> GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
+> Host: www.metabolomicsworkbench.org
+> Content-Type: text/html
+> User-Agent: Mozilla/5.0 ...
+> Accept-language: en-US,en;q=0.5
+> Accept-Encoding: gzip, deflate
+
+```
+
+The `GET` at the start is changed to `POST` or another value when sending actual data (in the body of the packet). (`curl -v -X POST ... -d "packet data"`)
 
 We didn't know what the response would be by the webpage, but OpenAPI provides a means to describe this as well.
 
