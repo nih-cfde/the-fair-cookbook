@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Evaluating FAIRness with FAIRshake</title>
+  <meta name="description" content="        Evaluating FAIRness with FAIRshake    Evaluating FAIRness with FAIRshake A tutorial that demonstrates  how to use FAIRshake to perform FAIR evaluatio...">
+
+  <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/recipes/04/fairshake.html">
+  <link rel="alternate" type="application/rss+xml" title="THE CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
+
+  <meta property="og:url"         content="https://nih-cfde.github.io/the-fair-cookbook/recipes/04/fairshake.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Evaluating FAIRness with FAIRshake" />
+<meta property="og:description" content="        Evaluating FAIRness with FAIRshake    Evaluating FAIRness with FAIRshake A tutorial that demonstrates  how to use FAIRshake to perform FAIR evaluatio..." />
+<meta property="og:image"       content="https://nih-cfde.github.io/the-fair-cookbook/images/logo/logo-workedout.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/recipes/04/fairshake.html",
+  "headline": "Evaluating FAIRness with FAIRshake",
+  "datePublished": "2020-05-28T12:56:57+00:00",
+  "dateModified": "2020-05-28T12:56:57+00:00",
+  "description": "        Evaluating FAIRness with FAIRshake    Evaluating FAIRness with FAIRshake A tutorial that demonstrates  how to use FAIRshake to perform FAIR evaluatio...",
+  "author": {
+    "@type": "Person",
+    "name": "CFDE"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nih-cfde.github.io/the-fair-cookbook",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://nih-cfde.github.io/the-fair-cookbook",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/the-fair-cookbook/assets/css/styles.css">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/the-fair-cookbook/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
+    },
+    
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
+
+  <!-- DOM updating function -->
+  <script src="/the-fair-cookbook/assets/js/page/dom-update.js"></script>
+
+  <!-- Selectors for elements on the page -->
+  <script src="/the-fair-cookbook/assets/js/page/documentSelectors.js"></script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/the-fair-cookbook';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/the-fair-cookbook/assets/js/page/anchors.js" async></script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+<!-- Display Thebelab button in each code cell -->
+<script>
+/**
+ * Set up thebelab button for code blocks
+ */
+
+const thebelabCellButton = id =>
+  `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
+    <img src="/the-fair-cookbook/assets/images/edit-button.svg" alt="Start thebelab interactive mode">
+  </a>`
+
+
+const addThebelabButtonToCodeCells =  () => {
+
+  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.getElementById("thebelab-cell-button-" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', thebelabCellButton(id));
+    }
+  })
+}
+
+initFunction(addThebelabButtonToCodeCells);
+</script>
+
+
+<script src="https://unpkg.com/thebelab@latest/lib/index.js" async></script>
+<script>
+    /**
+     * Add attributes to Thebelab blocks
+     */
+
+    const initThebelab = () => {
+        const addThebelabToCodeCells = () => {
+            console.log("Adding thebelab to code cells...");
+            // If Thebelab hasn't loaded, wait a bit and try again. This
+            // happens because we load ClipboardJS asynchronously.
+            if (window.thebelab === undefined) {
+                setTimeout(addThebelabToCodeCells, 250)
+            return
+            }
+
+            // If we already detect a Thebelab cell, don't re-run
+            if (document.querySelectorAll('div.thebelab-cell').length > 0) {
+                return;
+            }
+
+            // Find all code cells, replace with Thebelab interactive code cells
+            const codeCells = document.querySelectorAll('.input_area pre')
+            codeCells.forEach((codeCell, index) => {
+                const id = codeCellId(index)
+
+                // Clean up the language to make it work w/ CodeMirror and add it to the cell
+                dataLanguage = ""
+                dataLanguage = detectLanguage(dataLanguage);
+                codeCell.setAttribute('data-language', dataLanguage)
+                codeCell.setAttribute('data-executable', 'true')
+
+                // If the code cell is hidden, show it
+                var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
+                if (inputCheckbox !== null) {
+                    setCodeCellVisibility(inputCheckbox, 'visible');
+                }
+            });
+
+            // Remove the event listener from the page so keyboard press doesn't
+            // Change page
+            document.removeEventListener('keydown', initPageNav)
+            keyboardListener = false;
+
+            // Init thebelab
+            thebelab.bootstrap();
+
+            // Remove copy buttons since they won't work anymore
+            const copyAndThebeButtons = document.querySelectorAll('.copybtn, .thebebtn')
+            copyAndThebeButtons.forEach((button, index) => {
+                button.remove();
+            });
+
+            // Remove outputs since they'll be stale
+            const outputs = document.querySelectorAll('.output *, .output')
+            outputs.forEach((output, index) => {
+                output.remove();
+            });
+
+            // Find any cells with an initialization tag and ask ThebeLab to run them when ready
+            var thebeInitCells = document.querySelectorAll('div.tag_thebelab-init');
+            thebeInitCells.forEach((cell) => {
+                console.log("Initializing ThebeLab with cell: " + cell.id);
+                cell.querySelector('.thebelab-run-button').click();
+            });
+        }
+
+        // Add event listener for the function to modify code cells
+        const thebelabButtons = document.querySelectorAll('[id^=thebelab], [id$=thebelab]')
+        thebelabButtons.forEach((thebelabButton,index) => {
+            if (thebelabButton === null) {
+                setTimeout(initThebelab, 250)
+                return
+            };
+            thebelabButton.addEventListener('click', addThebelabToCodeCells);
+        });
+    }
+
+    // Initialize Thebelab
+    initFunction(initThebelab);
+
+// Helper function to munge the language name
+var detectLanguage = (language) => {
+    if (language.indexOf('python') > -1) {
+        language = "python";
+    }
+    return language;
+}
+</script>
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.1/tocbot.min.js" async></script>
+  <script src="/the-fair-cookbook/assets/js/page/tocbot.js"></script>
+
+
+
+<!-- using mermaid for rendering Diagram and flow chart -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" async></script> -->
+<script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<!--  <script src="/the-fair-cookbook/assets/js/mermaid.js"></script>-->
+
+
+
+  <!-- Google analytics -->
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
+
+  <!-- Load custom website scripts -->
+  <script src="/the-fair-cookbook/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/the-fair-cookbook/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/the-fair-cookbook/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+<script>
+/**
+  * To auto-embed hub URLs in interact links if given in a RESTful fashion
+ */
+
+function getJsonFromUrl(url) {
+  var query = url.split('?');
+  if (query.length < 2) {
+    // No queries so just return false
+    return false;
+  }
+  query = query[1];
+  // Collect REST params into a dictionary
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+    
+function dict2param(dict) {
+    params = Object.keys(dict).map(function(k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(dict[k])
+    });
+    return params.join('&')
+}
+
+// Parse a Binder URL, converting it to the string needed for JupyterHub
+function binder2Jupyterhub(url) {
+  newUrl = {};
+  parts = url.split('v2/gh/')[1];
+  // Grab the base repo information
+  repoinfo = parts.split('?')[0];
+  var [org, repo, ref] = repoinfo.split('/');
+  newUrl['repo'] = ['https://github.com', org, repo].join('/');
+  newUrl['branch'] = ref
+  // Grab extra parameters passed
+  params = getJsonFromUrl(url);
+  if (params['filepath'] !== undefined) {
+    newUrl['subPath'] = params['filepath']
+  }
+  return dict2param(newUrl);
+}
+
+// Filter out potentially unsafe characters to prevent xss
+function safeUrl(url)
+{
+   return String(encodeURIComponent(url))
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+function addParamToInternalLinks(hub) {
+  var links = document.querySelectorAll("a").forEach(function(link) {
+    var href = link.href;
+    // If the link is an internal link...
+    if (href.search("https://nih-cfde.github.io") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+      // Assume we're an internal link, add the hub param to it
+      var params = getJsonFromUrl(href);
+      if (params !== false) {
+        // We have REST params, so append a new one
+        params['jupyterhub'] = hub;
+      } else {
+        // Create the REST params
+        params = {'jupyterhub': hub};
+      }
+      // Update the link
+      var newHref = href.split('?')[0] + '?' + dict2param(params);
+      link.setAttribute('href', decodeURIComponent(newHref));
+    }
+  });
+  return false;
+}
+
+
+// Update interact links
+function updateInteractLink() {
+    // hack to make this work since it expects a ? in the URL
+    rest = getJsonFromUrl("?" + location.search.substr(1));
+    jupyterHubUrl = rest['jupyterhub'];
+    var hubType = null;
+    var hubUrl = null;
+    if (jupyterHubUrl !== undefined) {
+      hubType = 'jupyterhub';
+      hubUrl = jupyterHubUrl;
+    }
+
+    if (hubType !== null) {
+      // Sanitize the hubUrl
+      hubUrl = safeUrl(hubUrl);
+
+      // Add HTTP text if omitted
+      if (hubUrl.indexOf('http') < 0) {hubUrl = 'http://' + hubUrl;}
+      var interactButtons = document.querySelectorAll("button.interact-button")
+      var lastButton = interactButtons[interactButtons.length-1];
+      var link = lastButton.parentElement;
+
+      // If we've already run this, skip the link updating
+      if (link.nextElementSibling !== null) {
+        return;
+      }
+
+      // Update the link and add context div
+      var href = link.getAttribute('href');
+      if (lastButton.id === 'interact-button-binder') {
+        // If binder links exist, we need to re-work them for jupyterhub
+        if (hubUrl.indexOf('http%3A%2F%2Flocalhost') > -1) {
+          // If localhost, assume we're working from a local Jupyter server and remove `/hub`
+          first = [hubUrl, 'git-sync'].join('/')
+        } else {
+          first = [hubUrl, 'hub', 'user-redirect', 'git-sync'].join('/')
+        }
+        href = first + '?' + binder2Jupyterhub(href);
+      } else {
+        // If interact button isn't binderhub, assume it's jupyterhub
+        // If JupyterHub links, we only need to replace the hub url
+        href = href.replace("", hubUrl);
+        if (hubUrl.indexOf('http%3A%2F%2Flocalhost') > -1) {
+          // Assume we're working from a local Jupyter server and remove `/hub`
+          href = href.replace("/hub/user-redirect", "");
+        }
+      }
+      link.setAttribute('href', decodeURIComponent(href));
+
+      // Add text after interact link saying where we're launching
+      hubUrlNoHttp = decodeURIComponent(hubUrl).replace('http://', '').replace('https://', '');
+      link.insertAdjacentHTML('afterend', '<div class="interact-context">on ' + hubUrlNoHttp + '</div>');
+
+      // Update internal links so we retain the hub url
+      addParamToInternalLinks(hubUrl);
+    }
+}
+
+runWhenDOMLoaded(updateInteractLink)
+document.addEventListener('turbolinks:load', updateInteractLink)
+</script>
+
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/the-fair-cookbook/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/the-fair-cookbook/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/the-fair-cookbook/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
+</head>
+
+  <body>
+    <!-- Include the ThebeLab config so it gets reloaded on each page -->
+    <script type="text/x-thebe-config">{
+    requestKernel: true,
+    binderOptions: {
+    repo: "nih-cfde/the-fair-cookbook",
+    ref: "gh-pages",
+    },
+    codeMirrorConfig: {
+    theme: "abcdef",
+    mode: "python"
+    },
+    kernelOptions: {
+    kernelName: "python3",
+    path: ""
+    }
+}
+</script>
+
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="https://nih-cfde.github.io/the-fair-cookbook/intro.html"><img src="/the-fair-cookbook/images/logo/logo-workedout.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">THE CFDE FAIR COOKBOOK</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">The FAIR cookbook by the NIH-CFDE</li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/intro">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/intro.html"
+        >
+          
+          Introduction
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/00/fair-principles">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/00/fair-principles.html"
+              >
+                
+                What is FAIR?
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/05/cfde">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/05/cfde.html"
+              >
+                
+                Engaging with NIH-CFDE
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/recipes/recipes-overview">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/recipes/recipes-overview.html"
+        >
+          
+          Recipes
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/06/cataloguing">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/06/cataloguing.html"
+              >
+                
+                Discoverability
+              </a>
+            </li>
+            
+              
+              <ul class='c-sidebar__subsections u-hidden-visually'>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/12/c2m2">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/12/c2m2.html"
+                  >
+                    
+                    Introducing the Cross-Cut Metadata Model (C2M2)
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/07/seo">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/07/seo.html"
+                  >
+                    
+                    ETL to C2M2/DATS - the KidsFirst example
+                  </a>
+                </li>
+              
+              </ul>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/08/identifiers">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/08/identifiers.html"
+              >
+                
+                Identification
+              </a>
+            </li>
+            
+              
+              <ul class='c-sidebar__subsections u-hidden-visually'>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/08/1/pids">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/08/1/pids.html"
+                  >
+                    
+                    Minting persistent and resolvable identifiers
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/08/2/minids">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/08/2/minids.html"
+                  >
+                    
+                    Using MINIDs
+                  </a>
+                </li>
+              
+              </ul>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/09/finding">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/09/finding.html"
+              >
+                
+                Semantics
+              </a>
+            </li>
+            
+              
+              <ul class='c-sidebar__subsections u-hidden-visually'>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/10/ontologies">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/10/ontologies.html"
+                  >
+                    
+                    Understanding terminologies
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/11/onto-services">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/11/onto-services.html"
+                  >
+                    
+                    Ontology services
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/14/cfde-terminologies">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/14/cfde-terminologies.html"
+                  >
+                    
+                    NIH CFDE selected terminologies
+                  </a>
+                </li>
+              
+              </ul>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/fair-assessment">
+              <a class="c-sidebar__entry"
+                href="/the-fair-cookbook/recipes/fair-assessment.html"
+              >
+                
+                FAIR compliance
+              </a>
+            </li>
+            
+              
+              <ul class='c-sidebar__subsections u-hidden-visually'>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/04/fairshake">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/04/fairshake.html"
+                  >
+                    
+                    Evaluating FAIRness with FAIRshake
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/16/fair-api">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/16/fair-api.html"
+                  >
+                    
+                    Developing FAIR API
+                  </a>
+                </li>
+              
+              </ul>
+            
+            
+          
+        </ul>
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/CFDE_Glossary">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/CFDE_Glossary.html"
+        >
+          
+          Glossary
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Community</li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/contributing">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/contributing.html"
+        >
+          
+          Contributing
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/governance">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/governance.html"
+        >
+          
+          Governance
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/license">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/license.html"
+        >
+          
+          License
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/disclaimer">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/disclaimer.html"
+        >
+          
+          Disclaimer
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/code_of_conduct">
+        <a class="c-sidebar__entry"
+          href="/the-fair-cookbook/code_of_conduct.html"
+        >
+          
+          Code of Conduct
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="https://github.com/nih-cfde/the-fair-cookbook">
+        <a class="c-sidebar__entry"
+          href="https://github.com/nih-cfde/the-fair-cookbook"
+        >
+          
+          GitHub repository
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+  </ul>
+  <p class="sidebar_footer">Powered by <a href="https://jupyterbook.org">Jupyter Book</a></p>
+</nav>
+
+      
+      <div class="c-topbar" id="top-navbar">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/the-fair-cookbook/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
+    </div>
+</div>
+
+
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/the-fair-cookbook/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/the-fair-cookbook/search.html" class="topbar-right-button" id="search-button">
+    <img src="/the-fair-cookbook/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+                  <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Evaluating FAIRness with FAIRshake</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Evaluating-FAIRness-with-FAIRshake">Evaluating FAIRness with FAIRshake<a class="anchor-link" href="#Evaluating-FAIRness-with-FAIRshake"> </a></h1><p>A tutorial that demonstrates  how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.</p>
+<p><strong>Authors</strong>: <a href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
+<p><strong>Maintainers</strong>: <a href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
+<p><strong>Version</strong>: 1.0</p>
+<p><strong>License</strong>: GPLv2+</p>
+<h2 id="Background">Background<a class="anchor-link" href="#Background"> </a></h2><p>Adhering to <a href="https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#FAIRness">FAIRness</a> is somewhat abstract. While all of the components of becoming FAIR can be addressed at some level, it remains difficult to provide a concrete answer about whether something is indeed FAIR or not. In general, improvement is only real if it can be measured. To address this limitation of the FAIR guidelines, <a href="https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#FAIRshake">FAIRshake</a> was created with the basic goal of making FAIR more concrete and measurable. While FAIRshake provides a catalog of community-contributed ways to characterize FAIRness, it is still up to a given project to decide which of these criteria they will adopt and/or create.</p>
+<p>FAIRshake provides:</p>
+<ul>
+<li>A catalog of digital objects: these can be, for example,  datasets, APIs, workflows, each having their own unique identity and is the target of a FAIR assessment. That-is whatever the digital object is, you want it to assess how much it is Findable, Accessible, Interoperable and Reusable.</li>
+<li><p>A catalog of projects: where a project contains any set of digital objects grouped for the purpose of analytic and findability purposes, e.g., all digital objects that belong to a specific NIH Common Fund program could be bundled into one project. If you plan on automating FAIR assessments, it makes sense to do it as part of a project so that assessments can be compared only against other assessments within your project.</p>
+</li>
+<li><p>A catalog of metrics: these are any singular FAIR criterion, or a FAIR compliance question, that can often be answered with yes/no/percentage of compliance.</p>
+</li>
+<li>A catalog of rubrics: these are sets/bundles of FAIR metrics meant to be answered together, e.g., a "FAIR" API should satisfy several independent metrics already registered in FAIRshake, these can be a part of one or more rubrics</li>
+<li>Facilitation of FAIR assessments: any digital object can be assessed with a given rubric in the context of a project both manually through the FAIRshake website, or 'automatically' by enabling assessment registration over API. Some automatic assessments have been integrated into the manual assessment UI on FAIRshake but this is still under development. Contributing your own automatic assessment modules will be discussed in this tutorial</li>
+<li>Aggregations of FAIR assessments: FAIRshake provides the FAIR insignia, a look at the average assessments of a given digital object, project, or rubric. It also provides project analytics in the form of a report with summary statistics charts.</li>
+</ul>
+<p>In this recipe we'll look at the process of performing a FAIR evaluation using FAIRshake starting from nothing and covering various decisions that must be made along the way. We'll use the CFDE DCC resources <a href="https://github.com/nih-cfde/FAIR">transformed to DATS</a> as the target of our assessment. This is because an automated assessment that is common across all CF DCCs is not possible to begin with without a common machine-readable metadata standard.</p>
+<h2 id="Ingredients">Ingredients<a class="anchor-link" href="#Ingredients"> </a></h2><ol>
+<li>A set of digital objects to assess for FAIRness</li>
+<li>A rubric from FAIRshake encapsulating the FAIR metrics you wish to use to perform the FAIR assessments</li>
+<li>Machine-readable (ideally standardized) metadata description for enabling automated assessments</li>
+</ol>
+<h2 id="Objectives">Objectives<a class="anchor-link" href="#Objectives"> </a></h2><ol>
+<li>Use FAIRshake to facilitate FAIR Rubric discovery and development</li>
+<li>Assess a digital object manually</li>
+<li>Identify avenues for performing automated assessments</li>
+<li>Perform an automated assessment on a set of digital objects serialized with machine-readable metadata</li>
+<li>Develop an understanding of how well your digital objects comply with the chosen rubric</li>
+<li>Understand how new automated assessment mechanisms can be contributed to the FAIRshake ecosystem</li>
+</ol>
+<h2 id="Recipe">Recipe<a class="anchor-link" href="#Recipe"> </a></h2><h3 id="Using-FAIRshake">Using FAIRshake<a class="anchor-link" href="#Using-FAIRshake"> </a></h3><p>FAIRshake can be accessed at <a href="https://fairshake.cloud">fairshake.cloud</a>. There are several YouTube tutorials and some technical documentation accessible on the website. Let's walk you through a simple example of using the FAIRshake website.</p>
+<p>After <a href="https://fairshake.cloud/accounts/login/">logging in to the website</a>, you will be able to create content on the site. Let's try performing an assessment using the <a href="https://fairshake.cloud/rubric/25/">FAIR metrics by fairmetrics.org Rubric</a>. This rubric is a FAIRshake entry for the universal FAIR metrics published in <a href="https://www.nature.com/articles/sdata2018118">this paper</a>.</p>
+<p><!-- ![FAIR metrics Rubric on FAIRshake](./images/ss1.png)  --></p>
+<div><img src="./images/ss1.png" width="1000px" style="padding:1px;border:thin solid black;"/></div><p>To perform an assessment with this rubric, we'll need something to assess. For this, you can find a digital object already in FAIRshake or register your own (with 'create object' at the bottom of the rubric).</p>
+<p><!-- ![Searching for Digital Objects to Assess on FAIRshake](./images/ss2.png) --></p>
+<div><img src="./images/ss2.png" width="1000px" style="padding:1px;border:thin solid black;"/></div><p><!-- ![Starting an assessment on FAIRshake](./images/ss3.png) --></p>
+<div><img src="./images/ss3.png" width="1000px" style="padding:1px;border:thin solid black;"/></div><p>The assessment may be associated with a project (or not), this is relevant if you want to aggregate a set of assessments after the fact. The target (digital object) and rubric are mandatory. When we confirm this, we can then submit a manual assessment with FAIRshake.</p>
+<p><!-- ![Performing a manual assessment on FAIRshake](./images/ss4.png) --></p>
+<div><img src="./images/ss4.png" width="1000px" style="padding:1px;border:thin solid black;"/></div><p>You may find that some of these questions are hard to answer, this is because the universal FAIR metrics are designed to be widely applicable and are as such, somewhat broad and abstract. While the metrics in this rubric are useful to satisfy, they may not be enough in certain contexts. If you complete and publish an assessment, your answers will become associated with the digital object that you assessed, and this information will be used for rendering the insignia and perform the analytics for that digital object. The rubric we used for the CFDE is available from <a href="https://fairshake.cloud/rubric/36">here</a>. It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as 'A relevant file type is present and resolvable with EDAM'. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of <a href="https://fairshake.cloud/project/87">this project</a>, you can also see statistics for those assessments there.</p>
+<p><!-- ![Reviewing FAIR assessment breakdown on FAIRshake](./images/ss5.png) --></p>
+<div><img src="./images/ss5.png" width="1000px" style="padding:1px;border:thin solid black;"/></div><p>Manually assessing thousands of digital objects would be extremely time consuming and inefficient. In many cases answers to FAIR metrics are redundant so those can be automatable. For example,  we can write code that validates whether the file type of a digital object is in EDAM or not. After determining these answers in bulk, we can then publish them on FAIRshake with the FAIRshake API.</p>
+<h3 id="Preparing-to-perform-Automated-Assessments">Preparing to perform Automated Assessments<a class="anchor-link" href="#Preparing-to-perform-Automated-Assessments"> </a></h3><p>Certain standards are well defined and designed in a way that makes it possible to computationally verify whether a digital object is complying with the standard. In an ideal world, all standards should be made in this way, such that an automated mechanism exists for confirming compliance. In reality, however, many standards are not--ultimately necessitating harmonization before datasets, APIs, or anything to be used together.</p>
+<p>Some examples of well-defined standards are TCP/IP and HTTP. The effectiveness of these standards and their adoption enables the internet to function and grow as it does. Another, more relevant standard is <a href="https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#RDF">RDF</a>. RDF defines a way to serialize metadata and permits harmonization via ontologies or shape constraint languages (such as <a href="https://www.w3.org/TR/shacl/">SHACL</a>). Another standard that is not explicitly based on RDF is <a href="https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#JSON-Schema">JSON Schema</a>. JSON Schema builds off of <a href="https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#JSON">JSON</a> and allows one to use json itself to define what is a valid JSON instance of some metadata. A JSON Schema document can effectively become its own standard given that it is well described and validatable using a JSON Schema validator.</p>
+<p>In the case of assessing digital objects that comply with standards that are defined using mechanisms easily validated, automated assessments become simple and in many cases involve simply taking advantage of already constructed mechanisms for asserting compliance with those standards. In the case that those standards are not well defined; the best course of action would be to convert those digital objects to an alternative and validatable standard, or alternatively formally codify the standard. In either case, you're doing some FAIRification in an effort to even begin the assessment. We have to do this step because we can't measure compliance with a standard if we don't have a quantifiable standard in the first place! Well we could do it but only manually.</p>
+<h3 id="Performing-an-Automated-Assessment-on-DATS">Performing an Automated Assessment on DATS<a class="anchor-link" href="#Performing-an-Automated-Assessment-on-DATS"> </a></h3><p>One can think of an automated assessment as a unit/integration test for compliance with a standard. Ideally, this test will reveal issues with integration at the digital object provider level at the benefit of the consumer of those digital objects. Automated assessments are only possible on existing machine-readable metadata and validatable standards, such as <a href="https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#DATS">DATS</a>. As such we'll utilize DATS for our assessment; not only will we assess compliance with DATS itself, we'll go further with several additional 'optional' parts of DATS including ontological term verification and other sanity checks.</p>
+<p>While there are several ways one can go about making an assessment, one way is to construct the rubric and metrics metadata while you construct the code to assert that metric.</p>
+<div class="highlight"><pre><span></span><span class="n">rubric</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;@id&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="c1"># ID in FAIRshake</span>
+  <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;NIH CFDE Interoperability&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;This rubric identifies aspects of the metadata models which promote interoperable dataset querying and filtering&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;metrics&#39;</span><span class="p">:</span> <span class="p">{},</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">metric</span><span class="p">(</span><span class="n">schema</span><span class="p">):</span>
+  <span class="sd">&#39;&#39;&#39; A python decorator for registering a metric for the rubric. Usage:</span>
+<span class="sd">  @metric({</span>
+<span class="sd">    &#39;@id&#39;: unique_id,</span>
+<span class="sd">    &#39;metric&#39;: &#39;metadata&#39;</span>
+<span class="sd">  })</span>
+<span class="sd">  def _(asset):</span>
+<span class="sd">    yield { &#39;value&#39;: 1.0, &#39;comment&#39;: &#39;Success&#39; }</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="k">global</span> <span class="n">rubric</span>
+  <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="n">rubric</span><span class="p">[</span><span class="s1">&#39;metrics&#39;</span><span class="p">][</span><span class="n">schema</span><span class="p">[</span><span class="s1">&#39;@id&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">)</span>
+  <span class="nb">setattr</span><span class="p">(</span><span class="n">wrapper</span><span class="p">,</span> <span class="s1">&#39;__name__&#39;</span><span class="p">,</span> <span class="n">schema</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+  <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="k">def</span> <span class="nf">assess</span><span class="p">(</span><span class="n">rubric</span><span class="p">,</span> <span class="n">doc</span><span class="p">):</span>
+  <span class="sd">&#39;&#39;&#39; How to use use this rubric for assessing a document. Usage:</span>
+<span class="sd">  assess(rubric, { &quot;your&quot;: &quot;metadata&quot; })</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="n">assessment</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Assessment&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="n">doc</span><span class="p">,</span>
+    <span class="s1">&#39;rubric&#39;</span><span class="p">:</span> <span class="n">rubric</span><span class="p">[</span><span class="s1">&#39;@id&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;answers&#39;</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">}</span>
+  <span class="c1"># print(assessment)</span>
+  <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">rubric</span><span class="p">[</span><span class="s1">&#39;metrics&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="c1"># print(&#39;Checking {}...&#39;.format(metric[&#39;name&#39;]))</span>
+    <span class="k">for</span> <span class="n">answer</span> <span class="ow">in</span> <span class="n">metric</span><span class="p">[</span><span class="s1">&#39;func&#39;</span><span class="p">](</span><span class="n">doc</span><span class="p">):</span>
+      <span class="c1"># print(&#39; =&gt; {}&#39;.format(answer))</span>
+      <span class="n">assessment</span><span class="p">[</span><span class="s1">&#39;answers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;metric&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">metric</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="s1">&#39;func&#39;</span> <span class="p">},</span>
+        <span class="s1">&#39;answer&#39;</span><span class="p">:</span> <span class="n">answer</span><span class="p">,</span>
+      <span class="p">})</span>
+  <span class="k">return</span> <span class="n">assessment</span>
+</pre></div>
+<p>With these functions setup, all we have left is to define the metrics and their metadata, then the assess function can operate on a given document. Let's write a metric for assessing DATS:</p>
+<div class="highlight"><pre><span></span><span class="nd">@metric</span><span class="p">({</span>
+  <span class="s1">&#39;@id&#39;</span><span class="p">:</span> <span class="mi">107</span><span class="p">,</span> <span class="c1"># ID in FAIRshake</span>
+  <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;DATS&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;The metadata properly conforms with the DATS metadata specification&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;principle&#39;</span><span class="p">:</span> <span class="s1">&#39;Findable&#39;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+  <span class="kn">from</span> <span class="nn">jsonschema</span> <span class="kn">import</span> <span class="n">Draft4Validator</span>
+  <span class="n">errors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Draft4Validator</span><span class="p">({</span><span class="s1">&#39;$ref&#39;</span><span class="p">:</span> <span class="s1">&#39;http://w3id.org/dats/schema/dataset_schema.json&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">iter_errors</span><span class="p">(</span><span class="n">doc</span><span class="p">))</span>
+  <span class="k">yield</span> <span class="p">{</span>
+    <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="s1">&#39;comment&#39;</span><span class="p">:</span> <span class="s1">&#39;DATS JSON-Schema Validation results in </span><span class="si">{}</span><span class="s1"> error(s)</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+      <span class="nb">len</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span> <span class="k">if</span> <span class="n">errors</span> <span class="k">else</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">errors</span><span class="p">))</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+  <span class="p">}</span>
+
+<span class="c1"># ... additional metrics ...</span>
+</pre></div>
+<p>With this added metric, which uses jsonschema to validate the conformance of the metadata document to the DATS metadata model, an assessment would now produce answers for this specific metric. We've normalized the answers between 0 and 1, you get a 1 for full conformance or a 0 for &gt;= 100 validation errors. It's important to note that this isn't the complete picture, perhaps you have a field for a landing page, but that website is down!</p>
+<div class="highlight"><pre><span></span><span class="nd">@metric</span><span class="p">({</span>
+  <span class="s1">&#39;@id&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="c1"># ID in FAIRshake</span>
+  <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Landing Page&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;A landing page exists and is accessible&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;principle&#39;</span><span class="p">:</span> <span class="s1">&#39;Findable&#39;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+  <span class="n">landingPages</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span>
+    <span class="n">node</span><span class="p">[</span><span class="s1">&#39;access&#39;</span><span class="p">][</span><span class="s1">&#39;landingPage&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">jsonld_frame</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="p">{</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;DatasetDistribution&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;access&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;landingPage&#39;</span><span class="p">:</span> <span class="p">{},</span>
+      <span class="p">}</span>
+    <span class="p">})[</span><span class="s1">&#39;@graph&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">node</span><span class="p">[</span><span class="s1">&#39;access&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">node</span><span class="p">[</span><span class="s1">&#39;access&#39;</span><span class="p">][</span><span class="s1">&#39;landingPage&#39;</span><span class="p">]</span>
+  <span class="p">)</span>
+  <span class="k">if</span> <span class="n">landingPages</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">landingPage</span> <span class="ow">in</span> <span class="n">landingPages</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">landingPage</span><span class="p">)</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&lt;</span> <span class="mi">400</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="p">{</span>
+          <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s1">&#39;comment&#39;</span><span class="p">:</span> <span class="s1">&#39;Landing page found </span><span class="si">{}</span><span class="s1"> and seems to be accessible&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">landingPage</span><span class="p">)</span>
+        <span class="p">}</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="p">{</span>
+          <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+          <span class="s1">&#39;comment&#39;</span><span class="p">:</span> <span class="s1">&#39;Landing page found </span><span class="si">{}</span><span class="s1"> but seems to report a problem&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">landingPage</span><span class="p">)</span>
+        <span class="p">}</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">yield</span> <span class="p">{</span>
+      <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s1">&#39;comment&#39;</span><span class="p">:</span> <span class="s1">&#39;Could not identify any landing pages&#39;</span>
+    <span class="p">}</span>
+</pre></div>
+<p>So we'll have a separate question for that where we'll go further. Above we have an example which uses jsonld framing to find landing pages, for each of those landing pages we attempt to load the page and expect to get a reasonable http status code (&lt;400 is 200s for success, or 300s for redirects). This could be improved further to be more stringent (ensure we can find the title of our document on the landing page or something along those lines) but even this basic loose criterion is not always satisfied.</p>
+<p>Ultimately this can become a command line application that we run in parallel on lots of DATS metadata. You can refer to the scripts <a href="https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment">here</a> for examples on how you can accomplish this. It's also possible to resolve additional metadata in the process of the assessment through forward chaining or other methods, an example of an assessment like that is also on that page: <code>data_citation_assessment.py</code> which uses a url to negotiate and resolve microdata according to this <a href="https://www.nature.com/articles/s41597-019-0031-8">Data citation paper's guidelines</a>.</p>
+<h3 id="Publishing-codified-FAIRshake-metrics-and-resolvers-for-assessment-reproducibility">Publishing codified FAIRshake metrics and resolvers for assessment reproducibility<a class="anchor-link" href="#Publishing-codified-FAIRshake-metrics-and-resolvers-for-assessment-reproducibility"> </a></h3><p>It is useful for reproducibility purposes but also for reusability purposes for automated FAIR assessment code to be shared publicly. To that end, a repository for storing that code and its association with the FAIRshake metrics was developed and can be found <a href="https://github.com/MaayanLab/fairshake-assessments">here</a>. This catalog and the code in it can also be used to perform future FAIR assessments that use the same metrics, rubrics, or resolvers. Pull requests are welcome but existing automated mechanisms can immediately be used by installing the package and using some of the core functions. Performing this assessment with that repository works like so:</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/python</span>
+<span class="c1"># assumption: DATS objects are generated line by line</span>
+<span class="c1"># usage: assess.py &lt; input_dats.txt &gt; output_assessments.txt</span>
+
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">fairshake_assessments.core</span> <span class="kn">import</span> <span class="n">assess_many_async</span>
+<span class="kn">from</span> <span class="nn">fairshake_assessments.rubrics.rubric_36_nih_cfde</span> <span class="kn">import</span> <span class="n">rubric_36_nih_cfde</span>
+
+<span class="k">for</span> <span class="n">assessment</span> <span class="ow">in</span> <span class="n">assess_many_async</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">)):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">assessment</span><span class="p">))</span>
+</pre></div>
+<p>Note that other rubrics, metrics, and resolvers (e.g. ways of finding DATS from a <code>url</code>) are available in the <code>fairshake-assessments</code> and are associated with some of the FAIRshake metrics.</p>
+<h3 id="Registering-assessments-on-FAIRshake">Registering assessments on FAIRshake<a class="anchor-link" href="#Registering-assessments-on-FAIRshake"> </a></h3><p>Now that we've performed our assessment, we should publish these results on FAIRshake for us and the world to see where improvements can be made. It is important to note that the assessment results are a function of all parties (the digital object, the standard, the underlying repository or system that serves the digital object) and as such must be compared relative to the same baseline.</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/python</span>
+<span class="c1"># assumption: DATS objects are generated line by line</span>
+<span class="c1"># usage: register.py &lt; output_assessments.txt</span>
+
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">fairshake_assessments.core</span> <span class="kn">import</span> <span class="p">(</span>
+  <span class="n">get_fairshake_client</span><span class="p">,</span>
+  <span class="n">find_or_create_fairshake_digital_object</span><span class="p">,</span>
+  <span class="n">publish_fairshake_assessment</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># assumption: DATS objects are generated line by line</span>
+<span class="c1"># usage: API_KEY=&#39;&#39; assess.py &lt; input_dats.txt &gt; output_assessments.txt</span>
+<span class="c1"># see https://fairshake.cloud/accounts/api_access/ for an API_KEY</span>
+
+<span class="n">fairshake</span> <span class="o">=</span> <span class="n">get_fairshake_client</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;API_KEY&#39;</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">assessment</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">):</span>
+  <span class="n">target</span> <span class="o">=</span> <span class="n">find_or_create_fairshake_digital_object</span><span class="p">(</span><span class="n">fairshake</span><span class="o">=</span><span class="n">fairshake</span><span class="p">,</span> <span class="o">**</span><span class="n">assessment</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">])</span>
+  <span class="n">publish_fairshake_assessment</span><span class="p">(</span><span class="n">fairshake</span><span class="o">=</span><span class="n">fairshake</span><span class="p">,</span> <span class="o">**</span><span class="n">target</span><span class="p">)</span>
+</pre></div>
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion"> </a></h2><p>The process of FAIRification with FAIRshake both manually and automatically was detailed and described with a CFDE case study. While the assessment described here was for the CFDE DATS serialized assets, the same process is applicable to any standard and any type of digital object. Examples exist for assessing APIs, GitHub repositories, and tools, among other case studies using standards applicable to each. As more standards become codified and accessible through FAIRshake, they will become simpler to evaluate, ultimately increasing the FAIRness of the standard itself and anything using that standard. It should be noted that the process of using FAIRshake for performing assessments is mainly designed to increase awareness about standards that digital object producers can apply to improve the FAIRness of the digital assets they produce and publish.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+              
+<nav class="c-page__nav">
+  
+    
+    
+
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/the-fair-cookbook/recipes/fair-assessment.html">
+      〈 <span class="u-margin-right-tiny"></span> FAIR compliance
+    </a>
+  
+
+  
+    
+
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/the-fair-cookbook/recipes/16/fair-api.html">
+      Developing FAIR API <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+
+              <footer>
+  <p class="footer">This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/dataecosystem"><img src="/the-fair-cookbook/assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> <script>mermaid.init();</script></p>
+</footer>
+
+            </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

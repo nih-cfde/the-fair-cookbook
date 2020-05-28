@@ -15,7 +15,7 @@
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Contributing" />
 <meta property="og:description" content="        Contributing    Contributing to the FAIR cookbook Welcome to the FAIR cookbook repository! We're excited you're here and want to contribute.These gui..." />
-<meta property="og:image"       content="https://nih-cfde.github.io/the-fair-cookbook/images/logo/logo.png" />
+<meta property="og:image"       content="https://nih-cfde.github.io/the-fair-cookbook/images/logo/logo-workedout.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/contributing.html",
   "headline": "Contributing",
-  "datePublished": "2020-03-26T22:30:37+00:00",
-  "dateModified": "2020-03-26T22:30:37+00:00",
+  "datePublished": "2020-05-28T12:56:57+00:00",
+  "dateModified": "2020-05-28T12:56:57+00:00",
   "description": "        Contributing    Contributing to the FAIR cookbook Welcome to the FAIR cookbook repository! We're excited you're here and want to contribute.These gui...",
   "author": {
     "@type": "Person",
@@ -242,8 +242,9 @@ var detectLanguage = (language) => {
 
 
 <!-- using mermaid for rendering Diagram and flow chart -->
- <script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
- <script>mermaid.initialize({startOnLoad:true});</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" async></script> -->
+<script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
 <!--  <script src="/the-fair-cookbook/assets/js/mermaid.js"></script>-->
 
 
@@ -572,12 +573,20 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="https://nih-cfde.github.io/the-fair-cookbook/intro.html"><img src="/the-fair-cookbook/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <a href="https://nih-cfde.github.io/the-fair-cookbook/intro.html"><img src="/the-fair-cookbook/images/logo/logo-workedout.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent></a>
   <h2 class="c-sidebar__title">THE CFDE FAIR COOKBOOK</h2>
   <ul class="c-sidebar__chapters">
     
       
       
+        <li class="c-sidebar__divider">
+        
+      
+      
+        <li><h2 class="c-sidebar__title">The FAIR cookbook by the NIH-CFDE</h2></li>
+        
+      
+      
 
       
       
@@ -586,12 +595,10 @@ initFunction(initPrint)
 
       
       
-      <li class="c-sidebar__chapter" data-url="intro">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/intro.html"
-        >
+      <li class="c-sidebar__chapter" data-url="/intro">
+        <a class="c-sidebar__entry" href="/the-fair-cookbook/intro.html">
           
-          
+          Introduction
         </a>
       </li>
 
@@ -604,50 +611,51 @@ initFunction(initPrint)
       
 
       
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/00/fair-principles">
+              <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/00/fair-principles.html">
+                
+                What is FAIR?
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/recipes/05/cfde">
+              <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/05/cfde.html">
+                
+                Engaging with NIH-CFDE
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
-      
-      
-
-      
-      
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter" data-url="https://github.com/nih-cfde/the-fair-cookbook">
-        <a class="c-sidebar__entry"
-          href="https://github.com/nih-cfde/the-fair-cookbook"
-        >
-          
-            1.
-          
-          GitHub repository
-        </a>
-      </li>
-
-      
-      
-
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-        <li class="c-sidebar__divider"></li>
-        
-      
-      
-        <li><h2 class="c-sidebar__title">FAIR Cookbook</li>
-        
       
       
 
@@ -659,11 +667,9 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter" data-url="/recipes/recipes-overview">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/recipes/recipes-overview.html"
-        >
+        <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/recipes-overview.html">
           
-          Recipes overview
+          Recipes
         </a>
       </li>
 
@@ -690,15 +696,40 @@ initFunction(initPrint)
             
             
 
-            <li class="c-sidebar__section" data-url="/recipes/recipe-template">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/recipe-template.html"
-              >
+            <li class="c-sidebar__section" data-url="/recipes/06/cataloguing">
+              <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/06/cataloguing.html">
                 
-                Recipe Template
+                Discoverability
               </a>
             </li>
             
+              
+              <ul class="c-sidebar__subsections u-hidden-visually">
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/12/c2m2">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/12/c2m2.html">
+                    
+                    Introducing the Cross-Cut Metadata Model (C2M2)
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/07/seo">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/07/seo.html">
+                    
+                    ETL to C2M2/DATS - the KidsFirst example
+                  </a>
+                </li>
+              
+              </ul>
+            
             
           
             
@@ -709,15 +740,40 @@ initFunction(initPrint)
             
             
 
-            <li class="c-sidebar__section" data-url="/recipes/fair-principles">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/fair-principles.html"
-              >
+            <li class="c-sidebar__section" data-url="/recipes/08/identifiers">
+              <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/08/identifiers.html">
                 
-                FAIR
+                Identification
               </a>
             </li>
             
+              
+              <ul class="c-sidebar__subsections u-hidden-visually">
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/08/1/pids">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/08/1/pids.html">
+                    
+                    Minting persistent and resolvable identifiers
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/08/2/minids">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/08/2/minids.html">
+                    
+                    Using MINIDs
+                  </a>
+                </li>
+              
+              </ul>
+            
             
           
             
@@ -728,15 +784,51 @@ initFunction(initPrint)
             
             
 
-            <li class="c-sidebar__section" data-url="/recipes/fair-cfde">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/fair-cfde.html"
-              >
+            <li class="c-sidebar__section" data-url="/recipes/09/finding">
+              <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/09/finding.html">
                 
-                FAIR in the context of NIH CDFE
+                Semantics
               </a>
             </li>
             
+              
+              <ul class="c-sidebar__subsections u-hidden-visually">
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/10/ontologies">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/10/ontologies.html">
+                    
+                    Understanding terminologies
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/11/onto-services">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/11/onto-services.html">
+                    
+                    Ontology services
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/14/cfde-terminologies">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/14/cfde-terminologies.html">
+                    
+                    NIH CFDE selected terminologies
+                  </a>
+                </li>
+              
+              </ul>
+            
             
           
             
@@ -747,603 +839,39 @@ initFunction(initPrint)
             
             
 
-            <li class="c-sidebar__section" data-url="/recipes/cfde">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/cfde.html"
-              >
+            <li class="c-sidebar__section" data-url="/recipes/fair-assessment">
+              <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/fair-assessment.html">
                 
-                Working with the CFDE
+                FAIR compliance
               </a>
             </li>
             
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/cataloguing">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/cataloguing.html"
-              >
+              
+              <ul class="c-sidebar__subsections u-hidden-visually">
+              
                 
-                Finding datasets - cataloguing resources
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/c2m2">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/c2m2.html"
-              >
                 
-                NIH Crosscut metadata (C2M2) data model
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/deriva-frictionless">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/deriva-frictionless.html"
-              >
                 
-                Implementing C2M2 with Deriva and Frictionless Data Packages
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/identifiers">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/identifiers.html"
-              >
                 
-                The need for identifiers
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/pids">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/pids.html"
-              >
+                <li class="c-sidebar__subsection" data-url="/recipes/04/fairshake">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/04/fairshake.html">
+                    
+                    Evaluating FAIRness with FAIRshake
+                  </a>
+                </li>
+              
                 
-                Recommendations for minting persistent and resolvable identifiers
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/minids">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/minids.html"
-              >
                 
-                Understanding MINIDs
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/doi">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/doi.html"
-              >
                 
-                Examples of implementing DOIs
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/finding">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/finding.html"
-              >
                 
-                Finding digital objects - Terminologies and query expansion
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/ontologies">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/ontologies.html"
-              >
-                
-                Understanding Ontologies
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/onto-services">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/onto-services.html"
-              >
-                
-                Ontology services
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/cfde-terminologies">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/cfde-terminologies.html"
-              >
-                
-                NIH CFDE selected terminologies
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/etl">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/etl.html"
-              >
-                
-                ETL processes - Learnings and recommendations
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/hmp">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/hmp.html"
-              >
-                
-                Experience from HMP
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/mw">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/mw.html"
-              >
-                
-                Experience from the Metabolomics Workbench
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/gtex">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/gtex.html"
-              >
-                
-                Experience from GTEx
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/lincs">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/lincs.html"
-              >
-                
-                Experience from LINCS
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/ethics">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/ethics.html"
-              >
-                
-                Privacy protection and Ethics concerns
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/licensing">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/licensing.html"
-              >
-                
-                Choosing a license for data and metadata
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/fair-api">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/fair-api.html"
-              >
-                
-                Developing FAIR API
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/fairshake">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/fairshake.html"
-              >
-                
-                Evaluating FAIRness with FAIRshake
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/cloud">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/cloud.html"
-              >
-                
-                Hosting databases and tools in the cloud
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/notebooks-workflows">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/notebooks-workflows.html"
-              >
-                
-                Jupyter notebooks and CF data processing workflows
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/seo">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/seo.html"
-              >
-                
-                Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/recipes/assets-to-dats">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/recipes/assets-to-dats.html"
-              >
-                
-                Converting Assets to DATS
-              </a>
-            </li>
-            
-            
-          
-        </ul>
-      
-
-      
-    
-      
-      
-        <li class="c-sidebar__divider"></li>
-        
-      
-      
-        <li><h2 class="c-sidebar__title">Help Section and Demonstration</li>
-        
-      
-      
-
-      
-      
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter" data-url="/1/frictionless">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/1/frictionless.html"
-        >
-          
-            2.
-          
-          frictionless
-        </a>
-      </li>
-
-      
-      
-
-      
-
-      
-      
-
-      
-        
-
-        
-
-        <ul class="c-sidebar__sections u-hidden-visually">
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/1/testnb/0-rose-metabolites-Python-data-handling">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/1/testnb/0-rose-metabolites-Python-data-handling.html"
-              >
-                
-                  2.1
-                
-                1
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/1/testnb/1-rose-metabolites-Python-analysis">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/1/testnb/1-rose-metabolites-Python-analysis.html"
-              >
-                
-                  2.2
-                
-                2
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/1/testnb/3-rose-metabolites-R-analysis">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/1/testnb/3-rose-metabolites-R-analysis.html"
-              >
-                
-                  2.3
-                
-                3
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html"
-              >
-                
-                  2.4
-                
-                4
-              </a>
-            </li>
+                <li class="c-sidebar__subsection" data-url="/recipes/16/fair-api">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/16/fair-api.html">
+                    
+                    Developing FAIR API
+                  </a>
+                </li>
+              
+              </ul>
             
             
           
@@ -1362,14 +890,10 @@ initFunction(initPrint)
 
       
       
-      <li class="c-sidebar__chapter" data-url="/1/mermaidsetup">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/1/mermaidsetup.html"
-        >
+      <li class="c-sidebar__chapter" data-url="/CFDE_Glossary">
+        <a class="c-sidebar__entry" href="/the-fair-cookbook/CFDE_Glossary.html">
           
-            3.
-          
-          mermaidsetup
+          Glossary
         </a>
       </li>
 
@@ -1387,7 +911,11 @@ initFunction(initPrint)
     
       
       
-        <li class="c-sidebar__divider"></li>
+        <li class="c-sidebar__divider">
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Community</h2></li>
         
       
       
@@ -1400,9 +928,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter" data-url="/contributing">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/contributing.html"
-        >
+        <a class="c-sidebar__entry" href="/the-fair-cookbook/contributing.html">
           
           Contributing
         </a>
@@ -1431,9 +957,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter" data-url="/governance">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/governance.html"
-        >
+        <a class="c-sidebar__entry" href="/the-fair-cookbook/governance.html">
           
           Governance
         </a>
@@ -1462,9 +986,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter" data-url="/license">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/license.html"
-        >
+        <a class="c-sidebar__entry" href="/the-fair-cookbook/license.html">
           
           License
         </a>
@@ -1493,9 +1015,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter" data-url="/disclaimer">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/disclaimer.html"
-        >
+        <a class="c-sidebar__entry" href="/the-fair-cookbook/disclaimer.html">
           
           Disclaimer
         </a>
@@ -1524,9 +1044,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter" data-url="/code_of_conduct">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/code_of_conduct.html"
-        >
+        <a class="c-sidebar__entry" href="/the-fair-cookbook/code_of_conduct.html">
           
           Code of Conduct
         </a>
@@ -1546,7 +1064,7 @@ initFunction(initPrint)
     
       
       
-        <li class="c-sidebar__divider"></li>
+        <li class="c-sidebar__divider">
         
       
       
@@ -1558,12 +1076,10 @@ initFunction(initPrint)
 
       
       
-      <li class="c-sidebar__chapter" data-url="/features/features">
-        <a class="c-sidebar__entry"
-          href="/the-fair-cookbook/features/features.html"
-        >
+      <li class="c-sidebar__chapter" data-url="https://github.com/nih-cfde/the-fair-cookbook">
+        <a class="c-sidebar__entry" href="https://github.com/nih-cfde/the-fair-cookbook">
           
-          Features and customization
+          GitHub repository
         </a>
       </li>
 
@@ -1576,52 +1092,6 @@ initFunction(initPrint)
       
 
       
-        
-
-        
-
-        <ul class="c-sidebar__sections u-hidden-visually">
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/features/markdown">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/features/markdown.html"
-              >
-                
-                Markdown files
-              </a>
-            </li>
-            
-            
-          
-            
-            
-
-            
-            
-            
-            
-
-            <li class="c-sidebar__section" data-url="/features/notebooks">
-              <a class="c-sidebar__entry"
-                href="/the-fair-cookbook/features/notebooks.html"
-              >
-                
-                Jupyter notebooks
-              </a>
-            </li>
-            
-            
-          
-        </ul>
-      
 
       
     
@@ -1633,17 +1103,14 @@ initFunction(initPrint)
       <div class="c-topbar" id="top-navbar">
   <!-- We show the sidebar by default so we use .is-active -->
   <div class="c-topbar__buttons">
-    <button
-      id="js-sidebar-toggle"
-      class="hamburger hamburger--arrowalt is-active"
-    >
+    <button id="js-sidebar-toggle" class="hamburger hamburger--arrowalt is-active">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
     <div class="buttons">
 <div class="download-buttons-dropdown">
-    <button id="dropdown-button-trigger" class="interact-button"><img src="/the-fair-cookbook/assets/images/download-solid.svg" alt="Download" /></button>
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/the-fair-cookbook/assets/images/download-solid.svg" alt="Download"></button>
     <div class="download-buttons">
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
@@ -1656,25 +1123,30 @@ initFunction(initPrint)
   </div>
   <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
   <aside class="sidebar__right">
-    <header><h4 class="nav__title"><img src="/the-fair-cookbook/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <header><h4 class="nav__title">
+<img src="/the-fair-cookbook/assets/images/list-solid.svg" alt="Search">   On this page</h4></header>
     <nav class="onthispage">
     </nav>
   </aside>
   <a href="/the-fair-cookbook/search.html" class="topbar-right-button" id="search-button">
-    <img src="/the-fair-cookbook/assets/images/search-solid.svg" alt="Search" />
+    <img src="/the-fair-cookbook/assets/images/search-solid.svg" alt="Search">
   </a>
 </div>
 
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Contributing</div>
+    <div id="page-info">
+<div id="page-title">Contributing</div>
 </div>
     <div class="jb_cell">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Contributing-to-the-FAIR-cookbook">Contributing to the <code>FAIR cookbook</code><a class="anchor-link" href="#Contributing-to-the-FAIR-cookbook"> </a></h1><p>Welcome to the <code>FAIR cookbook</code> repository! We're excited you're here and want to contribute.</p>
+<h1 id="Contributing-to-the-FAIR-cookbook">Contributing to the <code>FAIR cookbook</code><a class="anchor-link" href="#Contributing-to-the-FAIR-cookbook"> </a>
+</h1>
+<p>Welcome to the <code>FAIR cookbook</code> repository! We're excited you're here and want to contribute.</p>
 <p>These guidelines are designed to make it as easy as possible to get involved.
 If you have any questions that aren't discussed below, please let us know by opening an <a href="https://github.com/fair-cookbook/the-fair-cookbook/issues">issue</a>!</p>
 <p>Before you start you'll need to set up a free <a href="https://github.com/https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">GitHub</a> account and sign in.
@@ -1688,10 +1160,14 @@ Here are some <a href="https://help.github.com/articles/signing-up-for-a-new-git
 <li><a href="#style-guide">Structuring contributions</a></li>
 <li><a href="#recognizing-contributions">Recognizing contributors</a></li>
 </ul>
-<h2 id="Joining-the-conversation">Joining the conversation<a class="anchor-link" href="#Joining-the-conversation"> </a></h2><p><code>FAIR cookbook</code> is a young project maintained by a growing group of enthusiastic developers&mdash; and we're excited to have you join!
+<h2 id="Joining-the-conversation">Joining the conversation<a class="anchor-link" href="#Joining-the-conversation"> </a>
+</h2>
+<p><code>FAIR cookbook</code> is a young project maintained by a growing group of enthusiastic developers— and we're excited to have you join!
 Most of our discussions will take place on open <a href="https://github.com/fair-cookbook/the-fair-cookbook/issues">issues</a>.</p>
 <p>As a reminder, we expect all contributors to <code>FAIR cookbook</code> to adhere to the <a href="https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">FAIR cookbook Code of Conduct</a> in these conversations.</p>
-<h2 id="Contributing-through-GitHub">Contributing through GitHub<a class="anchor-link" href="#Contributing-through-GitHub"> </a></h2><p><a href="https://git-scm.com">git</a> is a really useful tool for version control.
+<h2 id="Contributing-through-GitHub">Contributing through GitHub<a class="anchor-link" href="#Contributing-through-GitHub"> </a>
+</h2>
+<p><a href="https://git-scm.com">git</a> is a really useful tool for version control.
 <a href="https://github.com/https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">GitHub</a> sits on top of git and supports collaborative and distributed working.</p>
 <p>You'll use <a href="https://daringfireball.net/projects/markdown">Markdown</a> to chat in issues and pull requests on GitHub.
 You can think of Markdown as a few little symbols around your text that will allow GitHub
@@ -1700,37 +1176,48 @@ For example you could write words as bold (<code>**bold**</code>), or in italics
 or as a <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a> (<code>[link](https://https://youtu.be/dQw4w9WgXcQ)</code>) to another webpage.</p>
 <p>GitHub has a helpful page on
 <a href="https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github">getting started with writing and formatting Markdown on GitHub</a>.</p>
-<h2 id="Understanding-issues,-milestones-and-project-boards">Understanding issues, milestones and project boards<a class="anchor-link" href="#Understanding-issues,-milestones-and-project-boards"> </a></h2><p>Every project on GitHub uses <a href="https://github.com/fair-cookbook/the-fair-cookbook/issues">issues</a> slightly differently.</p>
+<h2 id="Understanding-issues,-milestones-and-project-boards">Understanding issues, milestones and project boards<a class="anchor-link" href="#Understanding-issues,-milestones-and-project-boards"> </a>
+</h2>
+<p>Every project on GitHub uses <a href="https://github.com/fair-cookbook/the-fair-cookbook/issues">issues</a> slightly differently.</p>
 <p>The following outlines how the <code>FAIR cookbook</code> developers think about these tools.</p>
 <p><strong>Issues</strong> are individual pieces of work that need to be completed to move the project forwards.
 A general guideline: if you find yourself tempted to write a great big issue that
 is difficult to describe as one unit of work, please consider splitting it into two or more issues.</p>
 <p>Issues are assigned <a href="#issue-labels">labels</a> which explain how they relate to the overall project's
 goals and immediate next steps.</p>
-<h3 id="Issue-labels">Issue labels<a class="anchor-link" href="#Issue-labels"> </a></h3><p>The current list of labels are <a href="https://github.com/fair-cookbook/the-fair-cookbook/labels">here</a> and include:</p>
+<h3 id="Issue-labels">Issue labels<a class="anchor-link" href="#Issue-labels"> </a>
+</h3>
+<p>The current list of labels are <a href="https://github.com/fair-cookbook/the-fair-cookbook/labels">here</a> and include:</p>
 <ul>
-<li><p><a href="https://github.com/fair-cookbook/the-fair-cookbook/help%20wanted"><img src="https://img.shields.io/badge/-help%20wanted-159818.svg" alt="Help Wanted"></a> <em>These issues contain a task that a member of the team has determined we need additional help with.</em></p>
+<li>
+<p><a href="https://github.com/fair-cookbook/the-fair-cookbook/help%20wanted"><img src="https://img.shields.io/badge/-help%20wanted-159818.svg" alt="Help Wanted"></a> <em>These issues contain a task that a member of the team has determined we need additional help with.</em></p>
 <p>If you feel that you can contribute to one of these issues, we especially encourage you to do so!</p>
 <ul>
-<li><p><a href="https://github.com/fair-cookbook/the-fair-cookbook/help%20wanted"><img src="https://img.shields.io/badge/-good%20first%20issue-blueviolet.svg" alt="Good First Issue"></a> <em>These issues contain a task that a member of the team thinks could be a good entry point to the project.</em></p>
+<li>
+<p><a href="https://github.com/fair-cookbook/the-fair-cookbook/help%20wanted"><img src="https://img.shields.io/badge/-good%20first%20issue-blueviolet.svg" alt="Good First Issue"></a> <em>These issues contain a task that a member of the team thinks could be a good entry point to the project.</em></p>
 <p>If you're new to the <code>FAIR cookbook</code> project, we think that this is a great place for your first contribution!</p>
 </li>
 </ul>
 </li>
-<li><p><a href="https://github.com/fair-cookbook/the-fair-cookbook/labels/bug"><img src="https://img.shields.io/badge/-bugs-fc2929.svg" alt="Bugs"></a> <em>These issues point to problems in the project.</em></p>
+<li>
+<p><a href="https://github.com/fair-cookbook/the-fair-cookbook/labels/bug"><img src="https://img.shields.io/badge/-bugs-fc2929.svg" alt="Bugs"></a> <em>These issues point to problems in the project.</em></p>
 <p>If you find new a bug, please give as much detail as possible in your issue, including steps to recreate the error.
   If you experience the same bug as one already listed, please add any additional information that you have as a comment.</p>
 </li>
-<li><p><a href="https://github.com/fair-cookbook/the-fair-cookbook/enhancement"><img src="https://img.shields.io/badge/-enhancement-84b6eb.svg" alt="Enhancement"></a> <em>These issues are asking for enhancements to be added to the project.</em></p>
+<li>
+<p><a href="https://github.com/fair-cookbook/the-fair-cookbook/enhancement"><img src="https://img.shields.io/badge/-enhancement-84b6eb.svg" alt="Enhancement"></a> <em>These issues are asking for enhancements to be added to the project.</em></p>
 <p>Please try to make sure that your enhancement is distinct from any others that have already been requested or implemented.
   If you find one that's similar but there are subtle differences please reference the other request in your issue.</p>
 </li>
-<li><p><a href="https://github.com/fair-cookbook/the-fair-cookbook/labels/question"><img src="https://img.shields.io/badge/-question-DE8BE7.svg" alt="Question"></a> <em>These are questions that users and contributors have asked.</em></p>
+<li>
+<p><a href="https://github.com/fair-cookbook/the-fair-cookbook/labels/question"><img src="https://img.shields.io/badge/-question-DE8BE7.svg" alt="Question"></a> <em>These are questions that users and contributors have asked.</em></p>
 <p>Please check the issues (especially closed ones) to see if your question has been asked and answered before. 
   If you find one that's similar but there are subtle differences please reference the other request in your issue.</p>
 </li>
 </ul>
-<h2 id="Making-a-change">Making a change<a class="anchor-link" href="#Making-a-change"> </a></h2><p>We appreciate all contributions to <code>FAIR cookbook</code>, but those accepted fastest will follow a workflow similar to the following:</p>
+<h2 id="Making-a-change">Making a change<a class="anchor-link" href="#Making-a-change"> </a>
+</h2>
+<p>We appreciate all contributions to <code>FAIR cookbook</code>, but those accepted fastest will follow a workflow similar to the following:</p>
 <p><strong>1. Comment on an existing issue or open a new issue referencing your addition.</strong></p>
 <p>This allows other members of the jupyter-book development team to confirm that you aren't overlapping with work that's currently underway and that everyone is on the same page with the goal of the work you're going to carry out.</p>
 <p><a href="https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/">This blog</a> is a nice explanation of why putting this work in up front is so useful to everyone involved.</p>
@@ -1745,16 +1232,25 @@ We've found that working on a <a href="https://help.github.com/articles/creating
 <p>A member of the development team will review your changes to confirm that they can be merged into the main code base.
 When opening the pull request, we ask that you follow some <a href="#pull-requests">specific conventions</a>.
 We outline these below.</p>
-<h3 id="Pull-Requests">Pull Requests<a class="anchor-link" href="#Pull-Requests"> </a></h3><p>To improve understanding pull requests "at a glance", we encourage the use of several standardized tags.
+<h3 id="Pull-Requests">Pull Requests<a class="anchor-link" href="#Pull-Requests"> </a>
+</h3>
+<p>To improve understanding pull requests "at a glance", we encourage the use of several standardized tags.
 When opening a pull request, please use at least one of the following prefixes:</p>
 <ul>
-<li><strong>[BRK]</strong> for changes which break existing builds or tests</li>
-<li><strong>[DOC]</strong> for new or updated documentation</li>
-<li><strong>[ENH]</strong> for enhancements</li>
-<li><strong>[FIX]</strong> for bug fixes</li>
-<li><strong>[REF]</strong> for refactoring existing code</li>
-<li><strong>[STY]</strong> for stylistic changes</li>
-<li><strong>[TST]</strong> for new or updated tests, and</li>
+<li>
+<strong>[BRK]</strong> for changes which break existing builds or tests</li>
+<li>
+<strong>[DOC]</strong> for new or updated documentation</li>
+<li>
+<strong>[ENH]</strong> for enhancements</li>
+<li>
+<strong>[FIX]</strong> for bug fixes</li>
+<li>
+<strong>[REF]</strong> for refactoring existing code</li>
+<li>
+<strong>[STY]</strong> for stylistic changes</li>
+<li>
+<strong>[TST]</strong> for new or updated tests, and</li>
 </ul>
 <p>You can also combine the tags above, for example if you are updating both a test and
 the documentation: <strong>[TST, DOC]</strong>.</p>
@@ -1765,11 +1261,15 @@ This tells the development team that your pull request is a "work-in-progress",
 and that you plan to continue working on it.</p>
 <p>When your pull request is Ready for Review, you can select this option on the PR's page,
 and a project maintainer will review your proposed changes.</p>
-<h2 id="Recognizing-contributors">Recognizing contributors<a class="anchor-link" href="#Recognizing-contributors"> </a></h2><p>We welcome and recognize all contributions from documentation to testing to code development.
+<h2 id="Recognizing-contributors">Recognizing contributors<a class="anchor-link" href="#Recognizing-contributors"> </a>
+</h2>
+<p>We welcome and recognize all contributions from documentation to testing to code development.
 You can see a list of current contributors in the <a href="https://github.com/fair-cookbook/the-fair-cookbook/graphs/contributors">contributors tab</a>.</p>
-<h2 id="Thank-you!">Thank you!<a class="anchor-link" href="#Thank-you!"> </a></h2><p>You're awesome. :wave::smiley:</p>
+<h2 id="Thank-you!">Thank you!<a class="anchor-link" href="#Thank-you!"> </a>
+</h2>
+<p>You're awesome. <img class="emoji" title=":wave:" alt=":wave:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png" height="20" width="20"><img class="emoji" title=":smiley:" alt=":smiley:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png" height="20" width="20"></p>
 <p><br></p>
-<p><em>&mdash; Based on contributing guidelines from the <a href="https://github.com/KirstieJane/STEMMRoleModels">STEMMRoleModels</a> project.</em></p>
+<p><em>— Based on contributing guidelines from the <a href="https://github.com/KirstieJane/STEMMRoleModels">STEMMRoleModels</a> project.</em></p>
 
 </div>
 </div>
@@ -1789,8 +1289,8 @@ You can see a list of current contributors in the <a href="https://github.com/fa
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/the-fair-cookbook/1/mermaidsetup.html">
-      〈 <span class="u-margin-right-tiny"></span> mermaidsetup
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/the-fair-cookbook/CFDE_Glossary.html">
+      〈 <span class="u-margin-right-tiny"></span> Glossary
     </a>
   
 
@@ -1805,13 +1305,14 @@ You can see a list of current contributors in the <a href="https://github.com/fa
 </nav>
 
               <footer>
-  <p class="footer">This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/dataecosystem"><img src="/the-fair-cookbook/assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a></p>
+  <p class="footer">This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/dataecosystem"><img src="/the-fair-cookbook/assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> <script>mermaid.init();</script></p>
 </footer>
 
             </div>
 
-        </div>
-      </main>
-    </div>
+        </main>
+</div>
+      
+    
   </body>
 </html>

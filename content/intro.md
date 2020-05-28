@@ -1,4 +1,4 @@
-# CFDE FAIR Cookbook
+# The FAIR cookbook by the NIH-CFDE
 
 The [Common Fund Data Ecosystem (CFDE)](https://nih-cfde.org) aims to assist the [Common Fund (CF)](https://commonfund.nih.gov/) Data Coordination Centers (DCC) with the process of making their digital objects that they host and produce better adhere to the [Findable, Accessible, Interoperable, and Reusable (FAIR) principles](https://www.nature.com/articles/sdata201618).
 
