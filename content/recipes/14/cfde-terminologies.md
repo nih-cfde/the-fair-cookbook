@@ -63,7 +63,7 @@ For each of the potential data sources and for a set of core search facets, a su
 
 ___
 
-## Learnings:
+## Conclusions:
 
 * By explicitly identifying a number of semantic artefacts for describing key attributes, the C2M2 defines a curation framework, with the aim of anchoring free text descriptors to controlled terms, which can be exploited for query expansion or resource linking.
 * The resource survey that has been carried out is an important step in the FAIRification process as it identifies potential `areas of intervention`, defined as semantic markup of free text description can deliver gains in `interoperability` and `reusability`.

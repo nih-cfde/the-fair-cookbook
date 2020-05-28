@@ -28,8 +28,10 @@
 	17. [NIH CFDE selected terminologies](./14/cfde-terminologies.html)
 
 
+
 * FAIR compliance
 	4. [Assessing with FAIRshake](./04/fairshake.html)
+	22. [Developing FAIR API](./16/fair-api.html)
 
 
 <!-- 18. [Experience from HMP](./15/1/hmp.html)

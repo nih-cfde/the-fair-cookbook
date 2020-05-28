@@ -49,7 +49,7 @@ There are `6 important features` to consider where selecting an semantic artefac
 
 **2. What format does it come in?**
 
-**3. Is it well maintained ?, i.e. frequent release, term requests handling, versioning and deprecation policies clarified.**
+**3. Is it well maintained ? i.e. frequent release, term requests handling, versioning and deprecation policies clarified.**
 
 **4. Are there stable persistent resolvable identifiers for all terrms?**
 
@@ -85,6 +85,51 @@ This point becomes particularly important when considering the role of `reasoner
 * **In the context of observation studies**, the OMOP model also relies on controled terminologies such as SNOMED-CT, RxNORM for drugs and LOINC for clinical and laboratory test descriptions.
 
 * **In the context of Clinical Data collections**, the CDISC models work tightly with CDISC Terminology, National Cancer Institute's Enterprise Vocabulary Services (EVS) and also recommend use of SNOMED-CT and terminologies such as LOINC, both of which come with specific licensing terms users need to get familiar with.
+
+
+### Use Cases and Iterative Approach  
+
+
+The use and implementation of common terminologies will enable a normalization/harmonization of variable labels (data label) and allowed values (data term) when querying a database. Implementing the use of common terminologies in the curation workflow will ensure consistency of the annotation across all studies.
+
+
+
+### Selection Criteria
+
+A set of widely accepted criteria for selecting terminologies (or other reporting standards) do not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and BioSharing ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point top define possible criteria for excluding and/or including a terminology resource.
+
+
+*   **Exclusion criteria**:
+    * :x: absent licence or terms of use (_indicator of usability_)
+    * :x: restrictive licences or terms of use with restrictions on redistribution and reuse 
+    * :x: absence of term definitions 
+    * :x: absence of sufficient class metadata (_indicator of quality_)
+    * :x: absence of sustainability indicators (_absence of funding records_) 
+ 
+*   **Inclusion criteria**:
+    * :heavy_check_mark:  scope and coverage meets the requirements of the concept identified
+    * :heavy_check_mark:  unique URI, textual definition and IDs for each term
+    * :heavy_check_mark:  resource releases are versioned
+    * :heavy_check_mark:  size of resource (_indicator of coverage_)
+    * :heavy_check_mark:  number of classes and subclasses (_indicator of depth_)
+    * :heavy_check_mark:  number of terms having definitions and synonyms (_indicator of richness_)
+    * :heavy_check_mark:  presence of an help desk and contact point (_indicator of community support_)
+    * :heavy_check_mark:  presence of term submission tracker / issue tracker (_indicator of resource agility and capability to grow upon request_)
+    * :heavy_check_mark:  potential integrative nature of the resource (_as indicator of translational application potential_)
+    * :heavy_check_mark:  licensing information available (_as indicator of freedom to use_)
+    * :heavy_check_mark:  use of of top level ontology (_as indicator of a resource built for generic use_)
+    * :heavy_check_mark:  pragmatism (_as indicator of actual, current real life practice)_
+    * :heavy_check_mark:  possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)
+
+These criteria are simply indicative and need to be modulated depending on the `contexts` described in the introduction, as specific constraints (e.g. regulatory requirements) may take precedence over some of the criteria listed here. 
+
+---
+
+## Conclusions:
+
+Choosing ontology and semantic resources is a complex issue, which requires careful considerations, taking into account the research context of the data production workflow, regulatory requirements that may apply. The choices made affect the integrative potential of a dataset as they influence the level of `interoperability`. 
+Clearly declaring the semantic resources used to annotate a dataset also influence `findability` and `reusability` and it is good practice to do so.
+
 ___
 
 ## Bibliography:
