@@ -101,12 +101,6 @@ $ cd .minid
 $ touch minid-config.cfg
 ```
 
-  Failing to create the minid-config.cfg file, will result in the following error when trying the minid login command and authenticating with the globus id.
-
-
-  ```bash
-  [Errno 2] No such file or directory: '/Users/philippe/.minid/minid-config.cfg'
-  ```
 
 2. Create a GlobusID account
   
@@ -253,11 +247,15 @@ Below is a sample file manifest configuration file:
 
 ## Conclusions:
 
+Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets get be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 
 
 ___
 
 ## Bibliography:
+
 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
+
+2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles
 
 
