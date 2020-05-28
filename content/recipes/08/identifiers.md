@@ -2,11 +2,11 @@
 
 **authors**: [Philippe Rocca-Serra]()
 
-**maintainers**
+**maintainers**: [Philippe Rocca-Serra]()
 
 **version**: Initial Draft
 
-**license**:
+**license**: 
 
         
 
@@ -48,23 +48,23 @@ Data interoperability as described by FAIR assumes that entities and information
 
 For a number of digital objects (`scholarly articles`, `grants`), persistent identifiers such DOI exist and for research `organizations` and `persons`, RORID and ORCID are gaining popularity becoming more widely used.
 
-`Datasets` are another type of digital objects which are being identified by DOI with services such as [Zenodo](https://zenodo.org).
+`Datasets` are another type of digital objects which are being identified by DOI with services such as [Figshare](https://figshare.com/) or [Zenodo](https://zenodo.org).
 
 But `interoperability` goes far beyond reliable identification of these entities. For research scientists, entities such as:  
-- [x] Taxonomic Information
-- [x] Anatomical Information
-- [x] Diseases and Conditions
-- [x] Molecular Entities, such as:
-    - [x] Chemicals
-    - [x] Metabolites
-    - [x] Genes
-    - [x] Transcripts
-    - [x] Protein
-    - [x] Lipids
-- [x] Pathways and Biochemical reactions
-- [x] Assays
-- [x] Instruments
-- [x] Licenses
+- Taxonomic Information
+- Anatomical Information
+- Diseases and Conditions
+- Molecular Entities, such as:
+    - Chemicals
+    - Metabolites
+    - Genes
+    - Transcripts
+    - Protein
+    - Lipids
+- Pathways and Biochemical reactions
+- Assays
+- Instruments
+- Licenses
 
 For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](TODO:ADD_URL) and made available through the [Deriva system](TODO:ADD_URL).
 

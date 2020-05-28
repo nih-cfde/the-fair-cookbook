@@ -1,6 +1,6 @@
 # Controlled Terminologies & Ontologies
 
-**authors**: [Philippe Rocca-Serra]()
+**authors**: [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
 
 **maintainers**: 
 
@@ -15,7 +15,7 @@ ___
 The aim of this recipe is to provide a compact introduction about `controled terminologies` and `ontologies`, why these resources are central to the preservation of knowledge and data mining and how such resources are developed.
 
 
-## Controled terminology or Ontology, what's the difference ?
+## Controlled terminology or Ontology, what's the difference ?
 
 The need for `controled vocabulary` often arises in situation where validation of textual information is necessary for operational requirements. 
 The main initial driver for data entry harmonization is to increase query recall. It is most basic form, `keywords` may be used to perform indexation. However, if relying on user input alone, the chances of typographic errors increases with the number of users. These unavoidable events accumulate over time and end up  hurting the accuracy of search results and this is the reason for offering sets of predefined values. It reduces the noise. 
@@ -103,14 +103,5 @@ ___
 12. Topbraid composer. https://www.topquadrant.com/products/topbraid-composer/
 13. INCAtools. https://github.com/INCATools
 14. ROBOT. [R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.](https://doi.org/10.1186/s12859-019-3002-3)
-
-___
-
-## Authors:
-
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
-
 
 

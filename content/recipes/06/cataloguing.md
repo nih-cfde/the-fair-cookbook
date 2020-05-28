@@ -1,25 +1,9 @@
-# Finding datasets - cataloguing resources
+# Findability & Discoverability
 
-**authors**
+This section covers the F of the FAIR principles and thus describes the NIH CFDE CrossCut Metadata Model, abbreviated to C2M2 from now on.
 
-**maintainers**
+It includes:
 
-**version**
+- the C2M2 model specifications
 
-**license**
-
-        
-
-## Objectives:
-
-## Step by Step Process:
-
-### Step1:
-    
-### Step2:
-    
-### Step3:
-  
-### Step4:
-    
-### Step5:
+- an ETL example to an early version of the C2M2 model in the DATS form.

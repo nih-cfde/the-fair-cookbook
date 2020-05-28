@@ -109,14 +109,18 @@ p {
 
 body {
 /*	background-color: orange;*/
-	font-family: "Avenir", Avenir, serif;
+    font-family: 100%/1.6em "Droid Sans",Trebuchet MS,Arial,Helvetica,sans-serif;
+	/*font-family: "Avenir", Avenir, serif;*/
 	font-size: 14px;
 }
 
 nav.c-textbook__sidebar {
 	font-family: "Avenir", Avenir, serif;
-	color:darkred;
+	color:lightgray;
 	font-weight: bold;
+    /*background-color: */
+    /*background-image: linear-gradient(#a4682140, lightgray);*/
+    background-image: linear-gradient(#00518f, #00518f);
 }
 
 .c-page__nav{
@@ -139,23 +143,42 @@ nav.c-textbook__sidebar {
 ul.c-sidebar__chapters {
 	font-size: 13px;
 	font-family: "Avenir", Avenir, serif;
-	color:darkred;
+	color:lightgray;
 	font-weight: bold;
 }
 
 li.c-sidebar__chapter {
 	font-size: 13px;
 	font-family: "Avenir", Avenir, serif;
-	color:orange;
+	color:lightgray;
+   /* #color:orange;*/
 	font-weight: bold;
 }
 
-a.c-sidebar__entry {
-	color:orange;
+
+/*a.c-sidebar__entry {
+	color:lightgray;
 	font-family: "Avenir", Avenir, serif;
 	font-weight: bold;
-	}
+	}*/
 
+a.li.c-sidebar__entry: {
+    color:red;
+    font-style:italic;
+}
+
+a.c-sidebar__entry:visited {
+    color:orange;
+    font-style:italic;
+}
+
+a.c-sidebar__entry:active {
+  color: yellow;
+}
+
+a.c-sidebar__entry:{
+    color:green;
+}
 
 div {
 /*	background-color: orange;*/
@@ -206,6 +229,9 @@ main.c-textbook__page{
 	font-size: 16px;
 }
 
+/*main.c-textbook__page a:visited{
+    color:pink;
+}*/
 
 
 blockquote {
@@ -274,16 +300,16 @@ figure.fullwidth figcaption {
 /* Links: replicate underline that clears descenders */
 a:link {
 	color:darkred;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	}
 
 a:visited{
-	color: gray;
+	color: orange;
 }
 /*a:visited {
     color: inherit; 
-}*/
-
+}
+*/
 /*.no-tufte-underline:link {
     background: unset;
     text-shadow: unset;

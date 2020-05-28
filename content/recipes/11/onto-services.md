@@ -1,25 +1,39 @@
 # Ontology services
 
-**authors**
+**authors**: [Philippe Rocca-Serra]()
 
-**maintainers**
+**maintainers**: 
 
-**version**
+**version**: initial draft
 
-**license**
+**license**: GPLv2+
 
         
 
 ## Objectives:
 
-## Step by Step Process:
+The aim of this chapter is to provide an overview of services and infrastructures available around terminologies and controlled vocabularies.  The services referred here encompass the following:
+* terminology hosting
+* terminology versioning
+* terminology browsing
+* term selection and metadata display
+* free text annotation and semantic markup
+* automatic annotation
+* ontology mapping services
 
-### Step1:
+
+## Context
+
+### Clinical Data Context:
     
-### Step2:
+### Observational Patient Outcome Context:
+
+### Basic Research:
     
-### Step3:
+### NCBO Bioportal:
   
-### Step4:
+### Athena:
     
-### Step5:
+### EVS:
+
+
