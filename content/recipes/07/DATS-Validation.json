@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "type": "object",
+  "properties": {
+    "dats": {
+      "$ref": "https://raw.githubusercontent.com/datatagsuite/schema/master/dataset_schema.json"
+    }
+  }
+}

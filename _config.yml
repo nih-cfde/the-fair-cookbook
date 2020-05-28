@@ -31,12 +31,12 @@ url: https://nih-cfde.github.io                  # the base hostname & protocol 
 
 # Main page settings
 footer_text: This project is supported by NIH CFDE program <a href="https://commonfund.nih.gov/dataecosystem"><img src="/the-fair-cookbook/assets/images/logo/CFDE-logo.png" height="20" alt="NIH flag" class="float-left bottom-margin"></a> 
-
+ <script>mermaid.init();</script>
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
 collapse_inactive_sections: true  # Whether to collapse the sub-sections within a non-active section in the sidebar
-textbook_logo: images/logo/logo.png               # A logo to be displayed at the top of your textbook sidebar. Should be square
+textbook_logo: images/logo/logo-workedout.png               # A logo to be displayed at the top of your textbook sidebar. Should be square
 textbook_logo_link: https://nih-cfde.github.io/the-fair-cookbook/intro.html                    # A link for the logo.
 sidebar_footer_text: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 number_toc_chapters: true         # Whether to add numbers to chapterse in your Table of Contents. If true, you can control this at the Chapter level in _data/toc.yml
@@ -155,6 +155,7 @@ exclude:
 plugins:
 - jekyll-redirect-from
 - jekyll-scholar
+- jemoji
 
 # Jupyter Book version - DO NOT CHANGE THIS. It is generated when a new book is created
 jupyter_book_version: 0.6.4

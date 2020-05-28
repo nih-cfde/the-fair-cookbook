@@ -10,7 +10,8 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 
 # Setup Ruby environment
-bundle install --path vendor/bundle
+bundle config set path 'vendor/bundle'
+bundle install
 
 # Setup jupyter book
 make install

@@ -21,141 +21,169 @@
 #
 # See the links below for an example.
 
-# Top-level page
-- title: FAIR cookbook
-  url: intro
-  not_numbered: true
-
-# External link
-- title: GitHub repository
-  url: https://github.com/nih-cfde/the-fair-cookbook
-  external: true
-  not_numbered: false
-
-
 # Divider for meta-pages and content page
 - divider: true
 
-# Add a header and sample content section
-- header: FAIR Cookbook
+# # Add a header and sample content section
+- header: The FAIR cookbook by the NIH-CFDE
 
 # A chapter w/ a collection of sections beneath it
-- title: Recipes overview
+# Top-level page
+- title: Introduction
+  url: /intro
+  not_numbered: true
+  sections:
+    - title: What is FAIR?
+      url: /recipes/00/fair-principles
+      not_numbered: false
+      # subsections:
+        # - title: FAIR in NIH CDFE context
+        #   url: /recipes/01/fair-cfde
+        #   not_numbered: false
+        #   expand_sections: true
+        # - title: Privacy and Ethics concerns
+        #   url: /recipes/02/ethics
+        #   not_numbered: false
+        # - title: Licensing data and metadata
+        #   url: /recipes/03/licensing
+        #   not_numbered: false
+    - title: Engaging with NIH-CFDE
+      url: /recipes/05/cfde
+      not_numbered: false
+  # - title: Finding datasets - cataloging DCC resources
+  #   url: /recipes/06/cataloguing
+  #   not_numbered: false
+  #     expand_sections: true
+  # subsections:
+
+
+- title: Recipes
   url: /recipes/recipes-overview
   not_numbered: true
-  expand_sections: false
   sections:
-  - title: Recipe Template
-    url: /recipes/recipe-template
-    not_numbered: false 
-  - title: FAIR 
-    url: /recipes/fair-principles
-    not_numbered: true
-  - title: FAIR in the context of NIH CDFE
-    url: /recipes/fair-cfde
-    not_numbered: true
-  - title: Working with the CFDE
-    url: /recipes/cfde
-    not_numbered: true
-  - title: Finding datasets - cataloguing resources
-    url: /recipes/cataloguing
-    not_numbered: true
-  - title: NIH Crosscut metadata (C2M2) data model
-    url: /recipes/c2m2
-    not_numbered: true
-  - title: Implementing C2M2 with Deriva and Frictionless Data Packages
-    url: /recipes/deriva-frictionless
-    not_numbered: true
-  - title: The need for identifiers
-    url: /recipes/identifiers
-    not_numbered: true
-  - title: Recommendations for minting persistent and resolvable identifiers
-    url: /recipes/pids
-    not_numbered: true
-  - title: Understanding MINIDs
-    url: /recipes/minids
-    not_numbered: true
-  - title: Examples of implementing DOIs
-    url: /recipes/doi
-    not_numbered: true
-  - title: Finding digital objects - Terminologies and query expansion
-    url: /recipes/finding
-    not_numbered: true
-  - title: Understanding Ontologies
-    url: /recipes/ontologies
-    not_numbered: true
-  - title: Ontology services
-    url: /recipes/onto-services
-    not_numbered: true
-  - title: NIH CFDE selected terminologies
-    url: /recipes/cfde-terminologies
-    not_numbered: true
-  - titke: ETL processes - Learnings and recommendations
-    url: /recipes/etl
-    not_numbered: true
-  - title: Experience from HMP
-    url: /recipes/hmp
-    not_numbered: true
-  - title: Experience from the Metabolomics Workbench
-    url: /recipes/mw
-    not_numbered: true
-  - title: Experience from GTEx
-    url: /recipes/gtex
-    not_numbered: true
-  - title: Experience from LINCS
-    url: /recipes/lincs
-    not_numbered: true
-  - title: Privacy protection and Ethics concerns
-    url: /recipes/ethics
-    not_numbered: true
-  - title: Choosing a license for data and metadata
-    url: /recipes/licensing
-    not_numbered: true
-  - title: Developing FAIR API
-    url: /recipes/fair-api
-    not_numbered: true
-  - title: Evaluating FAIRness with FAIRshake
-    url: /recipes/fairshake
-    not_numbered: true
-  - title: Hosting databases and tools in the cloud
-    url: /recipes/cloud
-    not_numbered: true
-  - title: Jupyter notebooks and CF data processing workflows
-    url: /recipes/notebooks-workflows
-    not_numbered: true
-  - title: Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
-    url: /recipes/seo
-    not_numbered: true
-  - title: Converting Assets to DATS
-    url: /recipes/assets-to-dats
-    not_numbered: true
 
 
-# Divider for meta-pages and content page
-- divider: true
+  - title: Discoverability
+    url: /recipes/06/cataloguing
+    not_numbered: false
+    expand_sections: true
+    subsections:
+      - title: Introducing the Cross-Cut Metadata Model (C2M2)
+        url: /recipes/12/c2m2
+        not_numbered: false
+        # expand_sections: true
 
-- header: Help Section and Demonstration
+      - title: ETL to C2M2/DATS - the KidsFirst example
+        url: /recipes/07/seo
+        not_numbered: false
+        # expand_sections: true
 
-- title: frictionless
-  url: /1/frictionless
-  sections:
-  - title: 1
-    url: /1/testnb/0-rose-metabolites-Python-data-handling
-  - title: 2
-    url: /1/testnb/1-rose-metabolites-Python-analysis
-  - title: 3
-    url: /1/testnb/3-rose-metabolites-R-analysis
-  - title: 4
-    url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis
-- title: mermaidsetup
-  url: /1/mermaidsetup  
+  - title: Identification
+    url: /recipes/08/identifiers
+    not_numbered: false
+    subsections:
+      - title: Minting persistent and resolvable identifiers
+        url: /recipes/08/1/pids
+        not_numbered: false
+        expand_sections: true
+      - title: Using MINIDs
+        url: /recipes/08/2/minids
+        not_numbered: false
+        expand_sections: true
+
+      # - title: Obtaining DOIs
+      #   url: /recipes/08/3/doi
+      #   not_numbered: false
+      #   expand_sections: true
+  - title: Semantics
+    url: /recipes/09/finding
+    not_numbered: false
+    subsections:
+      - title: Understanding terminologies
+        url: /recipes/10/ontologies
+        not_numbered: false
+      - title: Ontology services
+        url: /recipes/11/onto-services
+        not_numbered: false
+  # - title: NIH-CFDE C2M2 data model
+  #   url: /recipes/12/c2m2
+  #   not_numbered: false
+  # - title: Implementing C2M2 with Deriva and Frictionless Data Packages
+  #   url: /recipes/13/deriva-frictionless
+  #   not_numbered: false
+      - title: NIH CFDE selected terminologies
+        url: /recipes/14/cfde-terminologies
+        not_numbered: false
+  # - titke: ETL processes - Learnings and recommendations
+  #   url: /recipes/15/etl
+  #   not_numbered: false
+
+
+
+  - title: FAIR compliance
+    url: /recipes/fair-assessment
+    not_numbered: false
+    subsections:
+      - title: Evaluating FAIRness with FAIRshake
+        url: /recipes/04/fairshake
+        not_numbered: false
+        expand_sections: true
+      - title: Developing FAIR API
+        url: /recipes/16/fair-api
+        not_numbered: false 
+        expand_sections: true 
+
+# - title: Experience from HMP
+#   url: /recipes/15/1/hmp
+#   not_numbered: false
+# - title: Experience from the Metabolomics Workbench
+#   url: /recipes/15/2/mw
+#   not_numbered: false
+# - title: Experience from GTEx
+#   url: /recipes/15/3/gtex
+#   not_numbered: false
+# - title: Experience from LINCS
+#   url: /recipes/15/4/lincs
+#   not_numbered: false
+
+# - title: Hosting databases and tools in the cloud
+#   url: /recipes/17/cloud
+#   not_numbered: false
+# - title: Jupyter notebooks and CF data processing workflows
+#   url: /recipes/18/notebooks-workflows
+#   not_numbered: false
+
+- title: Glossary
+  url: /CFDE_Glossary
+  not_numbered: true
+# # Divider for meta-pages and content page
+# - divider: true
+
+# - header: Help Section and Demonstration
+# - title: Recipe Template
+#   url: /1/recipe-template
+#   not_numbered: false
+
+# - title: frictionless
+#   url: /1/frictionless
+#   sections:
+#   - title: 1
+#     url: /1/testnb/0-rose-metabolites-Python-data-handling
+#   - title: 2
+#     url: /1/testnb/1-rose-metabolites-Python-analysis
+#   - title: 3
+#     url: /1/testnb/3-rose-metabolites-R-analysis
+#   - title: 4
+#     url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis
+# - title: mermaidsetup
+#   url: /1/mermaidsetup
 
 
 # Divider for meta-pages and content page
 - divider: true
 
 # Add a header and sample content section
-#- header: Boilerplate 
+- header: Community
 
 # Contribution section
 - title: Contributing
@@ -165,38 +193,43 @@
 # Governance section
 - title: Governance
   url: /governance
-  not_numbered: true 
+  not_numbered: true
 
 # license section
 - title: License
   url: /license
-  not_numbered: true    
+  not_numbered: true
 
 
 # disclaimer section
 - title: Disclaimer
   url: /disclaimer
-  not_numbered: true  
+  not_numbered: true
 
 
 # Code of Conduct section
 - title: Code of Conduct
   url: /code_of_conduct
-  not_numbered: true 
+  not_numbered: true
 
 # Divider for meta-pages and content page
 - divider: true
 
-# A chapter w/ a collection of sections beneath it
-- title: Features and customization
-  url: /features/features
+# External link
+- title: GitHub repository
+  url: https://github.com/nih-cfde/the-fair-cookbook
+  external: true
   not_numbered: true
-  expand_sections: false
-  sections:
-  - title: Markdown files
-    url: /features/markdown
-    not_numbered: true
-  - title: Jupyter notebooks
-    url: /features/notebooks
-    not_numbered: true
 
+# A chapter w/ a collection of sections beneath it
+# - title: Features and customization
+#   url: /features/features
+#   not_numbered: true
+#   expand_sections: false
+#   sections:
+#   - title: Markdown files
+#     url: /features/markdown
+#     not_numbered: true
+#   - title: Jupyter notebooks
+#     url: /features/notebooks
+#     not_numbered: true

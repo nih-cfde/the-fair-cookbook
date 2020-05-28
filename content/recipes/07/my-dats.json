@@ -1,0 +1,6 @@
+{
+  "$schema": "./DATS-Validation.json",
+  "dats": {
+    "title": "My First Json-Schema Validated DATS Object"
+  }
+}
