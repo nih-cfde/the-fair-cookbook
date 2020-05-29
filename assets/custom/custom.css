@@ -120,7 +120,9 @@ nav.c-textbook__sidebar {
 	font-weight: bold;
     /*background-color: */
     /*background-image: linear-gradient(#a4682140, lightgray);*/
-    background-image: linear-gradient(#00518f, #00518f);
+    /*background-image: linear-gradient(#00518f, #00518f);*/
+
+    background-image: linear-gradient(#3f51b5,#3f51b5);
 }
 
 .c-page__nav{
