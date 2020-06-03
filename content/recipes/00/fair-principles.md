@@ -64,10 +64,15 @@ As we hinted, the FAIR principles are `broad guiding principles`, sometimes prov
 
 ### How to contribute, reform, evolve evaluation rules?
 
-~~Who IS evaluating FAIR? For instance, if someone wanted to dispute/correct/change/question their FAIRshake score, who might they contact? Can someone provide a resource for this?~~
+While it is possible to assess FAIR on general terms, specific domains of knowledge requires dedicated extensions. To give a practical example, `Findability` and `Interoperability` mandate that `sufficient metadata` is provided. However the amount of metadata varies depending on the application and content, so requirements for the description of *transcriptomics experiments* differs from *medical imaging* ones.
+It is therefore necessary to craft domain specific profiles which can be used by the FAIR assessor tools to determine the level of compliance. When using [FAIRShake](https://fairshake.cloud/), this is achieved by the creation of dedicated `rubrics`.
 
-TODO: suggestion: the respective github repositories<br/>
-TODO: mention RDA FAIR working group<br/></p>
+As the field of scoring FAIR is still relatively new, several groups, e.g. [RDA FAIR Maturity Model working group](https://www.rd-alliance.org/groups/fair-data-maturity-model-wg),  have been established to evolve the metrics or maturity indicators in an attempt to resolve differences in interpretation of the FAIR principles and also to create a forum where discussions can take place.
+
+FAIR rubrics github repository: []()
+<br/></p>
+FAIR metrics github repository: [https://github.com/FAIRMetrics/Metrics](https://github.com/FAIRMetrics/Metrics)
+<br/></p>
 
 
 ## Conclusion
