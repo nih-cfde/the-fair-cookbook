@@ -123,7 +123,7 @@ defaults:
     toc_icon: list-ul
     excerpt: ''
 
-favicon_path: images/logo/favicon.ico
+favicon_path: images/logo/CFDE-logo.ico
 
 # Markdown Processing
 markdown: kramdown
