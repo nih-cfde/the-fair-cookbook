@@ -235,6 +235,9 @@ main.c-textbook__page{
     color:pink;
 }*/
 
+img.float-left.bottom-margin  {
+    height: 40px;
+}
 
 blockquote {
     font-size: 1.4rem; 
