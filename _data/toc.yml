@@ -25,7 +25,7 @@
 - divider: true
 
 # # Add a header and sample content section
-- header: The FAIR cookbook by the NIH-CFDE
+# - header: The FAIR cookbook by the NIH-CFDE
 
 # A chapter w/ a collection of sections beneath it
 # Top-level page
@@ -183,7 +183,7 @@
 - divider: true
 
 # Add a header and sample content section
-- header: Community
+# - header: Community
 
 # Contribution section
 - title: Contributing

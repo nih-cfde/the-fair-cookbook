@@ -15,6 +15,13 @@ html {
     /*background-color: orange;*/
 }
 
+h1 > code,
+h2 > code,
+h3 > code {
+    font-size: 0.80em; 
+    font-family: "Avenir", Avenir, serif;
+}
+
 body {
     width: 87.5%;
     margin-left: auto;
@@ -32,6 +39,7 @@ h1 {
     margin-bottom: 1.5rem;
     font-size: 3.2rem;
     line-height: 1; 
+    font-family: "Avenir", Avenir, serif;
 }
 
 h2 {
@@ -41,6 +49,7 @@ h2 {
     margin-bottom: 1.4rem;
     font-size: 2.2rem;
     line-height: 1; 
+    font-family: "Avenir", Avenir, serif;
 }
 
 h3 {
@@ -50,6 +59,7 @@ h3 {
     margin-top: 2rem;
     margin-bottom: 1.4rem;
     line-height: 1; 
+    font-family: "Avenir", Avenir, serif;
 }
 
 hr {
@@ -118,6 +128,7 @@ nav.c-textbook__sidebar {
 	font-family: "Avenir", Avenir, serif;
 	color:lightgray;
 	font-weight: bold;
+    opacity: 0.95;
     /*background-color: */
     /*background-image: linear-gradient(#a4682140, lightgray);*/
     /*background-image: linear-gradient(#00518f, #00518f);*/
@@ -140,6 +151,10 @@ nav.c-textbook__sidebar {
 	border-color: darkred;
 }
 
+
+.c-sidebar__title{
+    font-family: "Avenir", Avenir, serif;
+}
 
 
 ul.c-sidebar__chapters {
@@ -422,10 +437,13 @@ code, pre > code {
     font-size: 1.2rem; 
 }*/
 
-h1 > code,
-h2 > code,
-h3 > code {
-    font-size: 0.80em; 
+
+
+
+
+a.anchor-link {
+    color: red;
+    font-family: "Avenir", Avenir, serif;
 }
 
 .marginnote > code,

@@ -1,8 +1,8 @@
-# Table of content
-
 <div>
 <img src="../images/logo/logo.png" width="150"/>
 </div>
+
+# Table of content
 
 
 1. [FAIR in NIH CDFE context](./00/fair-principles.html)
