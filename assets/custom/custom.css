@@ -138,17 +138,17 @@ nav.c-textbook__sidebar {
 
 .c-page__nav{
 	width:  120%;
-	border-color: darkred;
+	border-color: orange;
 }
 
 .c-page__nav__prev{
 	width:  120%;
-	border-color: darkred;
+	border-color: orange;
 }
 
 .c-page__nav__next{
 	width:  120%;
-	border-color: darkred;
+	border-color: orange;
 }
 
 
@@ -319,7 +319,7 @@ figure.fullwidth figcaption {
 
 /* Links: replicate underline that clears descenders */
 a:link {
-	color:darkred;
+	color: mediumpurple;
 	/*font-weight: bold;*/
 	}
 
@@ -436,6 +436,10 @@ code, pre > code {
 /*.sans > code {
     font-size: 1.2rem; 
 }*/
+
+.buttons .interact-button  {
+    background-color: #3f51b5;
+}
 
 
 
