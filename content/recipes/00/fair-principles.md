@@ -69,10 +69,10 @@ It is therefore necessary to craft domain specific profiles which can be used by
 
 As the field of scoring FAIR is still relatively new, several groups, e.g. [RDA FAIR Maturity Model working group](https://www.rd-alliance.org/groups/fair-data-maturity-model-wg),  have been established to evolve the metrics or maturity indicators in an attempt to resolve differences in interpretation of the FAIR principles and also to create a forum where discussions can take place.
 
-FAIR rubrics github repository: []()
-<br/></p>
-FAIR metrics github repository: [https://github.com/FAIRMetrics/Metrics](https://github.com/FAIRMetrics/Metrics)
-<br/></p>
+* FAIR rubrics: [https://fairshake.cloud/rubric/](https://fairshake.cloud/rubric/)
+<br/>
+* FAIR metrics github repository: [https://github.com/FAIRMetrics/Metrics](https://github.com/FAIRMetrics/Metrics)
+<br/>
 
 
 ## Conclusion
