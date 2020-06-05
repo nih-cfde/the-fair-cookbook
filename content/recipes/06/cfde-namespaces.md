@@ -22,10 +22,10 @@ with questions before investing significant effort in creating their ETL process
 The namespace must be a valid URI (not necessarily resolvable) that is
 under the control of the DCC or a trusted naming authority, and may
 contain an intial path information. Examples of valid namespaces
- * `https://project-a.example.org`
- * `https://project-a.example.org/samples`
- * `tag:project-a.example.org,2020:`
- * `tag:project-a.example.org,2020:samples`
+ * `https://project-a.example.org/`
+ * `https://project-a.example.org/samples/`
+ * `tag:project-a.example.org,2020:/`
+ * `tag:project-a.example.org,2020:samples#`
 
 The namespace itself does not need (nor should) have any
 semantic meaning on its own, though the namespaces table in the C2M2 may contain
@@ -38,18 +38,15 @@ those entities are associated with.
 
 ## Syntax
 
-The local name of a resource is concatenated with the namespace using the `/`
-character as a seperator to form the full resource name. To ensure
-this, the namespace must be a valid URI, without a trailing `/`. Similarily,
-th local name of a resource must be a valid path, but may not begin with a
-`/`.
+The local name of a resource is concatenated with the namespace to form the full resource name. To ensure
+this, the namespace must be a valid URI and may include a trailing separation character, such as `?` or `#`. The local name of a resource may have any syntax, so long as when concatenate with the namespace the full names is also a valid URI.
 
 Given the local name `8675/REAMDE` and the previous namespace
 examples, the full resouces names would be:
  * `https://project-a.example.org/8675/REAMDE`
  * `https://project-a.example.org/samples/8675/REAMDE`
  * `tag:project-a.example.org,2020:/8675/REAMDE`
- * `tag:project-a.example.org,2020:samples/8675/REAMDE`
+ * `tag:project-a.example.org,2020:samples#8675/REAMDE`
 
 ## Namespace Selection
 
