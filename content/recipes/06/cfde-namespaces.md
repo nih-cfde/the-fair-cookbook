@@ -47,6 +47,62 @@ examples, the full resouces names would be:
  * `https://project-a.example.org/samples/8675/REAMDE`
  * `tag:project-a.example.org,2020:/8675/REAMDE`
  * `tag:project-a.example.org,2020:samples#8675/REAMDE`
+ 
+## Validation
+
+There are tools for validating and introspecting URIs, like the [Python rfc3986 package](https://pypi.org/project/rfc3986/). Using our examples above, we can valid the namespaces, the full names, and look at the breakdown of the elements.
+
+```python
+import rfc3986
+
+# https://project-a.example.org/
+rfc3986.is_valid_uri('https://project-a.example.org/')
+True
+rfc3986.uri_reference('https://project-a.example.org/')
+URIReference(scheme='https', authority='project-a.example.org', path='/', query=None, fragment=None)
+
+# https://project-a.example.org/samples/
+rfc3986.is_valid_uri('https://project-a.example.org/samples/')
+True
+rfc3986.uri_reference('https://project-a.example.org/samples/')
+URIReference(scheme='https', authority='project-a.example.org', path='/samples/', query=None, fragment=None)
+
+# tag:project-a.example.org,2020:/
+rfc3986.is_valid_uri('tag:project-a.example.org,2020:/')
+True
+rfc3986.uri_reference('tag:project-a.example.org,2020:/')
+URIReference(scheme='tag', authority=None, path='project-a.example.org,2020:/', query=None, fragment=None)
+
+# tag:project-a.example.org,2020:samples#
+rfc3986.is_valid_uri('tag:project-a.example.org,2020:samples#')
+True
+rfc3986.uri_reference('tag:project-a.example.org,2020:samples#')
+URIReference(scheme='tag', authority=None, path='project-a.example.org,2020:samples', query=None, fragment='')
+
+# https://project-a.example.org/8675/REAMDE
+rfc3986.is_valid_uri('https://project-a.example.org/8675/REAMDE')
+True
+rfc3986.uri_reference('https://project-a.example.org/8675/REAMDE')
+URIReference(scheme='https', authority='project-a.example.org', path='/8675/REAMDE', query=None, fragment=None)
+
+# https://project-a.example.org/samples/8675/REAMDE
+rfc3986.is_valid_uri('https://project-a.example.org/samples/8675/REAMDE')
+True
+rfc3986.uri_reference('https://project-a.example.org/samples/8675/REAMDE')
+URIReference(scheme='https', authority='project-a.example.org', path='/samples/8675/REAMDE', query=None, fragment=None)
+
+# tag:project-a.example.org,2020:/8675/REAMDE
+rfc3986.is_valid_uri('tag:project-a.example.org,2020:/8675/REAMDE')
+True
+rfc3986.uri_reference('tag:project-a.example.org,2020:/8675/REAMDE')
+URIReference(scheme='tag', authority=None, path='project-a.example.org,2020:/8675/REAMDE', query=None, fragment=None)
+
+# tag:project-a.example.org,2020:samples#8675/REAMDE
+rfc3986.is_valid_uri('tag:project-a.example.org,2020:samples#8675/REAMDE')
+True
+rfc3986.uri_reference('tag:project-a.example.org,2020:samples#8675/REAMDE')
+URIReference(scheme='tag', authority=None, path='project-a.example.org,2020:samples', query=None, fragment='8675/REAMDE')
+```
 
 ## Namespace Selection
 
