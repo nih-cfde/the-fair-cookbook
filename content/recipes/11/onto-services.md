@@ -1,8 +1,8 @@
 # Ontology services
 
-**authors**: [Philippe Rocca-Serra]()
+**authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**maintainers**: 
+**maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
 **version**: initial draft
 
@@ -87,7 +87,7 @@ These can be accessed via several vocabulary services maintainde by public insti
 |-|-|-|
 |Ontobee|[http://www.ontobee.org/ontology/](http://www.ontobee.org/ontology/)|University of Michigan Medical School|
 |Ontology Lookup Service|[https://www.ebi.ac.uk/ols/index](https://www.ebi.ac.uk/ols/index)|EMBL-European Bioinformatics Institute|
-|NCBO Bioportal|[https://bioportal.bioontology.org/](https://bioportal.bioontology.org/)|National Centre for Biomedical Ontologies| Stanford University| 
+|NCBO Bioportal|[https://bioportal.bioontology.org/](https://bioportal.bioontology.org/)|National Centre for Biomedical Ontologies, Stanford University| 
 
 ---
 
@@ -96,6 +96,8 @@ These can be accessed via several vocabulary services maintainde by public insti
 Semantic artefacts (Lexicons, Controlled Terminologies, Ontologies) can be accessed through a number of publicly available services, each with specific features and services attached to them.
 For specialized domains, it may be beneficial to access the specialized servers (e.g. Athena), as they, to some extent, limit to search space to only those resources relevant to the fields.
 This is in contrast to more general purpose, domain agnostic vocabulary services.
+> ####  What to read next?
+> * [CFDE selected terminologies?](../14/cfde-terminologies.html)
 
 
 

@@ -15,6 +15,13 @@ html {
     /*background-color: orange;*/
 }
 
+h1 > code,
+h2 > code,
+h3 > code {
+    font-size: 0.80em; 
+    font-family: "Avenir", Avenir, serif;
+}
+
 body {
     width: 87.5%;
     margin-left: auto;
@@ -26,12 +33,13 @@ body {
     counter-reset: sidenote-counter; 
 }
 
-h1 {
+h1  { 
     font-weight: 400;
     margin-top: 4rem;
     margin-bottom: 1.5rem;
     font-size: 3.2rem;
     line-height: 1; 
+    font-family: "Avenir", Avenir, serif!important;
 }
 
 h2 {
@@ -41,6 +49,7 @@ h2 {
     margin-bottom: 1.4rem;
     font-size: 2.2rem;
     line-height: 1; 
+    font-family: "Avenir", Avenir, serif!important;;
 }
 
 h3 {
@@ -50,6 +59,7 @@ h3 {
     margin-top: 2rem;
     margin-bottom: 1.4rem;
     line-height: 1; 
+    font-family: "Avenir", Avenir, serif!important;;
 }
 
 hr {
@@ -118,6 +128,7 @@ nav.c-textbook__sidebar {
 	font-family: "Avenir", Avenir, serif;
 	color:lightgray;
 	font-weight: bold;
+    opacity: 0.95;
     /*background-color: */
     /*background-image: linear-gradient(#a4682140, lightgray);*/
     /*background-image: linear-gradient(#00518f, #00518f);*/
@@ -127,19 +138,23 @@ nav.c-textbook__sidebar {
 
 .c-page__nav{
 	width:  120%;
-	border-color: darkred;
+	border-color: orange;
 }
 
 .c-page__nav__prev{
 	width:  120%;
-	border-color: darkred;
+	border-color: orange;
 }
 
 .c-page__nav__next{
 	width:  120%;
-	border-color: darkred;
+	border-color: orange;
 }
 
+
+.c-sidebar__title{
+    font-family: "Avenir", Avenir, serif;
+}
 
 
 ul.c-sidebar__chapters {
@@ -180,6 +195,10 @@ a.c-sidebar__entry:active {
 
 a.c-sidebar__entry:{
     color:green;
+}
+
+a.anchor-link {
+    font-family: "Avenir", Avenir, serif;
 }
 
 div {
@@ -235,6 +254,9 @@ main.c-textbook__page{
     color:pink;
 }*/
 
+img.float-left.bottom-margin  {
+    height: 40px;
+}
 
 blockquote {
     font-size: 1.4rem; 
@@ -301,13 +323,15 @@ figure.fullwidth figcaption {
 
 /* Links: replicate underline that clears descenders */
 a:link {
-	color:darkred;
+	color: mediumpurple;
 	/*font-weight: bold;*/
 	}
 
 a:visited{
 	color: orange;
 }
+
+
 /*a:visited {
     color: inherit; 
 }
@@ -419,10 +443,17 @@ code, pre > code {
     font-size: 1.2rem; 
 }*/
 
-h1 > code,
-h2 > code,
-h3 > code {
-    font-size: 0.80em; 
+.buttons .interact-button  {
+    background-color: #3f51b5;
+}
+
+
+
+
+
+a.anchor-link {
+    color: red;
+    font-family: "Avenir", Avenir, serif;
 }
 
 .marginnote > code,

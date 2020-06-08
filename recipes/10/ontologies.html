@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Understanding terminologies</title>
-  <meta name="description" content="        Understanding terminologies    Controlled Terminologies &amp; Ontologies authors: Philippe Rocca-Serramaintainers:version: initial draftlicense: GPLv...">
+  <meta name="description" content="        Understanding terminologies    Controlled Terminologies &amp; Ontologies authors: Philippe Rocca-Serramaintainers: Philippe Rocca-Serraversion: initi...">
 
   <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/recipes/10/ontologies.html">
-  <link rel="alternate" type="application/rss+xml" title="THE CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NIH-CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
 
   <meta property="og:url"         content="https://nih-cfde.github.io/the-fair-cookbook/recipes/10/ontologies.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Understanding terminologies" />
-<meta property="og:description" content="        Understanding terminologies    Controlled Terminologies &amp; Ontologies authors: Philippe Rocca-Serramaintainers:version: initial draftlicense: GPLv..." />
+<meta property="og:description" content="        Understanding terminologies    Controlled Terminologies &amp; Ontologies authors: Philippe Rocca-Serramaintainers: Philippe Rocca-Serraversion: initi..." />
 <meta property="og:image"       content="https://nih-cfde.github.io/the-fair-cookbook/images/logo/CFDE-logo-contrast.png" />
 
 <meta name="twitter:card" content="summary">
@@ -26,9 +26,9 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/recipes/10/ontologies.html",
   "headline": "Understanding terminologies",
-  "datePublished": "2020-05-29T12:45:25+00:00",
-  "dateModified": "2020-05-29T12:45:25+00:00",
-  "description": "        Understanding terminologies    Controlled Terminologies &amp; Ontologies authors: Philippe Rocca-Serramaintainers:version: initial draftlicense: GPLv...",
+  "datePublished": "2020-06-08T16:51:59+00:00",
+  "dateModified": "2020-06-08T16:51:59+00:00",
+  "description": "        Understanding terminologies    Controlled Terminologies &amp; Ontologies authors: Philippe Rocca-Serramaintainers: Philippe Rocca-Serraversion: initi...",
   "author": {
     "@type": "Person",
     "name": "CFDE"
@@ -61,7 +61,7 @@
   <meta name="theme-color" content="#233947">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/the-fair-cookbook/images/logo/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/the-fair-cookbook/images/logo/CFDE-logo.ico">
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
@@ -574,16 +574,12 @@ initFunction(initPrint)
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
   <a href="https://nih-cfde.github.io/the-fair-cookbook/intro.html"><img src="/the-fair-cookbook/images/logo/CFDE-logo-contrast.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent></a>
-  <h2 class="c-sidebar__title">THE CFDE FAIR COOKBOOK</h2>
+  <h2 class="c-sidebar__title">NIH-CFDE FAIR COOKBOOK</h2>
   <ul class="c-sidebar__chapters">
     
       
       
         <li class="c-sidebar__divider">
-        
-      
-      
-        <li><h2 class="c-sidebar__title">The FAIR cookbook by the NIH-CFDE</h2></li>
         
       
       
@@ -714,6 +710,28 @@ initFunction(initPrint)
                   <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/12/c2m2.html">
                     
                     Introducing the Cross-Cut Metadata Model (C2M2)
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/12/C2M2-L1-description">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/12/C2M2-L1-description.html">
+                    
+                    Description of the Level-1 C2M2
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/06/cfde-namespaces">
+                  <a class="c-sidebar__entry" href="/the-fair-cookbook/recipes/06/cfde-namespaces.html">
+                    
+                    CFDE Resource Naming
                   </a>
                 </li>
               
@@ -912,10 +930,6 @@ initFunction(initPrint)
       
       
         <li class="c-sidebar__divider">
-        
-      
-      
-        <li><h2 class="c-sidebar__title">Community</h2></li>
         
       
       
@@ -1147,7 +1161,7 @@ initFunction(initPrint)
 <h1 id="Controlled-Terminologies-&amp;-Ontologies">Controlled Terminologies &amp; Ontologies<a class="anchor-link" href="#Controlled-Terminologies-&amp;-Ontologies"> </a>
 </h1>
 <p><strong>authors</strong>: <a href="https://orcid.org/orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a></p>
-<p><strong>maintainers</strong>:</p>
+<p><strong>maintainers</strong>: <a href="https://orcid.org/orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a></p>
 <p><strong>version</strong>: initial draft</p>
 <p><strong>license</strong>: GPLv2+</p>
 <hr>
@@ -1267,6 +1281,14 @@ This point becomes particularly important when considering the role of <code>rea
 </h2>
 <p>Choosing ontology and semantic resources is a complex issue, which requires careful considerations, taking into account the research context of the data production workflow, regulatory requirements that may apply. The choices made affect the integrative potential of a dataset as they influence the level of <code>interoperability</code>. 
 Clearly declaring the semantic resources used to annotate a dataset also influence <code>findability</code> and <code>reusability</code> and it is good practice to do so.</p>
+<blockquote>
+<h4 id="What-to-read-next?">What to read next?<a class="anchor-link" href="#What-to-read-next?"> </a>
+</h4>
+<ul>
+<li><a href="../11/onto-services.html">Ontology services</a></li>
+<li><a href="../14/cfde-terminologies.html">CFDE selected terminologies</a></li>
+</ul>
+</blockquote>
 <hr>
 <h2 id="Bibliography:">Bibliography:<a class="anchor-link" href="#Bibliography:"> </a>
 </h2>

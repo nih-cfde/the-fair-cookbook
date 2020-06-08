@@ -9,7 +9,7 @@
   <meta name="description" content="# Introduction to FAIR Principles**Author(s):** [John Cheadle](https://orcid.org/0000-0002-0106-4415)**Maintainer(s):** [John Cheadle](https://orcid.org/0000...">
 
   <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/00/fair-principles.html">
-  <link rel="alternate" type="application/rss+xml" title="THE CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NIH-CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
 
   <meta property="og:url"         content="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/00/fair-principles.html" />
 <meta property="og:type"        content="article" />
@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/content/recipes/00/fair-principles.html",
   "headline": "Introduction to FAIR Principles",
-  "datePublished": "2020-05-29T12:45:25+00:00",
-  "dateModified": "2020-05-29T12:45:25+00:00",
+  "datePublished": "2020-06-08T16:51:59+00:00",
+  "dateModified": "2020-06-08T16:51:59+00:00",
   "description": "# Introduction to FAIR Principles**Author(s):** [John Cheadle](https://orcid.org/0000-0002-0106-4415)**Maintainer(s):** [John Cheadle](https://orcid.org/0000...",
   "author": {
     "@type": "Person",
@@ -61,7 +61,7 @@
   <meta name="theme-color" content="#233947">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/the-fair-cookbook/images/logo/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/the-fair-cookbook/images/logo/CFDE-logo.ico">
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
@@ -574,16 +574,12 @@ initFunction(initPrint)
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
   <a href="https://nih-cfde.github.io/the-fair-cookbook/intro.html"><img src="/the-fair-cookbook/images/logo/CFDE-logo-contrast.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
-  <h2 class="c-sidebar__title">THE CFDE FAIR COOKBOOK</h2>
+  <h2 class="c-sidebar__title">NIH-CFDE FAIR COOKBOOK</h2>
   <ul class="c-sidebar__chapters">
     
       
       
         <li class="c-sidebar__divider"></li>
-        
-      
-      
-        <li><h2 class="c-sidebar__title">The FAIR cookbook by the NIH-CFDE</li>
         
       
       
@@ -726,6 +722,32 @@ initFunction(initPrint)
                   >
                     
                     Introducing the Cross-Cut Metadata Model (C2M2)
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/12/C2M2-L1-description">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/12/C2M2-L1-description.html"
+                  >
+                    
+                    Description of the Level-1 C2M2
+                  </a>
+                </li>
+              
+                
+                
+                
+                
+                <li class="c-sidebar__subsection" data-url="/recipes/06/cfde-namespaces">
+                  <a class="c-sidebar__entry"
+                    href="/the-fair-cookbook/recipes/06/cfde-namespaces.html"
+                  >
+                    
+                    CFDE Resource Naming
                   </a>
                 </li>
               
@@ -948,10 +970,6 @@ initFunction(initPrint)
       
       
         <li class="c-sidebar__divider"></li>
-        
-      
-      
-        <li><h2 class="c-sidebar__title">Community</li>
         
       
       
@@ -1239,7 +1257,7 @@ initFunction(initPrint)
 
 <h3 id="how-is-fair-evaluated-in-the-context-of-the-cfde">How is FAIR evaluated in the context of the CFDE?</h3>
 
-<p>In the context of the CFDE, aspects of FAIR are evaluated using the <a href="https://fairshake.cloud/">FAIRshake tool</a>, which interrogates a digital object using a <a href="https://fairshake.cloud/rubric/">specific rubric of metrics</a>. The metrics are questionnaire-style. Within the FAIRshake context, other organizations define rubrics that contain metrics that are more appropriate for evaluating their digital objects. More information can be found in the FAIRshake Rubric for CFDE recipe (TODO:link needed) within this cookbook.</p>
+<p>In the context of the CFDE, aspects of FAIR are evaluated using the <a href="https://fairshake.cloud/">FAIRshake tool</a>, which interrogates a digital object using an appropriate <a href="https://fairshake.cloud/rubric/">rubric of metrics</a>. The metrics are questionnaire-style. Many digital objects have already been evaluated with the <a href="https://fairshake.cloud/rubric/36/">NIH-CFDE FAIR Rubric</a>. Within FAIRshake other organizations define rubrics containing metrics that are more appropriate for evaluating their own digital objects.</p>
 
 <h3 id="why-evaluate-fair">Why evaluate FAIR?</h3>
 
@@ -1247,10 +1265,15 @@ initFunction(initPrint)
 
 <h3 id="how-to-contribute-reform-evolve-evaluation-rules">How to contribute, reform, evolve evaluation rules?</h3>
 
-<p><del>Who IS evaluating FAIR? For instance, if someone wanted to dispute/correct/change/question their FAIRshake score, who might they contact? Can someone provide a resource for this?</del></p>
+<p>While it is possible to assess FAIR on general terms, specific domains of knowledge requires dedicated extensions. To give a practical example, <code class="language-plaintext highlighter-rouge">Findability</code> and <code class="language-plaintext highlighter-rouge">Interoperability</code> mandate that <code class="language-plaintext highlighter-rouge">sufficient metadata</code> is provided. However the amount of metadata varies depending on the application and content, so requirements for the description of <em>transcriptomics experiments</em> differs from <em>medical imaging</em> ones.
+It is therefore necessary to craft domain specific profiles which can be used by the FAIR assessor tools to determine the level of compliance. When using <a href="https://fairshake.cloud/">FAIRShake</a>, this is achieved by the creation of dedicated <code class="language-plaintext highlighter-rouge">rubrics</code>.</p>
 
-<p>TODO: suggestion: the respective github repositories<br />
-TODO: mention RDA FAIR working group<br />&lt;/p&gt;</p>
+<p>As the field of scoring FAIR is still relatively new, several groups, e.g. <a href="https://www.rd-alliance.org/groups/fair-data-maturity-model-wg">RDA FAIR Maturity Model working group</a>,  have been established to evolve the metrics or maturity indicators in an attempt to resolve differences in interpretation of the FAIR principles and also to create a forum where discussions can take place.</p>
+
+<ul>
+  <li>FAIR rubrics: <a href="https://fairshake.cloud/rubric/">https://fairshake.cloud/rubric/</a><br /></li>
+  <li>FAIR metrics github repository: <a href="https://github.com/FAIRMetrics/Metrics">https://github.com/FAIRMetrics/Metrics</a><br /></li>
+</ul>
 
 <h2 id="conclusion">Conclusion</h2>
 
