@@ -70,5 +70,8 @@ ___
 * Taking the notion of `taxonomical descriptors` for example, the harmonization across the various sources can be easily achieved by relying on a resource such as NCBITaxonomy and the curation action is simplified by that limited diversity of *species* found in the different databases.
 * On the other hand, the harmonization tasks for domains such as `sample type`, `assay type` can be more involved, not to mention the case of `phenotypic descriptions` or `disease`, even though `level 0 and level 1 compliance` do not expect such a degree of integration.
 
+> ####  What to read next?
+> * [CFDE C2M2 model](../12/c2m2.html)
+> * [ETL to CFDE C2M2 model](../07/seo.html)
 
 

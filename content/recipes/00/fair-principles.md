@@ -54,7 +54,7 @@ Another [2019 paper by Clark et al. and led by Dr Ma'ayan](https://doi.org/10.10
 
 ### How is FAIR evaluated in the context of the CFDE?
 
-In the context of the CFDE, aspects of FAIR are evaluated using the [FAIRshake tool](https://fairshake.cloud/), which interrogates a digital object using a [specific rubric of metrics](https://fairshake.cloud/rubric/). The metrics are questionnaire-style. Within the FAIRshake context, other organizations define rubrics that contain metrics that are more appropriate for evaluating their digital objects. More information can be found in the FAIRshake Rubric for CFDE recipe (TODO:link needed) within this cookbook.
+In the context of the CFDE, aspects of FAIR are evaluated using the [FAIRshake tool](https://fairshake.cloud/), which interrogates a digital object using an appropriate [rubric of metrics](https://fairshake.cloud/rubric/). The metrics are questionnaire-style. Many digital objects have already been evaluated with the [NIH-CFDE FAIR Rubric](https://fairshake.cloud/rubric/36/). Within FAIRshake other organizations define rubrics containing metrics that are more appropriate for evaluating their own digital objects.
 
 
 ### Why evaluate FAIR?
@@ -64,10 +64,13 @@ As we hinted, the FAIR principles are `broad guiding principles`, sometimes prov
 
 ### How to contribute, reform, evolve evaluation rules?
 
-~~Who IS evaluating FAIR? For instance, if someone wanted to dispute/correct/change/question their FAIRshake score, who might they contact? Can someone provide a resource for this?~~
+While it is possible to assess FAIR on general terms, specific domains of knowledge requires dedicated extensions. To give a practical example, `Findability` and `Interoperability` mandate that `sufficient metadata` is provided. However the amount of metadata varies depending on the application and content, so requirements for the description of *transcriptomics experiments* differs from *medical imaging* ones.
+It is therefore necessary to craft domain specific profiles which can be used by the FAIR assessor tools to determine the level of compliance. When using [FAIRShake](https://fairshake.cloud/), this is achieved by the creation of dedicated `rubrics`.
 
-TODO: suggestion: the respective github repositories<br/>
-TODO: mention RDA FAIR working group<br/></p>
+As the field of scoring FAIR is still relatively new, several groups, e.g. [RDA FAIR Maturity Model working group](https://www.rd-alliance.org/groups/fair-data-maturity-model-wg),  have been established to evolve the metrics or maturity indicators in an attempt to resolve differences in interpretation of the FAIR principles and also to create a forum where discussions can take place.
+
+* FAIR rubrics: [https://fairshake.cloud/rubric/](https://fairshake.cloud/rubric/)<br/>
+* FAIR metrics github repository: [https://github.com/FAIRMetrics/Metrics](https://github.com/FAIRMetrics/Metrics)<br/>
 
 
 ## Conclusion

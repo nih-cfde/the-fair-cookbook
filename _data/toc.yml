@@ -25,7 +25,7 @@
 - divider: true
 
 # # Add a header and sample content section
-- header: The FAIR cookbook by the NIH-CFDE
+# - header: The FAIR cookbook by the NIH-CFDE
 
 # A chapter w/ a collection of sections beneath it
 # Top-level page
@@ -70,6 +70,14 @@
     subsections:
       - title: Introducing the Cross-Cut Metadata Model (C2M2)
         url: /recipes/12/c2m2
+        not_numbered: false
+        # expand_sections: true
+      - title: Description of the Level-1 C2M2
+        url: /recipes/12/C2M2-L1-description
+        not_numbered: false
+        # expand_sections: true
+      - title: CFDE Resource Naming
+        url: /recipes/06/cfde-namespaces
         not_numbered: false
         # expand_sections: true
 
@@ -183,7 +191,7 @@
 - divider: true
 
 # Add a header and sample content section
-- header: Community
+# - header: Community
 
 # Contribution section
 - title: Contributing

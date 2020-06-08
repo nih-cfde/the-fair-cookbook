@@ -1,8 +1,8 @@
-# Table of content
-
 <div>
-<img src="../images/logo/logo.png" width="150"/>
+<img src="../images/logo/logo-colourized-II.png" width="150"/>
 </div>
+
+# Table of content
 
 
 1. [FAIR in NIH CDFE context](./00/fair-principles.html)
@@ -11,13 +11,14 @@
 
 * [Discoverability](./08/cataloguing):
 
-	15. Introducing the Cross-Cut Metadata Model (C2M2)
-	16. Implementing C2M2 with Deriva and Frictionless Data Packages
+	15. [Introducing the Cross-Cut Metadata Model (C2M2)]()
+	16. [Implementing C2M2 with Deriva and Frictionless Data Packages](./12/C2M2-L1-description.html)
+	17. [CFDE namespaces](./06/cfde-namespaces.html)
 	7. [Mapping your model to the C2M2: the KidsFirst example](./07/seo.html)
 
 * [Identification]():
 	8. [The need for identifiers](./08/identifiers.html)
-	9. [Recommendations for minting persistent and resolvable identifiers]()
+	9. [Recommendations for minting persistent and resolvable identifiers](./08/1/pids.html)
 	10. [Identifier minting with MINIDs](./08/2/minids.html)
 <!-- 11. Obtaining DOIs -->
 <!-- 12. Finding digital objects - Terminologies and query expansion -->

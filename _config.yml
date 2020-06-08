@@ -16,7 +16,7 @@
 
 #######################################################################################
 # Jekyll site settings
-title: THE CFDE FAIR COOKBOOK
+title: NIH-CFDE FAIR COOKBOOK
 author: CFDE
 email: YOUR EMAIL
 description: >-
@@ -123,7 +123,7 @@ defaults:
     toc_icon: list-ul
     excerpt: ''
 
-favicon_path: images/logo/favicon.ico
+favicon_path: images/logo/CFDE-logo.ico
 
 # Markdown Processing
 markdown: kramdown
