@@ -2,6 +2,7 @@
 
 **authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 			 [Robert Carter](https://orcid.org/0000-0003-0937-8141)
+			 [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
 **maintainers**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 

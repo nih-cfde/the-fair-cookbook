@@ -72,6 +72,14 @@
         url: /recipes/12/c2m2
         not_numbered: false
         # expand_sections: true
+      - title: Description of the Level-1 C2M2
+        url: /recipes/12/C2M2-L1-description
+        not_numbered: false
+        # expand_sections: true
+      - title: CFDE Resource Naming
+        url: /recipes/06/cfde-namespaces
+        not_numbered: false
+        # expand_sections: true
 
       - title: ETL to C2M2/DATS - the KidsFirst example
         url: /recipes/07/seo

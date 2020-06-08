@@ -2,7 +2,7 @@
 
 **authors**: [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
 
-**maintainers**: 
+**maintainers**: [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
 
 **version**: initial draft
 
@@ -132,7 +132,7 @@ Clearly declaring the semantic resources used to annotate a dataset also influen
 
 > ####  What to read next?
 > * [Ontology services](../11/onto-services.html)
-> * [CFDE selected terminologies?](../14/cfde-terminologies.html)
+> * [CFDE selected terminologies](../14/cfde-terminologies.html)
 
 ___
 

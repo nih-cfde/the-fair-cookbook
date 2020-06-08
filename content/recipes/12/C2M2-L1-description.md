@@ -5,6 +5,18 @@ pdf_options:
 
 # Conceptual Description of the Level 1 C2M2
 
+**authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
+
+**maintainers**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
+
+**version**: initial draft
+
+**license**: GPLv2+
+
+---
+
+## Objectives
+
 This is a conceptual and narrative description of the Level 1 crosscut metadata model (C2M2). It
 covers the things (proper nouns) in the Level 1 C2M2 and their
 relationships, and describes the tables used to
@@ -172,6 +184,7 @@ A table linking a subject, a subject_role (a named organism-level constituent co
    - synthetic
  * **taxonomy_id** An NCBI Taxonomy Database ID identifying this taxon
 
+
 ## CFDE Controlled Vocabularies
 
 ### Subject Granularity
@@ -196,3 +209,16 @@ A table linking a subject, a subject_role (a named organism-level constituent co
 | pathogen | An organism identified as a pathogen symbiont in a subject assigned to the 'host-pathogen system' granularity category |
 | cell line ancestor | A taxon identified as a source organism for a subject assigned to the 'cell line' granularity category |
 | synthetic | A synthetic biological entity |
+
+
+## Conclusions:
+
+This section provides a concise overview of the key objects and concepts covered by the C2M2 model and should be viewed as an initial contact point for anyone interested in mapping data into the C2M2 model, thereby getting ready for a full ETL process.
+
+> ####  What to read next?
+> * [CFDE namespaces](../06/cfde-namespaces.html)
+> * [CFDE selected terminologies?](../14/cfde-terminologies.html)
+
+
+
+---

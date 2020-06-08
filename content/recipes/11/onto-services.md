@@ -1,8 +1,8 @@
 # Ontology services
 
-**authors**: [Philippe Rocca-Serra]()
+**authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**maintainers**: 
+**maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
 **version**: initial draft
 

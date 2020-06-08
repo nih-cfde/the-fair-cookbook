@@ -3,7 +3,19 @@ pdf_options:
   format: Letter
 ---
 
-# CFDE Resource Naming
+# Conceptual Description of the Level 1 C2M2
+
+**authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
+
+**maintainers**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
+
+**version**: initial draft
+
+**license**: GPLv2+
+
+---
+
+## Objectives:
 
 Resources (files, subjects, biosamples, etc.) are uniquely
 named in the context of the C2M2 using a namespace and an local name
@@ -146,3 +158,14 @@ Example
 
 The descriptive text (name and description) should related to the
 namespce and the local names of the resources.
+
+---
+ 
+## Conclusions:
+
+This section provides a concise overview of the mechanism to declaring a `namespace` associated with a DCC in the context of the CFDE project. It is an important `harmonization` process, which aims to avoid collisions between identifiers, while enhancing `interoperability` and `findability`. It also represents a key process in mapping data into the C2M2 model, thereby getting ready for a full ETL process from a DCC to the CFDE model and future indexing in the CDFE Deriva system.
+
+> ####  What to read next?
+> * [CFDE selected terminologies](../14/cfde-terminologies.html)
+
+
