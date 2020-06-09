@@ -6,7 +6,7 @@
 
 **Version**: 1.0
 
-**License**: GPLv2+
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 ## Background
 An [Application Programming Interface (API)](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#API)  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover [FAIR](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#FAIR) APIs of software libraries but instead focus on developing FAIR APIs for the web.

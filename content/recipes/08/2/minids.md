@@ -8,7 +8,7 @@
 
 **Version**: 1.0
 
-**License**: GPLv2+
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 ## Table of Contents
 1. [Main Objectives](#Main%20Objectives)
