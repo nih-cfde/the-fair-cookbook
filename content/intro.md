@@ -1,5 +1,5 @@
 <div>
-<img src="./images/logo/logo-colourized-II.png" width="150"/>
+<img src="./images/logo/CFDE-FAIR-new-logo-option1-colourized.png" width="150"/>
 </div>
 
 # The FAIR cookbook by the NIH-CFDE
