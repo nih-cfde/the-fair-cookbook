@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Developing FAIR API</title>
-  <meta name="description" content="        Developing FAIR API    Developing FAIR API Authors: Daniel J. B. ClarkeMaintainers: Daniel J. B. ClarkeVersion: 1.0License: GPLv2+Background An Appli...">
+  <meta name="description" content="        Developing FAIR API    Developing FAIR API Authors: Daniel J. B. ClarkeMaintainers: Daniel J. B. ClarkeVersion: 1.0License: CC0 1.0 Universal (CC0 1....">
 
   <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/recipes/16/fair-api.html">
   <link rel="alternate" type="application/rss+xml" title="NIH-CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
@@ -14,7 +14,7 @@
   <meta property="og:url"         content="https://nih-cfde.github.io/the-fair-cookbook/recipes/16/fair-api.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Developing FAIR API" />
-<meta property="og:description" content="        Developing FAIR API    Developing FAIR API Authors: Daniel J. B. ClarkeMaintainers: Daniel J. B. ClarkeVersion: 1.0License: GPLv2+Background An Appli..." />
+<meta property="og:description" content="        Developing FAIR API    Developing FAIR API Authors: Daniel J. B. ClarkeMaintainers: Daniel J. B. ClarkeVersion: 1.0License: CC0 1.0 Universal (CC0 1...." />
 <meta property="og:image"       content="https://nih-cfde.github.io/the-fair-cookbook/images/logo/CFDE-logo-contrast.png" />
 
 <meta name="twitter:card" content="summary">
@@ -26,9 +26,9 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/recipes/16/fair-api.html",
   "headline": "Developing FAIR API",
-  "datePublished": "2020-06-09T14:22:00+00:00",
-  "dateModified": "2020-06-09T14:22:00+00:00",
-  "description": "        Developing FAIR API    Developing FAIR API Authors: Daniel J. B. ClarkeMaintainers: Daniel J. B. ClarkeVersion: 1.0License: GPLv2+Background An Appli...",
+  "datePublished": "2020-06-09T17:11:14+00:00",
+  "dateModified": "2020-06-09T17:11:14+00:00",
+  "description": "        Developing FAIR API    Developing FAIR API Authors: Daniel J. B. ClarkeMaintainers: Daniel J. B. ClarkeVersion: 1.0License: CC0 1.0 Universal (CC0 1....",
   "author": {
     "@type": "Person",
     "name": "CFDE"
@@ -1213,7 +1213,7 @@ initFunction(initPrint)
 <h1 id="Developing-FAIR-API">Developing FAIR API<a class="anchor-link" href="#Developing-FAIR-API"> </a></h1><p><strong>Authors</strong>: <a href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
 <p><strong>Maintainers</strong>: <a href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
 <p><strong>Version</strong>: 1.0</p>
-<p><strong>License</strong>: GPLv2+</p>
+<p><strong>License</strong>: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
 <h2 id="Background">Background<a class="anchor-link" href="#Background"> </a></h2><p>An <a href="https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#API">Application Programming Interface (API)</a>  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover <a href="https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#FAIR">FAIR</a> APIs of software libraries but instead focus on developing FAIR APIs for the web.</p>
 <p>More and more web-based applications are becoming available each day. These applications typically perform complex operations on large databases. While web-based applications provide users with the capacity to access a tool, a database, or other resource programmatically, they are not always able to interoperate with other independent web applications. A web-based application that offers a FAIR API is more accessible to operating as part of workflows, or integration systems such as semantic search engines. This makes FAIR API development very relevant for data catalogs or web tools developed by the CF DCCs.</p>
 <p>While a slew of standards exist for web API development and documentation, each has their own level of FAIRness. Here we are going to focus on <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">RESTful APIs</a> which can be described with <a href="https://www.openapis.org/">OpenAPI</a> (previously Swagger) to take advantage of RESTful API flexibility while still permitting machine readable introspection. Several other standards are machine readable by default, including <a href="https://www.w3.org/TR/soap/">SOAP</a>, <a href="https://www.w3.org/TR/sparql11-overview/">SPARQL</a> or <a href="https://graphql.org/">GraphQL</a> among many others, but despite this, RESTful APIs are the most widely used because of their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI.</p>
