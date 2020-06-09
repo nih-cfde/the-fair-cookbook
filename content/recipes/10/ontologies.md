@@ -51,7 +51,7 @@ There are `6 important features` to consider where selecting an semantic artefac
 
 **3. Is it well maintained ? i.e. frequent release, term requests handling, versioning and deprecation policies clarified.**
 
-**4. Are there stable persistent resolvable identifiers for all terrms?**
+**4. Are there stable persistent resolvable identifiers for all terms?**
 
 **5. Who use it and What resources are being annotated with it?**
 
