@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>CFDE Glossary</title>
-  <meta name="description" content="# CFDE Glossary## Controlled Vocabulary**Asset** - a sample or a file.**Biospecimens** - a material collected from an organism, a cell culture, or a material...">
+  <meta name="description" content="# CFDE Glossary# Table of Content1. [Common Fund Projects - Programs - Organizations](#Common-Fund-Projects---Programs---Organizations)2. [Use Case Terms](#U...">
 
   <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/CFDE_Glossary.html">
   <link rel="alternate" type="application/rss+xml" title="NIH-CFDE FAIR COOKBOOK" href="https://nih-cfde.github.io/the-fair-cookbook/feed.xml">
@@ -14,7 +14,7 @@
   <meta property="og:url"         content="https://nih-cfde.github.io/the-fair-cookbook/content/CFDE_Glossary.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="CFDE Glossary" />
-<meta property="og:description" content="# CFDE Glossary## Controlled Vocabulary**Asset** - a sample or a file.**Biospecimens** - a material collected from an organism, a cell culture, or a material..." />
+<meta property="og:description" content="# CFDE Glossary# Table of Content1. [Common Fund Projects - Programs - Organizations](#Common-Fund-Projects---Programs---Organizations)2. [Use Case Terms](#U..." />
 <meta property="og:image"       content="https://nih-cfde.github.io/the-fair-cookbook/images/logo/CFDE-logo-contrast.png" />
 
 <meta name="twitter:card" content="summary">
@@ -26,9 +26,9 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/content/CFDE_Glossary.html",
   "headline": "CFDE Glossary",
-  "datePublished": "2020-06-11T17:38:39+00:00",
-  "dateModified": "2020-06-11T17:38:39+00:00",
-  "description": "# CFDE Glossary## Controlled Vocabulary**Asset** - a sample or a file.**Biospecimens** - a material collected from an organism, a cell culture, or a material...",
+  "datePublished": "2020-06-14T19:41:32+00:00",
+  "dateModified": "2020-06-14T19:41:32+00:00",
+  "description": "# CFDE Glossary# Table of Content1. [Common Fund Projects - Programs - Organizations](#Common-Fund-Projects---Programs---Organizations)2. [Use Case Terms](#U...",
   "author": {
     "@type": "Person",
     "name": "CFDE"
@@ -1205,198 +1205,531 @@ initFunction(initPrint)
             <div class="c-textbook__content" id="textbook_content">
               <h1 id="cfde-glossary">CFDE Glossary</h1>
 
-<h2 id="controlled-vocabulary">Controlled Vocabulary</h2>
+<!-- <details> -->
 
-<p><strong>Asset</strong> - a sample or a file.</p>
+<h1 id="table-of-content">Table of Content</h1>
+<ol>
+  <li><a href="#Common-Fund-Projects---Programs---Organizations">Common Fund Projects - Programs - Organizations</a></li>
+  <li><a href="#Use-Case-Terms">Use Case Terms</a></li>
+  <li><a href="#Data-Models---Software---Tools">Data Models - Software - Tools</a></li>
+  <li><a href="#Cross-Cut-Metadata-Model-Core-Concepts">Cross Cut Metadata Model Core Concepts</a></li>
+  <li><a href="#CFDE-Model-Types-and-File-Formats">CFDE Model Types and File Formats</a></li>
+  <li><a href="#Processes">Processes</a></li>
+</ol>
 
-<p><strong>Biospecimens</strong> - a material collected from an organism, a cell culture, or a material containing organisms, such as an environmental material.</p>
+<h2 id="common-fund-projects---programs---organizations">Common Fund Projects - Programs - Organizations</h2>
 
-<p><strong>Data-Generating Events</strong> - a process, such as a data acquisition or a data transformation, resulting in the creation of a file (digital asset).</p>
+<!-- <summary>Click to expand!</summary> -->
 
-<p><strong>Data Object</strong> - a region of storage that contains a value or group of values. Each value can be accessed using its identifier or a more complex expression that refers to the object. In addition, each object has a unique data type.</p>
+<h5 id="a2cps"><u>A2CPS</u></h5>
+<ul>
+  <li><a href="https://commonfund.nih.gov/pain"><code class="language-plaintext highlighter-rouge">Acute to Chronic Pain Signatures program</code></a>. The most comprehensive study to date to investigate the connections of peripheral biology, brain, psychological, and bio-behavioral risk factors. Composed of a consortium of organizations and scientists throughout the U.S. and Canada, A2CPS is part of the multi-pronged <a href="https://heal.nih.gov/">NIH HEAL</a> (Helping to End Addiction Long-Term) initiative, an aggressive effort to speed scientific solutions to stem the national opioid public health crisis.</li>
+</ul>
 
-<p><strong>Dataset</strong> - a collection of data, published or curated by a single agent, and available for access or download in one or more formats.</p>
+<h5 id="ashg"><u>ASHG</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">American Society of Human Genetics</code>. They hold an annual conference that is the largest human genetics and genomics meeting and exposition in the world.</li>
+</ul>
 
-<p><strong>DATS</strong> - <a href="https://github.com/datatagsuite/README">Data Article Tag Suite</a> is a data model for representing key information about datasets with an emphasis on data discovery and data findability, which has inspired the creation of the NIH-C2M2 model. <a href="https://datatagsuite.github.io/docs/html/dats.html">The DATS model is expressed as a JSON schema</a>. Associated JSON-LD context files support search engine optimization because they map into <a href="https://schema.org">schema.org</a> and <a href="www.w3.org/TR/vocab-dcat-2/">DCAT</a>. Mappings into biological entities are also available via <a href="http://www.obofoundry.org">OBO Foundry resources</a>.</p>
+<h5 id="bic"><u>BIC</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Bioinformatics Center</code>. The BIC is responsible for the task of harmonizing the large quantity and diversity of data and metadata being generated by the consortium and performing meaningful integrative analyses across these omics data types.</li>
+</ul>
 
-<p><strong>DERIVA</strong> - Discovery Environment for Relational Information and Versioned Assets. A suite of tools and services that are designed to significantly reduce the overhead and complexity of creating and managing complex, big datasets. DERIVA provides a digital asset management system for scientific data to streamline the acquisition, modeling, management, and sharing of complex, big data, and provides interfaces so that these data can be delivered to diverse external tools for big-data analysis and analytic tools.</p>
+<h5 id="cc"><u>CC</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Coordinating Center</code>. The <a href="#CFDE">CFDE</a>-CC’s purpose is to improve growth in use and reuse of CF program data by supporting <a href="#DCC">DCC</a>s that participate in the Common Fund Data Ecosystem.</li>
+</ul>
 
-<p><strong><a href="https://www.go-fair.org/fair-principles/">FAIR</a></strong> - Findable, Accessible, Interoperable, and Reusable. Making data FAIR is the main goal of the DCCs.</p>
+<h5 id="cfde"><u>CFDE</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Common Fund Data Ecosystem</code>. A data ecosystem is a collection of data silos or commons joined together by a set of standards and services that facilitate findability, accessibility, reuse, and interoperability of datasets between silos/commons. A data ecosystem is focused on enabling multi-way connectivity between datasets, in a horizontal fashion, rather than deeper vertical analysis within each dataset. The goal of an ecosystem is to enable use cases between data silos, not within.</li>
+</ul>
 
-<p><strong><a href="https://fairshake.cloud/">FAIRshake</a></strong> - a tool produced for carrying out <em>FAIR Assessment</em>. Under the CFDE, each data center’s inventory will be evaluated consistently based on FAIRshake, and the Coordinating Center will work with the individual Common Fund programs to adjust FAIR measures to meet the needs of the Common Fund. FAIRshake includes evaluating the FAIRness of digital objects including datasets, tools, and repositories.</p>
+<h5 id="common-fund-programs"><u>Common Fund Programs</u></h5>
+<ul>
+  <li>the intent of the CF programs is to provide a strategic and nimble approach to address key roadblocks in biomedical research that impede basic scientific discovery and its translation into improved human health. In addition, these programs capitalize on emerging opportunities to catalyze the rate of progress across multiple biomedical fields. The CF programs include:</li>
+</ul>
 
-<p><strong>Figshare</strong> - an online open access repository where researchers can preserve and share their research outputs, including figures, datasets, images, and videos.</p>
+<h6 id="4dn"><a href="https://www.4dnucleome.org/">4DN</a></h6>
 
-<p><strong>File</strong> - digital objects that each of the DCCs host, such as genomic sequence, metagenomic, RNA-Seq, physiological, and metabolic data.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- The `4D Nucleome program`'s goal is to study the three-dimensional organization of the nucleus in space and time (the 4th dimension). 
+</code></pre></div></div>
 
-<p><strong>Frictionless Data Package</strong> - a format specification produced by the Open Knowledge Foundation and supported by the Frictionless.io organization. It aims to shorten the path from data to insight with a collection of specifications and software for the publication, transport, and consumption of data. This kills the cycle of find/improve/share that makes for a dynamic and productive data ecosystem.</p>
+<h6 id="gtex"><a href="https://www.gtexportal.org/home/">GTEx</a></h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- the `Genotype-Tissue Expression` project is an ongoing effort to build a comprehensive public resource to study tissue-specific gene expression and regulation.
+</code></pre></div></div>
 
-<p><strong>Globus Automate</strong> - a distributed research automation platform that addresses the problem of securely and reliably automating, for many thousands of scientists, sequences of data management tasks that may span locations, storage systems, administrative domains, and timescales, and integrate both mechanical and human inputs.</p>
+<h6 id="hmp"><a href="https://www.hmpdacc.org/">HMP</a></h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- the `Human Microbiome Project` whose mission is to generate resources to facilitate characterization of the human microbiota to further our understanding of how the microbiome impacts human health and disease. 
+</code></pre></div></div>
 
-<p><strong>GUID</strong> - Globally Unique IDentifier. A 128-bit unique identifier used to uniquely identify an entity as modern hashing functions used to generate those make identifier collisions (the event of the function producing the same sequence) highly unlikely (but not impossible).</p>
+<h6 id="kids-first"><a href="https://kidsfirstdrc.org/">Kids First</a></h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- the `Kids First Pediatric Research Program` Data Resource Center enables researchers, clinicians, and patients to work together to accelerate research and promote new discoveries for children affected with cancer and structural birth defects. 
+</code></pre></div></div>
 
-<p><strong>Insignia</strong> - a grid of colored squares used to visually communicate FAIRness level.</p>
+<h6 id="lincs"><a href="http://lincsproject.org/">LINCS</a></h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- the `Library of Integrated Network-based Cellular Signatures project` is based on the premise that disrupting any one of the many steps of a given biological process will cause related changes in the molecular and cellular characteristics, behavior, and/or function of the cell – the observable composite of which is known as the cellular phenotype. Observing how and when a cell’s phenotype is altered by specific stressors can provide clues about the underlying mechanisms involved in perturbation and, ultimately, disease.
+</code></pre></div></div>
 
-<p><strong>Metadata</strong> - a type of information entity usually defined as data about the data, understood as descriptors to understand the context of a dataset. For example, metadata about an FASTQ file may be file size or file creator. Metadata is often classified into descriptive metadata, structural metadata, administrative metadata, and provenance metadata, all of which provide context to the actual data/dataset.</p>
+<h6 id="metabolomics"><a href="">Metabolomics</a></h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- the `Metabolomics program` was developed with the goal of increasing national capacity in metabolomics by supporting the development of next generation technologies, providing training and mentoring opportunities, increasing the inventory and availability of high quality reference standards, and promoting data sharing and collaboration.
+</code></pre></div></div>
 
-<p><strong>Organization</strong> - an entity comprising of multiple people, such as an institution or an association, that has a particular purpose.</p>
+<h6 id="sparc"><a href="">SPARC</a></h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- the `Stimulating Peripheral Activity to Relieve Conditions program` seeks to accelerate development of therapeutic devices that modulate electrical activity in nerves to improve organ function.
+</code></pre></div></div>
 
-<p><strong>POC I/II</strong> - proof of concept. A realization of a certain method or idea in order to demonstrate its feasibility.</p>
+<h5 id="dccs"><u>DCCs</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Data Coordinating/Resource Center</code>.</li>
+</ul>
 
-<p><strong>Project</strong></p>
+<h5 id="dcic"><u>DCIC</u></h5>
+<ul>
+  <li>Data generated by <a href="#4DN">4DN</a> partner institutions are integrated, curated, analyzed, and disseminated by the 4DN Data Coordination and Integration Center (DCIC).</li>
+</ul>
 
-<p><strong>Sample</strong> - see <em>Biospecimens</em>.</p>
+<h5 id="dtc"><u>DTC</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Data and Tools Cores</code>. The <a href="#Metabolomics">Metabolomics Program</a> consortium consists of six RCMRCs and seven DTCs that are overseen by the Metabolomics Consortium Coordinating Center at the University of Florida.</li>
+</ul>
 
-<p><strong>Subject</strong> - a study participant (human, animal) from which samples may be obtained.</p>
+<h5 id="era-commons"><a href="https://public.era.nih.gov/commons">eRA Commons</a></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">eRA Commons</code> is an online interface where signing officials, principal investigators, trainees and post-docs at institutions/organizations can access and share administrative information relating to research grants. It is the <code class="language-plaintext highlighter-rouge">designated ID provider</code> for the whitelist of DCCs.</li>
+</ul>
 
-<p><strong>Subject Group</strong> - a set of study subjects, often grouped based on a set of criteria or the types of intervention study that the subjects will undergo.</p>
+<!-- ##### <u>HMP</u>
+- Human Microbiome Project.  -->
 
-<h2 id="file-formats-and-types">File Formats and Types</h2>
+<h5 id="m3c"><u>M3C</u></h5>
+<ul>
+  <li>the <code class="language-plaintext highlighter-rouge">Metabolomics Consortium Coordinating Center</code> at the University of Florida, which handles overall coordination for the Metabolomics program.</li>
+</ul>
 
-<p><strong>CFDE Asset Manifest</strong> - a collection of <em>Assets</em> described by the <em>CFDE Asset Specification</em>. The ecosystem will support the concept of a manifest that describes a collection of files. The manifests enable bundling lists of CFDE data assets into a machine-readable file using a common format. Manifests will also be used to publish the complete inventories of data from each DCC, and will enable uniform collection of asset metadata to support indexing of the assets in the CFDE portal.</p>
+<h5 id="mgp"><u>MGP</u></h5>
+<ul>
+  <li><a href="https://www.metabolomicsworkbench.org/databases/proteome/MGP.php"><code class="language-plaintext highlighter-rouge">Human Metabolome Gene/Protein Database</code></a>. Developed by the Common Fund Metabolomics program and part of Metabolomics Workbench. A database of metabolome-related genes and proteins containing over 7,300 genes and over 15,500 proteins. Users can search by gene (name, symbol, entrez ID, etc.), HMDB Pathway, or Reactome Pathway. MGP displays genes/proteins and metabolites associated with a pathway of interest. Searching by gene displays information about the gene’s associated proteins and pathways, including a summary of the function and metabolites involved in the pathway.</li>
+</ul>
 
-<p><strong>CFDE Asset Specification</strong> - defines the set of attributes used to charaterize an <em>Asset</em>. The specification simplifies the discovery of assets hosted at the DCCs with a minimal set of descriptors for each of these files. The types of files that are referenced (e.g., genomic sequence, metagenomic, RNA-Seq, physiological and metabolic data) are flexible and contain a small number of essential elements such as a <em>GUID</em>, originating institution (e.g., Broad Institute), assay type (e.g., whole genome/exome, transcriptome, epigenome), file type (e.g., fastq, alignment, vcf, counts), and tissue source and species name for the sample.
-<img src="https://user-images.githubusercontent.com/40363469/66134046-ac16bc80-e5c5-11e9-9b30-66407a3446e5.png" alt="data asset specification" /></p>
+<h5 id="motrpac"><u>MoTrPAC</u></h5>
+<ul>
+  <li><a href="https://www.motrpac.org/"><code class="language-plaintext highlighter-rouge">Molecular Transducers of Physical Activity Consortium</code></a>. MoTrPAC is a national research consortium designed to discover and perform preliminary characterization of the range of molecular transducers (the “molecular map”) that underlie the effects of physical activity in humans. The program’s goal is to study the molecular changes that occur during and after exercise and ultimately to advance the understanding of how physical activity improves and preserves health. The six-year program is the largest targeted NIH investment of funds into the mechanisms of how physical activity improves health and prevents disease.</li>
+</ul>
 
-<p><strong><a href="https://fair-research.org/deliverables/cfde-metadata-format.html">CFDE Common Metadata Format</a></strong> - specifies a minimal set of attributes (metadata) related to an <em>Asset</em>.
-<img src="https://user-images.githubusercontent.com/40363469/66134031-a8833580-e5c5-11e9-9cc8-5e4b275fa20c.png" alt="common metadata format" /></p>
+<h5 id="mw"><u>MW</u></h5>
+<ul>
+  <li><a href="https://www.metabolomicsworkbench.org/"><code class="language-plaintext highlighter-rouge">Metabolomics Workbench</code></a>. The MW is an online interface to the <a href="#NMDR">NMDR</a> developed at UCSD, by the Common Fund <a href="#Metabolomics">Metabolomics</a> program, . It allows users to manage and upload studies as well as browse and search available studies. Using the MW interface, submitters upload data and results, including metadata, targeted data measurements, protocols/methods files, untargeted data measurements, and raw data (MS/NMR files, etc.). Other researchers can then use the MW website to browse, search, analyze, and download data as well as view summary figures of key study search parameters (e.g., bubble chart showing studies by sample source). For example, studies can be filtered by study metadata (disease, sample source, species, instrumentation) or metabolite information (metabolite classification, biochemical pathways, retention time, etc.) to identify data relevant to the user’s needs. Additionally, it provides analysis tools and access to metabolite standards, protocols, tutorials, training, and other resources to support metabolomic researchers (such as <a href="#RefMet">RefMet</a>, <a href="#Metabolomics-Workbench-Metabolite-Database">Metabolomics Workbench Metabolite Database</a>).</li>
+</ul>
 
-<p><strong><a href="https://github.com/nih-cfde/cfde-deriva/blob/2019-08/diagrams/cfde-core-model.png">Core ER Diagram</a></strong></p>
+<h5 id="metabolomics-workbench-metabolite-database"><u>Metabolomics Workbench Metabolite Database</u></h5>
+<ul>
+  <li>a PostgreSQL database containing over 65,000 structures and annotations of biologically relevant metabolites collected from public repositories (e.g., LIPID MAPS, ChEBI, HMDB, BMRB, PubChem, KEGG). Users can search for metabolites in the database by substructure, text, or mass (m/z ratio). Each entry contains key information about the metabolite, including structure, molecular weight, common and systematic names, PubChem compound ID, and classification. Entries also contain cross references to external databases and repositories (e.g., HMDB, ChEBI, LIPID MAPS, METLIN, ChemSpider, KEGG, etc.) as well as links to the MoNA MS spectra and human metabolic pathways containing the metabolite. Additionally, the open-source chemistry cartridge enables substructure searching, generation of chemistry-centric attributes (formula, exact mass), and interconversion of molecular formats.</li>
+</ul>
 
-<p><strong><a href="https://github.com/nih-cfde/cfde-deriva/blob/2019-08/table-schema/cfde-core-model.json">Core Table Schema</a></strong></p>
+<h5 id="nmdr"><u>NMDR</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">National Metabolomics Data Repository</code>. Responsible for collating, analyzing, and distributing the data gathered by the RCMRCs and hosting the tools and methods created by the <a href="#DTC">DTC</a>s.</li>
+</ul>
 
-<p><strong><a href="https://github.com/nih-cfde/cfde-deriva/blob/2019-10/extractors_and_metadata.GTEx/cfde-core-model.2019.10.21.1430.png">Entity-Relation Diagram</a></strong></p>
+<h5 id="ras"><u>RAS</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Researcher Auth Service</code>. A service under development by the NIH’s Center for Information Technology that will facilitate access to controlled data assets and repositories.</li>
+</ul>
 
-<p><strong>Inventory</strong> - asset inventory distributed by the DCCs through a portal.</p>
+<h5 id="rcmrc"><u>RCMRC</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Regional Comprehensive Metabolomics Resource Cores</code>. The Metabolomics Program consortium consists of six RCMRCs, also called the Compound Identification Cores (CIDCs), and seven Data and Tools Cores (<a href="#DTC">DTC</a>s) that are overseen by the Metabolomics Consortium Coordinating Center at the University of Florida.</li>
+</ul>
 
-<p><strong>Metadata Manifest</strong> - a file that includes metadata for a group of accompanying files that are part of a coherent unit (manifest), such as name, version, background scripts, and browser actions.</p>
+<h5 id="refmet"><u>RefMet</u></h5>
+<ul>
+  <li><a href="https://www.metabolomicsworkbench.org/databases/refmet/index.php"><code class="language-plaintext highlighter-rouge">Reference list of Metabolite names</code></a>. Developed by the Common Fund Metabolomics program. Effectively, a large spreadsheet that provides a standard nomenclature for over 95,500 chemical species. From the Metabolomics Workbench website, it can be browsed and searched directly or a user can input a list of metabolite names and have them automatically converted to RefMet nomenclature. A user can also directly download the data, either in whole or after filtering as one would with a simple Excel sheet. Or the entire dataset can be downloaded as part of a Shiny R app and queried locally.</li>
+</ul>
 
-<h2 id="processes">Processes</h2>
+<h5 id="strides"><u>STRIDES</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Science and Technology Research Infrastructure for Discovery, Experimentation, and Sustainability</code> initiative by the NIH. Common Fund leadership has partnered with the STRIDES initiative, which provides lower-cost cloud services to NIH projects.</li>
+</ul>
 
-<p><strong>C2M2 Creation Flow</strong></p>
+<h5 id="tcc"><u>TCC</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Training Coordination Center</code>. This center is staffed by experts in bioinformatics curriculum development, teaching, and community building. It provides support and resources for the development of DCC-specific training programs as well as end-user training on CFDE products and general topics of interest to the Common Fund research community. The TCC can help with logistical support for hosting workshops, as well as providing guidance on how to grow and build a sustainable training program. The TCC provides instructor training for the <a href="#DCC">DCC</a>s and assists with creating useful qualitative and quantitative feedback and assessment tools. In addition to site-specific training, the TCC offers training on CFDE products as they become available, and pilots a general bioinformatics workshop curriculum on topics of broad interest within the Common Fund.</li>
+</ul>
 
-<p><strong>C2M2 Extractor Flow</strong></p>
+<h5 id="topmed"><u>TOPMed</u></h5>
+<ul>
+  <li><a href="https://www.nhlbiwgs.org/"><code class="language-plaintext highlighter-rouge">Trans-Omics for Precision Medicine</code></a>.  The Trans-Omics for Precision Medicine (TOPMed) program, sponsored by the National Institutes of Health (NIH) National Heart, Lung and Blood Institute (NHLBI), is part of a broader Precision Medicine Initiative, which aims to provide disease treatments tailored to an individual’s unique genes and environment. TOPMed contributes to this Initiative through the integration of whole-genome sequencing (WGS) and other omics (e.g., metabolic profiles, epigenomics, protein and RNA expression patterns) data with molecular, behavioral, imaging, environmental, and clinical data.</li>
+</ul>
 
-<p><strong>FAIR Assessment</strong> - the process of evaluating the level of compliance of a dataset with the FAIR principles. The assessment may be performed with tools such as <a href="https://fairshake.cloud">FAIRshake</a> or <a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/">FAIREvaluator</a>.</p>
-
-<p><strong>Globus Automate Flow</strong> - Globus, a software service created and based at the University of Chicago, helps scientists simplify their workflow by automating data transfer and synchronization tasks. Users can create automated sequences initiated by events.</p>
-
-<p><strong>Master Flow</strong></p>
-
-<p><strong>Metadata Ingest</strong> - assigning identifiers to the objects and then extracting or creating metadata for these objects.</p>
-
-<p><strong><a href="https://github.com/nih-cfde/cfde-deriva/blob/2019-08/examples/tableschema_to_deriva.py">Table Schema to DERIVA Translation</a></strong></p>
-
-<h2 id="software-and-tools">Software and Tools</h2>
-
-<p><strong>API</strong> - Application Programmer Interface. Allows developers to manipulate (query, update) remote data sources through specific protocols or specific standards for communication (e.g., REST,SOAP). An important element of the ecosystem will be the standardization and publishing of an API that can be used by data consumers to retrieve the inventories, the data asset specification, and additional metadata associated with the assets. This will allow for consumers of these inventories to programmatically interrogate the federated system for information that may be relevant to a consuming service.</p>
-
-<p><strong>C2M2</strong> - Cross Cut Metadata Model.</p>
-
-<p><strong><a href="https://cfde.derivacloud.org/deriva-webapps/plot/">CFDE Data Dashboard</a></strong> - an interface that monitors DCC data upload to the cloud and usage statistics to support cross-DCC search and ecosystem integration.</p>
-
-<p><strong>CFDE Query Portal</strong> - a portal enabling users and administrators to search all the federated data assets at each Common Fund Program. The CFDE portal increases a user’s ability to find these important resources, as well as mix and match sets of data from each site to use in subsequent analysis. Administrators and Program Officers at Common Fund can use a single website to view the growth of data from their program over time, review objective FAIR metrics for these assets, understand download statistics and geographic distribution, and view the degree of harmonization of these data in comparison to other sites.</p>
-
-<p><strong><a href="https://github.com/nih-cfde/FAIR/blob/master/Demos/FAIRAssessment/data_citation_rubric.py">Data Citation Rubric</a></strong></p>
-
-<p><strong>dbGaP</strong> - Database of Genotypes and Phenotypes.</p>
-
-<p><strong>DERIVA Catalog</strong> - a group of assets that may be digital objects (i.e., files) or references to physical objects. DERIVA uses an entity-relationship data model to catalog and organize these assets.</p>
-
-<p><strong>FAIR Insignia</strong> - to visually communicate FAIRness level, a grid of colored squares, called the FAIR insignia, was developed. The FAIR insignia identifies areas of strength and weakness in the FAIRness level of digital objects, guiding digital object producers on how to improve the FAIRness of their products.</p>
-
-<p><strong>GitHub</strong> - an online hub for storing and sharing computer programs and other plain text files. The CFDE team uses it for storage, hosting websites, communications, and project management.</p>
-
-<p><strong>Jupyter Notebook</strong> - a web-based interactive environment for organizing data, performing computation, and visualizing output.</p>
-
-<p><strong>NPM</strong> - a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry.</p>
+<hr />
 
 <h2 id="use-case-terms">Use Case Terms</h2>
 
-<p><strong>Objective</strong> - a description of a scientific process, told without reference to a specific technology solution. Focuses on resources required, method(s) followed, and outcome(s) targeted. Can be validated with scientific stakeholders.</p>
+<!-- <details> -->
 
-<p><strong>Persona</strong> - a type of user who will appear in the epics and stories that follow.</p>
-
-<p><strong>Requirement</strong> - a well-scoped and defined piece of software or data engineering work that is needed to support a User Task. These should be small tasks that can be verified with engineering teams (e.g., did we deliver it? Yes or no.) A single requirement may be important for any number of different User Tasks, and various collections of Requirements can be grouped to support different User Tasks.</p>
-
-<p><strong>Summary</strong> - a high-level, non-technical description of an entire Use Case. The user in each summary has a name, a scientific or administrative problem, and both proximate and ultimate goals. The focus is on the problem and what is generally needed to solve it.</p>
-
-<p><strong>User Task</strong> - a story, told from the user’s perspective that captures a concrete step in a user’s interactions with tools (e.g., software solutions) in the service of achieving the scientific objective. Must be written in terms that are meaningful to the user, from their perspective. This can be thought of as one in a series of medium scale tasks that must be completed to answer the question posed in the scientific objective. The list of User Tasks in a Use Case should cover everything the users needs to achieve their goals, even interactions that do not involve the software or data from the Common Fund.</p>
-
-<h2 id="other">Other</h2>
-
-<p><strong>A2CPS</strong> - NIH’s Acute to Chronic Pain Signatures program. The most comprehensive study to date to investigate the connections of peripheral biology, brain, psychological, and bio-behavioral risk factors. Composed of a consortium of organizations and scientists throughout the U.S. and Canada, A2CPS is part of the multi-pronged <a href="https://heal.nih.gov/">NIH HEAL</a> (Helping to End Addiction Long-Term) initiative, an aggressive effort to speed scientific solutions to stem the national opioid public health crisis.</p>
-
-<p><strong>ASHG</strong> - American Society of Human Genetics. They hold an annual conference that is the largest human genetics and genomics meeting and exposition in the world.</p>
-
-<p><strong>BIC</strong> - Bioinformatics Center. The BIC is responsible for the task of harmonizing the large quantity and diversity of data and metadata being generated by the consortium and performing meaningful integrative analyses across these omics data types.</p>
-
-<p><strong>CC</strong> - Coordinating Center. The CFDE-CC’s purpose is to improve growth in use and reuse of CF program data by supporting DCCs that participate in the Common Fund Data Ecosystem.</p>
-
-<p><strong>CFDE</strong> - Common Fund Data Ecosystem. A data ecosystem is a collection of data silos or commons joined together by a set of standards and services that facilitate findability, accessibility, reuse, and interoperability of datasets between silos/commons. A data ecosystem is focused on enabling multi-way connectivity between datasets, in a horizontal fashion, rather than deeper vertical analysis within each dataset. The goal of an ecosystem is to enable use cases between data silos, not within.</p>
-
-<p><strong>Common Fund Programs</strong> - the intent of the CF programs is to provide a strategic and nimble approach to address key roadblocks in biomedical research that impede basic scientific discovery and its translation into improved human health. In addition, these programs capitalize on emerging opportunities to catalyze the rate of progress across multiple biomedical fields. The CF programs include:</p>
+<h5 id="objective"><u>Objective</u></h5>
 <ul>
-  <li>4DN - The 4D Nucleome program’s goal is to study the three-dimensional organization of the nucleus in space and time (the 4th dimension).</li>
-  <li>GTEx - the Genotype-Tissue Expression project is an ongoing effort to build a comprehensive public resource to study tissue-specific gene expression and regulation.</li>
-  <li>HMP - the Human Microbiome Project whose mission is to generate resources to facilitate characterization of the human microbiota to further our understanding of how the microbiome impacts human health and disease.</li>
-  <li>Kids First - the Kids First Pediatric Research Program Data Resource Center enables researchers, clinicians, and patients to work together to accelerate research and promote new discoveries for children affected with cancer and structural birth defects.</li>
-  <li>LINCS - the Library of Integrated Network-based Cellular Signatures project is based on the premise that disrupting any one of the many steps of a given biological process will cause related changes in the molecular and cellular characteristics, behavior, and/or function of the cell – the observable composite of which is known as the cellular phenotype. Observing how and when a cell’s phenotype is altered by specific stressors can provide clues about the underlying mechanisms involved in perturbation and, ultimately, disease.</li>
-  <li>Metabolomics - this program was developed with the goal of increasing national capacity in metabolomics by supporting the development of next generation technologies, providing training and mentoring opportunities, increasing the inventory and availability of high quality reference standards, and promoting data sharing and collaboration.</li>
-  <li>SPARC - the Stimulating Peripheral Activity to Relieve Conditions program seeks to accelerate development of therapeutic devices that modulate electrical activity in nerves to improve organ function.</li>
+  <li>a description of a scientific process, told without reference to a specific technology solution. Focuses on resources required, method(s) followed, and outcome(s) targeted. Can be validated with scientific stakeholders.</li>
 </ul>
 
-<p><strong>Controlled Vocabulary</strong> - an organized arrangement of words and phrases used to index content and/or to retrieve content through browsing or searching. It typically includes preferred and variant terms and has a defined scope or describes a specific domain. For example, the DCIC curates an internal 4DN controlled vocabulary to provide definitions for emerging technologies and techniques, metadata terms, and captures important data features not defined by previous ontologies.</p>
+<h5 id="persona"><u>Persona</u></h5>
+<ul>
+  <li>a type of user who will appear in the epics and stories that follow.</li>
+</ul>
 
-<p><strong>DCC</strong> - Data Coordinating/Resource Center.</p>
+<h5 id="requirement"><u>Requirement</u></h5>
+<ul>
+  <li>a well-scoped and defined piece of software or data engineering work that is needed to support a User Task. These should be small tasks that can be verified with engineering teams (e.g. <code class="language-plaintext highlighter-rouge">did we deliver it?</code> <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code>). A single requirement may be important for any number of different <a href="#User-Task">User Task</a>s, and various collections of Requirements can be grouped to support different User Tasks.</li>
+</ul>
 
-<p><strong>DCIC</strong> - Data generated by 4DN partner institutions are integrated, curated, analyzed, and disseminated by the 4DN Data Coordination and Integration Center (DCIC).</p>
+<h5 id="summary"><u>Summary</u></h5>
+<ul>
+  <li>a high-level, non-technical description of an entire <code class="language-plaintext highlighter-rouge">use case</code>. The user in each summary has a name, a scientific or administrative problem, and both proximate and ultimate goals. The focus is on the problem and what is generally needed to solve it.</li>
+</ul>
 
-<p><strong>DTC</strong> - Data and Tools Cores. The Metabolomics Program consortium consists of six RCMRCs and seven DTCs that are overseen by the Metabolomics Consortium Coordinating Center at the University of Florida.</p>
+<h5 id="use-case"><u>Use Case</u>:</h5>
+<ul>
+  <li>a <code class="language-plaintext highlighter-rouge">use case</code>, in software and systems engineering, is a list of actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system.</li>
+</ul>
 
-<p><strong>eRA Commons</strong> - Designated ID provider for the whitelist.</p>
+<h5 id="user-task"><u>User Task</u></h5>
+<ul>
+  <li>a <code class="language-plaintext highlighter-rouge">user story</code> is a story told from the user’s perspective that captures a concrete step in a user’s interactions with tools (e.g., software solutions) in the service of achieving the scientific objective. A <code class="language-plaintext highlighter-rouge">user task</code> ++must be written in terms that are meaningful to the user, from their perspective++. This can be thought of as one in a series of medium scale tasks that must be completed to answer the question posed in the scientific objective. The list of <code class="language-plaintext highlighter-rouge">user tasks</code> in a <a href="#Use-Case"><code class="language-plaintext highlighter-rouge">use case</code></a> should cover everything the users needs to achieve their goals, even interactions that do not involve the software or data from the Common Fund.</li>
+</ul>
 
-<p><strong>HMP</strong> - Human Microbiome Project.</p>
+<hr />
 
-<p><strong>M3C</strong> - the Metabolomics Consortium Coordinating Center at the University of Florida, which handles overall coordination for the Metabolomics program.</p>
+<h2 id="data-models---software---tools">Data Models - Software - Tools</h2>
 
-<p><strong>Metabolomics Workbench Metabolite Database</strong> – a Postgres database containing over 65,000 structures and annotations of biologically relevant metabolites collected from public repositories (e.g., LIPID MAPS, ChEBI, HMDB, BMRB, PubChem, KEGG). Users can search for metabolites in the database by substructure, text, or mass (m/z ratio). Each entry contains key information about the metabolite, including structure, molecular weight, common and systematic names, PubChem compound ID, and classification. Entries also contain cross references to external databases and repositories (e.g., HMDB, ChEBI, LIPID MAPS, METLIN, ChemSpider, KEGG, etc.) as well as links to the MoNA MS spectra and human metabolic pathways containing the metabolite. Additionally, the open-source chemistry cartridge enables substructure searching, generation of chemistry-centric attributes (formula, exact mass), and interconversion of molecular formats.</p>
+<!-- <details> -->
 
-<p><strong>MGP</strong> – Human Metabolome Gene/Protein Database. Developed by the Common Fund Metabolomics program. A database of metabolome-related genes and proteins containing over 7,300 genes and over 15,500 proteins. Users can search by gene (name, symbol, entrez ID, etc.), HMDB Pathway, or Reactome Pathway. MGP displays genes/proteins and metabolites associated with a pathway of interest. Searching by gene displays information about the gene’s associated proteins and pathways, including a summary of the function and metabolites involved in the pathway.</p>
+<h5 id="api"><u>API</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Application Programmer Interface</code>. Allows developers to manipulate (query, update) remote data sources through specific protocols or specific standards for communication (e.g., REST,SOAP). An important element of the ecosystem will be the standardization and publishing of an API that can be used by data consumers to retrieve the inventories, the data asset specification, and additional metadata associated with the assets. This will allow for consumers of these inventories to programmatically interrogate the federated system for information that may be relevant to a consuming service.</li>
+</ul>
 
-<p><strong>MoTrPAC</strong> – Molecular Transducers of Physical Activity Consortium.</p>
+<h5 id="c2m2"><a href="https://www.nih-cfde.org/product/full-c2m2-er-model/">C2M2</a></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Cross Cut Metadata Model</code>. A data model specification developed by NIH <a href="#CFDE">CFDE</a> to represent experiments and datasets. Recycling a number of entities from the <a href="#DATS">DATS specification</a></li>
+</ul>
 
-<p><strong>MW</strong> – Metabolomics Workbench. Developed by the Common Fund Metabolomics program, the MW is an online interface to the NMDR developed at UCSD. It allows users to manage and upload studies as well as browse and search available studies. Using the MW interface, submitters upload data and results, including metadata, targeted data measurements, protocols/methods files, untargeted data measurements, and raw data (MS/NMR files, etc.). Other researchers can then use the MW website to browse, search, analyze, and download data as well as view summary figures of key study search parameters (e.g., bubble chart showing studies by sample source). For example, studies can be filtered by study metadata (disease, sample source, species, instrumentation) or metabolite information (metabolite classification, biochemical pathways, retention time, etc.) to identify data relevant to the user’s needs. Additionally, it provides analysis tools and access to metabolite standards, protocols, tutorials, training, and other resources to support metabolomic researchers.</p>
+<h5 id="cfde-data-dashboard"><a href="https://cfde.derivacloud.org/deriva-webapps/plot/">CFDE Data Dashboard</a></h5>
+<ul>
+  <li>an interface that monitors DCC data upload to the cloud and usage statistics to support cross-DCC search and ecosystem integration.</li>
+</ul>
 
-<p><strong>NMDR</strong> – National Metabolomics Data Repository. Responsible for collating, analyzing, and distributing the data gathered by the RCMRCs and hosting the tools and methods created by the DTCs.</p>
+<h5 id="cfde-query-portal"><u>CFDE Query Portal</u></h5>
+<ul>
+  <li>a portal enabling users and administrators to search all the federated data assets at each Common Fund Program. The CFDE portal increases a user’s ability to find these important resources, as well as mix and match sets of data from each site to use in subsequent analysis. Administrators and Program Officers at Common Fund can use a single website to view the growth of data from their program over time, review objective FAIR metrics for these assets, understand download statistics and geographic distribution, and view the degree of harmonization of these data in comparison to other sites.</li>
+</ul>
 
-<p><strong>RAS</strong> – Researcher Auth Service. A service under development by the NIH’s Center for Information Technology that will facilitate access to controlled data assets and repositories.</p>
+<h5 id="cv"><u>CV</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Controlled Vocabulary</code>: an organized arrangement of words and phrases used to index content and/or to retrieve content through browsing or searching. It typically includes preferred and variant terms and has a defined scope or describes a specific domain. For example, the <a href="#DCIC">DCIC</a> curates an internal <a href="#4DN">4DN</a> controlled vocabulary to provide definitions for emerging technologies and techniques, metadata terms, and captures important data features not defined by previous ontologies.</li>
+</ul>
 
-<p><strong>RCMRC</strong> – Regional Comprehensive Metabolomics Resource Cores. The Metabolomics Program consortium consists of six RCMRCs, also called the Compound Identification Cores (CIDCs), and seven Data and Tools Cores (DTCs) that are overseen by the Metabolomics Consortium Coordinating Center at the University of Florida.</p>
+<h5 id="dats"><u>DATS</u></h5>
+<ul>
+  <li><a href="https://github.com/datatagsuite/README"><code class="language-plaintext highlighter-rouge">Data Article Tag Suite</code></a> is a data model for representing key information about datasets with an emphasis on data discovery and data findability, which has inspired the creation of the NIH-C2M2 model. <a href="https://datatagsuite.github.io/docs/html/dats.html">The DATS model is expressed as a JSON schema</a>. Associated JSON-LD context files support search engine optimization because they map into <a href="https://schema.org">schema.org</a> and <a href="www.w3.org/TR/vocab-dcat-2/">DCAT</a>. Mappings into biological entities are also available via <a href="http://www.obofoundry.org">OBO Foundry resources</a>.</li>
+</ul>
 
-<p><strong>RefMet</strong> – Reference list of Metabolite names. Developed by the Common Fund Metabolomics program. Effectively a large spreadsheet that provides a standard nomenclature for over 95,500 chemical species. From the Metabolomics Workbench website, it can be browsed and searched directly or a user can input a list of metabolite names and have them automatically converted to RefMet nomenclature. A user can also directly download the data, either in whole or after filtering as one would with a simple Excel sheet. Or the entire dataset can be downloaded as part of a Shiny R app and queried locally.</p>
+<h5 id="data-citation-rubric"><a href="">Data Citation Rubric</a></h5>
+<ul>
+  <li>a collection of rules to assess <a href="#FAIR-Evaluation">FAIRness</a> of data citation using the <a href="#FAIRshake">FAIRshake tool</a> available from the following <a href="https://github.com/nih-cfde/FAIR/blob/master/Demos/FAIRAssessment/data_citation_rubric.py">github repository</a></li>
+</ul>
 
-<p><strong>SSO</strong> – Single Sign-On.</p>
+<h5 id="dbgap"><a href="https://www.ncbi.nlm.nih.gov/gap/">dbGaP</a></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Database of Genotypes and Phenotypes</code>. The database of Genotypes and Phenotypes (dbGaP) was developed to archive and distribute the data and results from studies that have investigated the interaction of genotype and phenotype in Humans.</li>
+</ul>
 
-<p><strong>STRIDES</strong> – NIH’s Science and Technology Research Infrastructure for Discovery, Experimentation, and Sustainability initiative. Common Fund leadership has partnered with the STRIDES initiative, which provides lower-cost cloud services to NIH projects.</p>
+<h5 id="deriva"><a href="https://docs.derivacloud.org/platform.html">DERIVA</a></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Discovery Environment for Relational Information and Versioned Assets</code>. A suite of tools and services that are designed to significantly reduce the overhead and complexity of creating and managing complex, big datasets. DERIVA provides a digital asset management system for scientific data to streamline the acquisition, modeling, management, and sharing of complex, big data, and provides interfaces so that these data can be delivered to diverse external tools for big-data analysis and analytic tools.</li>
+</ul>
 
-<p><strong>TCC</strong> – Training Coordination Center. This center is staffed by experts in bioinformatics curriculum development, teaching, and community building. It provides support and resources for the development of DCC-specific training programs as well as end-user training on CFDE products and general topics of interest to the Common Fund research community. The TCC can help with logistical support for hosting workshops, as well as providing guidance on how to grow and build a sustainable training program. The TCC provides instructor training for the DCCs and assists with creating useful qualitative and quantitative feedback and assessment tools. In addition to site-specific training, the TCC offers training on CFDE products as they become available, and pilots a general bioinformatics workshop curriculum on topics of broad interest within the Common Fund.</p>
+<h5 id="deriva-catalog"><a href="https://cfde.derivacloud.org/">DERIVA Catalog</a></h5>
+<ul>
+  <li>a group of assets that may be digital objects (i.e., files) or references to physical objects. DERIVA uses an entity-relationship data model to catalog and organize these assets.</li>
+</ul>
 
-<p><strong>TOPMed</strong> – Trans-Omics for Precision Medicine.</p>
+<h5 id="entity-relationship-model"><u>Entity-relationship-model</u></h5>
+<ul>
+  <li>an <code class="language-plaintext highlighter-rouge">Entity-relationship-model</code> (or ER model) describes interrelated things of interest in a specific domain of knowledge. A basic ER model is composed of entity types (which classify the things of interest) and specifies relationships that can exist between entities (instances of those entity types). In software engineering, an ER model is commonly formed to represent things a business needs to remember in order to perform business processes. Consequently, the ER model becomes an abstract data model, that defines a data or information structure which can be implemented in a database, typically a relational database. source: Wikipedia).</li>
+</ul>
 
-<h1 id="draft---list-of-term-anchors-currently-linked-from-spec-documents">DRAFT - list of term anchors currently linked from spec documents</h1>
+<h5 id="fair-insignia"><a href="">FAIR Insignia</a></h5>
+<ul>
+  <li>A grid of colored squares developed to visually communicate FAIRness level. The <a href="#FAIR">FAIR</a> insignia identifies areas of strength and weakness in the FAIRness level of digital objects, guiding digital object producers on how to improve the FAIRness of their products. FAIR insignia is an output of the <a href="#FAIRshake">FAIRshake</a></li>
+</ul>
 
-<p><strong>CFDE-asset-manifest</strong></p>
+<p><img src="./images/logo/FAIRinsignia.png" alt="drawing" style="border:1px solid black;" width="100" align="top" /></p>
 
-<p><strong>DCCs</strong></p>
+<h5 id="fairshake"><a href="https://fairshake.cloud/">FAIRshake</a></h5>
+<ul>
+  <li>a tool produced for carrying out <em>FAIR Assessment</em>. Under the <a href="#CFDE">CFDE</a>, each data center’s inventory will be evaluated consistently based on FAIRshake, and the Coordinating Center will work with the individual Common Fund programs to adjust <a href="#FAIR">FAIR</a> measures to meet the needs of the Common Fund. FAIRshake includes evaluating the FAIRness of digital objects including datasets, tools, and repositories.</li>
+</ul>
 
-<p><strong>DCC-data-ingestion-process</strong></p>
+<h5 id="figshare"><a href="https://figshare.com/">Figshare</a></h5>
+<ul>
+  <li>an online open access repository where researchers can preserve and share their research outputs, including figures, datasets, images, and videos.</li>
+</ul>
 
-<p><strong>Entity-relationship-model</strong></p>
+<h5 id="frictionless-data-package"><a href="http://frictionlessdata.io/data-package/">Frictionless Data Package</a></h5>
+<ul>
+  <li>a format specification produced by the <a href="https://okfn.org/">Open Knowledge Foundation</a> and supported by the Frictionlessdata.io organization. It aims to shorten the path from data to insight with a collection of specifications and software for the publication, transport, and consumption of data. This kills the cycle of find/improve/share that makes for a dynamic and productive data ecosystem.</li>
+</ul>
 
-<p><strong>Metadata</strong></p>
+<h5 id="github"><a href="https://github.com/">GitHub</a></h5>
+<ul>
+  <li>an online hub for storing and sharing computer programs and other plain text files. The <a href="#CFDE">CFDE</a> team uses it for storage, hosting websites, communications, and project management.</li>
+</ul>
 
-<p><strong>Richness-levels</strong></p>
+<h5 id="globus-automate"><a href="">Globus Automate</a></h5>
+<ul>
+  <li>a distributed research automation platform that addresses the problem of securely and reliably automating, for many thousands of scientists, sequences of data management tasks that may span locations, storage systems, administrative domains, and timescales, and integrate both mechanical and human inputs.</li>
+</ul>
+
+<h5 id="jupyter-notebook"><a href="https://jupyter.org/">Jupyter Notebook</a></h5>
+<ul>
+  <li>a web-based interactive environment for organizing data, performing computation, and visualizing output.</li>
+</ul>
+
+<h5 id="npm"><a href="https://www.npmjs.com/">NPM</a></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Node Package Manager</code>: a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry.</li>
+</ul>
+
+<h5 id="richness-levels"><u>Richness-levels</u></h5>
+<ul>
+  <li>a qualifier indicative of the depth and granularity of an object model or <a href="#Entity-relationship-model">Entity-Relationship model</a>. In the context of <a href="#CFDE">CFDE</a>, the <a href="#C2M2">C2M2</a> model is described by the following increasing richness levels: [Level-0, Level-1, Level-2]</li>
+</ul>
+
+<h5 id="sso"><u>SSO</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Single Sign-On</code>: An authentication scheme that allows a user to log in with a single ID and password to any of several related, yet independent, software systems. It is often accomplished by using the <a href="https://ldap.com/">Lightweight Directory Access Protocol (LDAP)</a> and stored LDAP databases on (directory) servers. A simple version of single sign-on can be achieved over IP networks using cookies but only if the sites share a common DNS parent domain.</li>
+</ul>
+
+<hr />
+
+<h2 id="cross-cut-metadata-model-core-concepts">Cross Cut Metadata Model Core Concepts</h2>
+
+<!-- <details> -->
+
+<h5 id="asset"><u>Asset</u></h5>
+<ul>
+  <li>a <code class="language-plaintext highlighter-rouge">sample or a file</code>, which are also known as <code class="language-plaintext highlighter-rouge">material asset</code> or <code class="language-plaintext highlighter-rouge">digital asset</code> respectively.</li>
+</ul>
+
+<h5 id="asset-inventory"><u>Asset Inventory</u></h5>
+<ul>
+  <li>an asset inventory is a collection of digital asset  distributed by the DCCs through a portal.</li>
+</ul>
+
+<h5 id="biospecimens"><u>Biospecimens</u></h5>
+<ul>
+  <li>a <code class="language-plaintext highlighter-rouge">material asset</code>, collected from an organism, a cell culture, or a material containing organisms, such as an environmental material. syn: <a href="#Sample">Sample</a></li>
+</ul>
+
+<h5 id="data-object"><u>Data Object</u></h5>
+<ul>
+  <li>a region of storage that contains a value or group of values. Each value can be accessed using its identifier or a more complex expression that refers to the object. In addition, each object has a unique data type.</li>
+</ul>
+
+<h5 id="dataset"><u>Dataset</u></h5>
+<ul>
+  <li>a <code class="language-plaintext highlighter-rouge">collection of data</code>, published or curated by a single agent, and available for access or download in one or more formats.</li>
+</ul>
+
+<h5 id="fair"><a href="https://www.go-fair.org/fair-principles/">FAIR</a></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Findable, Accessible, Interoperable, and Reusable</code>. Making data FAIR is the main goal of the DCCs.</li>
+</ul>
+
+<h5 id="file"><u>File</u></h5>
+<ul>
+  <li>a <code class="language-plaintext highlighter-rouge">digital asset</code>, that is a type of digital object that each of the <a href="#DCC">DCCs</a> hosts, such as genomic, metagenomic, RNA-Seq sequence data, physiological, and metabolic data or generic metadata electronic document.</li>
+</ul>
+
+<h5 id="guid"><u>GUID</u></h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Globally Unique IDentifier</code>. a chain of characters, usually 128-bit long used to uniquely identify an entity. Modern hashing functions used to generate GUIDs make <code class="language-plaintext highlighter-rouge">identifier collisions</code> (the event of the function producing the same sequence) highly unlikely (but not impossible), hence those can only be <code class="language-plaintext highlighter-rouge">nearly guaranteed to be unique</code>.</li>
+</ul>
+
+<h5 id="metadata"><u>Metadata</u></h5>
+<ul>
+  <li>a type of information entity usually defined as <code class="language-plaintext highlighter-rouge">data about the data</code>, understood as <code class="language-plaintext highlighter-rouge">descriptors to understand the context of a dataset</code>. For example, metadata about an FASTQ file may be <code class="language-plaintext highlighter-rouge">file size</code> or <code class="language-plaintext highlighter-rouge">file creator</code>. Metadata is often classified into <code class="language-plaintext highlighter-rouge">descriptive metadata</code>, <code class="language-plaintext highlighter-rouge">structural metadata</code>, <code class="language-plaintext highlighter-rouge">administrative metadata</code>, and <code class="language-plaintext highlighter-rouge">provenance metadata</code>, all of which provide ++<code class="language-plaintext highlighter-rouge">context</code>++ to the actual data/dataset.</li>
+</ul>
+
+<h5 id="organization"><u>Organization</u></h5>
+<ul>
+  <li>an entity comprising of multiple people, such as an institution or an association, that has a particular purpose.</li>
+</ul>
+
+<h5 id="project"><u>Project</u></h5>
+<ul>
+  <li>a entity to describe administrative/funding/contract/etc. hierarchy governing ownership/management/purview/responsibility of/for subcollections of experimental resources and metadata</li>
+</ul>
+
+<h5 id="sample"><u>Sample</u></h5>
+<ul>
+  <li>a material collected from an organism, a cell culture, or a material containing organisms, such as an environmental material. syn: <em><a href="#Biospecimens">Biospecimens</a></em>.</li>
+</ul>
+
+<h5 id="subject"><u>Subject</u></h5>
+<ul>
+  <li>a study participant (human, animal) from which samples may be obtained.</li>
+</ul>
+
+<h5 id="subject-group"><u>Subject Group</u></h5>
+<ul>
+  <li>a set of study subjects sharing some characteristics or undergoing the same type of study intervention.</li>
+</ul>
+
+<hr />
+
+<h2 id="cfde-model-types-and-file-formats">CFDE Model Types and File Formats</h2>
+
+<!-- <details> -->
+
+<h5 id="cfde-asset-manifest"><u>CFDE Asset Manifest</u></h5>
+<ul>
+  <li>a collection of <em>Assets</em> described by the <em>CFDE Asset Specification</em>. The ecosystem will support the concept of a manifest that describes a collection of files. The manifests enable bundling lists of CFDE data assets into a machine-readable file using a common format. Manifests will also be used to publish the complete inventories of data from each DCC, and will enable uniform collection of asset metadata to support indexing of the assets in the CFDE portal.</li>
+</ul>
+
+<h5 id="cfde-asset-specification"><u>CFDE Asset Specification</u></h5>
+<ul>
+  <li>defines the set of attributes used to charaterize an <em>Asset</em>. The specification simplifies the discovery of assets hosted at the DCCs with a minimal set of descriptors for each of these files. The types of files that are referenced (e.g., genomic sequence, metagenomic, RNA-Seq, physiological and metabolic data) are flexible and contain a small number of essential elements such as a <em>GUID</em>, originating institution (e.g., Broad Institute), assay type (e.g., whole genome/exome, transcriptome, epigenome), file type (e.g., fastq, alignment, vcf, counts), and tissue source and species name for the sample.
+<!-- ![data asset specification](https://user-images.githubusercontent.com/40363469/66134046-ac16bc80-e5c5-11e9-9b30-66407a3446e5.png) --></li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/40363469/66134046-ac16bc80-e5c5-11e9-9b30-66407a3446e5.png" alt="drawing" style="border:1px solid black;" width="650" align="top" /></p>
+
+<h5 id="cfde-common-metadata-format"><a href="https://fair-research.org/deliverables/cfde-metadata-format.html">CFDE Common Metadata Format</a></h5>
+<ul>
+  <li>specifies a minimal set of attributes (metadata) related to an <em>Asset</em>.</li>
+</ul>
+
+<!-- ![common metadata format](https://user-images.githubusercontent.com/40363469/66134031-a8833580-e5c5-11e9-9cc8-5e4b275fa20c.png) -->
+
+<p><img src="https://user-images.githubusercontent.com/40363469/66134031-a8833580-e5c5-11e9-9cc8-5e4b275fa20c.png" alt="drawing" style="border:1px solid black;" width="650" align="top" /></p>
+
+<h5 id="cfde-core-er-diagram"><u>CFDE Core ER Diagram</u></h5>
+<ul>
+  <li>the <code class="language-plaintext highlighter-rouge">CFDE Core Entity Relationship diagram</code> corresponds to a  <code class="language-plaintext highlighter-rouge">Level 0 representation richness</code> and is available from the following <a href="https://github.com/nih-cfde/cfde-deriva/blob/2019-08/diagrams/cfde-core-model.png">github repository</a></li>
+</ul>
+
+<h5 id="cfde-core-table-schema"><u>CFDE Core Table Schema</u></h5>
+<ul>
+  <li>the <code class="language-plaintext highlighter-rouge">CFDE Core Table Schema</code> corresponds to a  <code class="language-plaintext highlighter-rouge">Level 0 representation richness</code>, expressed as a <a href="#Frictionless">Frictionless Data Package</a> represenstation and is available from the following <a href="https://github.com/nih-cfde/cfde-deriva/blob/2019-08/table-schema/cfde-core-model.json">github repository</a></li>
+</ul>
+
+<h5 id="cfde-entity-relation-diagram"><u>CFDE Entity-Relation Diagram</u></h5>
+<ul>
+  <li>the <code class="language-plaintext highlighter-rouge">CFDE Core Entity Relationship diagram</code> corresponds to a  <code class="language-plaintext highlighter-rouge">Level 2 representation richness</code> and is available from the following <a href="https://github.com/nih-cfde/cfde-deriva/blob/2019-10/extractors_and_metadata.GTEx/cfde-core-model.2019.10.21.1430.png">github repository</a></li>
+</ul>
+
+<h5 id="metadata-manifest"><u>Metadata Manifest</u></h5>
+<ul>
+  <li>a file that includes metadata for a group of accompanying files that are part of a coherent unit (manifest), such as name, version, background scripts, and browser actions.</li>
+</ul>
+
+<h5 id="cfde-asset-manifest-1"><u>CFDE-asset-manifest</u></h5>
+<ul>
+  <li>a type of Metadata Manifest describing an  <a href="#Asset-Inventory">Asset Inventory</a></li>
+</ul>
+
+<hr />
+
+<h2 id="processes">Processes</h2>
+
+<!-- <details>
+ -->
+
+<h5 id="c2m2-creation-flow"><u>C2M2 Creation Flow</u></h5>
+<ul>
+  <li>the process which generated the C2M2 model.</li>
+</ul>
+
+<h5 id="c2m2-extractor-flow"><u>C2M2 Extractor Flow</u></h5>
+<ul>
+  <li>a process which transforms information stored in a given DCC representation format into the CFDE C2M2 model instances.</li>
+</ul>
+
+<h5 id="data-generating-event"><u>Data-Generating Event</u></h5>
+<ul>
+  <li>a process, such as a data acquisition or a data transformation, resulting in the creation of a file (digital asset).</li>
+</ul>
+
+<h5 id="fair-assessment"><u>FAIR Assessment</u></h5>
+<ul>
+  <li>a process which evaluates the level of compliance of a dataset with the FAIR principles. The assessment may be performed with tools such as <a href="https://fairshake.cloud">FAIRshake</a> or <a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/">FAIREvaluator</a>.</li>
+</ul>
+
+<h5 id="globus-automate-flow"><u>Globus Automate Flow</u></h5>
+<ul>
+  <li>a process which relies on Globus Automate, a software service created and based at the University of Chicago, to help scientists simplify their workflow by automating data transfer and synchronization tasks. Users can create automated sequences initiated by events, known as <code class="language-plaintext highlighter-rouge">Globus Automate Flows</code>.</li>
+</ul>
+
+<h5 id="dcc-data-ingestion-process"><u>DCC-data-ingestion-process</u></h5>
+<ul>
+  <li>a process which converts a dataset obtained from a <a href="#DCC">DCC</a> and transforms its data and metadata into a <a href="#C2M2">C2M2</a> model instance representation and persists it to a <a href="#DERIVA">DERIVA</a> endpoint<br />
+<!-- ##### <u>Master Flow</u> --></li>
+</ul>
+
+<h5 id="metadata-ingest"><u>Metadata Ingest</u></h5>
+<ul>
+  <li>a process which assigns identifiers to the objects, then extracts or creates metadata for these objects and persists them.</li>
+</ul>
+
+<h5 id="proof-of-concept-poc"><u>Proof of Concept (POC)</u></h5>
+<ul>
+  <li>a process or realization of a certain method or idea in order to demonstrate its feasibility.</li>
+</ul>
+
+<h5 id="table-schema-to-deriva-translation"><u>Table Schema to DERIVA Translation</u></h5>
+<ul>
+  <li>a process of metadata ingest which uses tabular formatted data such as Frictionless data package to persist information in the <a href="#DERIVA">DERIVA system</a>. The code for such a process is available from Github from <a href="(https://github.com/nih-cfde/cfde-deriva/blob/2019-08/examples/tableschema_to_deriva.py)">this repository</a></li>
+</ul>
+
+<!-- # DRAFT - list of term anchors currently linked from spec documents -->
+
+<!-- CFDE-asset-manifest -->
+
+<!-- DCCs -->
+
+<!-- DCC-data-ingestion-process -->
+
+<!-- Entity-relationship-model -->
+
+<!-- Metadata -->
+
+<!-- *[A2CPS]: Acute to Chronic Pain Signatures program
+*[SSO]: Single Sign-On
+*[DATS]: Data Article Tag Suite
+*[DERIVA]: Discovery Environment for Relational Information and Versioned Assets
+*[C2M2]: Cross Cut Metadata Model
+*[CFDE]: Common Fund Data Ecosystem
+*[GUID]: Globally Unique Identifier
+*[CC]: Coordinating Center
+*[ASHG]: American Society of Human Genetics
+*[BIC]: Bioinformatics Center
+*[LDAP]: Lightweight Directory Access Protocol
+*[DCC]: Data Coordination Center.
+*[TCC]: Training Coordination Center.
+*[FAIR]: Findable Accessible Interoperable Reusable
+*[DCAT]: Data Catalog Vocabulary
+*[OBO]: Open Biomedical Ontology
+*[POC]: Proof of Concept
+*[NIH]: National Institutes of Health
+*[NHLBI]: National Heart, Lung and Blood Institute
+*[WGS]: Whole Genome Sequencing
+*[STRIDES]: Science and Technology Research Infrastructure for Discovery, Experimentation 
+*[DNS]: Domain Name System 
+*[RNA]: ribonucleic acid
+ -->
 
             </div>
             <div class="c-textbook__footer" id="textbook_footer">

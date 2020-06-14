@@ -131,9 +131,9 @@ nav.c-textbook__sidebar {
     opacity: 0.95;
     /*background-color: */
     /*background-image: linear-gradient(#a4682140, lightgray);*/
-    /*background-image: linear-gradient(#00518f, #00518f);*/
+    background-image: linear-gradient(#0355ab, #0355ab);
 
-    background-image: linear-gradient(#3f51b5,#3f51b5);
+    /*background-image: linear-gradient(#3f51b5,#3f51b5);*/
 }
 
 .c-page__nav{
@@ -444,7 +444,8 @@ code, pre > code {
 }*/
 
 .buttons .interact-button  {
-    background-color: #3f51b5;
+    /*background-color: #3f51b5;*/
+    background-color: #0355ab;
 }
 
 
