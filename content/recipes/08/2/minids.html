@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/content/recipes/08/2/minids.html",
   "headline": "Identifier Minting Service with Minid Client",
-  "datePublished": "2020-06-14T19:41:32+00:00",
-  "dateModified": "2020-06-14T19:41:32+00:00",
+  "datePublished": "2020-06-15T11:49:22+00:00",
+  "dateModified": "2020-06-15T11:49:22+00:00",
   "description": "# Identifier Minting Service with Minid Client**Authors**:   * [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)  * [Mike D'Arcy ](http...",
   "author": {
     "@type": "Person",
@@ -1240,25 +1240,29 @@ initFunction(initPrint)
 
 <p>The main purpose of this recipe is:</p>
 
-<p>To create a <strong>persistent</strong>, <strong>globally unique</strong> and <strong>resolvable identifier</strong> using the <strong><em>Minid client</em></strong> accessing the Minid 2.0 release</p>
+<p>To create a <strong>persistent</strong>, <strong>globally unique</strong> and <strong>resolvable identifier</strong> using the <strong><em>Minid client</em></strong> accessing the Minid 2.0 release.</p>
 
 <hr />
 
 <h2 id="graphical-overview-of-the-fairification-recipe-objectives">Graphical Overview of the FAIRification Recipe Objectives</h2>
 
-<div class="mermaid" style="padding:1px;border:thin solid black;">
-graph TD;
-    A([file creation]):::box --&gt;B(New File):::box
-    B --&gt; C{need for a <br />stable <br />identifier?}:::box
-    C --&gt;|Yes| D([invoke MINID minting service]):::box
-    C --&gt;|No| E(no findable data):::box1
-    D --&gt; F([hdl:20.500.12633/1HK1DTv1wPt3a]):::box
+<div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;" /></div>
 
+<!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
+<!-- graph TD; -->
+<!--  A([file creation]):::box -->
+<p><!-- B(New File):::box  -->
+<!--    B --> <!-- C{need for a <br>stable <br>identifier?}:::box -->
+<!--    C --> <!-- |Yes| D([invoke MINID minting service]):::box -->
+<!--    C --> <!-- |No| E(no findable data):::box1 -->
+<!--    D --> <!-- F([hdl:20.500.12633/1HK1DTv1wPt3a]):::box --></p>
+
+<!--
     classDef box font-family:avenir,font-size:14px,fill:#B30000,stroke:#222,color:#fff,stroke-width:1px
     classDef box1 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
     linkStyle 0,1,2,3 stroke:#B30000,stroke-width:1px,color:#B30000,font-family:avenir;
     
-</div>
+</div> -->
 
 <!-- ___
 

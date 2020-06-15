@@ -28,27 +28,29 @@
 
 The main purpose of this recipe is:
 
-To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release
+To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release.
 
 ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
+ <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>  
 
-<div class="mermaid"  style="padding:1px;border:thin solid black;">
-graph TD;
-    A([file creation]):::box -->B(New File):::box
-    B --> C{need for a <br>stable <br>identifier?}:::box
-    C -->|Yes| D([invoke MINID minting service]):::box
-    C -->|No| E(no findable data):::box1
-    D --> F([hdl:20.500.12633/1HK1DTv1wPt3a]):::box
+<!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
+<!-- graph TD; -->
+<!--  A([file creation]):::box --> <!-- B(New File):::box  -->
+<!--    B --> <!-- C{need for a <br>stable <br>identifier?}:::box -->
+<!--    C --> <!-- |Yes| D([invoke MINID minting service]):::box -->
+<!--    C --> <!-- |No| E(no findable data):::box1 -->
+<!--    D --> <!-- F([hdl:20.500.12633/1HK1DTv1wPt3a]):::box -->
 
+<!--
     classDef box font-family:avenir,font-size:14px,fill:#B30000,stroke:#222,color:#fff,stroke-width:1px
     classDef box1 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
     linkStyle 0,1,2,3 stroke:#B30000,stroke-width:1px,color:#B30000,font-family:avenir;
     
-</div>
+</div> -->
 
 
 
