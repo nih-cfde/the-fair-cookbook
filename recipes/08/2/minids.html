@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/recipes/08/2/minids.html",
   "headline": "Using MINIDs",
-  "datePublished": "2020-06-15T18:28:14+00:00",
-  "dateModified": "2020-06-15T18:28:14+00:00",
+  "datePublished": "2020-06-15T20:03:23+00:00",
+  "dateModified": "2020-06-15T20:03:23+00:00",
   "description": "        Using MINIDs    Identifier Minting Service with Minid Client Authors:Philippe Rocca-SerraMike D'Arcy Maintainers: Philippe Rocca-SerraVersion: 1.0Lic...",
   "author": {
     "@type": "Person",
@@ -1236,7 +1236,10 @@ initFunction(initPrint)
 <h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
 <p>To create a <strong>persistent</strong>, <strong>globally unique</strong> and <strong>resolvable identifier</strong> using the <strong><em>Minid client</em></strong> accessing the Minid 2.0 release.</p>
 <hr>
-<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div><!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
+
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>  
+<!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
 <!-- graph TD; -->
 <!--  A([file creation]):::box --> <!-- B(New File):::box  -->
 <!--    B --> <!-- C{need for a <br>stable <br>identifier?}:::box -->
@@ -1272,30 +1275,48 @@ ___ -->
 
 
 
-<h2 id="Installing-the-minid-2.0-client">Installing the minid 2.0 client<a class="anchor-link" href="#Installing-the-minid-2.0-client"> </a></h2><p>This is a prerequisite to be able to call the minid API hosted on a server at the following url <a href="http://minid.bd2k.org/minid">http://minid.bd2k.org/minid</a></p>
-<h3 id="installing-with-pip">installing with pip<a class="anchor-link" href="#installing-with-pip"> </a></h3><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">pre</span> <span class="n">minid</span>
-</pre></div>
-<h3 id="building-from-source:">building from source:<a class="anchor-link" href="#building-from-source:"> </a></h3><p>use the dev branch to obtain to source
-<a href="https://github.com/fair-research/minid">minid github repository</a></p>
-<h2 id="Configuration">Configuration<a class="anchor-link" href="#Configuration"> </a></h2><hr>
-<ol>
-<li><p>prerequisite: create a minig-config.cfg file</p>
-<p>As a convenience you need specify this information in a minid configuration file (<code>~/.minid/minid-config.cfg</code>)
-To do so from the command line, issue the following:</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span>$ mkdir ~/Users/philippe/.minid
-$ <span class="nb">cd</span> .minid
-$ touch minid-config.cfg
-</pre></div>
-<ol>
-<li><p>Create a GlobusID account</p>
-<p>Before using the API you first need to create a <a href="https://www.globusid.org/create">globus account</a></p>
-<!-- <kbd>![](./images/globus/globus-account-create.png)<kbd/> -->
+## Installing the minid 2.0 client
 
-<p><div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div></p>
-<!-- ![](https://i.imgur.com/B5UbkpF.png) --></li>
-</ol>
+This is a prerequisite to be able to call the minid API hosted on a server at the following url [http://minid.bd2k.org/minid](http://minid.bd2k.org/minid)
+
+### installing with pip
+
+```python
+pip3 install --pre minid
+```
+
+### building from source:
+
+use the dev branch to obtain to source
+[minid github repository](https://github.com/fair-research/minid)
+
+
+## Configuration
+-------------
+
+1. prerequisite: create a minig-config.cfg file
+
+  As a convenience you need specify this information in a minid configuration file (`~/.minid/minid-config.cfg`)
+  To do so from the command line, issue the following:
+
+```bash
+$ mkdir ~/Users/philippe/.minid
+$ cd .minid
+$ touch minid-config.cfg
+```
+
+
+2. Create a GlobusID account
+
+  Before using the API you first need to create a [globus account](https://www.globusid.org/create)
+  <!-- <kbd>![](./images/globus/globus-account-create.png)<kbd/> -->
+
+ <!--  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>   -->
+<div>
+  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
+</div>  <!-- ![](https://i.imgur.com/B5UbkpF.png) -->
+
+
 <p>and validate your email address, as part of the registration process. A unique code will be sent to your email address. You must present this code along with your email address when accessing the API.</p>
 <ol>
 <li><p>Accessing minid service from the command line</p>
@@ -1306,19 +1327,28 @@ $ touch minid-config.cfg
 </pre></div>
 <p>This will open the GlobusID login page. Simply enter your credentials obtained from 2.</p>
 <p><!-- ![](./images/globus/globus-account-login.png) -->
-<!-- ![](https://i.imgur.com/2OZFcJa.png) --></p>
-<div>
+<!-- ![](https://i.imgur.com/2OZFcJa.png) -->
+<!-- <div>
 <img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
+</div>  --></p>
+<div>
+  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div><p>followed by:</p>
 <p><!-- ![](./images/globus/globus-account-allow.png) -->
-<!-- ![](https://i.imgur.com/avzyAFZ.png) --></p>
-<div>
+<!-- ![](https://i.imgur.com/avzyAFZ.png) -->
+<!-- <div>
 <img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
+</div>  --></p>
+<div>
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
 </div><p>If all goes well, the following browser screen will be shown:</p>
 <p><!-- ![](./images/globus/globus-account-login-success.png) -->
-<!-- ![](https://i.imgur.com/THYPg4E.png) --></p>
-<div>
+<!-- ![](https://i.imgur.com/THYPg4E.png) -->
+<!-- <div>
 <img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
+</div>  --></p>
+<div>
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login-success.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
 </div><p>While the terminal will show the following:</p>
 <div class="highlight"><pre><span></span>You have been logged in.
 </pre></div>
