@@ -1,6 +1,7 @@
 <div>
 <!-- <img src="./images/logo/CFDE-FAIR-new-logo-option1-colourized.png" width="150"/> -->
-<img src="../images/logo/CFDE-FAIR-new-logo-option1-nih-blue.png" width="150"/>
+<!-- <img src="../images/logo/CFDE-FAIR-new-logo-option1-nih-blue.png" width="150"/> -->
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/images/logo/CFDE-FAIR-new-logo-option1-nih-blue.png?raw=true" width="150"/>
 </div>
 
 # Table of content
