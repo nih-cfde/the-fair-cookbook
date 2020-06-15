@@ -35,8 +35,9 @@ ___
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
- <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>  
+<!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
 
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>  
 <!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
 <!-- graph TD; -->
 <!--  A([file creation]):::box --> <!-- B(New File):::box  -->
@@ -109,7 +110,11 @@ $ touch minid-config.cfg
   Before using the API you first need to create a [globus account](https://www.globusid.org/create)
   <!-- <kbd>![](./images/globus/globus-account-create.png)<kbd/> -->
 
-  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>  
+ <!--  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>   -->
+<div>
+  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
+</div> 
+
   <!-- ![](https://i.imgur.com/B5UbkpF.png) -->
 
 
@@ -129,25 +134,34 @@ $ touch minid-config.cfg
 
 <!-- ![](./images/globus/globus-account-login.png) -->
 <!-- ![](https://i.imgur.com/2OZFcJa.png) -->
-<div>
+<!-- <div>
 <img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
+</div>  -->
+<div>
+  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div> 
   
   followed by:
 
 <!-- ![](./images/globus/globus-account-allow.png) -->
 <!-- ![](https://i.imgur.com/avzyAFZ.png) -->
-<div>
+<!-- <div>
 <img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
-</div> 
+</div>  -->
+<div>
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
+</div>
   
   If all goes well, the following browser screen will be shown:
 
 <!-- ![](./images/globus/globus-account-login-success.png) -->
 <!-- ![](https://i.imgur.com/THYPg4E.png) -->
-<div>
+<!-- <div>
 <img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
-</div> 
+</div>  -->
+<div>
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login-success.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
+</div>
   
   While the terminal will show the following:
 
