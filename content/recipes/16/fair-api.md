@@ -28,11 +28,11 @@ Though OpenAPI can be edited by most standards editors because it is typically w
 <!-- ![An example endpoint in an OpenAPI Editor](./images/ss1.png) -->
 An example endpoint in an OpenAPI Editor:
 <br/>
-<div><img src="./images/ss1.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/16/images/ss1.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
 <!-- ![A real response in an OpenAPI Editor](./images/ss2.png) -->
 A real response in an OpenAPI Editor:<br/>
-<div><img src="./images/ss2.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/16/images/ss2.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
 
 ## Recipe
@@ -208,7 +208,7 @@ Again, each of these parameters is validatable with JSONSchema, in our current e
 Finally, we've included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
 
 <!-- ![](./images/ss2.png) -->
-<div><img src="./images/ss2.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/16/images/ss2.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
 With the output, we can complete our path by annotating the response:
 
