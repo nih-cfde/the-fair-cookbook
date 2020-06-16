@@ -55,28 +55,28 @@ FAIRshake can be accessed at [fairshake.cloud](https://fairshake.cloud). There a
 After [logging in to the website](https://fairshake.cloud/accounts/login/), you will be able to create content on the site. Let's try performing an assessment using the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118).
 
 <!-- ![FAIR metrics Rubric on FAIRshake](./images/ss1.png)  -->
-<div><img src="./images/ss1.png" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss1.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
 
 
 To perform an assessment with this rubric, we'll need something to assess. For this, you can find a digital object already in FAIRshake or register your own (with 'create object' at the bottom of the rubric).
 
 <!-- ![Searching for Digital Objects to Assess on FAIRshake](./images/ss2.png) -->
-<div><img src="./images/ss2.png" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss2.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
 
 <!-- ![Starting an assessment on FAIRshake](./images/ss3.png) -->
-<div><img src="./images/ss3.png" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss3.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
 
 
 The assessment may be associated with a project (or not), this is relevant if you want to aggregate a set of assessments after the fact. The target (digital object) and rubric are mandatory. When we confirm this, we can then submit a manual assessment with FAIRshake.
 
 <!-- ![Performing a manual assessment on FAIRshake](./images/ss4.png) -->
-<div><img src="./images/ss4.png" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss4.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
 
 
 You may find that some of these questions are hard to answer, this is because the universal FAIR metrics are designed to be widely applicable and are as such, somewhat broad and abstract. While the metrics in this rubric are useful to satisfy, they may not be enough in certain contexts. If you complete and publish an assessment, your answers will become associated with the digital object that you assessed, and this information will be used for rendering the insignia and perform the analytics for that digital object. The rubric we used for the CFDE is available from [here](https://fairshake.cloud/rubric/36). It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as 'A relevant file type is present and resolvable with EDAM'. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of [this project](https://fairshake.cloud/project/87), you can also see statistics for those assessments there.
 
 <!-- ![Reviewing FAIR assessment breakdown on FAIRshake](./images/ss5.png) -->
-<div><img src="./images/ss5.png" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss5.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
 
 
 Manually assessing thousands of digital objects would be extremely time consuming and inefficient. In many cases answers to FAIR metrics are redundant so those can be automatable. For example,  we can write code that validates whether the file type of a digital object is in EDAM or not. After determining these answers in bulk, we can then publish them on FAIRshake with the FAIRshake API.

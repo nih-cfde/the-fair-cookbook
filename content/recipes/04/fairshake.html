@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/content/recipes/04/fairshake.html",
   "headline": "Evaluating FAIRness with FAIRshake",
-  "datePublished": "2020-06-15T20:03:23+00:00",
-  "dateModified": "2020-06-15T20:03:23+00:00",
+  "datePublished": "2020-06-16T18:01:57+00:00",
+  "dateModified": "2020-06-16T18:01:57+00:00",
   "description": "# Evaluating FAIRness with FAIRshakeA tutorial that demonstrates  how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context...",
   "author": {
     "@type": "Person",
@@ -1262,25 +1262,25 @@ initFunction(initPrint)
 <p>After <a href="https://fairshake.cloud/accounts/login/">logging in to the website</a>, you will be able to create content on the site. Let’s try performing an assessment using the <a href="https://fairshake.cloud/rubric/25/">FAIR metrics by fairmetrics.org Rubric</a>. This rubric is a FAIRshake entry for the universal FAIR metrics published in <a href="https://www.nature.com/articles/sdata2018118">this paper</a>.</p>
 
 <!-- ![FAIR metrics Rubric on FAIRshake](/the-fair-cookbook/content/recipes/04/images/ss1.png)  -->
-<div><img src="./images/ss1.png" width="1000px" style="padding:1px;border:thin solid black;" /></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss1.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;" /></div>
 
 <p>To perform an assessment with this rubric, we’ll need something to assess. For this, you can find a digital object already in FAIRshake or register your own (with ‘create object’ at the bottom of the rubric).</p>
 
 <!-- ![Searching for Digital Objects to Assess on FAIRshake](/the-fair-cookbook/content/recipes/04/images/ss2.png) -->
-<div><img src="./images/ss2.png" width="1000px" style="padding:1px;border:thin solid black;" /></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss2.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;" /></div>
 
 <!-- ![Starting an assessment on FAIRshake](/the-fair-cookbook/content/recipes/04/images/ss3.png) -->
-<div><img src="./images/ss3.png" width="1000px" style="padding:1px;border:thin solid black;" /></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss3.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;" /></div>
 
 <p>The assessment may be associated with a project (or not), this is relevant if you want to aggregate a set of assessments after the fact. The target (digital object) and rubric are mandatory. When we confirm this, we can then submit a manual assessment with FAIRshake.</p>
 
 <!-- ![Performing a manual assessment on FAIRshake](/the-fair-cookbook/content/recipes/04/images/ss4.png) -->
-<div><img src="./images/ss4.png" width="1000px" style="padding:1px;border:thin solid black;" /></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss4.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;" /></div>
 
 <p>You may find that some of these questions are hard to answer, this is because the universal FAIR metrics are designed to be widely applicable and are as such, somewhat broad and abstract. While the metrics in this rubric are useful to satisfy, they may not be enough in certain contexts. If you complete and publish an assessment, your answers will become associated with the digital object that you assessed, and this information will be used for rendering the insignia and perform the analytics for that digital object. The rubric we used for the CFDE is available from <a href="https://fairshake.cloud/rubric/36">here</a>. It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as ‘A relevant file type is present and resolvable with EDAM’. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of <a href="https://fairshake.cloud/project/87">this project</a>, you can also see statistics for those assessments there.</p>
 
 <!-- ![Reviewing FAIR assessment breakdown on FAIRshake](/the-fair-cookbook/content/recipes/04/images/ss5.png) -->
-<div><img src="./images/ss5.png" width="1000px" style="padding:1px;border:thin solid black;" /></div>
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss5.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;" /></div>
 
 <p>Manually assessing thousands of digital objects would be extremely time consuming and inefficient. In many cases answers to FAIR metrics are redundant so those can be automatable. For example,  we can write code that validates whether the file type of a digital object is in EDAM or not. After determining these answers in bulk, we can then publish them on FAIRshake with the FAIRshake API.</p>
 
