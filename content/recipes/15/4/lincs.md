@@ -21,16 +21,16 @@ A cookbook documenting the ETL process of fitting the LINCS data to the C2M2.
 
 The [LINCS Data Portal](http://lincsportal.ccs.miami.edu/dcic-portal/) provides various ways to browse the existing LINCS data and highlight which small molecules, cell lines, genes, proteins, and antibodies are featured in a given dataset.
 
-While LINCS revolves around *Datasets*, encompassing in some cases several files for each data level, the [C2M2](TODO) models information revolving around files. Fortunately, the [C2M2 Level 1](TODO) provides collections, which enables arbitrary meaningful groupings of files, which is how the LINCS datasets can fit.
+While LINCS revolves around *Datasets*, encompassing in some cases several files for each data level, the [C2M2](https://www.nih-cfde.org/product/cfde-c2m2/) models information revolving around files. Fortunately, the [C2M2 Level 1](https://www.nih-cfde.org/product/level-1-asset-manifest-specification/) provides collections, which enables arbitrary meaningful groupings of files, which is how the LINCS datasets can fit.
 
 
 ## Step by Step Process
 
 ### Step 1: Setting up your environment
 
-The C2M2 Level 1 is described using a [Frictionless datapackage specification](TODO), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
+The C2M2 Level 1 is described using a [Frictionless datapackage specification](http://frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
 
-A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](TODO) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FrictionlessDataclass) and is easily updated to future C2M2 schemas. This can be installed directly from github with:
+A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FrictionlessDataclass) and is easily updated to future C2M2 schemas. This can be installed directly from github with:
 
 ```bash
 pip install git+git://github.com/nih-cfde/FAIR.git#egg=c2m2_frictionless&subdirectory=Demos/FrictionlessDataclass
@@ -89,7 +89,7 @@ if __name__ == '__main__':
 
 ```
 
-With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 Level 1 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids in your DCC will not clash with the ids in another, for more about this please refer to the C2M2 [documentation](TODO) or [cookbook](TODO).
+With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 Level 1 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids in your DCC will not clash with the ids in another, for more about this please refer to the C2M2 [documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/).
 
 Now we're ready to expand the `extract_transform` function such that we walk through the DCC's pertinent dataset descriptions and yield C2M2 equivalent dataclasses.
 
@@ -98,7 +98,7 @@ Now we're ready to expand the `extract_transform` function such that we walk thr
 
 #### Step 3.1: Projects
 
-We'll first focus on grabbing the `project` structure. It is recommended that a primary project for which all other projects point to it used for your DCC for logical grouping in the UI. Please see the [C2M2 documentation](TODO) for a full description of what project should represent, in short it is the groupings of datasets based essentially on funding awards.
+We'll first focus on grabbing the `project` structure. It is recommended that a primary project for which all other projects point to it used for your DCC for logical grouping in the UI. Please see the [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/) for a full description of what project should represent, in short it is the groupings of datasets based essentially on funding awards.
 
 ```python
 def lincs_fetchdata_iter():
@@ -111,7 +111,7 @@ def extract_transform():
   # ...
   # Projects refer to collections of items that were produced i.e. under the same award
   #  for a more complete definition of this and other C2M2 constructs,
-  #  please refer to the C2M2 docs (TODO)
+  #  please refer to the C2M2 docs (https://www.nih-cfde.org/product/cfde-c2m2/)
   primary_project = c2m2_level_1.project(
     # The namespace from before, ensuring any ids we choose don't clash
     id_namespace=ns.id,
@@ -246,7 +246,7 @@ def extract_transform():
 
 ```
 
-With this we have already satisfied a C2M2 Level 0 instance, but ideally we'll go a step further to C2M2 Level 1 which has more annotations including information about Subjects and Biosamples, for more information refer to the [C2M2 Level documentation](TODO).
+With this we have already satisfied a C2M2 Level 0 instance, but ideally we'll go a step further to C2M2 Level 1 which has more annotations including information about Subjects and Biosamples, for more information refer to the [C2M2 Level documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/#c2m2-richness-levels).
 
 
 #### Step 3.3: Subjects & Biosamples
@@ -585,4 +585,4 @@ This tool facilitates authentication, manual preview verification when loaded on
 
 ## Conclusion
 
-Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the standard, for maximal compliance it is essential that you review the most up to date [C2M2 documentation](TODO) and it may also be useful to review and perform [FAIR assessments](TODO) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
+Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the standard, for maximal compliance it is essential that you review the most up to date [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/) and it may also be useful to review and perform [FAIR assessments](https://nih-cfde.github.io/the-fair-cookbook/recipes/04/fairshake.html) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
