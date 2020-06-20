@@ -18,6 +18,7 @@
 	17. [CFDE namespaces](./06/cfde-namespaces.html)
 	7.  [Mapping your model to the DATS: the KidsFirst example](./07/seo.html)
 	20. [Extract-Transform-Load into C2M2: the KidsFirst example](./15//5/kf.html)
+	21. [Extract-Transform-Load into C2M2: the LINCS example](./15/4/lincs.html)
 
 * [Identification]():
 	8. [The need for identifiers](./08/identifiers.html)

@@ -88,6 +88,9 @@
       - title: ETL to C2M2- the KidsFirst example
         url: /recipes/15/5/kf
         not_numbered: false  
+      - title: ETL to C2M2- the LINCS example
+        url: /recipes/15/4/lincs
+        not_numbered: false          
 
   - title: Identification
     url: /recipes/08/identifiers
