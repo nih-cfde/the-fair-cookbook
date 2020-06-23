@@ -1,4 +1,2 @@
 Title: The FAIR Cookbook
-arrange:
-  - content/Introduction
-  - content/recipes
+collapse: true
