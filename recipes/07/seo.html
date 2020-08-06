@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/recipes/07/seo.html",
   "headline": "ETL to C2M2/DATS - the KidsFirst example",
-  "datePublished": "2020-08-06T16:54:33+00:00",
-  "dateModified": "2020-08-06T16:54:33+00:00",
+  "datePublished": "2020-08-06T19:43:54+00:00",
+  "dateModified": "2020-08-06T19:43:54+00:00",
   "description": "        ETL to C2M2/DATS - the KidsFirst example    Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS A case study with KidsFirst is considered for asset ...",
   "author": {
     "@type": "Person",
@@ -1268,12 +1268,12 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Motivations">Motivations<a class="anchor-link" href="#Motivations"> </a></h2><p>The <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">Data Tag Suite (DATS)</a> metadata model as described in <a href="https://doi.org/10.1093/gigascience/giz165">this paper</a> and fully codefied in <a href="https://github.com/datatagsuite/schema">this repository</a> strives to model datasets irrespective of their domains. <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> embodies several key elements making it extroudinarily useful for <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#FAIR">FAIRification</a>:</p>
+<h2 id="Motivations">Motivations<a class="anchor-link" href="#Motivations"> </a></h2><p>The <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">Data Tag Suite (DATS)</a> metadata model as described in <a href="https://doi.org/10.1093/gigascience/giz165">this paper</a> and fully codefied in <a href="https://github.com/datatagsuite/schema">this repository</a> strives to model datasets irrespective of their domains. <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> embodies several key elements making it extroudinarily useful for <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIRification</a>:</p>
 <ul>
-<li>Machine Readibility: Datasets described with a consistent <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> format permit machines to resolve <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#FAIR">FAIR</a> metadata such as identifiers, authorship, funding, citation, license, consent, access, provenance, and ultimatly topic as well.</li>
-<li><a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#RDF">RDF</a> Interoperability: Serialized in strict <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#JSON-LD">JSON-LD</a>, the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> format is renderable as an <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#RDF">RDF</a> graph permitting interoperability with ontological vocabularies and existing dataset description formats including <a href="https://schema.org/">schema.org</a> and the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#OBO">Open Biological and Biomedical Ontology (OBO)</a>.</li>
+<li>Machine Readibility: Datasets described with a consistent <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> format permit machines to resolve <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIR</a> metadata such as identifiers, authorship, funding, citation, license, consent, access, provenance, and ultimatly topic as well.</li>
+<li><a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#RDF">RDF</a> Interoperability: Serialized in strict <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON-LD">JSON-LD</a>, the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> format is renderable as an <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#RDF">RDF</a> graph permitting interoperability with ontological vocabularies and existing dataset description formats including <a href="https://schema.org/">schema.org</a> and the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#OBO">Open Biological and Biomedical Ontology (OBO)</a>.</li>
 <li>Findability: The utilization of these consistent formats will permit various existing services and endless future ones to be able to identify aspects of the dataset for the purposes of indexing and searching. One such service is <a href="https://datasetsearch.research.google.com/">google dataset search</a> which <a href="https://developers.google.com/search/docs/data-types/dataset">utilizes schema.org metadata</a>.</li>
-<li><a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#CFDE">CFDE</a> Compatibility: Tooling has been created to convert <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> to the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#C2M2">C2M2</a> and for automatically evaluating the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#FAIRness">FAIRness</a> of Datasets through the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> metadata model.</li>
+<li><a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#CFDE">CFDE</a> Compatibility: Tooling has been created to convert <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> to the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#C2M2">C2M2</a> and for automatically evaluating the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIRness">FAIRness</a> of Datasets through the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> metadata model.</li>
 </ul>
 
 </div>
@@ -1286,7 +1286,7 @@ initFunction(initPrint)
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Ingredients">Ingredients<a class="anchor-link" href="#Ingredients"> </a></h2><ol>
-<li>Access to a manifest or <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#API">API</a> for serving your existing datasets.</li>
+<li>Access to a manifest or <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#API">API</a> for serving your existing datasets.</li>
 </ol>
 
 </div>
@@ -1299,8 +1299,8 @@ initFunction(initPrint)
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Objectives">Objectives<a class="anchor-link" href="#Objectives"> </a></h2><ol>
-<li>Convert your existing <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a> into the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a> schema</li>
-<li>Check the validity of your <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> schema</li>
+<li>Convert your existing <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> into the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> schema</li>
+<li>Check the validity of your <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> schema</li>
 </ol>
 
 </div>
@@ -1312,8 +1312,8 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparation">Preparation<a class="anchor-link" href="#Preparation"> </a></h2><p>We need to get the manifest or access to an <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#API">API</a> serving the existing
- <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a>. In our case study, <a href="https://commonfund.nih.gov/kidsfirst">KidsFirst</a>,
+<h2 id="Preparation">Preparation<a class="anchor-link" href="#Preparation"> </a></h2><p>We need to get the manifest or access to an <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#API">API</a> serving the existing
+ <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a>. In our case study, <a href="https://commonfund.nih.gov/kidsfirst">KidsFirst</a>,
  the assets are browsable in the <a href="https://portal.kidsfirstdrc.org/search/file">file repository</a>
  After enabling all "Columns" click the "Export TSV" button and save that file to
  <code>./data/file-table.tsv</code>.</p>
@@ -1539,17 +1539,17 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="DATS-Conversion"><a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> Conversion<a class="anchor-link" href="#DATS-Conversion"> </a></h2><p>The full <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> schema is available <a href="https://github.com/datatagsuite/schema">here</a>,
-  it includes a <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#JSON-Schema">JSON Schema</a> definition as well as a visualization of how things fit together.
+<h2 id="DATS-Conversion"><a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> Conversion<a class="anchor-link" href="#DATS-Conversion"> </a></h2><p>The full <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> schema is available <a href="https://github.com/datatagsuite/schema">here</a>,
+  it includes a <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON-Schema">JSON Schema</a> definition as well as a visualization of how things fit together.
  <!-- ![DATS Schema Definition](https://raw.githubusercontent.com/datatagsuite/docs/master/source/_static/DATS-revised-overview.jpg) -->
  <div>
 <img src="https://raw.githubusercontent.com/datatagsuite/docs/master/source/_static/DATS-revised-overview.jpg" width="750px" style="padding:1px;border:thin solid black;"/>
 </div> 
   The root schema for datasets is: <a href="https://github.com/datatagsuite/schema/blob/master/dataset_schema.json">https://github.com/datatagsuite/schema/blob/master/dataset_schema.json</a>.</p>
-<p><a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> uses a strict <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#JSON-LD">JSON-LD</a> serialization.</p>
-<p>There are several ways to get a sense of what the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a> model entails, in some cases starting
+<p><a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> uses a strict <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON-LD">JSON-LD</a> serialization.</p>
+<p>There are several ways to get a sense of what the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> model entails, in some cases starting
   with an example is easier, but everything is easier with autocompletion and type-hints. Several
-  code editors support <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#JSON-Schema">JSON Schema</a> for auto completion (see <a href="http://schemastore.org/json/">this</a>).</p>
+  code editors support <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON-Schema">JSON Schema</a> for auto completion (see <a href="http://schemastore.org/json/">this</a>).</p>
 <p>With <a href="https://code.visualstudio.com/">visual studio code</a>, you can set this up by linking to the
   schema with a <code>$schema</code> field.</p>
 
@@ -1613,10 +1613,10 @@ cat &gt; my-dats.json <span class="s">&lt;&lt; EOF</span>
 <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/07/images/ss2.png?raw=true" width="650px" style="padding:1px;border:thin solid black;"/>
 </div></p>
 <p>Another way, or perhaps also, is to learn by example. Several <em>other</em> DCC's assets were
-  processed and converted to <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> <a href="https://github.com/nih-cfde/FAIR/">here</a>, example files
+  processed and converted to <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> <a href="https://github.com/nih-cfde/FAIR/">here</a>, example files
   and scripts can be found in the <code>DCC_name/output</code> and <code>DCC_name/scripts</code> directories
   respectively.</p>
-<p>It's now time to convert what we can into <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a>, striving to capture as much as possible
+<p>It's now time to convert what we can into <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a>, striving to capture as much as possible
   from the original table.</p>
 
 </div>
@@ -1639,13 +1639,13 @@ cat &gt; my-dats.json <span class="s">&lt;&lt; EOF</span>
 <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/07/images/ss3.png?raw=true" width="650px" style="padding:1px;border:thin solid black;"/>
 </div> 
  In other words, irrespective of what your definition is of a 'dataset', you should
-  consider using something that is identifiable enough to have its own unique <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a>
+  consider using something that is identifiable enough to have its own unique <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a>
   including dedicated landing page, unique identifier, citation, license, and more. File
   assets <em>associated</em> with that dataset will be listed under the dataset.</p>
 <p>Importantly, Datasets should ideally be associatable with singular biosamples when possible,
   so in some cases, it may make sense to consider each individual file to be its own dataset if
   each individual file is actually established for each biosample.</p>
-<p>Do note that <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> also supports Dataset in Dataset relationships if that becomes necessary.</p>
+<p>Do note that <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> also supports Dataset in Dataset relationships if that becomes necessary.</p>
 
 </div>
 </div>
@@ -1886,7 +1886,7 @@ cat &gt; my-dats.json <span class="s">&lt;&lt; EOF</span>
 <p>There are several improvements we can make to the above:</p>
 <ol>
 <li>Give context to our identifiers, which only make sense in the context of KidsFirst</li>
-<li>Provide more <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a> as available in our table</li>
+<li>Provide more <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> as available in our table</li>
 </ol>
 
 </div>
@@ -2321,8 +2321,8 @@ cat &gt; my-dats.json <span class="s">&lt;&lt; EOF</span>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we see, with some mapping effort, we were able to get all of the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a>
-  from the file manifest table into <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a>. It's important to note that there are
+<p>Now we see, with some mapping effort, we were able to get all of the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a>
+  from the file manifest table into <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a>. It's important to note that there are
   <strong>lots</strong> of fields missing including license, authorship information, and more which
   need to be found from other places to further complete and improve this model.
  With our newly created object, let's check to make sure we didn't make any mistakes!
@@ -2472,12 +2472,12 @@ cat &gt; my-dats.json <span class="s">&lt;&lt; EOF</span>
  +  }
 </pre></div>
 <p>You can see that we put in an invalid type and were missing some fields.
- In some cases, we need to add <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a> that wasn't in the original
- table such as <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a> about our own organization!</p>
+ In some cases, we need to add <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> that wasn't in the original
+ table such as <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> about our own organization!</p>
 <p>This is relevant in a catalog of many datasets but often isn't present
   in your own data; it's best if you determine how your own data will
   link back to your organization, than us trying to figure it out! That's why
-  <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> requires that <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a>.</p>
+  <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> requires that <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a>.</p>
 
 </div>
 </div>
@@ -2696,15 +2696,15 @@ cat &gt; my-dats.json <span class="s">&lt;&lt; EOF</span>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion"> </a></h2><p>As hoped, everything validates and we've successfully produced <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a>.
-  Though we now know our <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> is "valid", we're still not done. As with everything
-  there are levels; the more fields we fill out in the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a> the better off
-  we will be. This is where a <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#FAIR">FAIR</a> assessment comes in -- we can write metrics
-  that <em>also speak <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a></em> but are looking for presence of certain fields,
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion"> </a></h2><p>As hoped, everything validates and we've successfully produced <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a>.
+  Though we now know our <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> is "valid", we're still not done. As with everything
+  there are levels; the more fields we fill out in the <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> the better off
+  we will be. This is where a <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIR</a> assessment comes in -- we can write metrics
+  that <em>also speak <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a></em> but are looking for presence of certain fields,
   or checking that our <code>identifier</code> can actually be verified against the given <code>identifierSource</code>
-  <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#metadata">metadata</a> attributes.</p>
+  <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> attributes.</p>
 <p>Nonetheless, we've taken a step in the right direction. Future recipes will discuss
-  performing <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#FAIR">FAIR</a> assessments on this <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#DATS">DATS</a>, converting it to CFDE's <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#C2M2">C2M2</a> Frictionless Metadata model
+  performing <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIR</a> assessments on this <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a>, converting it to CFDE's <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#C2M2">C2M2</a> Frictionless Metadata model
   and more.</p>
 
 </div>

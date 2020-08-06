@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://nih-cfde.github.io/the-fair-cookbook/content/recipes/16/fair-api.html",
   "headline": "Developing FAIR API",
-  "datePublished": "2020-08-06T16:54:33+00:00",
-  "dateModified": "2020-08-06T16:54:33+00:00",
+  "datePublished": "2020-08-06T19:43:54+00:00",
+  "dateModified": "2020-08-06T19:43:54+00:00",
   "description": "# Developing FAIR API**Authors**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)**Maintainers**: [Daniel J. B. Clarke](https://orcid.org/0000-0...",
   "author": {
     "@type": "Person",
@@ -1240,7 +1240,7 @@ initFunction(initPrint)
 <p><strong>License</strong>: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
 
 <h2 id="background">Background</h2>
-<p>An <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#API">Application Programming Interface (API)</a>  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#FAIR">FAIR</a> APIs of software libraries but instead focus on developing FAIR APIs for the web.</p>
+<p>An <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#API">Application Programming Interface (API)</a>  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIR</a> APIs of software libraries but instead focus on developing FAIR APIs for the web.</p>
 
 <p>More and more web-based applications are becoming available each day. These applications typically perform complex operations on large databases. While web-based applications provide users with the capacity to access a tool, a database, or other resource programmatically, they are not always able to interoperate with other independent web applications. A web-based application that offers a FAIR API is more accessible to operating as part of workflows, or integration systems such as semantic search engines. This makes FAIR API development very relevant for data catalogs or web tools developed by the CF DCCs.</p>
 
@@ -1256,7 +1256,7 @@ initFunction(initPrint)
 <h2 id="objectives">Objectives</h2>
 <p>We will look at the existing REST service provided by the Metabolomics Workbench catalog: <a href="https://www.metabolomicsworkbench.org/tools/mw_rest.php">https://www.metabolomicsworkbench.org/tools/mw_rest.php</a>. This API is described for human consumption including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.</p>
 
-<p>Though OpenAPI can be edited by most standards editors because it is typically written in <a href="https://yaml.org/spec/1.2/spec.html">YAML</a> (a slightly ‘nicer’ version of <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/CFDE-glossary/#JSON">JSON</a> that is equivalent), it is helpful to use an OpenAPI editor like <a href="https://app.swaggerhub.com/home">https://app.swaggerhub.com/home</a>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.</p>
+<p>Though OpenAPI can be edited by most standards editors because it is typically written in <a href="https://yaml.org/spec/1.2/spec.html">YAML</a> (a slightly ‘nicer’ version of <a href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON">JSON</a> that is equivalent), it is helpful to use an OpenAPI editor like <a href="https://app.swaggerhub.com/home">https://app.swaggerhub.com/home</a>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.</p>
 
 <!-- ![An example endpoint in an OpenAPI Editor](/the-fair-cookbook/content/recipes/16/images/ss1.png) -->
 <p>An example endpoint in an OpenAPI Editor:
