@@ -15,7 +15,6 @@ A tutorial that demonstrates  how to use FAIRshake to perform FAIR evaluations o
 
 Adhering to [FAIRness](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) is somewhat abstract. While all of the components of becoming FAIR can be addressed at some level, it remains difficult to provide a concrete answer about whether something is indeed FAIR or not. In general, improvement is only real if it can be measured. To address this limitation of the FAIR guidelines, [FAIRshake](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fairshake) was created with the basic goal of making FAIR more concrete and measurable. While FAIRshake provides a catalog of community-contributed ways to characterize FAIRness, it is still up to a given project to decide which of these criteria they will adopt and/or create.
 
-
 FAIRshake provides:
 
 - A catalog of digital objects: these can be, for example,  datasets, APIs, workflows, each having their own unique identity and is the target of a FAIR assessment. That-is whatever the digital object is, you want it to assess how much it is Findable, Accessible, Interoperable and Reusable.
@@ -26,7 +25,23 @@ FAIRshake provides:
 - Facilitation of FAIR assessments: any digital object can be assessed with a given rubric in the context of a project both manually through the FAIRshake website, or 'automatically' by enabling assessment registration over API. Some automatic assessments have been integrated into the manual assessment UI on FAIRshake but this is still under development. Contributing your own automatic assessment modules will be discussed in this tutorial
 - Aggregations of FAIR assessments: FAIRshake provides the FAIR insignia, a look at the average assessments of a given digital object, project, or rubric. It also provides project analytics in the form of a report with summary statistics charts.
 
-In this recipe we'll look at the process of performing a FAIR evaluation using FAIRshake starting from nothing and covering various decisions that must be made along the way. We'll use the CFDE DCC resources [transformed to DATS](https://github.com/nih-cfde/FAIR) as the target of our assessment. This is because an automated assessment that is common across all CF DCCs is not possible to begin with without a common machine-readable metadata standard.
+
+## Motivation
+
+By selecting and adhering to a rubric or set of metrics shared by other projects, a resource can independently assert metric conformance thus improving interoperability between resources that share those metrics in the areas covered by those metrics. Each metric defines a concrete ideal criterion that is desired, satisfaction of that metric can be represented as a percentage, or a number between 0 and 1. Some metrics may be categorical, in which case their contribution can be quantized into the same range ordered ascending from 0 (least desirable) to 1 (most desirable). Given these normalized bounds, we can always compute a single scalar within the same range by finding the mean value of scores.
+
+The FAIR insignia aggregates each metric separately to provide contrast, informing someone where they can do better (metrics that have a low percentage) and where they are already doing well (metrics that have a high percentage). Because digital objects may be assessed by different rubrics (sets of metrics) which are often made up of different metrics.
+
+<!-- ![Anatomy of a FAIR Insignia](./images/insignia-anatomy) -->
+<div><img src="https://fairshake.cloud/static/image/insignia-anatomy.png"  style="padding:1px;"/></div>
+
+These insignias capture a visual snapshot of a resources' aggregated assessments at a glance. Interactive tooltips shown by hovering over a particular square reveal which metric is represented by that square. The overall assessments 
+
+It's important to note that these insignias can only represent knowledge that is reported and as such, "low score" should be interpreted as something to look into and not something to be accused of. It's also important to note that FAIR in general **does not represent quality of data but rather represent an expectation of how easy it might be to find, access, interoperate with and reuse that data**. By using automated mechanisms or strict clear-cut guidelines we can determine a score for this expectation.
+
+As a simple example, consider a metric which wants to find whether a citation can be located for a dataset from its landing page (a url); a human would look on the page and report whether they found it or not on the page, a robot might depend on [data citation guidelines](https://www.nature.com/articles/sdata2018259) which would expect to find a DOI or semantically annotated microdata or JSON-LD. While a robot might miss the obvious human-readable citation available on the page, it would also mean that a browser extension or bioinformatic crawling effort **would likely also miss it**. As such, a metric that is *not completely satisfied* may impair a use-case that depends on FAIR. FAIR Assessments can help identify situations like this and drive improvements.
+
+To increase your FAIR score, you should identify which metrics may need improvement, learn more about what that metric covers both theoretically (what the metric says) and concretely (how it was actually assessed). It is important to make sure that you are improving the overall FAIRness of your resource, and not just "hacking the FAIR metrics." In the context of the CFDE, periodic FAIR assessments are performed using a common rubric based on compliance with the C2M2, we encourage you to question when scores for certain metrics do not reflect what you feel is correct; it will take investigation of the metric itself, your own resource, and the C2M2 metadata model's capturing of your resource. We encourage you to repurpose the rubric we're using along with any additional metrics you hope to satisfy and assess your own resources. The contrast between assessments on your actual data and the assessments on your C2M2 converted data may reveal places that either of these may be improved.
 
 
 ## Ingredients
@@ -38,12 +53,15 @@ In this recipe we'll look at the process of performing a FAIR evaluation using F
 
 ## Objectives
 
+In this recipe we'll look at the process of performing a FAIR evaluation using FAIRshake starting from nothing and covering various decisions that must be made along the way. We'll use the CFDE DCC resources [transformed to DATS](https://github.com/nih-cfde/FAIR) as the target of our assessment. This is because an automated assessment that is common across all CF DCCs is not possible to begin with without a common machine-readable metadata standard.
+
 1. Use FAIRshake to facilitate FAIR Rubric discovery and development
 2. Assess a digital object manually
 3. Identify avenues for performing automated assessments
 4. Perform an automated assessment on a set of digital objects serialized with machine-readable metadata
 5. Develop an understanding of how well your digital objects comply with the chosen rubric
 6. Understand how new automated assessment mechanisms can be contributed to the FAIRshake ecosystem
+
 
 ## Recipe
 
