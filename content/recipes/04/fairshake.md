@@ -67,7 +67,7 @@ In this recipe we'll look at the process of performing a FAIR evaluation using F
 
 ### Using FAIRshake
 
-FAIRshake can be accessed at [fairshake.cloud](https://fairshake.cloud). There are several YouTube tutorials and some technical documentation accessible on the website. Let's walk you through a simple example of using the FAIRshake website.
+FAIRshake can be accessed at [fairshake.cloud](https://fairshake.cloud). There are several YouTube tutorials and some technical documentation accessible [on the website](https://fairshake.cloud/documentation/). Let's walk you through a simple example of using the FAIRshake website.
 
 
 After [logging in to the website](https://fairshake.cloud/accounts/login/), you will be able to create content on the site. Let's try performing an assessment using the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118).
