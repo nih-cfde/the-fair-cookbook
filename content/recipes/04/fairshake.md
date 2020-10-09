@@ -65,31 +65,55 @@ In this recipe we'll look at the process of performing a FAIR evaluation using F
 
 ## Recipe
 
+Because these ingredients are generic, we'll scope the recipe by considering a concrete scenario for each part of the recipe.
+
+#### Scenario
+
+Janice is a researcher at a Common Fund program who wants to assess her dataset using the CFDE rubric on FAIRshake that was used for the CFDE resources. After performing this assessment, she hopes to discover ways to improve her score. She has a resource in mind but would first like to get familiarized and set up with FAIRshake which she understands might be helpful.
+
 ### Using FAIRshake
 
-FAIRshake can be accessed at [fairshake.cloud](https://fairshake.cloud). There are several YouTube tutorials and some technical documentation accessible [on the website](https://fairshake.cloud/documentation/). Let's walk you through a simple example of using the FAIRshake website.
+FAIRshake can be accessed at [fairshake.cloud](https://fairshake.cloud). There are several YouTube tutorials and some general and technical documentation accessible [on the website](https://fairshake.cloud/documentation/).
 
+After logging in to the website, you will be able to create content on the site including registering a project, digital object, rubric, metric, or performing a FAIR assessment.
 
-After [logging in to the website](https://fairshake.cloud/accounts/login/), you will be able to create content on the site. Let's try performing an assessment using the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118).
+After logging in:
+[![FAIRshake login page](./images/ss8.png)](https://fairshake.cloud/accounts/login/)
 
-<!-- ![FAIR metrics Rubric on FAIRshake](./images/ss1.png)  -->
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss1.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+You're brought back to the home page where you can perform searches to locate projects, digital objects, rubrics or metrics by name, perform assessments or add new elements.
+[![FAIRshake performing a search](./images/ss9.png)](https://fairshake.cloud/?q=lincs&projects=1&digitalobjects=1&rubrics=1&metrics=1)
 
+#### Scenario
 
-To perform an assessment with this rubric, we'll need something to assess. For this, you can find a digital object already in FAIRshake or register your own (with 'create object' at the bottom of the rubric).
+Jenice is interested in a resource she contributed to: [L1000 dataset of CRISPR perturbagens](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293). She had a hard time finding it in the search so she decided to try the FAIRshake Chrome extension.
 
-<!-- ![Searching for Digital Objects to Assess on FAIRshake](./images/ss2.png) -->
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss2.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+[![FAIRshake Chrome Extension install](./images/ss10.png)](https://fairshake.cloud/chrome_extension/)
 
-<!-- ![Starting an assessment on FAIRshake](./images/ss3.png) -->
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss3.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+After installing the extension she went to the resource's landing page and activated the extension to find that, in fact, an assessment already exists for her already-C2M2 cataloged resource.
 
+[![Screenshot showing the FAIRshake chrome extension assessment summary](./images/ss6.png)](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293)
+
+She points her mouse over some of the red squares revealing information she doesn't quite understand.
+
+[![Screenshot showing the FAIRshake chrome extension assessment summary tooltip](./images/ss7.png)](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293)
+
+Though an assay is listed and described accurately on the page, there is no OBI term available on the page. She hopes to understand how this answer came to be and learn how the detailed and valuable assay information shown on the landing page can be made more FAIR.
+
+### Assess a digital object manually
+
+Let's try performing an assessment using the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118).
+
+[![FAIR metrics Rubric on FAIRshake](./images/ss1.png)](https://fairshake.cloud/rubric/25/)
+
+To perform an assessment with this rubric, we'll need something to assess. For this, you can find a digital object already in FAIRshake or register your own (with 'create object' below the rubric among other locations).
+
+When you've clicked the assess button on a digital object, you're presented with an assessment screen like the one below:
+[![Starting an assessment on FAIRshake](./images/ss3.png)](https://fairshake.cloud/assessment/prepare/?target=1081&rubric=20)
 
 The assessment may be associated with a project (or not), this is relevant if you want to aggregate a set of assessments after the fact. The target (digital object) and rubric are mandatory. When we confirm this, we can then submit a manual assessment with FAIRshake.
 
 <!-- ![Performing a manual assessment on FAIRshake](./images/ss4.png) -->
 <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss4.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
-
 
 You may find that some of these questions are hard to answer, this is because the universal FAIR metrics are designed to be widely applicable and are as such, somewhat broad and abstract. While the metrics in this rubric are useful to satisfy, they may not be enough in certain contexts. If you complete and publish an assessment, your answers will become associated with the digital object that you assessed, and this information will be used for rendering the insignia and perform the analytics for that digital object. The rubric we used for the CFDE is available from [here](https://fairshake.cloud/rubric/36). It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as 'A relevant file type is present and resolvable with EDAM'. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of [this project](https://fairshake.cloud/project/87), you can also see statistics for those assessments there.
 
