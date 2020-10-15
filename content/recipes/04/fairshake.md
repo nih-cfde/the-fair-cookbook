@@ -101,28 +101,114 @@ Though an assay is listed and described accurately on the page, there is no OBI 
 
 ### Assess a digital object manually
 
-Let's try performing an assessment using the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118).
+The C2M2 rubric was developed by the CFDE team to represent the concrete areas of FAIRness that the CFDE plans to focus on and ideally satisfy in order to accomplish several use-cases determined at the beginning of the project. The metrics chosen represent some broad subset of FAIR but don't necessarily cover all aspects necessary to make digital objects FAIR in *your* community.
+
+To that end, and to get a better sense of the scope of the FAIR metrics that could be developed to better serve your community, let's take a look at the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118), representing a universal set of broad criteria that should apply to all digital objects.
 
 [![FAIR metrics Rubric on FAIRshake](./images/ss1.png)](https://fairshake.cloud/rubric/25/)
 
-To perform an assessment with this rubric, we'll need something to assess. For this, you can find a digital object already in FAIRshake or register your own (with 'create object' below the rubric among other locations).
+#### Scenario
 
-When you've clicked the assess button on a digital object, you're presented with an assessment screen like the one below:
-[![Starting an assessment on FAIRshake](./images/ss3.png)](https://fairshake.cloud/assessment/prepare/?target=1081&rubric=20)
+Jenice decides to perform a manual assessment of her resource using the FAIRmetrics rubric before digging into the specifics of the CFDE assessment.
 
-The assessment may be associated with a project (or not), this is relevant if you want to aggregate a set of assessments after the fact. The target (digital object) and rubric are mandatory. When we confirm this, we can then submit a manual assessment with FAIRshake.
+![View on FAIRshake with extension](./images/ss11.png)
 
-<!-- ![Performing a manual assessment on FAIRshake](./images/ss4.png) -->
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss4.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+Which brings her to FAIRshake to see the relevant information available on FAIRshake related to the page she was on.
 
-You may find that some of these questions are hard to answer, this is because the universal FAIR metrics are designed to be widely applicable and are as such, somewhat broad and abstract. While the metrics in this rubric are useful to satisfy, they may not be enough in certain contexts. If you complete and publish an assessment, your answers will become associated with the digital object that you assessed, and this information will be used for rendering the insignia and perform the analytics for that digital object. The rubric we used for the CFDE is available from [here](https://fairshake.cloud/rubric/36). It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as 'A relevant file type is present and resolvable with EDAM'. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of [this project](https://fairshake.cloud/project/87), you can also see statistics for those assessments there.
+[![View on FAIRshake link location](./images/ss12.png)](https://fairshake.cloud/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&projects=1&digitalobjects=1&rubrics=1&metrics=1)
 
-<!-- ![Reviewing FAIR assessment breakdown on FAIRshake](./images/ss5.png) -->
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss5.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+Alternatively, she could have found or registered her digital object directly on the FAIRshake website with the 'Create New Digital Object' button.
 
+Clicking the assess button, we end up at the assessment preparation page.
 
-Manually assessing thousands of digital objects would be extremely time consuming and inefficient. In many cases answers to FAIR metrics are redundant so those can be automatable. For example,  we can write code that validates whether the file type of a digital object is in EDAM or not. After determining these answers in bulk, we can then publish them on FAIRshake with the FAIRshake API.
+[![Preparing an assessment on FAIRshake](./images/ss13.png)](https://fairshake.cloud/assessment/prepare/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&projects=1&digitalobjects=1&rubrics=1&metrics=1&target=8901)
 
+The digital object and its only rubric were selected automatically, but we'll instead select the fairmetrics rubric.
+
+[![Selecting the FAIRmetrics rubric](./images/ss14.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25)
+
+Instead of using the CFDE project, we'll perform this assessment as part of the FAIRshake testing project. It will likely make sense to create our own project if we expect to do a bunch of related assessments.
+
+[![Selecting the FAIRmetrics project](./images/ss15.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55)
+
+It's also important to note that project here can be left blank if our assessment isn't for any project.
+
+[![Preparing the FAIRshake Assessment](./images/ss16.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55)
+
+Confirming this, we being our manual assessment.
+
+[![Performing a Manual Assessment with FAIRshake](./images/ss17.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55)
+
+Each metric represents a concept pertinent to FAIRness which is described shortly before each prompt but potentially in more depth on the metrics' landing page. Middle-clicking on the metric "card" to the left of the question we get much more information in a new tab.
+
+[![Global unique identifier metric on FAIRshake](./images/ss18.png)](https://fairshake.cloud/metric/104/)
+
+Clicking 'View assessments' we can even see what other digital objects in the database got as an answer during an assessment through a tabular view.
+
+[![Assessments for Global unique identifier](./images/ss19.png)](https://fairshake.cloud/metric/104/assessments/)
+
+Clicking on any of these links will allow you to explore the projects, rubrics, or digital objects that were assessed to provide a more elaborate sense of why a particular score was received and in what context, we can see, for example, that these top entries refer to assessments made during an EBI workshop.
+
+Getting back to our assessment, we must determine whether our digital object satisfies the criterion at hand. This one asks us to provide a standard that defines the globally-unique structure of the identifier used for the resource.
+
+[![Identifying identifiers](./images/ss20.png)](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293)
+
+We find out quite quickly that we have several identifiers:
+- the data source: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138
+  - the data source's local identifier GSE70138
+- the local identifier: LDS-1293
+- the url is an identifier <http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293>
+
+While all of these are identifiers, not all of them are used outside of the resource itself and thus shared as "globally" accepted. The *scheme* however is shared -- **URL** which appears in the FAIRsharing database along with DOI and other standardized identifier schemes.
+
+[![FAIRsharing identifiers](./images/ss21.png)](https://fairsharing.org/standards/?q=&selected_facets=type_exact:identifier%20schema)
+
+A **URL**, provides some level of standardization more than, say, a digital object that *doesn't have a resolvable url*. But other identifier schemes may carry with them even more information, like a **DOI** which adds additional semantic interoperability conditions not present on URLS. Thus in certain circumstances, a URL might be good enough, but in others, a more specific standardized identifier might be more pertinent.
+
+While a DOI guarantees authorship information associated with it, a URL may very well contain absolutely anything. Furthermore, many organizations have come together to try to guarantee that DOIs will not change, while URLs can be changed or removed by the owner of the resource.
+
+Thus we *do* satisfy this metric in a broad context, though if our question was more specific, for instance -- is there a DOI for this digital object? We might have answered differently. Hopefully this demonstration helps to illuminate the need for establishing more specific metrics relevant to your community. The less qualitative a metric becomes, the more stable and useful that metric will be when measured.
+
+![Answer to question 1](./images/ss22.png)
+
+The next metric, persistent identifier, addresses persistence specifically and asks for a document describing the persistent identifier strategy. There is no obvious identifier type that guarantees this so we can investigate further. After some digging we find information about citation in the terms we found this in the terms:
+
+[![LINCS dataset terms](./images/ss23.png)](http://lincsportal.ccs.miami.edu/datasets/terms)
+
+This reveals that our local identifiers are registered in [identifiers.org](http://identifiers.org/), also recognized as [a standard in FAIRsharing](https://fairsharing.org/FAIRsharing.nknzhj). In fact we could create a few more identifiers with this knowledge:
+
+- `lincs.data:LDS-1293`
+- http://identifiers.org/lincs.data/LDS-1293
+
+Even if LINCS decides to change the URL structure of its webpage, there is an expectation that these identifiers will be persistent and *not* change in structure. According to the terms, these are meant to be "global and unique persistent identifiers." These identifiers could likely satisfy the persistent identifier criterion citing the scheme [as it is registered in identifiers.org](https://registry.identifiers.org/registry/lincs.data), but they are not immediately obvious and available on the landing page.
+
+This demonstrates a scenario where even though LINCS *has* persistent identifiers somewhere, they might not be discovered during the FAIR assessment. Whether we found the answer or not, we can learn something that can be improved.
+
+![Answer to question 2](./images/ss24.png)
+
+Lastly we'll look at the machine readable metadata before discussing automated assessments.
+
+FAIR strives to make things more Findable, Accessible, Interoperable, and Reusable, not just from a human perspective but also for a machine. With the massive amounts of data available in the public domain, many researchers conduct research by automatically locating data and operating with it without ever directly picking and choosing data sets. To this end it's important that the FAIR principles also be considered from a machine perspective. Though the assay is well described on our page, would someone be able to automatically identify datasets on our page with certain criteria such as data or assay-type?
+
+In this vein, machine readable metadata should ideally be available and documented. Again, not quite clear from the landing page or even from browsing the website, there [*is* a public API documentation](https://smart-api.info/ui/1ad2cba40cb25cd70d00aa8fba9cfaf3) documented and registered in [SmartAPI](https://smart-api.info/), another community resource [also recognized by FAIRsharing](https://fairsharing.org/search/?q=smartapi).
+
+This API provides a structured way of accessing the information on the website making dataset selection and filterability more viable but nonetheless still not trivial. As such we could say that we have machine-readable metadata but it of course doesn't express the full picture.
+
+![Answer to question 3](./images/ss25.png)
+
+Hopefully it is clear by now that despite being ideals, the FAIR metrics are broad ideas of things to think about when it comes to FAIR, but we'll likely need some more strict and concrete criterion if we're to measure FAIRness with precision. Furthermore, finding this information is a time consuming process and would be intractable with a large enough set of digital objects.
+
+This is where automated assessments and quantifiable metrics come in to help measure the moving target that is FAIRness. It is important to recognize at this point that a "good" or "bad" score produced by manual assessment does little more than prompt discussion. Can someone who *doesn't* know your resource well come up with the same FAIR assessment as you? If your information isn't blatantly obvious the answer will probably be **no**, and this is still valueable even if it's not the precise situation.
+
+When we're done with our assessment (or just want to save it for later) we can save, publish or delete it at the bottom of the assessment. Once published, an assessment cannot be modified, only one assessment on the same target, rubric, project can be worked on (without publishing) at a time. It's important to note that comments and urls will only be accessible to the authors of the digital object, the assessment, or the project in which it is assessed.
+
+![Save publish or delete assessment](./images/ss26.png)
+
+If you complete and publish an assessment, your answers will become associated with the digital object that you assessed, and this information will be used for rendering the insignia and perform the analytics for that digital object.
+
+![Assessment shown on FAIRshake](./images/ss27.png)
+
+Though the assessments seem to agree that we have machine readable metadata, it's unclear whether or not we truly have a globally unique identifier; we'll be able to find out exactly why given that those were reported by an automated assessment.
 
 ### Preparing to perform Automated Assessments
 
@@ -320,6 +406,14 @@ for assessment in map(json.loads, sys.stdin):
   target = find_or_create_fairshake_digital_object(fairshake=fairshake, **assessment['target'])
   publish_fairshake_assessment(fairshake=fairshake, **target)
 ```
+
+### Reviewing the state of FAIRness in a project
+
+The rubric we used for the CFDE is available from [here](https://fairshake.cloud/rubric/36). It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as 'A relevant file type is present and resolvable with EDAM'. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of [this project](https://fairshake.cloud/project/87), you can also see statistics for those assessments there.
+
+<!-- ![Reviewing FAIR assessment breakdown on FAIRshake](./images/ss5.png) -->
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/04/images/ss5.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+
 
 ## Conclusion
 
