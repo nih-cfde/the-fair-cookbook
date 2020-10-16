@@ -210,8 +210,37 @@ If you complete and publish an assessment, your answers will become associated w
 
 Though the assessments seem to agree that we have machine readable metadata, it's unclear whether or not we truly have a globally unique identifier; we'll be able to find out exactly why given that those were reported by an automated assessment.
 
-### Preparing to perform Automated Assessments
 
+### Perform automated assessments
+
+The C2M2 Metadata model defines a unified structure which all DCCs will be converting their own metadata to. With this machine-readable metadata, we can assess FAIRness in an automatic fashion based on the fields available to us. SCripts which demonstrate the conversion of several DCC metadata into the C2M2 are available [here](https://github.com/nih-cfde/FAIR), and scripts to assess that unified metadata for its compliance with the CFDE Rubric are [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment).
+
+We produced reports over time on the assessments that were executed on the CFDE portal and will continue to do so. This report is summarized [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment/report). The assessment script can be executed on your own **C2M2 converted data**, meaning the first step is to produce that if you wish to execute the C2M2 assessment; documentation for this is out of the scope of this recipe.
+
+Given that you have a frictionless datapackage containing your data, you can perform a FAIR assessment on that datapackage to identify gaps in your metadata. The script is also capable of performing FAIR assessments on the public repository via the DERIVA API.
+
+```bash
+git clone https://github.com/nih-cfde/FAIR.git
+cd Demos/FAIRAssessment/c2m2
+
+# see script help for more options
+python3 assess.py --help
+
+# perform a complete assessment with your frictionless datapackage
+python3 assess.py --offline-package=/your/datapackage.json --output-file=output.jsonl
+```
+
+Please note that this script tests a number of metrics including validating terms against ontologies, probing links to see if they are available and more and as such may take some time to run on large amounts of data.
+
+The resulting file, results.tsv, contains a table with the results of the assessment which include answer to each metric for each file in your datapackage. These results should be inspected to determine areas which can be improved. They can be interrogated offline with your favorite spreadsheet program or in the context of the other data [using the same report we produce](https://github.com/nih-cfde/FAIR/blob/master/Demos/FAIRAssessment/report/), or they can be published onto FAIRshake directly see [Registering assessments on FAIRshake](#Registering-assessments-on-FAIRshake).
+
+
+### Building your own Automated Assessment
+
+For assessments on completely new sets of digital objects with a completely new rubric will necessitate building your own automated assessments. We'll walk through how one might go about doing this.
+
+
+#### Preparing to Build an Automated Assessment
 
 Certain standards are well defined and designed in a way that makes it possible to computationally verify whether a digital object is complying with the standard. In an ideal world, all standards should be made in this way, such that an automated mechanism exists for confirming compliance. In reality, however, many standards are not--ultimately necessitating harmonization before datasets, APIs, or anything to be used together.
 
@@ -224,7 +253,7 @@ Some examples of well-defined standards are TCP/IP and HTTP. The effectiveness o
 In the case of assessing digital objects that comply with standards that are defined using mechanisms easily validated, automated assessments become simple and in many cases involve simply taking advantage of already constructed mechanisms for asserting compliance with those standards. In the case that those standards are not well defined; the best course of action would be to convert those digital objects to an alternative and validatable standard, or alternatively formally codify the standard. In either case, you're doing some FAIRification in an effort to even begin the assessment. We have to do this step because we can't measure compliance with a standard if we don't have a quantifiable standard in the first place! Well we could do it but only manually.
 
 
-### Performing an Automated Assessment on DATS
+#### Case Study: Performing an Automated Assessment on DATS
 
 
 One can think of an automated assessment as a unit/integration test for compliance with a standard. Ideally, this test will reveal issues with integration at the digital object provider level at the benefit of the consumer of those digital objects. Automated assessments are only possible on existing machine-readable metadata and validatable standards, such as [DATS](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#dats). As such we'll utilize DATS for our assessment; not only will we assess compliance with DATS itself, we'll go further with several additional 'optional' parts of DATS including ontological term verification and other sanity checks.
@@ -379,35 +408,42 @@ for assessment in assess_many_async(map(json.loads, sys.stdin)):
 Note that other rubrics, metrics, and resolvers (e.g. ways of finding DATS from a `url`) are available in the `fairshake-assessments` and are associated with some of the FAIRshake metrics.
 
 
-### Registering assessments on FAIRshake
+### <a name="Registering-assessments-on-FAIRshake"></a>Registering assessments on FAIRshake
 
 Now that we've performed our assessment, we should publish these results on FAIRshake for us and the world to see where improvements can be made. It is important to note that the assessment results are a function of all parties (the digital object, the standard, the underlying repository or system that serves the digital object) and as such must be compared relative to the same baseline.
 
-
+The [fairshake-assessments](https://github.com/maayanLab/fairshake-assessments) library can also help with this.
 
 ```python
 #!/bin/python
-# assumption: DATS objects are generated line by line
-# usage: register.py < output_assessments.txt
+# assumption: assessment objects formatted according to the FAIRshake API in a .jsonl file
+# usage: API_KEY='' register.py < assessments.jsonl
+# see https://fairshake.cloud/accounts/api_access/ for an API_KEY
 
-import sys, json
+import sys
+import json
 from fairshake_assessments.core import (
   get_fairshake_client,
   find_or_create_fairshake_digital_object,
   publish_fairshake_assessment,
 )
 
-# assumption: DATS objects are generated line by line
-# usage: API_KEY='' assess.py < input_dats.txt > output_assessments.txt
-# see https://fairshake.cloud/accounts/api_access/ for an API_KEY
+project = 87 # project id on fairshake
 
 fairshake = get_fairshake_client(api_key=os.environ['API_KEY'])
 for assessment in map(json.loads, sys.stdin):
   target = find_or_create_fairshake_digital_object(fairshake=fairshake, **assessment['target'])
-  publish_fairshake_assessment(fairshake=fairshake, **target)
+  publish_fairshake_assessment(
+    fairshake=fairshake,
+    project=project,
+    **assessment
+  )
 ```
 
+
 ### Reviewing the state of FAIRness in a project
+
+Once an assessment has been published on FAIRshake, it becomes possible to browse those assessments both via a high level summary page and via a more granular tabular view.
 
 The rubric we used for the CFDE is available from [here](https://fairshake.cloud/rubric/36). It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as 'A relevant file type is present and resolvable with EDAM'. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of [this project](https://fairshake.cloud/project/87), you can also see statistics for those assessments there.
 
