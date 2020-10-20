@@ -53,7 +53,7 @@ To increase your FAIR score, you should identify which metrics may need improvem
 
 ## Objectives
 
-In this recipe we'll look at the process of performing a FAIR evaluation using FAIRshake starting from nothing and covering various decisions that must be made along the way. We'll use the CFDE DCC resources already [transformed to the C2M2](https://github.com/nih-cfde/FAIR) as the target of our assessment. This is because an automated assessment that is common across all CF DCCs is not possible to begin with without a common machine-readable metadata standard.
+In this recipe we'll look at the process of performing a FAIR evaluation using FAIRshake starting from nothing and covering various decisions that must be made along the way. We'll use the CFDE DCC resources already [transformed to the C2M2](#fair-repo) as the target of our assessment. This is because an automated assessment that is common across all CF DCCs is not possible to begin with without a common machine-readable metadata standard.
 
 1. Use FAIRshake to facilitate FAIR Rubric discovery and development
 2. Assess a digital object manually
@@ -213,11 +213,13 @@ Though the assessments seem to agree that we have machine readable metadata, it'
 
 ### Perform automated assessments
 
-The C2M2 Metadata model defines a unified structure which all DCCs will be converting their own metadata to. With this machine-readable metadata, we can assess FAIRness in an automatic fashion based on the fields available to us. SCripts which demonstrate the conversion of several DCC metadata into the C2M2 are available [here](https://github.com/nih-cfde/FAIR), and scripts to assess that unified metadata for its compliance with the CFDE Rubric are [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment).
+The C2M2 Metadata model defines a unified structure which all DCCs will be converting their own metadata to. With this machine-readable metadata, we can assess FAIRness in an automatic fashion based on the fields available to us. SCripts which demonstrate the conversion of several DCC metadata into the C2M2 are available [here](#fair-repo), and scripts to assess that unified metadata for its compliance with the CFDE Rubric are [here](#fair-repo-assessments).
 
-We produced reports over time on the assessments that were executed on the CFDE portal and will continue to do so. This report is summarized [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment/report). The assessment script can be executed on your own **C2M2 converted data**, meaning the first step is to produce that if you wish to execute the C2M2 assessment; documentation for this is out of the scope of this recipe.
+We produced reports over time on the assessments that were executed on the CFDE portal and will continue to do so. This report is summarized [here](#fair-repo-report). The assessment script can be executed on your own **C2M2 converted data**, meaning the first step is to produce that if you wish to execute the C2M2 assessment; documentation for this is out of the scope of this recipe.
 
 Given that you have a frictionless datapackage containing your data, you can perform a FAIR assessment on that datapackage to identify gaps in your metadata. The script is also capable of performing FAIR assessments on the public repository via the DERIVA API.
+
+Please note that you need access to the [CFDE FAIR Repo](#fair-repo) to access these scripts.
 
 ```bash
 git clone https://github.com/nih-cfde/FAIR.git
@@ -232,7 +234,7 @@ python3 assess.py --offline-package=/your/datapackage.json --output-file=output.
 
 Please note that this script tests a number of metrics including validating terms against ontologies, probing links to see if they are available and more and as such may take some time to run on large amounts of data.
 
-The resulting file, results.tsv, contains a table with the results of the assessment which include answer to each metric for each file in your datapackage. These results should be inspected to determine areas which can be improved. They can be interrogated offline with your favorite spreadsheet program or in the context of the other data [using the same report we produce](https://github.com/nih-cfde/FAIR/blob/master/Demos/FAIRAssessment/report/), or they can be published onto FAIRshake directly see [Registering assessments on FAIRshake](#Registering-assessments-on-FAIRshake).
+The resulting file, results.tsv, contains a table with the results of the assessment which include answer to each metric for each file in your datapackage. These results should be inspected to determine areas which can be improved. They can be interrogated offline with your favorite spreadsheet program or in the context of the other data [using the same report we produce](#fair-repo-report), or they can be published onto FAIRshake directly see [Registering assessments on FAIRshake](#Registering-assessments-on-FAIRshake).
 
 
 ### Building your own Automated Assessment
@@ -381,7 +383,7 @@ So we'll have a separate question for that where we'll go further. Above we have
 
 
 
-Ultimately this can become a command line application that we run in parallel on lots of DATS metadata. You can refer to the scripts [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment) for examples on how you can accomplish this. It's also possible to resolve additional metadata in the process of the assessment through forward chaining or other methods, an example of an assessment like that is also on that page: `data_citation_assessment.py` which uses a url to negotiate and resolve microdata according to this [Data citation paper's guidelines](https://www.nature.com/articles/s41597-019-0031-8).
+Ultimately this can become a command line application that we run in parallel on lots of DATS metadata. You can refer to the scripts [here](#fair-repo-assessments) for examples on how you can accomplish this. It's also possible to resolve additional metadata in the process of the assessment through forward chaining or other methods, an example of an assessment like that is also on that page: `data_citation_assessment.py` which uses a url to negotiate and resolve microdata according to this [Data citation paper's guidelines](https://www.nature.com/articles/s41597-019-0031-8).
 
 
 ### Publishing codified FAIRshake metrics and resolvers for assessment reproducibility
@@ -454,3 +456,16 @@ The rubric we used for the CFDE is available from [here](https://fairshake.cloud
 ## Conclusion
 
 The process of FAIRification with FAIRshake both manually and automatically was detailed and described with a CFDE case study. While the assessment described here was for the CFDE DATS serialized assets, the same process is applicable to any standard and any type of digital object. Examples exist for assessing APIs, GitHub repositories, and tools, among other case studies using standards applicable to each. As more standards become codified and accessible through FAIRshake, they will become simpler to evaluate, ultimately increasing the FAIRness of the standard itself and anything using that standard. It should be noted that the process of using FAIRshake for performing assessments is mainly designed to increase awareness about standards that digital object producers can apply to improve the FAIRness of the digital assets they produce and publish.
+
+
+## Reference
+
+### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo
+
+The CFDE FAIR repository is currently private given that it contains details about DCCs that have not yet been verified.
+Please submit a request to <https://www.nih-cfde.org/contact/> if you need access to the repository.
+
+If you have access to the repository, you can access information in it about:
+- [scripts](https://github.com/nih-cfde/FAIR) to convert several DCC's publicly facing metadata into C2M2 compatible frictionless datapackages organized by DCC name
+- [scripts](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment) to automatically assess C2M2 compatible frictionless datapackages against the C2M2 rubric on FAIRshake
+- [reports](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment/report) showing the satisfaction of the converted DCC metadata with the C2M2 rubric over time (FAIR assessments over time)
