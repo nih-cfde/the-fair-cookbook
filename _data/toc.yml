@@ -123,6 +123,9 @@
 - title: Jupyter notebooks and CF data processing workflows
   url: /recipes/18/notebooks-workflows
   not_numbered: false
+- title: Evaluating FAIRness with the CFDE rubric on FAIRshake
+  url: /recipes/19/fairshake
+  not_numbered: false
 
 
 
