@@ -294,45 +294,46 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/StudySummary'
+                $ref: '#/components/schemas/StudySummary'
   ...
 components:
-  StudySummary:
-    description: Summary information about a study
-    type: object
-    properties:
-      study_id:
-        type: string
-        description: A unique identifier for this study
-      study_title:
-        type: string
-      study_type:
-        type: string
-        description: The type of treatment used in the study
-      institute:
-        type: string
-        description: The institution that performed the study
-      department:
-        type: string
-        description: The department in the institute that performed the study
-      last_name:
-        type: string
-        description: The last name of the PI responsible for the study
-      first_name:
-        type: string
-        description: The first name of the PI responsible for the study
-      email:
-        type: string
-        description: The email to contact for information about the study
-      submit_date:
-        type: string
-        description: The date this study was submitted to metabolomics workbench
-      study_summary:
-        type: string
-        description: A detailed summary describing the study
-      subject_species:
-        type: string
-        description: The species of the subject of the study
+  schemas:
+    StudySummary:
+      description: Summary information about a study
+      type: object
+      properties:
+        study_id:
+          type: string
+          description: A unique identifier for this study
+        study_title:
+          type: string
+        study_type:
+          type: string
+          description: The type of treatment used in the study
+        institute:
+          type: string
+          description: The institution that performed the study
+        department:
+          type: string
+          description: The department in the institute that performed the study
+        last_name:
+          type: string
+          description: The last name of the PI responsible for the study
+        first_name:
+          type: string
+          description: The first name of the PI responsible for the study
+        email:
+          type: string
+          description: The email to contact for information about the study
+        submit_date:
+          type: string
+          description: The date this study was submitted to metabolomics workbench
+        study_summary:
+          type: string
+          description: A detailed summary describing the study
+        subject_species:
+          type: string
+          description: The species of the subject of the study
 ```
 
 Under `components`, as many individual components can be specified, and they can be referenced using `$ref` with [JSON-Schema pointers](https://json-schema.org/draft/2019-09/relative-json-pointer.html) as shown above.
