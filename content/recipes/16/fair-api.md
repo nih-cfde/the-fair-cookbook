@@ -4,7 +4,7 @@
 
 **Maintainers**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
-**Version**: 1.0
+**Version**: 1.1
 
 **License**: GPLv2+
 
