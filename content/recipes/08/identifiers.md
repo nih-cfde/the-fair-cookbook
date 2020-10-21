@@ -1,12 +1,12 @@
 # The need for identifiers
 
-**authors**: [Philippe Rocca-Serra]()
+**authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**maintainers**
+**maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
 **version**: Initial Draft
 
-**license**:
+**license**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
         
 
@@ -48,32 +48,32 @@ Data interoperability as described by FAIR assumes that entities and information
 
 For a number of digital objects (`scholarly articles`, `grants`), persistent identifiers such DOI exist and for research `organizations` and `persons`, RORID and ORCID are gaining popularity becoming more widely used.
 
-`Datasets` are another type of digital objects which are being identified by DOI with services such as [Zenodo](https://zenodo.org).
+`Datasets` are another type of digital objects which are being identified by DOI with services such as [Figshare](https://figshare.com/) or [Zenodo](https://zenodo.org).
 
 But `interoperability` goes far beyond reliable identification of these entities. For research scientists, entities such as:  
-- [x] Taxonomic Information
-- [x] Anatomical Information
-- [x] Diseases and Conditions
-- [x] Molecular Entities, such as:
-    - [x] Chemicals
-    - [x] Metabolites
-    - [x] Genes
-    - [x] Transcripts
-    - [x] Protein
-    - [x] Lipids
-- [x] Pathways and Biochemical reactions
-- [x] Assays
-- [x] Instruments
-- [x] Licenses
+- Taxonomic Information
+- Anatomical Information
+- Diseases and Conditions
+- Molecular Entities, such as:
+    - Chemicals
+    - Metabolites
+    - Genes
+    - Transcripts
+    - Protein
+    - Lipids
+- Pathways and Biochemical reactions
+- Assays
+- Instruments
+- Licenses
 
-For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](TODO:ADD_URL) and made available through the [Deriva system](TODO:ADD_URL).
+For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [Deriva system](TODO:ADD_URL).
 
-* Refer to the specific [NIH-CFDE recipe](TODO:ADD_URL) detailing which ontologies have been selected.
+* This specific [NIH-CFDE recipe](../14/cfde-terminologies.html) details which ontologies have been selected and how their use will be rolled out as the program progresses.
 
 It is important to notice that for such resources, a central authority is responsible for issueing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
 This works well to address the semantic markup needs that arise in the data curation, data extraction transform load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands, for instance to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/)
 
-* Refer to the specific recipe on [MINIDS](https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/minids.md)
+* Refer to the specific recipe on [MINIDS](./2/minids.html) to learn how to mint such resolvable identifiers for your resources.
 
 
 

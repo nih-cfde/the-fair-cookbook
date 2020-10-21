@@ -8,7 +8,7 @@
 
 **Version**: 1.0
 
-**License**: GPLv2+
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 ## Table of Contents
 1. [Main Objectives](#Main%20Objectives)
@@ -28,27 +28,30 @@
 
 The main purpose of this recipe is:
 
-To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release
+To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release.
 
 ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
+<!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
 
-<div class="mermaid"  style="padding:1px;border:thin solid black;">
-graph TD;
-    A([file creation]):::box -->B(New File):::box
-    B --> C{need for a <br>stable <br>identifier?}:::box
-    C -->|Yes| D([invoke MINID minting service]):::box
-    C -->|No| E(no findable data):::box1
-    D --> F([hdl:20.500.12633/1HK1DTv1wPt3a]):::box
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>  
+<!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
+<!-- graph TD; -->
+<!--  A([file creation]):::box --> <!-- B(New File):::box  -->
+<!--    B --> <!-- C{need for a <br>stable <br>identifier?}:::box -->
+<!--    C --> <!-- |Yes| D([invoke MINID minting service]):::box -->
+<!--    C --> <!-- |No| E(no findable data):::box1 -->
+<!--    D --> <!-- F([hdl:20.500.12633/1HK1DTv1wPt3a]):::box -->
 
+<!--
     classDef box font-family:avenir,font-size:14px,fill:#B30000,stroke:#222,color:#fff,stroke-width:1px
     classDef box1 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
     linkStyle 0,1,2,3 stroke:#B30000,stroke-width:1px,color:#B30000,font-family:avenir;
     
-</div>
+</div> -->
 
 
 
@@ -101,19 +104,17 @@ $ cd .minid
 $ touch minid-config.cfg
 ```
 
-  Failing to create the minid-config.cfg file, will result in the following error when trying the minid login command and authenticating with the globus id.
-
-
-  ```bash
-  [Errno 2] No such file or directory: '/Users/philippe/.minid/minid-config.cfg'
-  ```
 
 2. Create a GlobusID account
   
   Before using the API you first need to create a [globus account](https://www.globusid.org/create)
   <!-- <kbd>![](./images/globus/globus-account-create.png)<kbd/> -->
 
-  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>  
+ <!--  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>   -->
+<div>
+  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
+</div> 
+
   <!-- ![](https://i.imgur.com/B5UbkpF.png) -->
 
 
@@ -133,25 +134,34 @@ $ touch minid-config.cfg
 
 <!-- ![](./images/globus/globus-account-login.png) -->
 <!-- ![](https://i.imgur.com/2OZFcJa.png) -->
-<div>
+<!-- <div>
 <img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
+</div>  -->
+<div>
+  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div> 
   
   followed by:
 
 <!-- ![](./images/globus/globus-account-allow.png) -->
 <!-- ![](https://i.imgur.com/avzyAFZ.png) -->
-<div>
+<!-- <div>
 <img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
-</div> 
+</div>  -->
+<div>
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
+</div>
   
   If all goes well, the following browser screen will be shown:
 
 <!-- ![](./images/globus/globus-account-login-success.png) -->
 <!-- ![](https://i.imgur.com/THYPg4E.png) -->
-<div>
+<!-- <div>
 <img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
-</div> 
+</div>  -->
+<div>
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login-success.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
+</div>
   
   While the terminal will show the following:
 
@@ -253,11 +263,15 @@ Below is a sample file manifest configuration file:
 
 ## Conclusions:
 
+Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets get be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 
 
 ___
 
 ## Bibliography:
+
 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
+
+2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles
 
 
