@@ -13,12 +13,12 @@ An [Application Programming Interface (API)](https://github.com/nih-cfde/specifi
 
 More and more web-based applications are becoming available each day. These applications typically perform complex operations on large databases. While web-based applications provide users with the capacity to access a tool, a database, or other resource programmatically, they are not always able to interoperate with other independent web applications. A web-based application that offers a FAIR API is more accessible to operating as part of workflows, or integration systems such as semantic search engines. This makes FAIR API development very relevant for data catalogs or web tools developed by the CF DCCs.
 
-While a slew of standards exist for web API development and documentation, each has their own level of FAIRness. Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API flexibility while still permitting machine readable introspection. Several other standards are machine readable by default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview/) or [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI.
+While a slew of standards exist for web API development and documentation, each has their own level of FAIRness. Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API flexibility while still permitting machine readable introspection. Several other standards are machine readable by default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview/) or [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI. We'll consider a specific extension of OpenAPI: [Smart-API](https://smart-api.info/) which adds a few additional fields and also has its own [get-started guide](https://smart-api.info/guide).
 
 ## Ingredients
 - Web Application
 - Existing API Documentation
-- OpenAPI Editor
+- OpenAPI/SmartAPI Editor (see step 1)
 
 ## Objectives
 We will look at the existing REST service provided by the Metabolomics Workbench catalog: <https://www.metabolomicsworkbench.org/tools/mw_rest.php>. This API is described for human consumption including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.
