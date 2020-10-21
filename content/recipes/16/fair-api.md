@@ -37,7 +37,27 @@ A real response in an OpenAPI Editor:<br/>
 
 ## Recipe
 
-### Step 1: Beginning an OpenAPI specification
+### Step 1: Setting up the OpenAPI Editor
+Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs that are enabled to support CORS.
+Unfortunately the API we'll work with here **does not**, so we'll need to obtain a Swagger Editor that can operate even when CORS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue. We specifically modified [an Open Source Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer) so that it supports this specific use case.
+
+Until our pull request is merged, the modified extension can be accessed [here](https://github.com/MaayanLab/vs-swagger-viewer/releases/tag/v3.1.0). The `vsix` file can be installed with [visual studio code](https://code.visualstudio.com/).
+
+It can be installed from `Ctrl+Shift+P` with the action "Install from VSIX"
+![Install from VSIX dialog](images/ss3.png)
+
+And selecting the `.vsix` file you downloaded.
+
+Once installed a swagger file can be edited by opening the swagger.yaml (that we'll be writing throughout the rest of the recipe), using `Ctrl+Shift+P` again and choosing the action "Preview Swagger"
+![Previewing swagger](images/ss4.png)
+
+The result will be a webview that opens to the side with the Swagger Editor.
+
+![Swagger Editor](images/ss5.png)
+
+Edits to the file will update the view **in real time**, and the view may be used to craft/test API requests.
+
+### Step 2: Beginning an OpenAPI specification
 We start by annotating useful descriptions for the API in the `info` field, this includes adding descriptors, version, license, and contact information. This gives your API an identity and this way it can be used in OpenAPI catalogs, for which there are several including [SmartAPI](https://smart-api.info/), making it possible to find your own APIs.
 
 The `servers` field has the base url(s) for accessing the API we're about to describe.
@@ -59,7 +79,7 @@ servers:
     url: https://www.metabolomicsworkbench.org/rest
 ```
 
-### Step 2: Describing a path
+### Step 3: Describing a path
 The Metabolomics API offers several examples, let's tackle one of them:
 
 |Example request|Example URL|
@@ -174,7 +194,7 @@ Finally, the `schema` is JSON-Schema describing how the JSON should look. It als
 
 The benefit of fully describing and endpoint like this is that a developer can fully understand what to expect from an endpoint, enabling them to determine code logic validity prior to having to test it at runtime. Furthermore, the SmartAPI initiative has an extension for relating those types to RDF for visions like the [BioThings](https://biothings.io/).
 
-### Step 3: Adding a path with parameters
+### Step 4: Adding a path with parameters
 Let's tackle our next endpoint:
 
 |Example request|Example URL|
@@ -258,7 +278,7 @@ paths:
                       type: string
 ```
 
-### Step 4: Identifying components
+### Step 5: Identifying components
 In some cases, a common set of JSON objects are reused throughout the API. It is often meaningful to turn these into their own 'component' and reference them. It's also extremely helpful to include descriptions especially for fields that are not directly interpretable.
 
 
@@ -317,7 +337,7 @@ components:
 
 Under `components`, as many individual components can be specified, and they can be referenced using `$ref` with [JSON-Schema pointers](https://json-schema.org/draft/2019-09/relative-json-pointer.html) as shown above.
 
-### Step 5: SmartAPI extension
+### Step 6: SmartAPI extension
 When it comes to *automatic* interoperability, the [SmartAPI extension](https://smart-api.info/guide) to OpenAPI is almost essential. It provides mechanisms for adding RDF annotations to parameters or responses. We'll demonstrate it on a new endpoint:
 
 |Example request|Example URL|
@@ -411,7 +431,7 @@ Here we see our usual path setup with a new section: `x-responseValueType`, this
 
 With the annotations fully described here, it becomes possible to eventually utilize your API for federated RDF queries without any additional effort, this was demonstrated by the [BioThings](https://biothings.io/) which can integrate SmartAPI APIs with proper annotations. It also permits end users to find your APIs knowing their identifiers (i.e. ncbigenes).
 
-### Step 6: Publishing and utilizing your OpenAPI/SmartAPI
+### Step 7: Publishing and utilizing your OpenAPI/SmartAPI
 Once you have a working OpenAPI document, there are numerous things that you can now do. Firstly, your API can be published on [smart-api.info](https://smart-api.info/), permitting people and machines to locate it and potentially utilize it.
 
 But you can also produce interactive documentation much like the output seen in the OpenAPI editor to publish on your webpage.
