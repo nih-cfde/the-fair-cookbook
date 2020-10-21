@@ -74,27 +74,27 @@ Janice is a researcher at a Common Fund program who wants to assess her dataset 
 
 FAIRshake can be accessed at [fairshake.cloud](https://fairshake.cloud). There are several YouTube tutorials and some general and technical documentation accessible [on the website](https://fairshake.cloud/documentation/).
 
-After logging in to the website, you will be able to create content on the site including registering a project, digital object, rubric, metric, or performing a FAIR assessment.
+After [logging in to the website](https://fairshake.cloud/accounts/login/), you will be able to create content on the site including registering a project, digital object, rubric, metric, or performing a FAIR assessment.
 
 After logging in:
-[![FAIRshake login page](./images/ss8.png)](https://fairshake.cloud/accounts/login/)
+![FAIRshake login page](./images/ss8.png)
 
-You're brought back to the home page where you can perform searches to locate projects, digital objects, rubrics or metrics by name, perform assessments or add new elements.
-[![FAIRshake performing a search](./images/ss9.png)](https://fairshake.cloud/?q=lincs&projects=1&digitalobjects=1&rubrics=1&metrics=1)
+You're brought back to [the home page](https://fairshake.cloud/?q=lincs&projects=1&digitalobjects=1&rubrics=1&metrics=1) where you can perform searches to locate projects, digital objects, rubrics or metrics by name, perform assessments or add new elements.
+![FAIRshake performing a search](./images/ss9.png)
 
 #### Scenario
 
-Janice is interested in a resource she contributed to: [L1000 dataset of CRISPR perturbagens](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293). She had a hard time finding it in the search so she decided to try the FAIRshake Chrome extension.
+Janice is interested in a resource she contributed to: [L1000 dataset of CRISPR perturbagens](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293). She had a hard time finding it in the search so she decided to try the [FAIRshake Chrome extension](https://fairshake.cloud/chrome_extension/).
 
-[![FAIRshake Chrome Extension install](./images/ss10.png)](https://fairshake.cloud/chrome_extension/)
+![FAIRshake Chrome Extension install](./images/ss10.png)
 
-After installing the extension she went to the resource's own landing page (not the one on FAIRshake!) and activated the extension to find that, in fact, an assessment already exists for her already-C2M2 cataloged resource.
+After installing the extension she went to the [resource's own landing page](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293) (not the one on FAIRshake!) and activated the extension to find that, in fact, an assessment already exists for her already-C2M2 cataloged resource.
 
-[![Screenshot showing the FAIRshake chrome extension assessment summary](./images/ss6.png)](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293)
+![Screenshot showing the FAIRshake chrome extension assessment summary](./images/ss6.png)
 
 She points her mouse over some of the red squares revealing information she doesn't quite understand.
 
-[![Screenshot showing the FAIRshake chrome extension assessment summary tooltip](./images/ss7.png)](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293)
+![Screenshot showing the FAIRshake chrome extension assessment summary tooltip](./images/ss7.png)
 
 Though an assay is listed and described accurately on the page, there is no OBI term available on the page. She hopes to understand how this answer came to be and learn how the detailed and valuable assay information shown on the landing page can be made more FAIR.
 
@@ -104,7 +104,7 @@ The C2M2 rubric was developed by the CFDE team to represent the concrete areas o
 
 To that end, and to get a better sense of the scope of the FAIR metrics that could be developed to better serve your community, let's take a look at the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118), representing a universal set of broad criteria that should apply to all digital objects.
 
-[![FAIR metrics Rubric on FAIRshake](./images/ss1.png)](https://fairshake.cloud/rubric/25/)
+![FAIR metrics Rubric on FAIRshake](./images/ss1.png)]
 
 If you're following along, feel free to pick a digital object of your own that you know well and see if you can complete and publish a manual assessment with it! You can always find and delete it from your account if you choose not to keep it, just be sure not to publish it unless you're happy with it.
 
@@ -114,45 +114,45 @@ Janice decides to perform a manual assessment of her resource using the FAIRmetr
 
 ![View on FAIRshake with extension](./images/ss11.png)
 
-Which brings her to FAIRshake to see the relevant information available on FAIRshake related to the page she was on.
+Which brings her to FAIRshake to see the [relevant information available on FAIRshake](https://fairshake.cloud/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&projects=1&digitalobjects=1&rubrics=1&metrics=1) related to the page she was on.
 
-[![View on FAIRshake link location](./images/ss12.png)](https://fairshake.cloud/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&projects=1&digitalobjects=1&rubrics=1&metrics=1)
+![View on FAIRshake link location](./images/ss12.png)
 
 Alternatively, she could have found or registered her digital object directly on the FAIRshake website with the 'Create New Digital Object' button.
 
-Clicking the assess button, she ends up at the assessment preparation page.
+Clicking the assess button, she ends up at [the assessment preparation page](https://fairshake.cloud/assessment/prepare/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&projects=1&digitalobjects=1&rubrics=1&metrics=1&target=8901).
 
-[![Preparing an assessment on FAIRshake](./images/ss13.png)](https://fairshake.cloud/assessment/prepare/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&projects=1&digitalobjects=1&rubrics=1&metrics=1&target=8901)
+![Preparing an assessment on FAIRshake](./images/ss13.png)
 
-The digital object and its only rubric were selected automatically, but she ends up instead select the fairmetrics rubric.
+The digital object and its only rubric were selected automatically, but she ends up instead [select the fairmetrics rubric](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25).
 
-[![Selecting the FAIRmetrics rubric](./images/ss14.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25)
+![Selecting the FAIRmetrics rubric](./images/ss14.png)
 
 Instead of using the CFDE project, she will perform this assessment as part of the FAIRshake testing project. It will likely make sense to create our own project if we expect to do a bunch of related assessments.
 
-[![Selecting the FAIRmetrics project](./images/ss15.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55)
+![Selecting the FAIRmetrics project](./images/ss15.png)
 
 It's also important to note that project here can be left blank if our assessment isn't for any project.
 
-[![Preparing the FAIRshake Assessment](./images/ss16.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55)
+![Preparing the FAIRshake Assessment](./images/ss16.png)
 
-Confirming this, Janice begins a manual assessment.
+Confirming this, Janice [begins a manual assessment](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55).
 
-[![Performing a Manual Assessment with FAIRshake](./images/ss17.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55)
+![Performing a Manual Assessment with FAIRshake](./images/ss17.png)
 
-Each metric represents a concept pertinent to FAIRness which is described shortly before each prompt but potentially in more depth on the metrics' landing page. Clicking on the metric "card" to the left of the question she gets much more information in a new tab.
+Each metric represents a concept pertinent to FAIRness which is described shortly before each prompt but potentially in more depth on the metrics' landing page. Clicking on the metric "card" to the left of the question she gets [much more information in a new tab](https://fairshake.cloud/metric/104/).
 
-[![Global unique identifier metric on FAIRshake](./images/ss18.png)](https://fairshake.cloud/metric/104/)
+![Global unique identifier metric on FAIRshake](./images/ss18.png)
 
-Clicking 'View assessments' she can even see what other digital objects in the database got as an answer during an assessment through a tabular view.
+[Clicking 'View assessments'](https://fairshake.cloud/metric/104/assessments/) she can even see what other digital objects in the database got as an answer during an assessment through a tabular view.
 
-[![Assessments for Global unique identifier](./images/ss19.png)](https://fairshake.cloud/metric/104/assessments/)
+![Assessments for Global unique identifier](./images/ss19.png)
 
 Clicking on any of these links will allow you to explore the projects, rubrics, or digital objects that were assessed to provide a more elaborate sense of why a particular score was received and in what context, we can see, for example, that these top entries refer to assessments made during an EBI workshop.
 
 Getting back to the assessment, Janice must determine whether the digital object satisfies the criterion at hand. This one asks us to provide a standard that defines the globally-unique structure of the identifier used for the resource.
 
-[![Identifying identifiers](./images/ss20.png)](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293)
+![Identifying identifiers](./images/ss20.png)
 
 She finds out quite quickly that there are several identifiers:
 - the data source: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138
@@ -160,9 +160,9 @@ She finds out quite quickly that there are several identifiers:
 - the local identifier: LDS-1293
 - the url is an identifier <http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293>
 
-While all of these are identifiers, not all of them are used outside of the resource itself and thus shared as "globally" accepted. The *scheme* however is shared because URL appears in the FAIRsharing database along with DOI and other standardized identifier schemes.
+While all of these are identifiers, not all of them are used outside of the resource itself and thus shared as "globally" accepted. The *scheme* however is shared because URL [appears in the FAIRsharing database](https://fairsharing.org/standards/?q=&selected_facets=type_exact:identifier%20schema) along with DOI and other standardized identifier schemes.
 
-[![FAIRsharing identifiers](./images/ss21.png)](https://fairsharing.org/standards/?q=&selected_facets=type_exact:identifier%20schema)
+![FAIRsharing identifiers](./images/ss21.png)
 
 A **URL** provides some level of standardization more than, say, a digital object that *doesn't have a resolvable URL*. But other identifier schemes may carry with them even more information, like a **DOI** which adds additional semantic interoperability conditions not present on URLs. Thus in certain circumstances, a URL might be good enough, but in others, a more specific standardized identifier might be more pertinent.
 
@@ -172,9 +172,9 @@ Thus the matric *is* satisfied in a broad context, though if the question was mo
 
 ![Answer to question 1](./images/ss22.png)
 
-The next metric, persistent identifier, addresses persistence specifically and asks for a document describing the persistent identifier strategy. There is no obvious identifier type that guarantees this so she chooses to investigate further. After some digging she finds information about citation in the terms:
+The next metric, persistent identifier, addresses persistence specifically and asks for a document describing the persistent identifier strategy. There is no obvious identifier type that guarantees this so she chooses to investigate further. After some digging she finds information about citation [in the terms](http://lincsportal.ccs.miami.edu/datasets/terms):
 
-[![LINCS dataset terms](./images/ss23.png)](http://lincsportal.ccs.miami.edu/datasets/terms)
+![LINCS dataset terms](./images/ss23.png)
 
 This reveals that our local identifiers are registered in [identifiers.org](http://identifiers.org/), also recognized as [a standard in FAIRsharing](https://fairsharing.org/FAIRsharing.nknzhj). In fact she could create a few more identifiers with this knowledge:
 
