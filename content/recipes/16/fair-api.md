@@ -15,6 +15,19 @@ More and more web-based applications are becoming available each day. These appl
 
 While a slew of standards exist for web API development and documentation, each has their own level of FAIRness. Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API flexibility while still permitting machine readable introspection. Several other standards are machine readable by default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview/) or [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI. We'll consider a specific extension of OpenAPI: [Smart-API](https://smart-api.info/) which adds a few additional fields and also has its own [get-started guide](https://smart-api.info/guide).
 
+## Motivation
+Documenting APIs or building them from the ground up with SmartAPI in mind have a number of advantages:
+
+- human readable documentation of that API with a number of packages that can generate it from the OpenAPI schema
+- server/client libraries from a number of packages that can generate them for numerous programming languages based on the OpenAPI schema
+    - people can access your application features using their favorite programming language
+    - people can create an application that shares the same API as another application for interoperability
+- [interoperability with GraphQL](https://github.com/IBM/openapi-to-graphql)
+- enabling simple use cases like enhancing findability with [API Catalogs](https://apis.guru/browse-apis/)
+- enabling future use cases like 
+
+SmartAPI specifications inherit all of the benefits of OpenAPI while adding the potential for interoperability with RDF semantically linked data. This can help enable future use cases like [BioThings API](https://biothings.io/) powering semantically linked APIs for biomedical knowledge exploration.
+
 ## Ingredients
 - Web Application
 - Existing API Documentation
