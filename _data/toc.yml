@@ -142,10 +142,14 @@
         url: /recipes/04/fairshake
         not_numbered: false
         expand_sections: true
+      - title: Evaluating FAIRness with the CFDE rubric on FAIRshake
+        url: /recipes/19/fairshake
+        not_numbered: false
+        expand_sections: true
       - title: Developing FAIR API
         url: /recipes/16/fair-api
-        not_numbered: false 
-        expand_sections: true 
+        not_numbered: false
+        expand_sections: true
 
 # - title: Experience from HMP
 #   url: /recipes/15/1/hmp
