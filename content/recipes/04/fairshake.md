@@ -84,7 +84,7 @@ You're brought back to the home page where you can perform searches to locate pr
 
 #### Scenario
 
-Jenice is interested in a resource she contributed to: [L1000 dataset of CRISPR perturbagens](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293). She had a hard time finding it in the search so she decided to try the FAIRshake Chrome extension.
+Janice is interested in a resource she contributed to: [L1000 dataset of CRISPR perturbagens](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293). She had a hard time finding it in the search so she decided to try the FAIRshake Chrome extension.
 
 [![FAIRshake Chrome Extension install](./images/ss10.png)](https://fairshake.cloud/chrome_extension/)
 
@@ -136,25 +136,25 @@ It's also important to note that project here can be left blank if our assessmen
 
 [![Preparing the FAIRshake Assessment](./images/ss16.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55)
 
-Confirming this, we being our manual assessment.
+Confirming this, Janice begins a manual assessment.
 
 [![Performing a Manual Assessment with FAIRshake](./images/ss17.png)](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55)
 
-Each metric represents a concept pertinent to FAIRness which is described shortly before each prompt but potentially in more depth on the metrics' landing page. Clicking on the metric "card" to the left of the question we get much more information in a new tab.
+Each metric represents a concept pertinent to FAIRness which is described shortly before each prompt but potentially in more depth on the metrics' landing page. Clicking on the metric "card" to the left of the question she gets much more information in a new tab.
 
 [![Global unique identifier metric on FAIRshake](./images/ss18.png)](https://fairshake.cloud/metric/104/)
 
-Clicking 'View assessments' we can even see what other digital objects in the database got as an answer during an assessment through a tabular view.
+Clicking 'View assessments' she can even see what other digital objects in the database got as an answer during an assessment through a tabular view.
 
 [![Assessments for Global unique identifier](./images/ss19.png)](https://fairshake.cloud/metric/104/assessments/)
 
 Clicking on any of these links will allow you to explore the projects, rubrics, or digital objects that were assessed to provide a more elaborate sense of why a particular score was received and in what context, we can see, for example, that these top entries refer to assessments made during an EBI workshop.
 
-Getting back to our assessment, we must determine whether our digital object satisfies the criterion at hand. This one asks us to provide a standard that defines the globally-unique structure of the identifier used for the resource.
+Getting back to the assessment, Janice must determine whether the digital object satisfies the criterion at hand. This one asks us to provide a standard that defines the globally-unique structure of the identifier used for the resource.
 
 [![Identifying identifiers](./images/ss20.png)](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293)
 
-We find out quite quickly that we have several identifiers:
+She finds out quite quickly that there are several identifiers:
 - the data source: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138
   - the data source's local identifier GSE70138
 - the local identifier: LDS-1293
@@ -168,15 +168,15 @@ A **URL** provides some level of standardization more than, say, a digital objec
 
 While a DOI guarantees authorship information associated with it, a URL may very well contain absolutely anything. Furthermore, many organizations have come together to try to guarantee that DOIs will not change, while URLs can be changed or removed by the owner of the resource.
 
-Thus we *do* satisfy this metric in a broad context, though if our question was more specific, for instance -- is there a DOI for this digital object? We might have answered differently. Hopefully this demonstration helps to illuminate the need for establishing more specific metrics relevant to your community. The more quantitative a metric is, the more stable and useful it will be when measured.
+Thus the matric *is* satisfied in a broad context, though if the question was more specific, for instance -- "is there a DOI for this digital object?" She might have answered differently. Hopefully this demonstration helps to illuminate the need for establishing more specific metrics relevant to your community. The more quantitative a metric is, the more stable and useful it will be when measured.
 
 ![Answer to question 1](./images/ss22.png)
 
-The next metric, persistent identifier, addresses persistence specifically and asks for a document describing the persistent identifier strategy. There is no obvious identifier type that guarantees this so we can investigate further. After some digging we find information about citation in the terms:
+The next metric, persistent identifier, addresses persistence specifically and asks for a document describing the persistent identifier strategy. There is no obvious identifier type that guarantees this so she chooses to investigate further. After some digging she finds information about citation in the terms:
 
 [![LINCS dataset terms](./images/ss23.png)](http://lincsportal.ccs.miami.edu/datasets/terms)
 
-This reveals that our local identifiers are registered in [identifiers.org](http://identifiers.org/), also recognized as [a standard in FAIRsharing](https://fairsharing.org/FAIRsharing.nknzhj). In fact we could create a few more identifiers with this knowledge:
+This reveals that our local identifiers are registered in [identifiers.org](http://identifiers.org/), also recognized as [a standard in FAIRsharing](https://fairsharing.org/FAIRsharing.nknzhj). In fact she could create a few more identifiers with this knowledge:
 
 - `lincs.data:LDS-1293`
 - http://identifiers.org/lincs.data/LDS-1293
@@ -209,7 +209,7 @@ If you complete and publish an assessment, your answers will become associated w
 
 ![Assessment shown on FAIRshake](./images/ss27.png)
 
-Though the assessments seem to agree that we have machine readable metadata, it's unclear whether or not we truly have a globally unique identifier. Next, we'll find out exactly why, since those were reported by an automated assessment.
+Though the assessments seem to agree that the digital object has machine readable metadata, it's unclear from an outsider's perspective whether or not a globally unique identifier is present. Next, we'll find out exactly why, since those were reported by an automated assessment.
 
 ### Perform automated assessments
 
