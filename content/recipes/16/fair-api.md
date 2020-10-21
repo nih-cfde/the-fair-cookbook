@@ -37,6 +37,8 @@ A real response in an OpenAPI Editor:<br/>
 
 ## Recipe
 
+The complete `swagger.yaml` constructed in this recipe is available [here](swagger.yaml) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
+
 ### Step 1: Setting up the OpenAPI Editor
 Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs that are enabled to support CORS.
 Unfortunately the API we'll work with here **does not**, so we'll need to obtain a Swagger Editor that can operate even when CORS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue. We specifically modified [an Open Source Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer) so that it supports this specific use case.
