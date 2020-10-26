@@ -102,6 +102,7 @@
         not_numbered: false
         expand_sections: true
 
+
       # - title: Obtaining DOIs
       #   url: /recipes/08/3/doi
       #   not_numbered: false
@@ -148,6 +149,7 @@
         not_numbered: false 
         expand_sections: true 
 
+
 # - title: Experience from HMP
 #   url: /recipes/15/1/hmp
 #   not_numbered: false
@@ -178,9 +180,6 @@
 # - title: Recipe Template
 #   url: /1/recipe-template
 #   not_numbered: false
-
-
-
 # Divider for meta-pages and content page
 - divider: true
 

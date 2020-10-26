@@ -8,6 +8,26 @@
 
 @charset "UTF-8";
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fc7a4a;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3f51b5; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: ##fc7a4a; 
+}
+
 
 /* Tufte CSS styles */
 html {
@@ -34,6 +54,7 @@ body {
 }
 
 h1  { 
+    background: background-color:#FFFFFF; 
     font-weight: 400;
     margin-top: 4rem;
     margin-bottom: 1.5rem;
@@ -44,12 +65,13 @@ h1  {
 
 h2 {
     font-style: italic;
+    background: background-color:#FFFFFF; 
     font-weight: 400;
     margin-top: 2.1rem;
     margin-bottom: 1.4rem;
     font-size: 2.2rem;
     line-height: 1; 
-    font-family: "Avenir", Avenir, serif!important;;
+    font-family: "Avenir", Avenir, serif!important;
 }
 
 h3 {
@@ -59,7 +81,7 @@ h3 {
     margin-top: 2rem;
     margin-bottom: 1.4rem;
     line-height: 1; 
-    font-family: "Avenir", Avenir, serif!important;;
+    font-family: "Avenir", Avenir, serif!important;
 }
 
 hr {
