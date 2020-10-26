@@ -1,3 +1,6 @@
 # introduction
 
-some text goes here
+* [FAIR principles](./Introduction/fair-principles.html)
+
+
+* [Engaging with CFDE](./Introduction/cfde.html)

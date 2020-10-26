@@ -131,8 +131,8 @@ Choosing ontology and semantic resources is a complex issue, which requires care
 Clearly declaring the semantic resources used to annotate a dataset also influence `findability` and `reusability` and it is good practice to do so.
 
 > ####  What to read next?
-> * [Ontology services](../11/onto-services.html)
-> * [CFDE selected terminologies](../14/cfde-terminologies.html)
+> * [Ontology services](./onto-services.html)
+> * [CFDE selected terminologies](./cfde-terminologies.html)
 
 ___
 

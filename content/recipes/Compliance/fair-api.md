@@ -1,43 +1,78 @@
-# Developing FAIR API
+# Developing FAIR API for the Web
 
 **Authors**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
 **Maintainers**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
-**Version**: 1.0
+**Version**: 1.1
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 ## Background
-An [Application Programming Interface (API)](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#API)  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover [FAIR](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#FAIR) APIs of software libraries but instead focus on developing FAIR APIs for the web.
+An [Application Programming Interface (API)](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#api)  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover [FAIR](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) APIs of software libraries but instead focus on developing FAIR APIs for the web.
 
 More and more web-based applications are becoming available each day. These applications typically perform complex operations on large databases. While web-based applications provide users with the capacity to access a tool, a database, or other resource programmatically, they are not always able to interoperate with other independent web applications. A web-based application that offers a FAIR API is more accessible to operating as part of workflows, or integration systems such as semantic search engines. This makes FAIR API development very relevant for data catalogs or web tools developed by the CF DCCs.
 
-While a slew of standards exist for web API development and documentation, each has their own level of FAIRness. Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API flexibility while still permitting machine readable introspection. Several other standards are machine readable by default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview/) or [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI.
+While a slew of standards exist for web API development and documentation, each has their own level of FAIRness. Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API flexibility while still permitting machine readable introspection. Several other standards are machine readable by default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview/) or [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI. We'll consider a specific extension of OpenAPI: [Smart-API](https://smart-api.info/) which adds a few additional fields and also has its own [get-started guide](https://smart-api.info/guide).
+
+## Motivation
+Documenting APIs or building them from the ground up with SmartAPI in mind have a number of advantages:
+
+- human readable documentation of that API with a number of packages that can generate it from the OpenAPI schema
+- server/client libraries from a number of packages that can generate them for numerous programming languages based on the OpenAPI schema
+    - people can access your application features using their favorite programming language
+    - people can create an application that shares the same API as another application for interoperability
+- [interoperability with GraphQL](https://github.com/IBM/openapi-to-graphql)
+- enabling simple use cases like enhancing findability with [API Catalogs](https://apis.guru/browse-apis/)
+- enabling future use cases like 
+
+SmartAPI specifications inherit all of the benefits of OpenAPI while adding the potential for interoperability with RDF semantically linked data. This can help enable future use cases like [BioThings API](https://biothings.io/) powering semantically linked APIs for biomedical knowledge exploration.
 
 ## Ingredients
 - Web Application
 - Existing API Documentation
-- OpenAPI Editor
+- OpenAPI/SmartAPI Editor (see step 1)
 
 ## Objectives
 We will look at the existing REST service provided by the Metabolomics Workbench catalog: <https://www.metabolomicsworkbench.org/tools/mw_rest.php>. This API is described for human consumption including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.
 
-Though OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-CFDE_glossary/glossary.md#JSON) that is equivalent), it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
+Though OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json) that is equivalent), it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
 
-<!-- ![An example endpoint in an OpenAPI Editor](./images/ss1.png) -->
+<!-- ![An example endpoint in an OpenAPI Editor](./fair-api-images/ss1.png?raw=true) -->
 An example endpoint in an OpenAPI Editor:
 <br/>
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/16/images/ss1.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="./fair-api-images/ss1.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
-<!-- ![A real response in an OpenAPI Editor](./images/ss2.png) -->
+<!-- ![A real response in an OpenAPI Editor](./fair-api-images/ss2.png) -->
 A real response in an OpenAPI Editor:<br/>
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/16/images/ss2.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="./fair-api-images/ss2.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
 
 ## Recipe
 
-### Step 1: Beginning an OpenAPI specification
+The complete `swagger.yaml` constructed in this recipe is available [here](swagger.yaml) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
+
+### Step 1: Setting up the OpenAPI Editor
+Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs that are enabled to support CORS.
+Unfortunately the API we'll work with here **does not**, so we'll need to obtain a Swagger Editor that can operate even when CORS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue. We specifically modified [an Open Source Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer) so that it supports this specific use case.
+
+Until our pull request is merged, the modified extension can be accessed [here](https://github.com/MaayanLab/vs-swagger-viewer/releases/tag/v3.1.0). The `vsix` file can be installed with [visual studio code](https://code.visualstudio.com/).
+
+It can be installed from `Ctrl+Shift+P` with the action "Install from VSIX"
+![Install from VSIX dialog](fair-api-images/ss3.png)
+
+And selecting the `.vsix` file you downloaded.
+
+Once installed a swagger file can be edited by opening the swagger.yaml (that we'll be writing throughout the rest of the recipe), using `Ctrl+Shift+P` again and choosing the action "Preview Swagger"
+![Previewing swagger](fair-api-images/ss4.png)
+
+The result will be a webview that opens to the side with the Swagger Editor.
+
+![Swagger Editor](fair-api-images/ss5.png)
+
+Edits to the file will update the view **in real time**, and the view may be used to craft/test API requests.
+
+### Step 2: Beginning an OpenAPI specification
 We start by annotating useful descriptions for the API in the `info` field, this includes adding descriptors, version, license, and contact information. This gives your API an identity and this way it can be used in OpenAPI catalogs, for which there are several including [SmartAPI](https://smart-api.info/), making it possible to find your own APIs.
 
 The `servers` field has the base url(s) for accessing the API we're about to describe.
@@ -59,7 +94,7 @@ servers:
     url: https://www.metabolomicsworkbench.org/rest
 ```
 
-### Step 2: Describing a path
+### Step 3: Describing a path
 The Metabolomics API offers several examples, let's tackle one of them:
 
 |Example request|Example URL|
@@ -75,37 +110,30 @@ paths:
       description: Fetch summary information for all studies
 ```
 
-The path is relative to the server url, and `get` refers to the REST method (`GET` as opposed to `POST`, `PUT`, `DELETE`, ...), in REST `GET` refers to reading a resource and is what happens when you send the following packet to a web server:
+The path is relative to the server url, and `get` refers to the REST method (`GET` as opposed to `POST`, `PUT`, `DELETE`, ...), in REST `GET` refers to reading a resource and is what happens when you send the following packet to a web server. These packets can be crafted using `curl`, the `-v` flag helps see input and output packets and the `-X` flag allows you to set the method (`GET`, `POST`, ...), the `-H` flag lets you specify headers.
 
 ```bash
-GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
-Host: www.metabolomicsworkbench.org
-Content-Type: application/json
-
+curl -v -X GET -H 'Content-Type: application/json' https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available
 ```
-
-Note that your web browser does the same, albeit with a few more headers.
-
-```bash
-GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
-Host: www.metabolomicsworkbench.org
-Content-Type: text/html
-User-Agent: Mozilla/5.0 ...
-Accept-language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-
-```
-
-The `GET` at the start is changed to `POST` or another value when sending actual data (at the bottom of the packet)
-
-So let's submit this packet to the webserver, or visit it in our web browser. The result is shown below:
 
 ```raw
-HTTP/1.1 200 OK
-Server: Apache
-Content-Type: application/json
-Content-Length: 16158
-
+...
+> GET /rest/study/study_id/ST/available HTTP/1.1 # PATH HERE
+> Host: www.metabolomicsworkbench.org            # REQUEST HEADERS HERE
+> User-Agent: curl/7.70.0
+> Accept: */*
+> Content-Type: application/json
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK                                # RESPONSE STATUS CODE HERE
+< Date: Wed, 27 May 2020 14:29:27 GMT            # RESPONSE HEADERS HERE
+< Server: Apache/2.4.6 (CentOS)
+< X-Frame-Options: SAMEORIGIN
+< Vary: Accept-Encoding
+< X-XSS-Protection: 1; mode=block
+< Transfer-Encoding: chunked
+< Content-Type: application/json
+<                                                # BODY HERE
 {
   "1": {
     "project_id":"PR000001",
@@ -124,9 +152,22 @@ Content-Length: 16158
     "analysis_id":"AN002271"
   }
 }
+...
 ```
 
-Note your web browser will only show you the bottom part, but the top part includes the `response code` `200` and the `response headers` before the body.
+Note that your web browser does the same, albeit with a few different headers for end-to-end compression and browser information for webpage optimization.
+
+```bash
+> GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
+> Host: www.metabolomicsworkbench.org
+> Content-Type: text/html
+> User-Agent: Mozilla/5.0 ...
+> Accept-language: en-US,en;q=0.5
+> Accept-Encoding: gzip, deflate
+
+```
+
+The `GET` at the start is changed to `POST` or another value when sending actual data (in the body of the packet). (`curl -v -X POST ... -d "packet data"`)
 
 We didn't know what the response would be by the webpage, but OpenAPI provides a means to describe this as well.
 
@@ -168,7 +209,7 @@ Finally, the `schema` is JSON-Schema describing how the JSON should look. It als
 
 The benefit of fully describing and endpoint like this is that a developer can fully understand what to expect from an endpoint, enabling them to determine code logic validity prior to having to test it at runtime. Furthermore, the SmartAPI initiative has an extension for relating those types to RDF for visions like the [BioThings](https://biothings.io/).
 
-### Step 3: Adding a path with parameters
+### Step 4: Adding a path with parameters
 Let's tackle our next endpoint:
 
 |Example request|Example URL|
@@ -208,7 +249,7 @@ Again, each of these parameters is validatable with JSONSchema, in our current e
 Finally, we've included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
 
 <!-- ![](./images/ss2.png) -->
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/16/images/ss2.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="./fair-api-images/ss2.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
 With the output, we can complete our path by annotating the response:
 
@@ -252,7 +293,7 @@ paths:
                       type: string
 ```
 
-### Step 4: Identifying components
+### Step 5: Identifying components
 In some cases, a common set of JSON objects are reused throughout the API. It is often meaningful to turn these into their own 'component' and reference them. It's also extremely helpful to include descriptions especially for fields that are not directly interpretable.
 
 
@@ -268,50 +309,51 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/StudySummary'
+                $ref: '#/components/schemas/StudySummary'
   ...
 components:
-  StudySummary:
-    description: Summary information about a study
-    type: object
-    properties:
-      study_id:
-        type: string
-        description: A unique identifier for this study
-      study_title:
-        type: string
-      study_type:
-        type: string
-        description: The type of treatment used in the study
-      institute:
-        type: string
-        description: The institution that performed the study
-      department:
-        type: string
-        description: The department in the institute that performed the study
-      last_name:
-        type: string
-        description: The last name of the PI responsible for the study
-      first_name:
-        type: string
-        description: The first name of the PI responsible for the study
-      email:
-        type: string
-        description: The email to contact for information about the study
-      submit_date:
-        type: string
-        description: The date this study was submitted to metabolomics workbench
-      study_summary:
-        type: string
-        description: A detailed summary describing the study
-      subject_species:
-        type: string
-        description: The species of the subject of the study
+  schemas:
+    StudySummary:
+      description: Summary information about a study
+      type: object
+      properties:
+        study_id:
+          type: string
+          description: A unique identifier for this study
+        study_title:
+          type: string
+        study_type:
+          type: string
+          description: The type of treatment used in the study
+        institute:
+          type: string
+          description: The institution that performed the study
+        department:
+          type: string
+          description: The department in the institute that performed the study
+        last_name:
+          type: string
+          description: The last name of the PI responsible for the study
+        first_name:
+          type: string
+          description: The first name of the PI responsible for the study
+        email:
+          type: string
+          description: The email to contact for information about the study
+        submit_date:
+          type: string
+          description: The date this study was submitted to metabolomics workbench
+        study_summary:
+          type: string
+          description: A detailed summary describing the study
+        subject_species:
+          type: string
+          description: The species of the subject of the study
 ```
 
 Under `components`, as many individual components can be specified, and they can be referenced using `$ref` with [JSON-Schema pointers](https://json-schema.org/draft/2019-09/relative-json-pointer.html) as shown above.
 
-### Step 5: SmartAPI extension
+### Step 6: SmartAPI extension
 When it comes to *automatic* interoperability, the [SmartAPI extension](https://smart-api.info/guide) to OpenAPI is almost essential. It provides mechanisms for adding RDF annotations to parameters or responses. We'll demonstrate it on a new endpoint:
 
 |Example request|Example URL|
@@ -380,7 +422,7 @@ paths:
                     description: Verbose protein name
                   seqlength:
                     type: string
-                    descrition: Length of the sequence
+                    description: Length of the sequence
                   seq:
                     type: string
                     description: The protein sequence itself
@@ -405,7 +447,7 @@ Here we see our usual path setup with a new section: `x-responseValueType`, this
 
 With the annotations fully described here, it becomes possible to eventually utilize your API for federated RDF queries without any additional effort, this was demonstrated by the [BioThings](https://biothings.io/) which can integrate SmartAPI APIs with proper annotations. It also permits end users to find your APIs knowing their identifiers (i.e. ncbigenes).
 
-### Step 6: Publishing and utilizing your OpenAPI/SmartAPI
+### Step 7: Publishing and utilizing your OpenAPI/SmartAPI
 Once you have a working OpenAPI document, there are numerous things that you can now do. Firstly, your API can be published on [smart-api.info](https://smart-api.info/), permitting people and machines to locate it and potentially utilize it.
 
 But you can also produce interactive documentation much like the output seen in the OpenAPI editor to publish on your webpage.
