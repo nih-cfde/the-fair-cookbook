@@ -34,7 +34,7 @@
   not_numbered: true
   sections:
     - title: What is FAIR?
-      url: /recipes/00/fair-principles
+      url: /Introduction/fair-principles
       not_numbered: false
       # subsections:
         # - title: FAIR in NIH CDFE context
@@ -48,7 +48,7 @@
         #   url: /recipes/03/licensing
         #   not_numbered: false
     - title: Engaging with NIH-CFDE
-      url: /recipes/05/cfde
+      url: /Introduction/cfde
       not_numbered: false
   # - title: Finding datasets - cataloging DCC resources
   #   url: /recipes/06/cataloguing
@@ -61,47 +61,44 @@
   url: /recipes/recipes-overview
   not_numbered: true
   sections:
-
-
   - title: Discoverability
-    url: /recipes/06/cataloguing
+    url: /recipes/Discoverability/discoverability
     not_numbered: false
     expand_sections: true
     subsections:
       - title: Introducing the Cross-Cut Metadata Model (C2M2)
-        url: /recipes/12/c2m2
+        url: /recipes/Discoverability/c2m2
         not_numbered: false
         # expand_sections: true
       - title: Description of the Level-1 C2M2
-        url: /recipes/12/C2M2-L1-description
+        url: /recipes/Discoverability/C2M2-L1-description
         not_numbered: false
         # expand_sections: true
       - title: CFDE Resource Naming
-        url: /recipes/06/cfde-namespaces
+        url: /recipes/Discoverability/cfde-namespaces
         not_numbered: false
         # expand_sections: true
-
       - title: ETL to C2M2/DATS - the KidsFirst example
-        url: /recipes/07/seo
+        url: /recipes/Discoverability/seo
         not_numbered: false
         # expand_sections: true
       - title: ETL to C2M2- the KidsFirst example
-        url: /recipes/15/5/kf
+        url: /recipes/Discoverability/kf
         not_numbered: false  
       - title: ETL to C2M2- the LINCS example
-        url: /recipes/15/4/lincs
-        not_numbered: false          
+        url: /recipes/Discoverability/lincs
+        not_numbered: false
 
   - title: Identification
-    url: /recipes/08/identifiers
+    url: /recipes/Identification/identifiers
     not_numbered: false
     subsections:
       - title: Minting persistent and resolvable identifiers
-        url: /recipes/08/1/pids
+        url: /recipes/Identification/pids
         not_numbered: false
         expand_sections: true
       - title: Using MINIDs
-        url: /recipes/08/2/minids
+        url: /recipes/Identification/minids
         not_numbered: false
         expand_sections: true
 
@@ -111,14 +108,14 @@
       #   not_numbered: false
       #   expand_sections: true
   - title: Semantics
-    url: /recipes/09/finding
+    url: /recipes/Semantics/semantics
     not_numbered: false
     subsections:
       - title: Understanding terminologies
-        url: /recipes/10/ontologies
+        url: /recipes/Semantics/ontologies
         not_numbered: false
       - title: Ontology services
-        url: /recipes/11/onto-services
+        url: /recipes/Semantics/onto-services
         not_numbered: false
   # - title: NIH-CFDE C2M2 data model
   #   url: /recipes/12/c2m2
@@ -127,7 +124,7 @@
   #   url: /recipes/13/deriva-frictionless
   #   not_numbered: false
       - title: NIH CFDE selected terminologies
-        url: /recipes/14/cfde-terminologies
+        url: /recipes/Semantics/cfde-terminologies
         not_numbered: false
   # - titke: ETL processes - Learnings and recommendations
   #   url: /recipes/15/etl
@@ -136,21 +133,22 @@
 
 
   - title: FAIR compliance
-    url: /recipes/fair-assessment
+    url: /recipes/Compliance/compliance
     not_numbered: false
     subsections:
       - title: Evaluating FAIRness with FAIRshake
-        url: /recipes/04/fairshake
+        url: /recipes/Compliance/fairshake
         not_numbered: false
         expand_sections: true
       - title: Evaluating FAIRness with the CFDE rubric on FAIRshake
-        url: /recipes/19/fairshake
+        url: /recipes/Compliance/fairshake-rubric
         not_numbered: false
-        expand_sections: true
+        expand_sections: true        
       - title: Developing FAIR API
-        url: /recipes/16/fair-api
-        not_numbered: false
-        expand_sections: true
+        url: /recipes/Compliance/fair-api
+        not_numbered: false 
+        expand_sections: true 
+
 
 # - title: Experience from HMP
 #   url: /recipes/15/1/hmp
@@ -173,7 +171,7 @@
 #   not_numbered: false
 
 - title: Glossary
-  url: /CFDE_Glossary
+  url: /recipes/Governance/CFDE_Glossary
   not_numbered: true
 # # Divider for meta-pages and content page
 # - divider: true
@@ -182,22 +180,6 @@
 # - title: Recipe Template
 #   url: /1/recipe-template
 #   not_numbered: false
-
-# - title: frictionless
-#   url: /1/frictionless
-#   sections:
-#   - title: 1
-#     url: /1/testnb/0-rose-metabolites-Python-data-handling
-#   - title: 2
-#     url: /1/testnb/1-rose-metabolites-Python-analysis
-#   - title: 3
-#     url: /1/testnb/3-rose-metabolites-R-analysis
-#   - title: 4
-#     url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis
-# - title: mermaidsetup
-#   url: /1/mermaidsetup
-
-
 # Divider for meta-pages and content page
 - divider: true
 
@@ -206,29 +188,29 @@
 
 # Contribution section
 - title: Contributing
-  url: /contributing
+  url: /recipes/Governance/contributing
   not_numbered: true
 
-# Governance section
-- title: Governance
-  url: /governance
-  not_numbered: true
+# # Governance section
+# - title: Governance
+#   url: /recipes/Governance/governance
+#   not_numbered: true
 
 # license section
 - title: License
-  url: /license
+  url: /recipes/Governance/license
   not_numbered: true
 
 
 # disclaimer section
 - title: Disclaimer
-  url: /disclaimer
+  url: /recipes/Governance/disclaimer
   not_numbered: true
 
 
 # Code of Conduct section
 - title: Code of Conduct
-  url: /code_of_conduct
+  url: /recipes/Governance/code_of_conduct
   not_numbered: true
 
 # Divider for meta-pages and content page
@@ -240,15 +222,3 @@
   external: true
   not_numbered: true
 
-# A chapter w/ a collection of sections beneath it
-# - title: Features and customization
-#   url: /features/features
-#   not_numbered: true
-#   expand_sections: false
-#   sections:
-#   - title: Markdown files
-#     url: /features/markdown
-#     not_numbered: true
-#   - title: Jupyter notebooks
-#     url: /features/notebooks
-#     not_numbered: true
