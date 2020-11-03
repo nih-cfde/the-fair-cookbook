@@ -33,7 +33,7 @@ The C2M2 Level 1 is described using a [Frictionless datapackage specification](h
 A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FrictionlessDataclass) and is easily updated to future C2M2 schemas. This can be installed directly from GitHub with:
 
 ```bash
-pip install git+git://github.com/nih-cfde/FAIR.git#egg=c2m2_frictionless&subdirectory=Demos/FrictionlessDataclass
+pip install "git+https://github.com/nih-cfde/FAIR.git#egg=c2m2_frictionless&subdirectory=Demos/FrictionlessDataclass"
 ```
 
 This is also the time to install any relevant packages for interacting with your DCC's API, in our case we will use urllib to access the REST API.
@@ -571,7 +571,7 @@ A client for facilitating the ingestion of your data into the CFDE portal exists
 
 ```bash
 # install the DERIVA loader script
-pip install git+git://github.com/fair-research/deriva-flow-client.git@client-dev
+pip install "git+https://github.com/fair-research/deriva-flow-client.git@client-dev"
 
 # output here is the directory with the output of the etl.py script
 cfde run output
