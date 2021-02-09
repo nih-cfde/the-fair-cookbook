@@ -1,0 +1,7 @@
+- nav:
+  - Introduction: intro.md
+  - FAIR Cookbook Governance: index.md
+  - FAIR Cookbook Code of Conduct: code_of_conduct.md
+  - Contributing: contributing.md
+  - Disclaimer: disclaimer.md
+  - License: license.md
