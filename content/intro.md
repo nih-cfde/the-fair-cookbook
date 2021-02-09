@@ -1,6 +1,6 @@
-# introduction
+# Introduction
 
-* [FAIR principles](./Introduction/fair-principles.html)
+* [FAIR principles](./Introduction/fair-principles.md)
 
 
-* [Engaging with CFDE](./Introduction/cfde.html)
+* [Engaging with CFDE](./Introduction/cfde.md)
