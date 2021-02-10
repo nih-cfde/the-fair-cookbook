@@ -1,15 +1,12 @@
 # Overview
 
-* [Discoverability](./Discoverability/discoverability.html)
+* [Discoverability](./Discoverability/discoverability.md)
 
+* [Identification](./Identification/identifiers.md)
 
-* [Identification](./Identification/identifiers.html)
+* [FAIR compliance](./Compliance/compliance.md)
 
+* [Semantics](./Semantics/semantics.md)
 
-* [Semantics](./Semantics/semantics.html)
+* [Governance](./Governance/intro.md)
 
-
-* [FAIR compliance](./Compliance/compliance.html)
-
-
-* [Glossary](./CFDE_Glossary.html)
