@@ -4,4 +4,4 @@
 
 * [Engaging with CFDE](./Introduction/cfde.md)
 
-* [Recipes](./Recipes/recipe-overview.md)
+* [Recipes](./Recipes/recipes-overview.md)
