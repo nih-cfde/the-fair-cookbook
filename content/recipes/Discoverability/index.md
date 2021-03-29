@@ -4,8 +4,8 @@ This section covers the F of the FAIR principles and thus describes the NIH CFDE
 
 It includes:
 
-- [the C2M2 model specifications](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels)
+- the C2M2 model specifications
 
-- [the CFDE namespace conventions](./cfde-namespaces.html) 
+- [the CFDE namespace conventions](./cfde-namespaces.md) 
 
-- [an ETL example to an early version of the C2M2 model in the DATS form.](./seo.html)
+- [an ETL example to an early version of the C2M2 model in the DATS form.](./seo.md)
