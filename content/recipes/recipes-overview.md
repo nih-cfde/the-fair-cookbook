@@ -1,4 +1,13 @@
-# Overview
+---
+layout: page
+hide:
+  - toc
+---
+
+The FAIR Cookbook Recipes
+=========================
+
+Click the following to see sections of the cookbook regarding:
 
 * [Discoverability](./Discoverability/discoverability.md)
 
@@ -9,4 +18,3 @@
 * [Semantics](./Semantics/semantics.md)
 
 * [Governance](./Governance/intro.md)
-
