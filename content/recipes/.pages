@@ -1,6 +1,7 @@
-arrange:
-  - Discoverability
-  - Identification
-  - Compliance
-  - Semantics
-  - Governance
+nav:
+- Overview: recipes-overview.md 
+- Discoverability
+- Identification
+- Compliance
+- Semantics
+- Governance
