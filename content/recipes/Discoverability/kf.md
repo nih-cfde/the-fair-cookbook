@@ -218,6 +218,6 @@ It will produce these four green tables for Level 1: `file_format.tsv`,`data_typ
 * Other examples of transformation are available or will be made available as guidance.
 
 > ####  What to read next?
-> * [CFDE C2M2 model](./c2m2.html)
-> * [ETL to CFDE C2M2 model](./seo.html)
+> * [CFDE C2M2 model](./c2m2.md)
+> * [ETL to CFDE C2M2 model](./seo.md)
 
