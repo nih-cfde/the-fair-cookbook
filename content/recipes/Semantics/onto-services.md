@@ -97,7 +97,7 @@ Semantic artefacts (Lexicons, Controlled Terminologies, Ontologies) can be acces
 For specialized domains, it may be beneficial to access the specialized servers (e.g. Athena), as they, to some extent, limit to search space to only those resources relevant to the fields.
 This is in contrast to more general purpose, domain agnostic vocabulary services.
 > ####  What to read next?
-> * [CFDE selected terminologies?](../14/cfde-terminologies.html)
+> * [CFDE selected terminologies?](../14/cfde-terminologies.md)
 
 
 
