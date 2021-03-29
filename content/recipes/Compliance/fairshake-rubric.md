@@ -18,7 +18,7 @@ All projects that are part of the Common Fund Data Ecosystem (CFDE) are evaluate
 
 The FAIRshake insignia (pictured above) is a visual representation of a score given to a digital object based on a scoring rubric composed of metrics. It offers users a quick graphical view of the evaluation of the FAIR principles for that object. The number of colored boxes (non-gray) corresponds to the number of metrics in the rubric, whereas the color of the box indicates how well a metric adheres to FAIR principles (blue means full adherence and red not). Users can hover over the boxes to observe the score for each metric. The image below is from the [FAIRshake documentation page](https://fairshake.cloud/documentation/).
 
-![FAIRshake Insignia](ubric-images/image_1.png)
+![FAIRshake Insignia](rubric-images/image_1.png)
 
 ## FAIR Principles and Metrics Resources
 
