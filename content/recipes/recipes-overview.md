@@ -17,4 +17,4 @@ Click the following to see sections of the cookbook regarding:
 
 * [Semantics](./Semantics/semantics.md)
 
-* [Governance](./Governance/intro.md)
+* [Governance](./Governance/index.md)

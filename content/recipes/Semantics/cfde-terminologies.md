@@ -71,7 +71,7 @@ ___
 * On the other hand, the harmonization tasks for domains such as `sample type`, `assay type` can be more involved, not to mention the case of `phenotypic descriptions` or `disease`, even though `level 0 and level 1 compliance` do not expect such a degree of integration.
 
 > ####  What to read next?
-> * [CFDE C2M2 model](../12/c2m2.html)
-> * [ETL to CFDE C2M2 model](../07/seo.html)
+> * [CFDE C2M2 model](../12/c2m2.md)
+> * [ETL to CFDE C2M2 model](../07/seo.md)
 
 
