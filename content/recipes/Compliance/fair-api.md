@@ -40,14 +40,12 @@ We will look at the existing REST service provided by the Metabolomics Workbench
 Though OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json) that is equivalent), it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
 
 
-<!-- ![An example endpoint in an OpenAPI Editor](./fair-api-images/ss1.png?raw=true) -->
 An example endpoint in an OpenAPI Editor:
 <br/>
-<div><img src="./fair-api-images/ss1.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="../fair-api-images/ss1.png" width="750px" style="padding:1px;border:thin solid black;" alt="An example endpoint in an OpenAPI Editor" /></div>
 
-<!-- ![A real response in an OpenAPI Editor](./fair-api-images/ss2.png) -->
 A real response in an OpenAPI Editor:<br/>
-<div><img src="./fair-api-images/ss2.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="../fair-api-images/ss2.png" width="750px" style="padding:1px;border:thin solid black;" alt="A real response in an OpenAPI Editor" /></div>
 
 
 ## Recipe
@@ -250,8 +248,7 @@ Again, each of these parameters is validatable with JSONSchema, in our current e
 
 Finally, we've included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
 
-<!-- ![](./images/ss2.png) -->
-<div><img src="./fair-api-images/ss2.png?raw=true" width="750px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="../fair-api-images/ss2.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
 With the output, we can complete our path by annotating the response:
 
