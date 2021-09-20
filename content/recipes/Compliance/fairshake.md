@@ -31,8 +31,7 @@ By selecting and adhering to a rubric or set of metrics shared by other projects
 
 The FAIR insignia aggregates each metric separately to inform someone where they can do better (metrics that have a low percentage) and where they are already doing well (metrics that have a high percentage). Digital objects may be assessed by different rubrics (sets of metrics), which are often made up of different metrics.
 
-<!-- ![Anatomy of a FAIR Insignia](./fairshake-images/insignia-anatomy) -->
-<div><img src="https://fairshake.cloud/static/image/insignia-anatomy.png"  style="padding:1px;"/></div>
+<div><img src="../fairshake-images/insignia-anatomy.png" alt="Anatomy of a FAIR Insignia" style="padding:1px;"/></div>
 
 These insignias capture a visual snapshot of a resources' aggregated assessments at a glance. Interactive tooltips shown by hovering over a particular square reveal which metric is represented by that square. Clicking a given box will bring you to a landing page with detailed information about the metric.
 
@@ -449,8 +448,7 @@ Once an assessment has been published on FAIRshake, it becomes possible to brows
 
 The rubric we used for the CFDE is available from [here](https://fairshake.cloud/rubric/36). It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as 'A relevant file type is present and resolvable with EDAM'. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of [this project](https://fairshake.cloud/project/87), you can also see statistics for those assessments there.
 
-<!-- ![Reviewing FAIR assessment breakdown on FAIRshake](./fairshake-images/ss5.png) -->
-<div><img src="./fairshake-images/ss5.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div>
+<div><img src="../fairshake-images/ss5.png" width="1000px" style="padding:1px;border:thin solid black;" alt="Reviewing FAIR assessment breakdown on FAIRshake" /></div>
 
 Each bar is hoverable on FAIRshake indicating which metric is receiving that which particular score. The score itself is quantified between 0 and 1 much like the scores used to color the FAIR insignia, 0 representing little to no digital objects satisfy that particular metric and 1 meaning that the majority of digital objects satisfy the metric.
 
