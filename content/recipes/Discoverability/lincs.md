@@ -6,15 +6,15 @@ A cookbook recipe documenting the easy extract & transform (ETL) process of fitt
 
 **Maintainers**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
-**Version**: 1.0
+**Version**: 1.1
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 
 ## Objectives
-- Demonstrate the ETL process for preparing data for the C2M2 Level 1
-- Introduce tooling to make this process easier
-- Discuss necessary tradeoffs made to ensure maximal harmonization
+- Demonstrate an example of an ETL process for preparing data for the C2M2 Level 1
+- Introduce tooling that can make this process easier
+- Discuss necessary tradeoffs made to ensure maximal harmonization in the LINCS case
 
 
 ## Introduction
@@ -30,10 +30,12 @@ While LINCS revolves around *Datasets*, encompassing in some cases several files
 
 The C2M2 Level 1 is described using a [Frictionless datapackage specification](http://frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
 
-A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FrictionlessDataclass) and is easily updated to future C2M2 schemas. This can be installed directly from GitHub with:
+A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FrictionlessDataclass) and is easily updated to future C2M2 schemas.
+
+Given that you have access to the [FAIR repository](#fair-repo), this can be installed directly from GitHub with:
 
 ```bash
-pip install git+git://github.com/nih-cfde/FAIR.git#egg=c2m2_frictionless&subdirectory=Demos/FrictionlessDataclass
+pip install "git+https://github.com/nih-cfde/FAIR.git#egg=c2m2_frictionless&subdirectory=Demos/FrictionlessDataclass"
 ```
 
 This is also the time to install any relevant packages for interacting with your DCC's API, in our case we will use urllib to access the REST API.
@@ -41,7 +43,8 @@ This is also the time to install any relevant packages for interacting with your
 
 ### Step 2: Setup an ETL script
 
-Here we will outline the skeleton of an ETL script which utilizes the `c2m2_frictionless` package.
+Here we will outline the skeleton of an ETL script which utilizes the `c2m2_frictionless` package. For more complete examples for LINCS and other DCCs using this package, see the [FAIR repository](#fair-repo).
+
 
 extract_transform.py:
 ```python
@@ -571,7 +574,7 @@ A client for facilitating the ingestion of your data into the CFDE portal exists
 
 ```bash
 # install the DERIVA loader script
-pip install git+git://github.com/fair-research/deriva-flow-client.git@client-dev
+pip install "git+https://github.com/fair-research/deriva-flow-client.git@client-dev"
 
 # output here is the directory with the output of the etl.py script
 cfde run output
@@ -586,3 +589,12 @@ This tool facilitates authentication, manual preview verification when loaded on
 ## Conclusion
 
 Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/) and it may also be useful to review and perform [FAIR assessments](https://nih-cfde.github.io/the-fair-cookbook/recipes/Compliance/fairshake.html) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
+
+## Reference
+
+### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo
+
+The CFDE FAIR repository is currently private given that it contains details about DCCs that have not yet been verified.
+Please submit a request to <https://www.nih-cfde.org/contact/> if you need access to the repository.
+
+If you have access to the repository, you can access it [here](https://github.com/nih-cfde/FAIR). It contains C2M2 conversion scripts much like the one described here for several DCC's publicly facing metadata, organized into directories with each DCC name.
