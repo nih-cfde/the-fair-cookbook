@@ -56,7 +56,7 @@ The complete `swagger.yaml` constructed in this recipe is available [here](swagg
 Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs that are enabled to support CORS.
 Unfortunately the API we'll work with here **does not**, so we'll need to obtain a Swagger Editor that can operate even when CORS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue. We specifically modified [an Open Source Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer) so that it supports this specific use case.
 
-Until our pull request is merged, the modified extension can be accessed [here](https://github.com/MaayanLab/vs-swagger-viewer/releases/tag/v3.1.0). The `vsix` file can be installed with [visual studio code](https://code.visualstudio.com/).
+Until our pull request is merged, the modified extension can be accessed [here](https://github.com/MaayanLab/vs-swagger-viewer/releases). The `vsix` file can be installed with [visual studio code](https://code.visualstudio.com/).
 
 It can be installed from `Ctrl+Shift+P` with the action "Install from VSIX"
 ![Install from VSIX dialog](fair-api-images/ss3.png)
