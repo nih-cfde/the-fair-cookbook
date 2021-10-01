@@ -103,7 +103,7 @@ The C2M2 rubric was developed by the CFDE team to represent the concrete areas o
 
 To that end, and to get a better sense of the scope of the FAIR metrics that could be developed to better serve your community, let's take a look at the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118), representing a universal set of broad criteria that should apply to all digital objects.
 
-![FAIR metrics Rubric on FAIRshake](./fairshake-images/ss1.png)]
+![FAIR metrics Rubric on FAIRshake](./fairshake-images/ss1.png)
 
 If you're following along, feel free to pick a digital object of your own that you know well and see if you can complete and publish a manual assessment with it! You can always find and delete it from your account if you choose not to keep it, just be sure not to publish it unless you're happy with it.
 
