@@ -28,14 +28,14 @@ While LINCS revolves around *Datasets*, encompassing in some cases several files
 
 ### Step 1: Setting up your environment
 
-The C2M2 Level 1 is described using a [Frictionless datapackage specification](http://frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
+The C2M2 is described using a [Frictionless datapackage specification](http://frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
 
 A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FrictionlessDataclass) and is easily updated to future C2M2 schemas.
 
 Given that you have access to the [FAIR repository](#fair-repo), this can be installed directly from GitHub with:
 
 ```bash
-pip install "git+https://github.com/nih-cfde/FAIR.git#egg=c2m2_frictionless&subdirectory=Demos/FrictionlessDataclass"
+pip install "c2m2-frictionless @ git+https://github.com/nih-cfde/c2m2-frictionless-dataclass#egg=c2m2-frictionless&subdirectory=c2m2-frictionless"
 ```
 
 This is also the time to install any relevant packages for interacting with your DCC's API, in our case we will use urllib to access the REST API.
@@ -43,7 +43,7 @@ This is also the time to install any relevant packages for interacting with your
 
 ### Step 2: Setup an ETL script
 
-Here we will outline the skeleton of an ETL script which utilizes the `c2m2_frictionless` package. For more complete examples for LINCS and other DCCs using this package, see the [FAIR repository](#fair-repo).
+Here we will outline the skeleton of an ETL script which utilizes the `c2m2-frictionless` package. For more complete examples for LINCS and other DCCs using this package, see the [FAIR repository](#fair-repo).
 
 
 extract_transform.py:
@@ -53,29 +53,21 @@ extract_transform.py:
 # Import C2M2 Frictionless Helper package
 ## dataclasses
 import c2m2_frictionless
-from c2m2_frictionless.C2M2_Level_1 import table_schema_specs_for_level_1_c2m2_encoding_of_dcc_metadata as c2m2_level_1
+from c2m2_frictionless import C2M2
 
 # TODO: Import other helper methods/setup DCC API
 
 def extract_transform():
-  ''' Generate c2m2 level 1 dataclasses to be added to the datapackage
+  ''' Generate c2m2 dataclasses to be added to the datapackage
   '''
   # Construct the core id_namespace separating this DCC's ids from the ids of
   #  all other DCCs
-  ns = c2m2_level_1.id_namespace(
-    # Using a url is recommended
-    # it is ideal if id_namespace + id actually resolves to a valid landing page
-    id='http://www.lincsproject.org/',
-    abbreviation='LINCS',
-    name='LINCS	Library of Integrated Network-Based Cellular Signatures',
-    description='A library that catalogs changes that occur when different types of cells are exposed to a variety of agents that disrupt normal cellular functions',
-  )
-  yield ns
-  # TODO: yield additional models
+  ns = 'http://www.lincsproject.org/'
+  # TODO: yield models
 
 def extract_transform_validate(outdir):
   # use the extract_transform generator to produce a datapackage
-  pkg = c2m2_frictionless.create_datapackage('C2M2_Level_1', extract_transform(), outdir)
+  pkg = c2m2_frictionless.create_datapackage('C2M2', extract_transform(), outdir)
   # identify ontological terms in the datapackage, and complete the term tables
   c2m2_frictionless.build_term_tables(outdir)
   # validate assertion that the frictionless tableschema is complied with
@@ -92,7 +84,7 @@ if __name__ == '__main__':
 
 ```
 
-With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 Level 1 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the C2M2 [documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/).
+With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the C2M2 [documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/).
 
 Now we are ready to expand the `extract_transform` function such that we walk through the DCC's pertinent dataset descriptions and yield C2M2 equivalent dataclasses.
 
@@ -115,10 +107,10 @@ def extract_transform():
   # Projects refer to collections of items that were produced i.e. under the same award
   #  for a more complete definition of this and other C2M2 constructs,
   #  please refer to the C2M2 docs (https://www.nih-cfde.org/product/cfde-c2m2/)
-  primary_project = c2m2_level_1.project(
+  primary_project = C2M2.project(
     # The namespace from before, ensuring any ids we choose don't clash
-    id_namespace=ns.id,
-    id='lincs',
+    id_namespace=ns,
+    local_id='lincs',
     # the persistent id here enables you to point to a specific id,
     #  ideally a resolvable one, that behaves as a landing page for the project
     persistent_id='http://www.lincsproject.org/',
@@ -140,12 +132,12 @@ def extract_transform():
     # We will register the project if not done so already ensuring we
     #  don't end up with duplicates
     if dataset['projectname'] not in projects:
-      project = c2m2_level_1.project(
+      project = C2M2.project(
         # we'll use the same namespace of our primary project
         id_namespace=primary_project.id_namespace,
         # we'll use the project name as the identifier with lack of a better
         #  solution
-        id=dataset['projectname'],
+        local_id=dataset['projectname'],
         name=dataset['projectname'],
         # we've omitted the optional persistent_id here because we currently
         #  don't have landing pages for these project names and as such
@@ -158,11 +150,11 @@ def extract_transform():
       yield project
       # we'll also create a project_in_project associating our primary project
       #  to the project we just made
-      yield c2m2_level_1.project_in_project(
+      yield C2M2.project_in_project(
         parent_project_id_namespace=primary_project.id_namespace,
-        parent_project_id=primary_project.id,
+        parent_project_local_id=primary_project.local_id,
         child_project_id_namespace=project.id_namespace,
-        child_project_id=project.id,
+        child_project_local_id=project.local_id,
       )
     else:
       # grab the already created project
@@ -197,9 +189,9 @@ def extract_transform():
     #  sets of files
     #
     # LINCS Dataset Group
-    collection = c2m2_level_1.collection(
-      id_namespace=ns.id,
-      id=dataset['datasetgroup'],
+    collection = C2M2.collection(
+      id_namespace=ns,
+      local_id=dataset['datasetgroup'],
       persistent_id=f"http://lincsportal.ccs.miami.edu/datasets/view/{dataset['datasetgroup']}",
       name=dataset['datasetname'],
       description=dataset.get('description', ''),
@@ -207,27 +199,27 @@ def extract_transform():
     )
     yield collection
     # we can associate our collection with our project
-    yield c2m2_level_1.collection_defined_by_project(
+    yield C2M2.collection_defined_by_project(
       collection_id_namespace=collection.id_namespace,
-      collection_id=collection.id,
+      collection_local_id=collection.local_id,
       project_id_namespace=project.id_namespace,
-      project_id=project.id,
+      project_local_id=project.local_id,
     )
     #
     # each dataset level (corresponding to a file) is specified in the metadata
     for dataset_id, dataset_version in zip(dataset.get('datasetlevels', []), dataset.get('latestversions', [])):
-      file = c2m2_level_1.file(
-        id_namespace=ns.id,
+      file = C2M2.file(
+        id_namespace=ns,
         # the LINCS dataset id is used as the id
-        id=dataset_id,
+        local_id=dataset_id,
         # The file is necessarily associated with the project
         project_id_namespace=project.id_namespace,
-        project=project.id,
+        project_local_id=project.local_id,
         # The landing page of the dataset is used as the persistent id
         persistent_id=f"http://lincsportal.ccs.miami.edu/datasets/view/{dataset_id}",
         # the creation time we converted to ISO8601 before
         creation_time=creation_time,
-        # File filename, note that C2M2 Level 1 doesn't currently have a distinction between
+        # File filename, note that C2M2 doesn't currently have a distinction between
         #  download and landing page, we opted to put the download url in the filename.
         filename=f"http://lincsportal.ccs.miami.edu/dcic/api/download?path=LINCS_Data/{datum['centername']}&amp;file={dataset_id}_{dataset_version}.tar.gz",
         # Following are additional optional fields that we were unable
@@ -240,16 +232,16 @@ def extract_transform():
       )
       yield file
       # each file is in the collection
-      yield c2m2_level_1.file_in_collection(
+      yield C2M2.file_in_collection(
         file_id_namespace=file.id_namespace,
-        file_id=file.id,
+        file_local_id=file.local_id,
         collection_id_namespace=collection.id_namespace,
-        collection_id=collection.id,
+        collection_local_id=collection.local_id,
       )
 
 ```
 
-With this, we have already satisfied a C2M2 Level 0 instance, but ideally we'll go a step further to C2M2 Level 1 which has more annotations including information about Subjects and Biosamples, for more information refer to the [C2M2 Level documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/#c2m2-richness-levels).
+With this, we have already satisfied a C2M2 Level 0 instance, but ideally we'll go a step further to C2M2 which has more annotations including information about Subjects and Biosamples, for more information refer to the [C2M2 Level documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/#c2m2-richness-levels).
 
 
 #### Step 3.3: Subjects & Biosamples
@@ -267,15 +259,16 @@ def lincs_fetchstats(datasetid, fields):
 #
 # This dictionary describes how to get metadata for a given "stattype" (subject)
 statstypes = {
-  'protein': type('StatType', tuple(), dict(
-    # this describes the "type of subject"
-    id='lincs_subject_granularity:protein',
-    name='protein',
-    description='A protein biological entity',
+  'cellline': type('StatType', tuple(), dict(
+    # this describes the "type of subject" and is defined in the model
+    id='cfde_subject_granularity:4',
+    include=True,
+    name='cell line',
+    description='A cell line derived from one or more species or strains',
     # this is the landing page for this subject
-    download_url=lambda datasetid: f"http://lincsportal.ccs.miami.edu/dcic/api/Results?searchTerm=%22{datasetid}%22&category=Protein",
+    download_url=lambda datasetid: f"http://lincsportal.ccs.miami.edu/dcic/api/Results?searchTerm=%22{datasetid}%22&category=cellline",
     # this is the id we should use for this subject
-    id_from_meta=lambda meta: meta.get('PR_UniProt_ID') or meta.get('PP_Name'),
+    id_from_meta=lambda meta: meta.get('CL_LINCS_ID'),
   )),
   # ...
 }
@@ -287,19 +280,14 @@ def extract_transform():
   subject_granularities = {}
   # Add all subject granularities from `stattypes`
   for stat_key, stat in statstypes.items():
-    subject_granularities[stat_key] = c2m2_level_1.subject_granularity(
-      id=stat.id,
-      name=stat.name,
-      description=stat.description,
-    )
-    yield subject_granularities[stat_key]
+    subject_granularities[stat_key] = stat.id
   # ...
   subjects = {}
   # ...
   for dataset in lincs_fetchdata_iter():
     # ...
     # we'll associate a single biosample for the purpose of listing assay
-    biosample_id = collection.id
+    biosample_id = collection.local_id
     # NOTE: We defer biosample creation till after we have the anatomy
     # the biosample is in the collection
     #
@@ -316,17 +304,17 @@ def extract_transform():
           if stat_name not in subjects:
             subjects[stat_name] = {}
           if subject_id not in subjects[stat_name]:
-            subject = c2m2_level_1.subject(
-              id_namespace=ns.id,
+            subject = C2M2.subject(
+              id_namespace=ns,
               # in an effort to ensure id uniqueness, we'll use the stat_name as a prefix
-              id=f"{stat_name}:{subject_id}",
+              local_id=f"{stat_name}:{subject_id}",
               # our subject must be a part of the project, but because these subjects
               #   are re-used across all projects, we'll associate them with
               #   the primary project instead of just the project
               project_id_namespace=primary_project.id_namespace,
-              project=primary_project.id,
+              project_local_id=primary_project.local_id,
               # here we associate this subject with the subject granularity
-              granularity=subject_granularities[stat_name].id,
+              granularity=subject_granularities[stat_name],
             )
             yield subject
             subjects[stat_name][subject_id] = subject
@@ -335,56 +323,56 @@ def extract_transform():
           #
         # if we were able to get a subject out of this we'll add it as an
         #  association to the biosample
-        if subject and subject.id not in dataset_group_subjects:
-          dataset_group_subjects[subject.id] = subject
+        if subject and subject.local_id not in dataset_group_subjects:
+          dataset_group_subjects[subject.local_id] = subject
           # the biosample was derived from this subject
-          yield c2m2_level_1.biosample_from_subject(
-            biosample_id_namespace=ns.id,
-            biosample_id=biosample_id,
-            subject_id_namespace=ns.id,
-            subject_id=subject.id,
+          yield C2M2.biosample_from_subject(
+            biosample_id_namespace=ns,
+            biosample_local_id=biosample_id,
+            subject_id_namespace=subject.id_namespace,
+            subject_local_id=subject.local_id,
           )
           # the subject is in the collection (lincs dataset group)
-          yield c2m2_level_1.subject_in_collection(
-            subject_id_namespace=ns.id,
-            subject_id=subject.id,
-            collection_id_namespace=ns.id,
-            collection_id=collection.id,
+          yield C2M2.subject_in_collection(
+            subject_id_namespace=subject.id_namespace,
+            subject_local_id=subject.local_id,
+            collection_id_namespace=collection.id_namespace,
+            collection_local_id=collection.local_id,
           )
     #
-    biosample = c2m2_level_1.biosample(
-      id_namespace=ns.id,
-      id=biosample_id,
+    biosample = C2M2.biosample(
+      id_namespace=ns,
+      local_id=biosample_id,
       project_id_namespace=project.id_namespace,
-      project=project.id,
+      project_local_id=project.local_id,
       # TODO: ontological mappings
       # assay_type='',
       # anatomy=''
     )
     yield biosample
-    yield c2m2_level_1.biosample_in_collection(
+    yield C2M2.biosample_in_collection(
       biosample_id_namespace=biosample.id_namespace,
-      biosample_id=biosample_id,
+      biosample_local_id=biosample_id,
       collection_id_namespace=collection.id_namespace,
-      collection_id=collection.id,
+      collection_local_id=collection.local_id,
     )
     # ...
     for dataset_id, dataset_version in zip(datum.get('datasetlevels', []), datum.get('latestversions', [])):
       # ...
       # each file describes the biosample
-      yield c2m2_level_1.file_describes_biosample(
+      yield C2M2.file_describes_biosample(
         file_id_namespace=file.id_namespace,
-        file_id=file.id,
+        file_local_id=file.local_id,
         biosample_id_namespace=biosample.id_namespace,
-        biosample_id=biosample.id,
+        biosample_local_id=biosample.local_id,
       )
       # each file also describes all of the subjects in the study
       for subject in dataset_group_subjects.values():
-        yield c2m2_level_1.file_describes_subject(
+        yield C2M2.file_describes_subject(
           file_id_namespace=file.id_namespace,
-          file_id=file.id,
+          file_local_id=file.local_id,
           subject_id_namespace=subject.id_namespace,
-          subject_id=subject.id,
+          subject_local_id=subject.local_id,
         )
     # ...
 ```
@@ -494,7 +482,7 @@ def extract_transform():
   # ...
   taxonomies = {}
   # https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-C2M2_internal_CFDE_CV_tables/subject_granularity.tsv#L2
-  cfde_subject_role_organism = c2m2_level_1.subject_role(
+  cfde_subject_role_organism = C2M2.subject_role(
     id='cfde_subject_role:0',
     name='single organism',
     description="The organism represented by a subject in the 'single organism' granularity category",
@@ -515,7 +503,7 @@ def extract_transform():
           # in the case of cell lines, we'd have a taxonomy
           lincs_taxon = lincs_organism_lookup.get(stats.get('organism'))
           if lincs_taxon and lincs_taxon.id not in taxonomies:
-            taxon = c2m2_level_1.ncbi_taxonomy(
+            taxon = C2M2.ncbi_taxonomy(
               id=lincs_taxon.id,
               clade=lincs_taxon.clade,
               name=lincs_taxon.name,
@@ -529,7 +517,7 @@ def extract_transform():
           #
           if taxon:
             # associate the subject with the taxon
-            yield c2m2_level_1.subject_role_taxonomy(
+            yield C2M2.subject_role_taxonomy(
               subject_id_namespace=subject.id_namespace,
               subject_id=subject.id,
               role_id=subject_role_organism.id,
@@ -541,9 +529,9 @@ def extract_transform():
           else:
             print(f"WARNING: {subject_id} not in celllines")
     # ...
-    biosample = c2m2_level_1.biosample(
-      id_namespace=ns.id,
-      id=biosample_id,
+    biosample = C2M2.biosample(
+      id_namespace=ns,
+      local_id=biosample_id,
       project_id_namespace=project.id_namespace,
       project=project.id,
       # Lookup assay name to get OBI
