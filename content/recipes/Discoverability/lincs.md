@@ -6,13 +6,13 @@ A cookbook recipe documenting the easy extract & transform (ETL) process of fitt
 
 **Maintainers**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
-**Version**: 1.1
+**Version**: 1.2
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 
 ## Objectives
-- Demonstrate an example of an ETL process for preparing data for the C2M2 Level 1
+- Demonstrate an example of an ETL process for preparing data for the C2M2
 - Introduce tooling that can make this process easier
 - Discuss necessary tradeoffs made to ensure maximal harmonization in the LINCS case
 
@@ -35,7 +35,7 @@ A python helper class was devised to simplify codification of C2M2-compliant dat
 Given that you have access to the [FAIR repository](#fair-repo), this can be installed directly from GitHub with:
 
 ```bash
-pip install "c2m2-frictionless @ git+https://github.com/nih-cfde/c2m2-frictionless-dataclass#egg=c2m2-frictionless&subdirectory=c2m2-frictionless"
+pip3 install 'c2m2-frictionless-dataclass[full] @ git+https://github.com/nih-cfde/c2m2-frictionless-dataclass'
 ```
 
 This is also the time to install any relevant packages for interacting with your DCC's API, in our case we will use urllib to access the REST API.
@@ -63,7 +63,13 @@ def extract_transform():
   # Construct the core id_namespace separating this DCC's ids from the ids of
   #  all other DCCs
   ns = 'http://www.lincsproject.org/'
-  # TODO: yield models
+  yield C2M2.id_namespace(
+    id=ns,
+    abbreviation='LINCS',
+    name='Library of Integrated Network-Based Cellular Signatures',
+    description='The Library of Integrated Network-Based Cellular Signatures (LINCS) Program aims to create a network-based understanding of biology by cataloging changes in gene expression and other cellular processes that occur when cells are exposed to a variety of perturbing agents.',
+  )
+  # TODO: yield additional resources, using `ns` for `id_namespace`
 
 def extract_transform_validate(outdir):
   # use the extract_transform generator to produce a datapackage
@@ -84,7 +90,7 @@ if __name__ == '__main__':
 
 ```
 
-With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the C2M2 [documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/).
+With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the C2M2 [documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/).
 
 Now we are ready to expand the `extract_transform` function such that we walk through the DCC's pertinent dataset descriptions and yield C2M2 equivalent dataclasses.
 
@@ -93,7 +99,7 @@ Now we are ready to expand the `extract_transform` function such that we walk th
 
 #### Step 3.1: Projects
 
-We will first focus on grabbing the `project` structure. It is recommended that a primary project for which all other projects point to is used for your DCC for logical grouping in the UI. Please see the [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/) for a full description of what a "project" should represent, in short it is the groupings of datasets based essentially on funding awards.
+We will first focus on grabbing the `project` structure. It is recommended that a primary project for which all other projects point to is used for your DCC for logical grouping in the UI. Please see the [C2M2 documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/) for a full description of what a "project" should represent, in short it is the groupings of datasets based essentially on funding awards.
 
 ```python
 def lincs_fetchdata_iter():
@@ -241,7 +247,7 @@ def extract_transform():
 
 ```
 
-With this, we have already satisfied a C2M2 Level 0 instance, but ideally we'll go a step further to C2M2 which has more annotations including information about Subjects and Biosamples, for more information refer to the [C2M2 Level documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/#c2m2-richness-levels).
+With this, we have already satisfied a valid C2M2 instance, but ideally we'll go a step further to C2M2 which has more annotations including information about Subjects and Biosamples, for more information refer to the [C2M2 documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/).
 
 
 #### Step 3.3: Subjects & Biosamples
@@ -558,11 +564,11 @@ python3 extract_transform.py output
 
 ### Step 5: Pushing our validated C2M2 datapackage
 
-A client for facilitating the ingestion of your data into the CFDE portal exists [here](https://github.com/fair-research/deriva-flow-client/tree/client-dev). Once installed, the output directory we produced with the `etl.py` script can be sent to DERIVA.
+A client for facilitating the ingestion of your data into the CFDE portal exists, for more information about this, check [here](https://docs.nih-cfde.org/en/latest/cfde-submit/docs/). Once installed, the output directory we produced with the `etl.py` script can be sent to DERIVA.
 
 ```bash
 # install the DERIVA loader script
-pip install "git+https://github.com/fair-research/deriva-flow-client.git@client-dev"
+pip install cfde-submit
 
 # output here is the directory with the output of the etl.py script
 cfde run output
@@ -576,7 +582,7 @@ This tool facilitates authentication, manual preview verification when loaded on
 
 ## Conclusion
 
-Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/) and it may also be useful to review and perform [FAIR assessments](https://nih-cfde.github.io/the-fair-cookbook/recipes/Compliance/fairshake.html) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
+Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/) and it may also be useful to review and perform [FAIR assessments](https://nih-cfde.github.io/the-fair-cookbook/recipes/Compliance/fairshake.html) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
 
 ## Reference
 
