@@ -79,8 +79,10 @@ There can be a single project for each DCC, or things like studies can be repres
  * **sha256** The output of the SHA-256 cryptographic hash function after being run on this file: one or both of sha256 and md5 is required; sha256 is preferred
  * **md5** The output of the MD5 message-digest algorithm after being run as a cryptographic hash function on this file: one or both of
  * **filename** A filename with no prepended PATH information
- * **file_format** An EDAM CV term ID identifying the digital format of this file (e.g. TSV or FASTQ)
- * **data_type** An EDAM CV term ID identifying the type of information stored in this file (e.g. RNA sequence reads)
+ * **file_format** An EDAM CV term ID identifying the digital format of this file
+ <br> &nbsp; > **Ex.** TSV or FASTQ
+ * **data_type** An EDAM CV term ID identifying the type of information stored in this file 
+ <br> &nbsp; > **Ex.** TSV or FASTQ
 
 ### Subject
 
