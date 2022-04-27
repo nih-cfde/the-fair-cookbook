@@ -28,11 +28,7 @@ While LINCS revolves around *Datasets*, encompassing in some cases several files
 
 ### Step 1: Setting up your environment
 
-<<<<<<< HEAD
-The C2M2 is described using a [Frictionless datapackage specification](http://frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
-=======
 The C2M2 Level 1 is described using a [Frictionless datapackage specification](http://frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the [LINCS REST API](https://maayanlab.cloud/sigcom-lincs/static/tutorial/ldp3/LDP3Tutorial.html).
->>>>>>> dev
 
 A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/c2m2-frictionless-dataclass/tree/main/frictionless-dataclass) and is easily updated to future C2M2 schemas.
 
@@ -88,11 +84,7 @@ if __name__ == '__main__':
 
 ```
 
-<<<<<<< HEAD
-With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the C2M2 [documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/).
-=======
 With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 Level 1 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/).
->>>>>>> dev
 
 Now we are ready to expand the `extract_transform` function such that we walk through the DCC's pertinent dataset descriptions and yield C2M2 equivalent dataclasses.
 
@@ -385,7 +377,6 @@ def extract_transform():
     # ...
 ```
 
-
 #### Step 3.4: Ontology mapping
 
 Without subjects and biosamples in place, we can now add ontological terms which will be a point of harmonization between the different DCCs. For some, this will be simple, especially if the CFDE is prescribing an ontology that is already being used. For others, this may be a more complicated mapping effort. In LINCS, assays were described in a much more specific manner than the ontology for Biomedical Investigations (OBI). OBI is the currently prescribed ontology for assays in the C2M2--as such we need to collapse many of the assay descriptions into broader terms.
@@ -562,7 +553,6 @@ Our script is now ready to be run, tested, and refactored. During this phase it 
 ```bash
 python3 extract_transform.py output
 ```
-
 
 ### Step 5: Pushing our validated C2M2 datapackage
 
