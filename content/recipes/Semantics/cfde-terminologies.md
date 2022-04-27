@@ -8,14 +8,13 @@
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
-___      
+---
 
 ## Objectives
 
-> The main objective of this section is to draw the attention to the importance of semantics in `interoperability` and `reusability` as implemented in the C2M2 model and the associated task of ingesting datasets from an array of resources, each tackling a specific research area.
-> A secondary objective is to prepare for the `extract/transform/load` (ETL) processes by simply being aware of this model requirements.
+The main objective of this section is to draw the attention to the importance of semantics in `interoperability` and `reusability` as implemented in the C2M2 model and the associated task of ingesting datasets from an array of resources, each tackling a specific research area.
 
-
+A secondary objective is to prepare for the `extract/transform/load` (ETL) processes by simply being aware of this model requirements.
 
 ## Overview
 For a number of attributes, the [C2M2 model](https://github.com/nih-cfde/specifications-and-documentation) delegates to controlled terminologies and ontologies the associated value sets definition. This affords specification stability while allowing flexibility by outsourcing the maintenance needs for value set, typically when new values are required.

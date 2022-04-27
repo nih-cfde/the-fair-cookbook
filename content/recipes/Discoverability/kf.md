@@ -9,10 +9,13 @@
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
-## Objectives
-> This is a cookbook recipe documenting the extract & transform (ETL) process of converting the Kids First data into the C2M2 model.
+---
 
-> In other words, process Kids First data for input into C2M2 model to produce `Level 1 tables`
+## Objectives
+
+This is a cookbook recipe documenting the extract & transform (ETL) process of converting the Kids First data into the C2M2 model.
+
+In other words, process Kids First data for input into C2M2 model to produce `Level 1 tables`
 
 
 ## Step by Step Process

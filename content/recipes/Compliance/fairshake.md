@@ -10,6 +10,7 @@ A tutorial that demonstrates  how to use FAIRshake to perform FAIR evaluations o
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
+---
 
 ## Background
 

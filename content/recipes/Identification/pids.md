@@ -14,8 +14,7 @@
 
 ## Objectives
 
-> The main objective of this recipe is to provide a set guidelines and recommendations for producing or using resolvable identifiers. This is a key element as it provides `interoperability` and 'reusability', the I and R in FAIR.
-
+The main objective of this recipe is to provide a set guidelines and recommendations for producing or using resolvable identifiers. This is a key element as it provides `interoperability` and 'reusability', the I and R in FAIR.
 
 
 ## Introduction

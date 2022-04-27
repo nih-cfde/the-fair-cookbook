@@ -1,12 +1,14 @@
 # Introduction to FAIR Principles
 
-**Author(s):** [John Cheadle](https://orcid.org/0000-0002-0106-4415)
+**Authors:** [John Cheadle](https://orcid.org/0000-0002-0106-4415)
 
-**Maintainer(s):** [John Cheadle](https://orcid.org/0000-0002-0106-4415)
+**Maintainers:** [John Cheadle](https://orcid.org/0000-0002-0106-4415)
 
 **Version:** 1.0
 
 **License:** [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
+
+---
 
 ## Objectives
 

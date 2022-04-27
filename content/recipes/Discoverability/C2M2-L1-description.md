@@ -1,8 +1,3 @@
----
-pdf_options:
-  format: Letter
----
-
 # Conceptual Description of the Level 1 C2M2
 
 **Authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)

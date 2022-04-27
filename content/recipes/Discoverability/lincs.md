@@ -10,6 +10,7 @@ A cookbook recipe documenting the easy extract & transform (ETL) process of fitt
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
+---
 
 ## Objectives
 - Demonstrate an example of an ETL process for preparing data for the C2M2
