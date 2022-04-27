@@ -55,17 +55,17 @@ All persistent identifiers used within the CFDE **must** meet the following requ
 
 Examples:
 
-> **`HTTPS URL`:** https://doi.org/10.25490/a97f-egyk
+> **HTTPS URL:** https://doi.org/10.25490/a97f-egyk
 
-> **`Compact URI`:** doi:10.25490/a97f-egyk 
+> **Compact URI:** doi:10.25490/a97f-egyk 
 
 * **`Resolution`**:  Persistent identifiers using compact URIs must use prefixes (also known as URI schemes) registered with [N2T](https://n2t.net) or [Identifiers.org](https://identifiers.org) [5]. This permits the resolution of compact URIs in a consistent manner and helps to ensure uniqueness of identifiers by defining identifier naming authorities. Instructions on how to register prefixes are on the N2T and Identifiers.org sites. The joint list of registered prefixes is available [here](http://n2t.net/e/cdl_ebi_prefixes.yaml). 
 
 Examples: 
 
-> **`N2T`:** https://n2t.net/doi:10.25490/a97f-egyk
+> **N2T:** https://n2t.net/doi:10.25490/a97f-egyk
 
-> **`Identifiers.org`:** https://identifiers.org/doi:10.25490/a97f-egyk 
+> **Identifiers.org:** https://identifiers.org/doi:10.25490/a97f-egyk 
 
 
 * **`Description`**: When an identifier is resolved, either as a HTTPS URL or from a compact URI to a URL, the minimum result must be an HTML landing page, with human-readable metadata describing the referenced object. 
