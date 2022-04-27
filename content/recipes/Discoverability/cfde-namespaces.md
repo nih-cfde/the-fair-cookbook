@@ -15,7 +15,7 @@ pdf_options:
 
 ---
 
-## Objectives:
+## Objectives
 
 Resources (files, subjects, biosamples, etc.) are uniquely
 named in the context of the C2M2 using a namespace and an local name
@@ -161,7 +161,7 @@ namespce and the local names of the resources.
 
 ---
  
-## Conclusions:
+## Conclusions
 
 This section provides a concise overview of the mechanism to declaring a `namespace` associated with a DCC in the context of the CFDE project. It is an important `harmonization` process, which aims to avoid collisions between identifiers, while enhancing `interoperability` and `findability`. It also represents a key process in mapping data into the C2M2 model, thereby getting ready for a full ETL process from a DCC to the CFDE model and future indexing in the CDFE Deriva system.
 

@@ -126,7 +126,7 @@
 ### <u>Summary</u>
 - a high-level, non-technical description of an entire `use case`. The user in each summary has a name, a scientific or administrative problem, and both proximate and ultimate goals. The focus is on the problem and what is generally needed to solve it.
 
-### <u>Use Case</u>:
+### <u>Use Case</u>
 - a `use case`, in software and systems engineering, is a list of actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system.
 
 ### <u>User Task</u>

@@ -10,7 +10,7 @@
     
 ___
 
-## Objectives:
+## Objectives
 
 The aim of this recipe is to provide a compact introduction about `controled terminologies` and `ontologies`, why these resources are central to the preservation of knowledge and data mining and how such resources are developed.
 
@@ -136,7 +136,7 @@ Clearly declaring the semantic resources used to annotate a dataset also influen
 
 ___
 
-## Bibliography:
+## Bibliography
 
 1. RDF.https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/
 2. SKOS. https://www.w3.org/2004/02/skos/

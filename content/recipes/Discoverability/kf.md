@@ -9,13 +9,13 @@
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
-## Objectives:
+## Objectives
 > This is a cookbook recipe documenting the extract & transform (ETL) process of converting the Kids First data into the C2M2 model.
 
 > In other words, process Kids First data for input into C2M2 model to produce `Level 1 tables`
 
 
-## Step by Step Process:
+## Step by Step Process
 
 ### Step 1: Download data from the Kids First (KF) portal
 
@@ -40,7 +40,7 @@
 <br/>
 
 
-### Step 2: Data pre-processing:
+### Step 2: Data pre-processing
 
 * Initial preprocessing: remove all the columns that do NOT have any headers. 
 * Look at the KF datasets and select KF column names that correspond to the right C2M2 table column names. For the first, only the "core" C2M2 tables (Tables 1-4) and one association table (Table 5) were filled in. Core tables are the [blue and black tables](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels#Level-1) shown in the C2M2 [documentation page](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels#Level-1). 
@@ -212,7 +212,7 @@ It will produce these four green tables for Level 1: `file_format.tsv`,`data_typ
 * Add the `C2M2_Level_1.datapackage.json` file to this folder.
 * Send the repo to CFDE tech folks. 
 
-## Conclusion:
+## Conclusion
 
 * This recipe provides an examplar of how to convert a dataset from a DCC, KidsFirst in this example, into the format used by CFDE format for persistence into the DERIVA system.
 * Other examples of transformation are available or will be made available as guidance.

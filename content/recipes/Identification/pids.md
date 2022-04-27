@@ -12,13 +12,13 @@
 
 ---
 
-## Objectives:
+## Objectives
 
 > The main objective of this recipe is to provide a set guidelines and recommendations for producing or using resolvable identifiers. This is a key element as it provides `interoperability` and 'reusability', the I and R in FAIR.
 
 
 
-## Introduction:
+## Introduction
 
  A `persistent identifier` is a **globally unique name for a resource within the CFDE**. This name can be used to retrieve a description of the resource or to identify an entity like a file or dataset without dereferencing the identifier (i.e., accessing the resource itself). Persistent identifiers are created and maintained by the DCC responsible for the data and must be defined using the characteristics described in this document to ensure their data is `Findable`, `Accessible`, `Interoperable`, and `Reusable` (FAIR) [1]. Because DCCs need to be able to define and choose different identifiers for additional use cases, this document provides a minimum set of requirements that are intended to be flexible and fit within the existing practices of data repositories, publishers, and libraries [2, 3]. 
 
@@ -80,7 +80,7 @@ Beyond these minimal requirements, there are several recommendations that contri
 
 DCCs may choose to use different identifiers for files and collections based on their own needs. For example, a DCC may choose to use DOIs for their collections and ARKs for their files. And because resources may be referenced by multiple persistent identifiers, some files may also be referenced by DOIs so that the files may be cited as a citable dataset [6]. 
 
-#### **Specifics about identifiers for Files**:
+#### **Specifics about identifiers for Files**
 
  File identifier metadata should include the following:
 
@@ -104,13 +104,13 @@ DCCs may choose to use different identifiers for files and collections based on 
 - **`location`**: One or more locations using RFC 7595 schemes (e.g., HTTPS, SCP, FTP) or other agreed upon conventions (S3, GS) that map to access protocols. CFDE Resources The CFDE Coordinating Center is evaluating the operation a persistent identifier service for files and collections based on different identifier schemes including Handles, DOIs, and ARKs. DCCs interested in creating persistent identifiers for files and collections using this service may contact the CFDE CC for further details. 
 
 
-## Conclusion:
+## Conclusion
 
 The section draws the attention to essential properties identifiers must have in order to deliver `interoperability`. These will be implemented for all key objects and some of their key qualifiers.
 
 ---
 
-## References:
+## References
 
 - [1] Wilkinson MD, Dumontier M, Aalbersberg IjJ, Appleton G, Axton M, Baak A, Blomberg N, Boiten J-W, da Silva Santos LB, Bourne PE, Bouwman J, Brookes AJ, Clark T, Crosas M, Dillo I, Dumon O, Edmunds S, Evelo CT, Finkers R, Gonzalez-Beltran A, Gray AJG, Groth P, Goble C, Grethe JS, Heringa J, ’t Hoen PA., Hooft R, Kuhn T, Kok R, Kok J, Lusher SJ, Martone ME, Mons A, Packer AL, Persson B, Rocca-Serra P, Roos M, van Schaik R, Sansone S-A, Schultes E, Sengstag T, Slater T, Strawn G, Swertz MA, Thompson M, van der Lei J, van Mulligen E, Velterop J, Waagmeester A, Wittenburg P, Wolstencroft K, Zhao J, Mons B. The FAIR Guiding Principles for scientific data management and stewardship. Scientific Data [Internet]. Springer Science and Business Media LLC; 2016 Mar 15;3(1). Available from: http://dx.doi.org/10.1038/sdata.2016.18
 

@@ -10,7 +10,7 @@
 
         
 
-## Objectives:
+## Objectives
 
 The aim of this chapter is to provide an overview of services and infrastructures available around terminologies and controlled vocabularies.  The services referred here encompass the following:
 * terminology hosting
@@ -22,7 +22,7 @@ The aim of this chapter is to provide an overview of services and infrastructure
 * ontology mapping services
 
 
-### Clinical Trial Data:
+### Clinical Trial Data
 
 Operating in the field of Clinical Trials means that datasets are generated during `interventional studies`, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents in order to gain insights in terms of benefits in patient outcomes.
 In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by US FDA reviewers. This means that the [CDISC standards](https://www.cdisc.org/standards) are the *`de-facto standard`* in the area, which mandates the use of semantics resources such as:
@@ -42,7 +42,7 @@ All available from the [NCBI EVA system](https://evs.nci.nih.gov/).
 > :warning:  Some resources are only available under restrictive licences, which prevent derivative work, which may limit access and use. 
 
 
-### Observational Health Data:
+### Observational Health Data
 
 This context refers to data collected during observation studies, which in constrat to `interventional studies`, draws inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. `Observational health data` can also include `electronic health records (EHR)` or ` administrative insurance claims` and allow research around acquiring *`real world evidence`* from large corpora of data.
 In this specific context, a model and associated set of standards has been particularly successful. With several hundred millions of patient information structured using the **Observational Medical Outcomes Partnership (OMOP)**, the Observational Health Data Sciences and Informatics (OHDSI) `open-science community` has been particularly successful. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operated in such a `data context`.
@@ -68,7 +68,7 @@ The table below presents a small subset of semantic resources available from the
 For a more detail view and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the [`controlled terminology` in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
 
 
-### Basic research context:
+### Basic research context
 
 This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management good practice and proper archival requirements.
 As a consequence of fewer constraints, researchers are often confronted with a sea of options. This section aims to provide some guidance when tasked with deciding on which semantic resource to use.
@@ -91,7 +91,7 @@ These can be accessed via several vocabulary services maintainde by public insti
 
 ---
 
-## Conclusions:
+## Conclusions
 
 Semantic artefacts (Lexicons, Controlled Terminologies, Ontologies) can be accessed through a number of publicly available services, each with specific features and services attached to them.
 For specialized domains, it may be beneficial to access the specialized servers (e.g. Athena), as they, to some extent, limit to search space to only those resources relevant to the fields.
@@ -102,7 +102,7 @@ This is in contrast to more general purpose, domain agnostic vocabulary services
 
 
 
-## References:
+## References
 
 Smith, B., Ceusters, W., Klagges, B. et al. Relations in biomedical ontologies. Genome Biol 6, R46 (2005). https://doi.org/10.1186/gb-2005-6-5-r46
 

@@ -13,7 +13,7 @@
 The aim of this recipe is to summarize the `FAIR Guiding Principles` as well as define terminology and provide additional resources for individuals who are new to FAIR.  The recipe also touches on how FAIR is evaluated in general and in the context of [NIH CFDE](https://commonfund.nih.gov/dataecosystem), and provides both internal and external links to pertinent resources.
 
 
-## FAIR in 5 Questions:
+## FAIR in 5 Questions
 
 ### What is FAIR?
 

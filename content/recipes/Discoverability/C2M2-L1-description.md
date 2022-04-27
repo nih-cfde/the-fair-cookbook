@@ -211,7 +211,7 @@ A table linking a subject, a subject_role (a named organism-level constituent co
 | synthetic | A synthetic biological entity |
 
 
-## Conclusions:
+## Conclusions
 
 This section provides a concise overview of the key objects and concepts covered by the C2M2 model and should be viewed as an initial contact point for anyone interested in mapping data into the C2M2 model, thereby getting ready for a full ETL process.
 

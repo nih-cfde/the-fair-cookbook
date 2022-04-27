@@ -10,7 +10,7 @@
 
 ___      
 
-## Objectives:
+## Objectives
 
 > The main objective of this section is to draw the attention to the importance of semantics in `interoperability` and `reusability` as implemented in the C2M2 model and the associated task of ingesting datasets from an array of resources, each tackling a specific research area.
 > A secondary objective is to prepare for the `extract/transform/load` (ETL) processes by simply being aware of this model requirements.
@@ -63,7 +63,7 @@ For each of the potential data sources and for a set of core search facets, a su
 
 ___
 
-## Conclusions:
+## Conclusions
 
 * By explicitly identifying a number of semantic artefacts for describing key attributes, the C2M2 defines a curation framework, with the aim of anchoring free text descriptors to controlled terms, which can be exploited for query expansion or resource linking.
 * The resource survey that has been carried out is an important step in the FAIRification process as it identifies potential `areas of intervention`, defined as semantic markup of free text description can deliver gains in `interoperability` and `reusability`.

@@ -84,7 +84,7 @@ This is a prerequisite to be able to call the minid API hosted on a server at th
 pip3 install --pre minid
 ```
 
-### building from source:
+### building from source
 
 use the dev branch to obtain to source
 [minid github repository](https://github.com/fair-research/minid)
@@ -258,14 +258,14 @@ Below is a sample file manifest configuration file:
   ]
 ```
 
-## Conclusions:
+## Conclusions
 
 Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets get be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 
 
 ___
 
-## Bibliography:
+## Bibliography
 
 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
 

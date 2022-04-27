@@ -10,12 +10,12 @@
 
         
 
-## Objectives:
+## Objectives
 
 The aim of the recipe is to provide an introduction to the notion of identifiers, the different kind of identifiers and the kind of infrastructure required to support their use in the context of CFDE and in the context of producing and consuming FAIR data.
 
 
-## Definitions:
+## Definitions
 
 **identifier**: an identifier is a chain of characters (number, letter, symbol, or any combination of those) which is associated to an entity or a type of entities and which is used to refer to those entities in an indexing system.
 
@@ -42,7 +42,7 @@ print(id)
 
 
     
-## The importance of PIDs in FAIR and in the context of CFDE:
+## The importance of PIDs in FAIR and in the context of CFDE
 
 Data interoperability as described by FAIR assumes that entities and information about them can be retrieved through`internet communication protocol`. This can thus only be realized by relying on PIDs and resolution service to obtain the resources of interest.
 
