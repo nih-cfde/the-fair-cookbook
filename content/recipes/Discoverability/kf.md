@@ -24,7 +24,7 @@
 
 <!-- ![](https://i.imgur.com/9yQDHyu.png) -->
 
-![Dashboard](../images/kf_dash.png) 
+![Dashboard](/images/kf_dash.png) 
 <br/>
 
 * Download the Kids First Data by:
@@ -34,7 +34,7 @@
 
 <!-- ![](https://i.imgur.com/6OGEA83.png) -->
 
-![Download](../images/kf_download.png) 
+![Download](/images/kf_download.png) 
 <br/>
 
 ### Step 2: Data pre-processing:
