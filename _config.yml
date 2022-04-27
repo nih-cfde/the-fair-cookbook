@@ -3,7 +3,7 @@
 
 title: NIH-CFDE FAIR COOKBOOK
 author: ''
-logo: content/images/logo/CFDE-logo-contrast.png
+logo: content/images/logo/CFDE-logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -36,7 +36,7 @@ html:
   baseurl: https://nih-cfde.github.io/the-fair-cookbook/
   extra_navbar: ''
   google_analytics_id: 'G-5KFP1ECFDS'
-  favicon: content/images/logo/CFDE-logo.ico
+  favicon: content/images/logo/favicon.ico
   extra_footer: |
     This project is supported by NIH CFDE program <img src="/the-fair-cookbook/images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
 
