@@ -2,32 +2,19 @@
 
 ## Running Locally
 
-### Setup
 ```bash
-# Setup python environment
-python3 -m venv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
-
-# Setup Ruby environment
-bundle config set path 'vendor/bundle'
-bundle install
-
-# Setup jupyter book
-make install
+# Install necessary dependencies
+pip install -r requirements.txt
+# Book output goes to _build/html
+jupyter-book build .
 ```
 
-### Using
+## Publishing to gh-pages
 ```bash
-# compile book with
-make book
-
-# serve book locally with
-make serve
+ghp-import -n -p -f _build/html
 ```
 
 ## Modifying things
 
 - `content/**/*`: The actual pages rendered as HTML but can be written in `*.md` or `*.ipynb`
-- `_data/toc.yml`: Configure the relative level of content as seen in the sidebar
-
+- `_toc.yml`: Configure the relative level of content as seen in the sidebar
