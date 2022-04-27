@@ -10,24 +10,24 @@
 
 ## Background
 
-An [Application Programming Interface (API)](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#api)  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover [FAIR](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) APIs of software libraries but instead focus on developing FAIR APIs for the web.
+An [Application Programming Interface (API)](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#api)  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover [FAIR](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) APIs of software libraries, but instead focus on developing FAIR APIs for the web.
 
-More and more web-based applications are becoming available each day. These applications typically perform complex operations on large databases. While web-based applications provide users with the capacity to access a tool, a database, or other resource programmatically, they are not always able to interoperate with other independent web applications. A web-based application that offers a FAIR API is more accessible to operating as part of workflows, or integration systems such as semantic search engines. This makes FAIR API development very relevant for data catalogs or web tools developed by the CF DCCs.
+More and more web-based applications are becoming available every day. These applications typically perform complex operations on large databases. While web-based applications provide users with the capacity to access a tool, a database, or other resource programmatically, they are not always able to interoperate with other independent web applications. A web-based application that offers a FAIR API is more accessible to operating as part of workflows, or integration systems such as semantic search engines. This makes FAIR API development very relevant for data catalogs or web tools developed by the CF DCCs.
 
-While a slew of standards exist for web API development and documentation, each has their own level of FAIRness. Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API flexibility while still permitting machine readable introspection. Several other standards are machine readable by default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview/) or [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI. We'll consider a specific extension of OpenAPI: [Smart-API](https://smart-api.info/) which adds a few additional fields and also has its own [get-started guide](https://smart-api.info/guide).
+While a slew of standards exist for web API development and documentation, each has their own level of FAIRness. Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm), which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API flexibility while still permitting machine readable introspection. Several other standards are machine readable by default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview/) or [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI. We will consider a specific extension of OpenAPI: [Smart-API](https://smart-api.info/), which adds a few additional fields and also has its own [get-started guide](https://smart-api.info/guide).
 
 ## Motivation
 Documenting APIs or building them from the ground up with SmartAPI in mind have a number of advantages:
 
-- human readable documentation of that API with a number of packages that can generate it from the OpenAPI schema
-- server/client libraries from a number of packages that can generate them for numerous programming languages based on the OpenAPI schema
-    - people can access your application features using their favorite programming language
-    - people can create an application that shares the same API as another application for interoperability
-- [interoperability with GraphQL](https://github.com/IBM/openapi-to-graphql)
-- enabling simple use cases like enhancing findability with [API Catalogs](https://apis.guru/browse-apis/)
-- enabling future use cases like 
+- Human readable documentation of that API with a number of packages that can generate it from the OpenAPI schema
+- Server/client libraries from a number of packages that can generate them for numerous programming languages based on the OpenAPI schema
+    - People can access your application features using their favorite programming language
+    - People can create an application that shares the same API as another application for interoperability
+- [Interoperability with GraphQL](https://github.com/IBM/openapi-to-graphql)
+- Enabling simple use cases like enhancing findability with [API Catalogs](https://apis.guru/browse-apis/)
+- Enabling future use cases 
 
-SmartAPI specifications inherit all of the benefits of OpenAPI while adding the potential for interoperability with RDF semantically linked data. This can help enable future use cases like [BioThings API](https://biothings.io/) powering semantically linked APIs for biomedical knowledge exploration.
+SmartAPI specifications inherit all of the benefits of OpenAPI, while adding the potential for interoperability with RDF semantically linked data. This can help enable future use cases like [BioThings API](https://biothings.io/), powering semantically linked APIs for biomedical knowledge exploration.
 
 ## Ingredients
 - Web Application
@@ -35,9 +35,9 @@ SmartAPI specifications inherit all of the benefits of OpenAPI while adding the 
 - OpenAPI/SmartAPI Editor (see step 1)
 
 ## Objectives
-We will look at the existing REST service provided by the Metabolomics Workbench catalog: <https://www.metabolomicsworkbench.org/tools/mw_rest.php>. This API is described for human consumption including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.
+We will look at the existing REST service provided by the Metabolomics Workbench catalog: <https://www.metabolomicsworkbench.org/tools/mw_rest.php>. This API is described for human consumption, including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.
 
-Though OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json) that is equivalent), it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
+Although OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json) that is equivalent), it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
 
 
 An example endpoint in an OpenAPI Editor:
@@ -50,20 +50,20 @@ A real response in an OpenAPI Editor:<br/>
 
 ## Recipe
 
-The complete `swagger.yaml` constructed in this recipe is available [here](swagger.yaml) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
+The complete `swagger.yaml` constructed in this recipe that can be downloaded [here](swagger.yaml) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
 
 ### Step 1: Setting up the OpenAPI Editor
 Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs that are enabled to support CORS.
-Unfortunately the API we'll work with here **does not**, so we'll need to obtain a Swagger Editor that can operate even when CORS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue. We specifically modified [an Open Source Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer) so that it supports this specific use case.
+Unfortunately, the API we will work with here **does not**, so we will need to obtain a Swagger Editor that can operate even when CORS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue. We specifically modified [an Open Source Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer) so that it supports this specific use case.
 
-Until our pull request is merged, the modified extension can be accessed [here](https://github.com/MaayanLab/vs-swagger-viewer/releases). The `vsix` file can be installed with [visual studio code](https://code.visualstudio.com/).
+Until our pull request is merged, the modified extension can be accessed [here](https://github.com/MaayanLab/vs-swagger-viewer/releases). The `vsix` file can be installed with [Visual Studio Code](https://code.visualstudio.com/).
 
 It can be installed from `Ctrl+Shift+P` with the action "Install from VSIX"
 ![Install from VSIX dialog](fair-api-images/ss3.png)
 
 And selecting the `.vsix` file you downloaded.
 
-Once installed a swagger file can be edited by opening the swagger.yaml (that we'll be writing throughout the rest of the recipe), using `Ctrl+Shift+P` again and choosing the action "Preview Swagger"
+Once installed, a swagger file can be edited by opening the swagger.yaml (that we will be writing throughout the rest of the recipe), using `Ctrl+Shift+P` again and choosing the action "Preview Swagger"
 ![Previewing swagger](fair-api-images/ss4.png)
 
 The result will be a webview that opens to the side with the Swagger Editor.
@@ -169,7 +169,7 @@ Note that your web browser does the same, albeit with a few different headers fo
 
 The `GET` at the start is changed to `POST` or another value when sending actual data (in the body of the packet). (`curl -v -X POST ... -d "packet data"`)
 
-We didn't know what the response would be by the webpage, but OpenAPI provides a means to describe this as well.
+We did not know what the response would be by the webpage, but OpenAPI provides a means to describe this as well.
 
 ```yaml
 paths:
@@ -194,7 +194,7 @@ paths:
                       type: string
 ```
 
-the `200` here refers to the HTTP status code, these are standardized by HTTP but the gist is:
+The `200` here refers to the HTTP status code, these are standardized by HTTP but the gist is:
 
 |Code|Meaning|
 |-|-|
@@ -216,7 +216,7 @@ Let's tackle our next endpoint:
 |-|-|
 |Fetch analysis information for a study|https://www.metabolomicsworkbench.org/rest/study/study_id/ST000001/analysis|
 
-While the example shows `ST000001` in reality, the idea is that this can be any study ID (such as those coming out of the previous endpoint).
+While the example shows `ST000001` in reality, the idea is that this can be any study ID, such as those coming out of the previous endpoint.
 
 ```yaml
 paths:
@@ -240,13 +240,13 @@ paths:
 
 We see some new concepts here, the first is the path which has a variable in it delineated by `{study_id}` where we would want the `study_id` to go. Paired with this we add an entry into the `parameters` array and state the same name `study_id` is `in: path` referring to this path-style variable substitution.
 
-Parameters can be added in other places as well, google, for instance, describes searches like so: `https://www.google.com/search?q=smartapi&sourceid=chrome&ie=UTF-8`, the `?q=...&sourceid=...` are referred to as query parameters and they are in the form: `?{name}={value}&{name}={value}&...`. You could describe these in OpenAPI as well by using `in: query`.
+Parameters can be added in other places as well. Google, for instance, describes searches like so: `https://www.google.com/search?q=smartapi&sourceid=chrome&ie=UTF-8`, the `?q=...&sourceid=...` are referred to as query parameters and they are in the form: `?{name}={value}&{name}={value}&...`. You could describe these in OpenAPI as well by using `in: query`.
 
 In the case of a `POST` you might use, `in: body` referring to the content you send with your request.
 
-Again, each of these parameters is validatable with JSONSchema, in our current example, we've used a JSONSchema pattern to constrain the type of string acceptable by the endpoint, in the case of a body, it could be an elaborate JSON object such as our response schema.
+Again, every parameters is validatable with JSONSchema. In our current example, we have used a JSONSchema pattern to constrain the type of string acceptable by the endpoint. In the case of a body, it could be an elaborate JSON object such as our response schema.
 
-Finally, we've included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
+Finally, we have included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
 
 <div><img src="../fair-api-images/ss2.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
 
@@ -293,7 +293,7 @@ paths:
 ```
 
 ### Step 5: Identifying components
-In some cases, a common set of JSON objects are reused throughout the API. It is often meaningful to turn these into their own 'component' and reference them. It's also extremely helpful to include descriptions especially for fields that are not directly interpretable.
+In some cases, a common set of JSON objects are reused throughout the API. It is often meaningful to turn these into their own 'component' and reference them. It is also extremely helpful to include descriptions especially for fields that are not directly interpretable.
 
 
 ```yaml
@@ -353,7 +353,7 @@ components:
 Under `components`, as many individual components can be specified, and they can be referenced using `$ref` with [JSON-Schema pointers](https://json-schema.org/draft/2019-09/relative-json-pointer.html) as shown above.
 
 ### Step 6: SmartAPI extension
-When it comes to *automatic* interoperability, the [SmartAPI extension](https://smart-api.info/guide) to OpenAPI is almost essential. It provides mechanisms for adding RDF annotations to parameters or responses. We'll demonstrate it on a new endpoint:
+When it comes to *automatic* interoperability, the [SmartAPI extension](https://smart-api.info/guide) to OpenAPI is almost essential. It provides mechanisms for adding RDF annotations to parameters or responses. We will demonstrate it on a new endpoint:
 
 |Example request|Example URL|
 |-|-|
@@ -440,14 +440,14 @@ paths:
             x-valueType: https://identifiers.org/uniprot
 ```
 
-Here we see our usual path setup with a new section: `x-responseValueType`, this is the smartAPI extension, each `x-path` refers to the path in the JSON object (using `.` on nested keys), for instance, the `gene_id` which doesn't need any `.` because it's the root of the response object. The `x-valueType` here identifies the id namespace or context for which that value has meaning. Typically, this is a prefix path, in other words, you would produce a full URI with: `{x-valueType}/{actual_value}`.
+Here we see our usual path setup with a new section: `x-responseValueType`, this is the smartAPI extension. Each `x-path` refers to the path in the JSON object (using `.` on nested keys). For instance, the `gene_id` does not need any `.` because it is the root of the response object. The `x-valueType` here identifies the id namespace or context for which that value has meaning. Typically, this is a prefix path, in other words, you would produce a full URI with: `{x-valueType}/{actual_value}`.
 
 [identifiers.org](http://identifiers.org/) is a public resource cataloging actual identifier schemes making it an ideal way to namespace a given identifier. It has the added benefit of providing an API for accessing additional metadata such as cached [schema.org](https://schema.org/) annotations on the landing page of the resulting identifier.
 
-With the annotations fully described here, it becomes possible to eventually utilize your API for federated RDF queries without any additional effort, this was demonstrated by the [BioThings](https://biothings.io/) which can integrate SmartAPI APIs with proper annotations. It also permits end users to find your APIs knowing their identifiers (i.e. ncbigenes).
+With the annotations fully described here, it becomes possible to eventually utilize your API for federated RDF queries without any additional effort. This was demonstrated by the [BioThings](https://biothings.io/), which can integrate SmartAPI APIs with proper annotations. It also permits end users to find your APIs knowing their identifiers (i.e. ncbigenes).
 
 ### Step 7: Publishing and utilizing your OpenAPI/SmartAPI
-Once you have a working OpenAPI document, there are numerous things that you can now do. Firstly, your API can be published on [smart-api.info](https://smart-api.info/), permitting people and machines to locate it and potentially utilize it.
+Once you have a working OpenAPI document, this open up numerous possibilities that you can now do. Firstly, your API can be published on [smart-api.info](https://smart-api.info/), permitting people and machines to locate it and potentially utilize it.
 
 But you can also produce interactive documentation much like the output seen in the OpenAPI editor to publish on your webpage.
 
@@ -458,4 +458,4 @@ An [initiative by IBM](https://github.com/IBM/openapi-to-graphql) provides a mec
 These various capabilities make an API extremely accessible, lowering many barriers to entry for interoperability and reusability of your API.
 
 ## Conclusion
-We've walked you through a case study where we documented an API using OpenAPI and SmartAPI extensions to build a document that will vastly improve the FAIRness of your API. After registering your API on an API catalog platform such as [smart-api.info](https://smart-api.info/) you will enable  developers and programs to find, introspect and interoperate with our API. Furthermore, existing tooling around OpenAPI can enable the accessibility and reusability of your APIs in many programming languages and other standardized systems.
+We've walked you through a case study where we documented an API using OpenAPI and SmartAPI extensions to build a document that will vastly improve the FAIRness of your API. After registering your API on an API catalog platform, such as [smart-api.info](https://smart-api.info/) you will enable  developers and programs to find, introspect and interoperate with our API. Furthermore, existing tooling around OpenAPI can enable the accessibility and reusability of your APIs in many programming languages and other standardized systems.
