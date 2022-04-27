@@ -177,9 +177,7 @@
 ### [FAIR Insignia]()
 - A grid of colored squares developed to visually communicate FAIRness level. The [FAIR](#FAIR) insignia identifies areas of strength and weakness in the FAIRness level of digital objects, guiding digital object producers on how to improve the FAIRness of their products. FAIR insignia is an output of the [FAIRshake](#FAIRshake)
 
-<img src="./images/FAIRinsignia.png" alt="drawing" style="border:1px solid black;" width="100" />
-
-
+![drawing](./images/FAIRinsignia.png)
 
 ### [FAIRshake](https://fairshake.cloud/)
 - a tool produced for carrying out *FAIR Assessment*. Under the [CFDE](#CFDE), each data center’s inventory will be evaluated consistently based on FAIRshake, and the Coordinating Center will work with the individual Common Fund programs to adjust [FAIR](#FAIR) measures to meet the needs of the Common Fund. FAIRshake includes evaluating the FAIRness of digital objects including datasets, tools, and repositories.
