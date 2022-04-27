@@ -25,7 +25,7 @@
 <!-- ![](https://i.imgur.com/9yQDHyu.png) -->
 
 <div>
-<img src="../images/kf_dash" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
+<img src="../images/kf_dash.png" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
 </div> 
 <br/>
 
@@ -37,7 +37,7 @@
 <!-- ![](https://i.imgur.com/6OGEA83.png) -->
 
 <div>
-<img src="../images/kf_download" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
+<img src="../images/kf_download.png" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
 </div> 
 <br/>
 
