@@ -1,12 +1,12 @@
 # Controlled Terminologies & Ontologies
 
-**authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
+**Authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
+**Maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**version**: initial draft
+**Version**: initial draft
 
-**license**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
     
 ___
 

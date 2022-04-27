@@ -5,13 +5,13 @@ pdf_options:
 
 # Conceptual Description of the Level 1 C2M2
 
-**authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
+**Authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 
-**maintainers**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
+**Maintainers**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 
-**version**: initial draft
+**Version**: initial draft
 
-**license**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 ---
 
