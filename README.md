@@ -16,6 +16,14 @@ jupyter-book build .
 ghp-import -n -p -f _build/html
 ```
 
+## Deploying with docker
+```bash
+TAG=cookbook
+jupyter-book build .
+docker build -t $TAG .
+docker run -p 80:80 -it $TAG
+```
+
 ## Modifying things
 
 - `content/**/*`: The actual pages rendered as HTML but can be written in `*.md` or `*.ipynb`
