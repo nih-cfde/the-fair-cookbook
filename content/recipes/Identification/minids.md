@@ -9,12 +9,11 @@
 **Version**: 1.0
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-
+<!-- 3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table) -->
+<!-- 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs) -->
 ## Table of Contents
 1. [Main Objectives](#Main%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-<!-- 3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table) -->
-<!-- 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs) -->
 3. [Installing the minid 2.0 client](#Installing%20the%20minid%202.0%20client)
 4. [Minid Client Configuration](#Minid%20Client%20Configuration)
 5. [Minid Client Usage](#Minid%20Client%20Usage)
