@@ -33,7 +33,7 @@ As part of the Crosscut Metadata Model (C2M2), persistent identifiers can enable
 * Citing data 
 
 At present, the scope of these requirements is limited to two entities within the C2M2, files and collection (a grouping of files). These requirements may be extended to support other use cases, in particular data citation. Some of the information provided by the persistent identifier may be duplicated within the C2M2; over time, the C2M2 itself may be built in part from sets of persistent identifiers. 
-Persistent Identifier Recommendations The CFDE promotes the following recommendation towards improving the FAIRness of Common Fund sponsored data: 
+The CFDE's Persistent Identifier Recommendations promotes the following recommendation towards improving the FAIRness of Common Fund sponsored data: 
 
 * All data identifiers should be expressed as a URL 
 * Identifier URLs should resolve to landing pages with human-readable metadata 
