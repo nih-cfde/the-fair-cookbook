@@ -24,7 +24,9 @@
 
 <!-- ![](https://i.imgur.com/9yQDHyu.png) -->
 
-<div><img src="./images/kf_dash" alt="drawing" style="border:1px solid black;" width="650"  align="top"/></div>
+<div>
+<img src="../images/kf_dash" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
+</div> 
 <br/>
 
 * Download the Kids First Data by:
@@ -34,9 +36,10 @@
 
 <!-- ![](https://i.imgur.com/6OGEA83.png) -->
 
-<div><img src="./images/kf_download" alt="drawing" style="border:1px solid black;" width="650"  align="top"/></div>
+<div>
+<img src="../images/kf_download" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
+</div> 
 <br/>
-
 
 ### Step 2: Data pre-processing:
 
