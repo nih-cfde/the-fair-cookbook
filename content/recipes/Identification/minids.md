@@ -17,11 +17,11 @@
 <!-- 3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table) -->
 <!-- 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs) -->
 
-5. [Installing the minid 2.0 client](#Installing%20the%20minid%202.0%20client)
-6. [Minid Client Configuration](#Minid%20Client%20Configuration)
-7. [Minid Client Usage](#Minid%20Client%20Usage)
-8. [Authors](#Authors)
-9. [License](#License)
+3. [Installing the minid 2.0 client](#Installing%20the%20minid%202.0%20client)
+4. [Minid Client Configuration](#Minid%20Client%20Configuration)
+5. [Minid Client Usage](#Minid%20Client%20Usage)
+6. [Authors](#Authors)
+7. [License](#License)
 ---
 
 ## Main Objectives
