@@ -51,27 +51,27 @@ For a number of digital objects (`scholarly articles`, `grants`), persistent ide
 `Datasets` are another type of digital objects which are being identified by DOI with services such as [Figshare](https://figshare.com/) or [Zenodo](https://zenodo.org).
 
 But `interoperability` goes far beyond reliable identification of these entities. For research scientists, entities such as:  
-- Taxonomic Information
-- Anatomical Information
-- Diseases and Conditions
-- Molecular Entities, such as:
+* Taxonomic Information
+* Anatomical Information
+* Diseases and Conditions
+* Molecular Entities, such as:
     - Chemicals
     - Metabolites
     - Genes
     - Transcripts
     - Protein
     - Lipids
-- Pathways and Biochemical reactions
-- Assays
-- Instruments
-- Licenses
+* Pathways and Biochemical reactions
+* Assays
+* Instruments
+* Licenses
 
-For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [Deriva system](TODO:ADD_URL).
+For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [Deriva system](http://isrd.isi.edu/deriva/).
 
 * This specific [NIH-CFDE recipe](../14/cfde-terminologies.md) details which ontologies have been selected and how their use will be rolled out as the program progresses.
 
-It is important to notice that for such resources, a central authority is responsible for issueing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
-This works well to address the semantic markup needs that arise in the data curation, data extraction transform load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands, for instance to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/)
+It is important to notice that for such resources, a central authority is responsible for issuing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
+This works well to address the semantic markup needs that arise in the data curation, data extraction, transform, and load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands. For instance, to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/)
 
 * Refer to the specific recipe on [MINIDS](./2/minids.md) to learn how to mint such resolvable identifiers for your resources.
 
