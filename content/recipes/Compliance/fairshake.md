@@ -65,6 +65,8 @@ In this recipe we'll look at the process of performing a FAIR evaluation using F
 
 Because these ingredients are generic, we'll scope the recipe by considering a concrete scenario for each part of the recipe.
 
+### Introduction
+
 #### Scenario
 
 Janice is a researcher at a Common Fund program who wants to assess her dataset using the CFDE rubric on FAIRshake that was used for the CFDE resources. After performing this assessment, she hopes to discover ways to improve her score. She has a resource in mind but would first like to get familiarized and set up with FAIRshake which she understands might be helpful.

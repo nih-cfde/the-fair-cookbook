@@ -50,7 +50,7 @@ A real response in an OpenAPI Editor:<br/>
 
 ## Recipe
 
-The complete `swagger.yaml` constructed in this recipe is available [here](swagger.yaml) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
+The complete `swagger.yaml` constructed in this recipe is available [here](./swagger.yaml) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
 
 ### Step 1: Setting up the OpenAPI Editor
 Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs that are enabled to support CORS.
@@ -77,7 +77,7 @@ We start by annotating useful descriptions for the API in the `info` field, this
 
 The `servers` field has the base url(s) for accessing the API we're about to describe.
 
-```yml
+```yaml
 openapi: 3.0.0
 info:
   title: Metabolomics Workbench REST API
@@ -116,7 +116,7 @@ The path is relative to the server url, and `get` refers to the REST method (`GE
 curl -v -X GET -H 'Content-Type: application/json' https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available
 ```
 
-```raw
+```
 ...
 > GET /rest/study/study_id/ST/available HTTP/1.1 # PATH HERE
 > Host: www.metabolomicsworkbench.org            # REQUEST HEADERS HERE
