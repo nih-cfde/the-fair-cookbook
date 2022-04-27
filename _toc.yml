@@ -5,196 +5,100 @@ format: jb-book
 root: intro
 parts:
 - caption: Introduction
-  #url: /intro
-  #not_numbered: true
   chapters:
     - #title: What is FAIR?
-      #url: /Introduction/fair-principles
       file: content/Introduction/fair-principles
-      #not_numbered: false
-      # subsections:
-        # - title: FAIR in NIH CDFE context
-        #   url: /recipes/01/fair-cfde
-        #   not_numbered: false
-        #   expand_sections: true
-        # - title: Privacy and Ethics concerns
-        #   url: /recipes/02/ethics
-        #   not_numbered: false
-        # - title: Licensing data and metadata
-        #   url: /recipes/03/licensing
-        #   not_numbered: false
     - #title: Engaging with NIH-CFDE
-      #url: /Introduction/cfde
       file: content/Introduction/cfde
-      #not_numbered: false
   # - title: Finding datasets - cataloging DCC resources
   #   url: /recipes/06/cataloguing
-  #   not_numbered: false
-  #     expand_sections: true
-  # subsections:
 - caption: Recipes
   #url: /recipes/recipes-overview
-  #not_numbered: true
   chapters:
+  - file: content/recipes/recipes-overview
   - #title: Discoverability
-    #url: /recipes/Discoverability/discoverability
     file: content/recipes/Discoverability/discoverability
-    #not_numbered: false
-    #expand_sections: true
     sections:
       - #title: Introducing the Cross-Cut Metadata Model (C2M2)
-        #url: /recipes/Discoverability/c2m2
         file: content/recipes/Discoverability/c2m2
-        #not_numbered: false
-        # expand_sections: true
       - #title: Description of the Level-1 C2M2
-        #url: /recipes/Discoverability/C2M2-L1-description
         file: content/recipes/Discoverability/C2M2-L1-description
-        #not_numbered: false
-        # expand_sections: true
       - #title: CFDE Resource Naming
-        #url: /recipes/Discoverability/cfde-namespaces
         file: content/recipes/Discoverability/cfde-namespaces
-        #not_numbered: false
-        # expand_sections: true
       - #title: ETL to C2M2/DATS - the KidsFirst example
-        #url: /recipes/Discoverability/seo
         file: content/recipes/Discoverability/seo
-        #not_numbered: false
-        # expand_sections: true
       - #title: ETL to C2M2- the KidsFirst example
-        #url: /recipes/Discoverability/kf
         file: content/recipes/Discoverability/kf
-        #not_numbered: false  
       - #title: ETL to C2M2- the LINCS example
-        #url: /recipes/Discoverability/lincs
         file: content/recipes/Discoverability/lincs
-        #not_numbered: false
   - #title: Identification
-    #url: /recipes/Identification/identifiers
     file: content/recipes/Identification/identifiers
-    # not_numbered: false
     sections:
       - #title: Minting persistent and resolvable identifiers
-        #url: /recipes/Identification/pids
         file: content/recipes/Identification/pids
-        #not_numbered: false
-        #expand_sections: true
       - #title: Using MINIDs
-        #url: /recipes/Identification/minids
         file: content/recipes/Identification/minids
-        #not_numbered: false
-        #expand_sections: true
       # - title: Obtaining DOIs
       #   url: /recipes/08/3/doi
-      #   not_numbered: false
-      #   expand_sections: true
   - #title: Semantics
-    #url: /recipes/Semantics/semantics
     file: content/recipes/Semantics/semantics
-    # not_numbered: false
     sections:
       - #title: Understanding terminologies
-        #url: /recipes/Semantics/ontologies
         file: content/recipes/Semantics/ontologies
-        #not_numbered: false
       - #title: Ontology services
-        #url: /recipes/Semantics/onto-services
         file: content/recipes/Semantics/onto-services
-        #not_numbered: false
   # - title: NIH-CFDE C2M2 data model
   #   url: /recipes/12/c2m2
-  #   not_numbered: false
   # - title: Implementing C2M2 with Deriva and Frictionless Data Packages
   #   url: /recipes/13/deriva-frictionless
-  #   not_numbered: false
       - #title: NIH CFDE selected terminologies
-        #url: /recipes/Semantics/cfde-terminologies
         file: content/recipes/Semantics/cfde-terminologies
-        #not_numbered: false
   # - titke: ETL processes - Learnings and recommendations
   #   url: /recipes/15/etl
-  #   not_numbered: false
   - #title: FAIR compliance
-    #url: /recipes/Compliance/compliance
     file: content/recipes/Compliance/compliance
-    # not_numbered: false
     sections:
       - #title: Evaluating FAIRness with FAIRshake
-        #url: /recipes/Compliance/fairshake
         file: content/recipes/Compliance/fairshake
-        #not_numbered: false
-        #expand_sections: true
       - #title: Evaluating FAIRness with the CFDE rubric on FAIRshake
-        #url: /recipes/Compliance/fairshake-rubric
         file: content/recipes/Compliance/fairshake-rubric
-        #not_numbered: false
-        #expand_sections: true        
       - #title: Developing FAIR API
-        #url: /recipes/Compliance/fair-api
         file: content/recipes/Compliance/fair-api
-        #not_numbered: false 
-        #expand_sections: true 
-
 # - title: Experience from HMP
 #   url: /recipes/15/1/hmp
-#   not_numbered: false
 # - title: Experience from the Metabolomics Workbench
 #   url: /recipes/15/2/mw
-#   not_numbered: false
 # - title: Experience from GTEx
 #   url: /recipes/15/3/gtex
-#   not_numbered: false
 # - title: Experience from LINCS
 #   url: /recipes/15/4/lincs
-#   not_numbered: false
-
 # - title: Hosting databases and tools in the cloud
 #   url: /recipes/17/cloud
-#   not_numbered: false
 # - title: Jupyter notebooks and CF data processing workflows
 #   url: /recipes/18/notebooks-workflows
-#   not_numbered: false
-
 # - caption: Glossary
 #   url: /recipes/Governance/CFDE_Glossary
-#   not_numbered: true
 
-# Divider for meta-pages and content page
 # - divider: true
 
 # - header: Help Section and Demonstration
 # - title: Recipe Template
 #   url: /1/recipe-template
-#   not_numbered: false
+
 # Divider for meta-pages and content page
 # - divider: true
 
-# Add a header and sample content section
-# - header: Community
 - caption: Community
   chapters:
+  - #title: Governance
+    file: content/recipes/Governance/index
   - #title: Contributing
     #url: /recipes/Governance/contributing
     file: content/recipes/Governance/contributing
     #not_numbered: true
-  # Governance section
-  # - title: Governance
-  #   url: /recipes/Governance/governance
-  #   not_numbered: true
   - #title: License
-    #url: /recipes/Governance/license
     file: content/recipes/Governance/license
-    #not_numbered: true
   - #title: Disclaimer
-    #url: /recipes/Governance/disclaimer
     file: content/recipes/Governance/disclaimer
-    #not_numbered: true
   - #title: Code of Conduct
-    #url: /recipes/Governance/code_of_conduct
     file: content/recipes/Governance/code_of_conduct
-    #not_numbered: true
-  # - title: GitHub repository
-  #   url: https://github.com/nih-cfde/the-fair-cookbook
-  #   external: true
-  #   not_numbered: true
