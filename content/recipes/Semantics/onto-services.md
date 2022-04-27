@@ -70,14 +70,14 @@ For a more detail view and deep-dive into the ODHSI and OMOP semantic support, t
 
 ### Basic research context:
 
-This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management good practice and proper archival requirements.
+This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present, but this does not rule out data management good practice and proper archival requirements.
 As a consequence of fewer constraints, researchers are often confronted with a sea of options. This section aims to provide some guidance when tasked with deciding on which semantic resource to use.
 
 #### :bell: **An important consideration** 
 to bear in mind when writing selecting semantic resources is to assess whether or not `data archival in public repositories will be required`. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no requirement but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the [Experimental Factor Ontology](https://efo.owl) could ease deposition.
 
-#### :bell: **[the FAIRsharing registry](https://fairsharing.org)** 
-is an ELIXIR resources which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
+#### :bell: **[The FAIRsharing registry](https://fairsharing.org)** 
+is an ELIXIR resources, which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
 
 A number on open source, public and for some of them, interoperable by design resources are developed and distributed via the [OBO foundry](http://www.obofoundry.org/). 
 
