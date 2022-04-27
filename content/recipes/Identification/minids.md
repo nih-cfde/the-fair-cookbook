@@ -9,19 +9,16 @@
 **Version**: 1.0
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-
+<!-- 3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table) -->
+<!-- 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs) -->
 ## Table of Contents
 1. [Main Objectives](#Main%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-
-<!-- 3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table) -->
-<!-- 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs) -->
-
-5. [Installing the minid 2.0 client](#Installing%20the%20minid%202.0%20client)
-6. [Minid Client Configuration](#Minid%20Client%20Configuration)
-7. [Minid Client Usage](#Minid%20Client%20Usage)
-8. [Authors](#Authors)
-9. [License](#License)
+3. [Installing the minid 2.0 client](#Installing%20the%20minid%202.0%20client)
+4. [Minid Client Configuration](#Minid%20Client%20Configuration)
+5. [Minid Client Usage](#Minid%20Client%20Usage)
+6. [Authors](#Authors)
+7. [License](#License)
 ---
 
 ## Main Objectives
@@ -37,7 +34,7 @@ ___
 
 <!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
 
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>  
+<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/minid-mermaid.png" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>  
 <!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
 <!-- graph TD; -->
 <!--  A([file creation]):::box --> <!-- B(New File):::box  -->
@@ -93,7 +90,7 @@ use the dev branch to obtain to source
 ## Configuration
 -------------
 
-1. prerequisite: create a minig-config.cfg file
+1. Prerequisite: create a minig-config.cfg file
   
   As a convenience you need specify this information in a minid configuration file (`~/.minid/minid-config.cfg`)
   To do so from the command line, issue the following:
@@ -112,7 +109,7 @@ $ touch minid-config.cfg
 
  <!--  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>   -->
 <div>
-  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
+  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/globus/globus-account-create.png" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
 </div> 
 
   <!-- ![](https://i.imgur.com/B5UbkpF.png) -->
@@ -138,7 +135,7 @@ $ touch minid-config.cfg
 <img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
 <div>
-  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
+  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/globus/globus-account-login.png" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div> 
   
   followed by:
@@ -149,7 +146,7 @@ $ touch minid-config.cfg
 <img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
 <div>
-<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>
   
   If all goes well, the following browser screen will be shown:
@@ -160,7 +157,7 @@ $ touch minid-config.cfg
 <img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
 <div>
-<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login-success.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
+<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/globus/globus-account-login-success.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>
   
   While the terminal will show the following:
@@ -217,7 +214,7 @@ $ minid -h
 Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>).
 
 
-### file manifest format
+### File Manifest Format
 ------------------------
 
 Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a `BDBag <https://github.com/ini-bdds/bdbag>`_ or the minid file manifest format.
@@ -268,7 +265,7 @@ Using the `Minid` service, resources can now generate stable, resolvable identif
 
 ___
 
-## Bibliography:
+## References:
 
 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
 
