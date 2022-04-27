@@ -41,7 +41,7 @@
 ### Step 2: Data pre-processing:
 
 * Initial preprocessing: remove all the columns that do NOT have any headers. 
-* Go to the [C2M2 documentation page](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/#c2m2-technical-specification) and look for the diagram labeled "C2M2 model diagram". This diagram is important as it shows the "core tables", colored blue and black, needed to map the KF datasets to the C2M2 model. Tables 1-4 shown below are examples of mapping used for the "core ables" and table 5 is an examples used for the associate tables. The number of rows for each table coressponds to the number of unique `id` entries. 
+* Go to the [C2M2 documentation page](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/#c2m2-technical-specification) and look for the diagram labeled "C2M2 model diagram". This diagram is important as it shows the "core tables", colored blue and black, as well as the associate tables needed to map the KF datasets to the C2M2 model. Tables 1-4 shown below are examples of mapping used for the "core ables" and table 5 is an examples used for the associate tables. The number of rows for each table coressponds to the number of unique `id` entries. 
 
 *Note: id_namespace and project_id_namespace have repeating values of cfde_id_namespace:3.*
 
@@ -143,12 +143,12 @@ WXS: OBI:0002118, exome sequencing assay
 
 ### Step 3: Find the gold tables
 
-* The [gold tables](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-C2M2_ER_diagrams/Level-1-C2M2-model.png) are supplied by CFDE to the DCC and contain information that goes into the blue and green tables. They can be downloaded [here](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_internal_CFDE_CV_tables).
+* The gold tables are supplied by CFDE to the DCC and contain information that goes into the blue and green tables. They can be downloaded there.
 * If you are using the default Git repo structure for KF trial dataset, ensure that the three gold tables are in the folder titled `KF_sample_C2M2_Level_1_bdbag.contents`
 
 ### Step 4: Add empty association tables
 
-* All [association tables](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels#Level-1) (i.e. all lighter blue and grey tables in the diagrams) must be provided in the folder containing the gold tables mentioned in step 3.
+* All association tables (i.e. all lighter blue and grey tables in the diagrams) must be provided in the folder containing the gold tables mentioned in step 3.
 * These tables must have the right column names, in the right order, but may remain otherwise empty.  
 
 ### Step 5: Running R script to wrangle data
