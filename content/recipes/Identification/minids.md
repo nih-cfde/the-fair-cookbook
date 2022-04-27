@@ -1,10 +1,10 @@
 # Identifier Minting Service with Minid Client
 
 **Authors**: 
-  * [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
+  * [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
   * [Mike D'Arcy ](http://orcid.org/0000-0003-2280-917X)
 
-**Maintainers**: [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
+**Maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
 **Version**: 1.0
 
