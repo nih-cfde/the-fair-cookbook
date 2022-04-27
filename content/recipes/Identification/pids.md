@@ -72,9 +72,9 @@ Examples:
 
 ### 2. Recommended Identifier Characteristics
 
-Beyond these minimal requirements, there are several recommendations that contribute to the CFDE use cases and can improve the reuse and citation of the data referred to by persistent identifiers. Many of these recommendations are drawn from the [ref data citation roadmap](). They primarily focus on the descriptive metadata provided by the persistent identifier by its landing page, especially in a machine- readable format. 
+Beyond these minimal requirements, there are several recommendations that contribute to the CFDE use cases and can improve the reuse and citation of the data referred to by persistent identifiers. Many of these recommendations are drawn from the [ref data citation roadmap](http://dx.doi.org/10.1038/s41597-019-0031-8). They primarily focus on the descriptive metadata provided by the persistent identifier by its landing page, especially in a machine- readable format. 
 
-* **`Machine Readability`**: In addition to the [HTML landing page](), intended to be read by a person using a browser, the identifier and metadata associated with the resource should be embedded in the landing page in [JSON-LD](). The metadata should also be retrievable as JSON-LD using the `Accept` header to allow clients to retrieve the metadata without unnecessarily parsing HTML. 
+* **`Machine Readability`**: In addition to the HTML landing page, intended to be read by a person using a browser, the identifier and metadata associated with the resource should be embedded in the landing page in [JSON-LD](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json-ld). The metadata should also be retrievable as JSON-LD using the `Accept` header to allow clients to retrieve the metadata without unnecessarily parsing HTML. 
 
 * **`Metadata Schema`**:  The CFDE use cases for **file** and **collection metadata** include validation, disambiguation, and metrics around storage utilization and locality, e.g., Google vs. Amazon. Later, the use of the location attribute for the file identifiers with a list of URIs for data protocols may allow for data access. The recommended metadata for collections also includes the elements to allow for data citation, primarily to reduce the amount metadata required for individual files. 
 

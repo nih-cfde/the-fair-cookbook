@@ -16,6 +16,7 @@ latex:
     targetname: book.tex
 
 parse:
+  myst_url_schemes: [mailto, http, https]
   myst_enable_extensions:
     - html_image
 

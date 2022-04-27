@@ -91,7 +91,6 @@ use the dev branch to obtain to source
 
 
 ## Configuration
--------------
 
 1. prerequisite: create a minig-config.cfg file
   
@@ -174,7 +173,6 @@ $ touch minid-config.cfg
 
 
 ## Usage
------
 
 The CLI supports the following simple operations (Note: the `--test` flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.):
 
@@ -218,7 +216,6 @@ Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid
 
 
 ### file manifest format
-------------------------
 
 Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a `BDBag <https://github.com/ini-bdds/bdbag>`_ or the minid file manifest format.
 

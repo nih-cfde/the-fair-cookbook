@@ -50,7 +50,7 @@ A real response in an OpenAPI Editor:<br/>
 
 ## Recipe
 
-The complete `swagger.yaml` constructed in this recipe is available [here](./swagger.yaml) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
+The complete `swagger.yaml` constructed in this recipe is available [here](https://gist.github.com/u8sand/292c363274ff6e609fadb369c26ca9b6) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
 
 ### Step 1: Setting up the OpenAPI Editor
 Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs that are enabled to support CORS.

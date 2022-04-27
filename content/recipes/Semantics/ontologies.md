@@ -130,7 +130,7 @@ These criteria are simply indicative and need to be modulated depending on the `
 Choosing ontology and semantic resources is a complex issue, which requires careful consideration, taking into account the research context of the data production workflow, regulatory requirements that may apply. The choices made affect the integrative potential of a dataset as they influence the level of `interoperability`. 
 Clearly declaring the semantic resources used to annotate a dataset also influence `findability` and `reusability` and it is good practice to do so.
 
-> ####  What to read next?
+> ##  What to read next?
 > * [Ontology services](./onto-services.md)
 > * [CFDE selected terminologies](./cfde-terminologies.md)
 

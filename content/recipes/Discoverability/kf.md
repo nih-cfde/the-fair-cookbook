@@ -217,7 +217,7 @@ It will produce these four green tables for Level 1: `file_format.tsv`,`data_typ
 * This recipe provides an examplar of how to convert a dataset from a DCC, KidsFirst in this example, into the format used by CFDE format for persistence into the DERIVA system.
 * Other examples of transformation are available or will be made available as guidance.
 
-> ####  What to read next?
+> ##  What to read next?
 > * [CFDE C2M2 model](./c2m2.md)
 > * [ETL to CFDE C2M2 model](./seo.md)
 

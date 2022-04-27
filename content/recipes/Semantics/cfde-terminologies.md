@@ -1,8 +1,8 @@
 # NIH CFDE selected terminologies
 
-**authors** [Philippe Rocca-Serra]()
+**authors** [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**maintainers** [Philippe Rocca-Serra]()
+**maintainers** [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
 **version**: initial draft
 
@@ -36,7 +36,7 @@ The table also highlights the planned implementation, with phased releases from 
 |assay_type| [OBI](http://www.obofoundry.org/ontology/obi.html) |CC-BY | | :heavy_plus_sign:|:heavy_plus_sign:|
 |file_format|[EDAM](https://github.com/edamontology/edamontology)|CC BY-SA 4.0 | |:heavy_plus_sign: |:heavy_plus_sign:|
 |data_type | [EDAM](https://github.com/edamontology/edamontology)|CC BY-SA 4.0 | |:heavy_plus_sign:|:heavy_plus_sign: |
-|disease| [MONDO](mondo)|CC-BY | | |:heavy_plus_sign:|
+|disease| [MONDO](https://mondo.monarchinitiative.org/)|CC-BY | | |:heavy_plus_sign:|
 |disease| [DOID](http://www.obofoundry.org/ontology/doid.html)| CC-BY| | |:heavy_plus_sign:|
 
 
@@ -54,10 +54,10 @@ For each of the potential data sources and for a set of core search facets, a su
 | **taxonomy**          | free text             | free text         |free text             | free text                                                | free text             |free text                                                                                                    |
 | **anatomy**           | free text             | free text         |free text           | [UBERON](http://www.obofoundry.org/ontology/uberon.html) | free text             | [NCIT](https://ncit.nci.nih.gov/ncitbrowser/)                                                                |
 | **sample type**       | free text             | free text         |free text             | [UBERON](http://www.obofoundry.org/ontology/uberon.html) | free text             | [NCIT](https://ncit.nci.nih.gov/ncitbrowser/)                                                                |
-| **disease**           | free text             | free text         |free text             | free text                                                | free text             | [HPO]() [NCIT](https://ncit.nci.nih.gov/ncitbrowser/) [MONDO](http://www.obofoundry.org/ontology/mondo.html) |
-| **assay type**        | internal cv/free text | [BAO]()           |internal cv/free text | internal cv/free text                                    | internal cv/free text | internal cv/free text                                                                                        |
+| **disease**           | free text             | free text         |free text             | free text                                                | free text             | [HPO](https://hpo.jax.org/) [NCIT](https://ncit.nci.nih.gov/ncitbrowser/) [MONDO](http://www.obofoundry.org/ontology/mondo.html) |
+| **assay type**        | internal cv/free text | [BAO](http://bioassayontology.org/)           |internal cv/free text | internal cv/free text                                    | internal cv/free text | internal cv/free text                                                                                        |
 | **data type**         | _                     | free text         |free text             | _                                                        | internal cv/free text | internal cv/free text                                                                                        |
-| chemical compound | [pubchem CID](https://pubchem.ncbi.nlm.nih.gov/),[InChi]()     | [pubchem CID](https://pubchem.ncbi.nlm.nih.gov/),[InChi]() | _                     | _                                                        | _                     | _                                                                                                            |
+| chemical compound | [pubchem CID](https://pubchem.ncbi.nlm.nih.gov/),[InChi](https://www.inchi-trust.org/)     | [pubchem CID](https://pubchem.ncbi.nlm.nih.gov/),[InChi](https://www.inchi-trust.org/) | _                     | _                                                        | _                     | _                                                                                                            |
 | gene product      | refseq                | _                 | _                     | _                                                        | _                     | _                                                                                                            |
 | protein           | uniprot               | _                 | _                     | _                                                        | _                     | _                                                                                                            |
 
@@ -70,8 +70,8 @@ ___
 * Taking the notion of `taxonomical descriptors` for example, the harmonization across the various sources can be easily achieved by relying on a resource such as NCBITaxonomy and the curation action is simplified by that limited diversity of *species* found in the different databases.
 * On the other hand, the harmonization tasks for domains such as `sample type`, `assay type` can be more involved, not to mention the case of `phenotypic descriptions` or `disease`, even though `level 0 and level 1 compliance` do not expect such a degree of integration.
 
-> ####  What to read next?
-> * [CFDE C2M2 model](../12/c2m2.md)
-> * [ETL to CFDE C2M2 model](../07/seo.md)
+> ##  What to read next?
+> * [CFDE C2M2 model](../Discoverability/c2m2.md)
+> * [ETL to CFDE C2M2 model](../Discoverability/seo.md)
 
 
