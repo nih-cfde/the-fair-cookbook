@@ -71,6 +71,6 @@ ___
 
 > ##  What to read next?
 > * [CFDE C2M2 model](../Discoverability/c2m2.md)
-> * [ETL to CFDE C2M2 model](../Discoverability/seo.md)
+> * [ETL to CFDE C2M2 model](../Discoverability/seo.ipynb)
 
 

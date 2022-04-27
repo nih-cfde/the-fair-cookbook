@@ -43,10 +43,10 @@ Though OpenAPI can be edited by most standards editors because it is typically w
 
 
 An example endpoint in an OpenAPI Editor:  
-[An example endpoint in an OpenAPI Editor](./fair-api-images/ss1.png)
+![An example endpoint in an OpenAPI Editor](./fair-api-images/ss1.png)
 
 A real response in an OpenAPI Editor:  
-[A real response in an OpenAPI Editor](./fair-api-images/ss2.png)
+![A real response in an OpenAPI Editor](./fair-api-images/ss2.png)
 
 
 ## Recipe

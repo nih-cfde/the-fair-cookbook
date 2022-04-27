@@ -158,7 +158,7 @@
 ### <u>DATS</u>
 - [`Data Article Tag Suite`](https://github.com/datatagsuite/README) is a data model for representing key information about datasets with an emphasis on data discovery and data findability, which has inspired the creation of the NIH-C2M2 model. [The DATS model is expressed as a JSON schema](https://datatagsuite.github.io/docs/html/dats.html). Associated JSON-LD context files support search engine optimization because they map into [schema.org](https://schema.org) and [DCAT](www.w3.org/TR/vocab-dcat-2/). Mappings into biological entities are also available via [OBO Foundry resources](http://www.obofoundry.org). 
 
-### [Data Citation Rubric]()
+### <u>Data Citation Rubric</u>
 - a collection of rules to assess [FAIRness](#FAIR-Evaluation) of data citation using the [FAIRshake tool](#FAIRshake) available from the following [github repository](https://github.com/nih-cfde/FAIR/blob/v0.1/Demos/FAIRAssessment/data_citation_rubric.py)
 
 ### [dbGaP](https://www.ncbi.nlm.nih.gov/gap/)
@@ -174,7 +174,7 @@
 - an `Entity-relationship-model` (or ER model) describes interrelated things of interest in a specific domain of knowledge. A basic ER model is composed of entity types (which classify the things of interest) and specifies relationships that can exist between entities (instances of those entity types). In software engineering, an ER model is commonly formed to represent things a business needs to remember in order to perform business processes. Consequently, the ER model becomes an abstract data model, that defines a data or information structure which can be implemented in a database, typically a relational database. source: Wikipedia).
 
 
-### [FAIR Insignia]()
+### <u>FAIR Insignia</u>
 - A grid of colored squares developed to visually communicate FAIRness level. The [FAIR](#FAIR) insignia identifies areas of strength and weakness in the FAIRness level of digital objects, guiding digital object producers on how to improve the FAIRness of their products. FAIR insignia is an output of the [FAIRshake](#FAIRshake)
 
 ![drawing](./images/FAIRinsignia.png)
@@ -191,7 +191,7 @@
 ### [GitHub](https://github.com/)
 - an online hub for storing and sharing computer programs and other plain text files. The [CFDE](#CFDE) team uses it for storage, hosting websites, communications, and project management.
 
-### [Globus Automate]()
+### [Globus Automate](https://docs.globus.org/globus-automation-services/)
 - a distributed research automation platform that addresses the problem of securely and reliably automating, for many thousands of scientists, sequences of data management tasks that may span locations, storage systems, administrative domains, and timescales, and integrate both mechanical and human inputs.
 
 ### [Jupyter Notebook](https://jupyter.org/)
