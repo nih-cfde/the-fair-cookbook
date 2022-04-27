@@ -6,63 +6,63 @@ root: intro
 parts:
 - caption: Introduction
   chapters:
-    - #title: What is FAIR?
+    - title: What is FAIR?
       file: content/Introduction/fair-principles
-    - #title: Engaging with NIH-CFDE
+    - title: Engaging with NIH-CFDE
       file: content/Introduction/cfde
   # - title: Finding datasets - cataloging DCC resources
   #   url: /recipes/06/cataloguing
 - caption: Recipes
-  #url: /recipes/recipes-overview
   chapters:
-  - file: content/recipes/recipes-overview
-  - #title: Discoverability
+  - title: Overview
+    file: content/recipes/recipes-overview
+  - title: Discoverability
     file: content/recipes/Discoverability/discoverability
     sections:
-      - #title: Introducing the Cross-Cut Metadata Model (C2M2)
+      - title: Introducing the Cross-Cut Metadata Model (C2M2)
         file: content/recipes/Discoverability/c2m2
-      - #title: Description of the Level-1 C2M2
+      - title: Description of the Level-1 C2M2
         file: content/recipes/Discoverability/C2M2-L1-description
-      - #title: CFDE Resource Naming
+      - title: CFDE Resource Naming
         file: content/recipes/Discoverability/cfde-namespaces
-      - #title: ETL to C2M2/DATS - the KidsFirst example
+      - title: ETL to C2M2/DATS - the KidsFirst example
         file: content/recipes/Discoverability/seo
-      - #title: ETL to C2M2- the KidsFirst example
+      - title: ETL to C2M2- the KidsFirst example
         file: content/recipes/Discoverability/kf
-      - #title: ETL to C2M2- the LINCS example
+      - title: ETL to C2M2- the LINCS example
         file: content/recipes/Discoverability/lincs
-  - #title: Identification
+  - title: Identification
     file: content/recipes/Identification/identifiers
     sections:
-      - #title: Minting persistent and resolvable identifiers
+      - title: Minting persistent and resolvable identifiers
         file: content/recipes/Identification/pids
-      - #title: Using MINIDs
+      - title: Using MINIDs
         file: content/recipes/Identification/minids
       # - title: Obtaining DOIs
       #   url: /recipes/08/3/doi
-  - #title: Semantics
+  - title: Semantics
     file: content/recipes/Semantics/semantics
     sections:
-      - #title: Understanding terminologies
+      - title: Understanding terminologies
         file: content/recipes/Semantics/ontologies
-      - #title: Ontology services
+      - title: Ontology services
         file: content/recipes/Semantics/onto-services
   # - title: NIH-CFDE C2M2 data model
   #   url: /recipes/12/c2m2
   # - title: Implementing C2M2 with Deriva and Frictionless Data Packages
   #   url: /recipes/13/deriva-frictionless
-      - #title: NIH CFDE selected terminologies
+      - title: NIH CFDE selected terminologies
         file: content/recipes/Semantics/cfde-terminologies
   # - titke: ETL processes - Learnings and recommendations
   #   url: /recipes/15/etl
   - #title: FAIR compliance
     file: content/recipes/Compliance/compliance
     sections:
-      - #title: Evaluating FAIRness with FAIRshake
+      - title: Evaluating FAIRness with FAIRshake
         file: content/recipes/Compliance/fairshake
-      - #title: Evaluating FAIRness with the CFDE rubric on FAIRshake
+      - title: Evaluating FAIRness with the CFDE rubric on FAIRshake
         file: content/recipes/Compliance/fairshake-rubric
-      - #title: Developing FAIR API
+      - title: Developing FAIR API
         file: content/recipes/Compliance/fair-api
 # - title: Experience from HMP
 #   url: /recipes/15/1/hmp
@@ -90,15 +90,13 @@ parts:
 
 - caption: Community
   chapters:
-  - #title: Governance
+  - title: Governance
     file: content/recipes/Governance/index
-  - #title: Contributing
-    #url: /recipes/Governance/contributing
+  - title: Contributing
     file: content/recipes/Governance/contributing
-    #not_numbered: true
-  - #title: License
+  - title: License
     file: content/recipes/Governance/license
-  - #title: Disclaimer
+  - title: Disclaimer
     file: content/recipes/Governance/disclaimer
-  - #title: Code of Conduct
+  - title: Code of Conduct
     file: content/recipes/Governance/code_of_conduct
