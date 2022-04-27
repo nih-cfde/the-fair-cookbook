@@ -66,7 +66,7 @@ But `interoperability` goes far beyond reliable identification of these entities
 * Instruments
 * Licenses
 
-For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [Deriva system](http://isrd.isi.edu/deriva/).
+For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [DERIVA system](http://isrd.isi.edu/deriva/).
 
 * This specific [NIH-CFDE recipe](../14/cfde-terminologies.md) details which ontologies have been selected and how their use will be rolled out as the program progresses.
 
