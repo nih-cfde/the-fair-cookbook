@@ -258,7 +258,7 @@ The LINCS data associates Datasets with small molecules, cell lines, genes, prot
 
 Due to the sheer number of experiments performed in high throughput, LINCS stores the whole set of experiments in a few files representing the data level (level of processing performed on the raw data). It might be possible to extract these files and produce massive amounts of biosamples, but this information is not currently directly available on the website for the practical reason that having landing pages for each micro-experiment is not useful for the users of this data.
 
-Because of this, LINCS lumps all the biosamples together into one "biosample" referring to the whole experiment. This allows annotating that biosample with the assay used to perform the experiment and associate that biosample with the subjects of the experiment that were studied. Subjeccts includes cell line, small molecules, etc..)  This closely matches how the LINCS portal serves this data and fits in the C2M2.
+Because of this, LINCS lumps all the biosamples together into one "biosample" referring to the whole experiment. This allows annotating that biosample with the assay used to perform the experiment and associate that biosample with the subjects of the experiment that were studied. Subjects includes cell line, small molecules, and etc. This closely matches how the LINCS portal serves this data and fits in the C2M2.
 
 ```python
 #
