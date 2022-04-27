@@ -1,5 +1,7 @@
 # The FAIR Cookbook
 
+<https://nih-cfde.github.io/the-fair-cookbook/>
+
 ## Running Locally
 
 ```bash
