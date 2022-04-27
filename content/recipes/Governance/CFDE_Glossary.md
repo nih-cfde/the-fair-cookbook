@@ -142,10 +142,10 @@
 ### <u>API</u> 
 - `Application Programmer Interface`. Allows developers to manipulate (query, update) remote data sources through specific protocols or specific standards for communication (e.g., REST,SOAP). An important element of the ecosystem will be the standardization and publishing of an API that can be used by data consumers to retrieve the inventories, the data asset specification, and additional metadata associated with the assets. This will allow for consumers of these inventories to programmatically interrogate the federated system for information that may be relevant to a consuming service.
 
-### [C2M2](https://www.nih-cfde.org/product/full-c2m2-er-model/)
+### [C2M2](docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/)
 - `Cross Cut Metadata Model`. A data model specification developed by NIH [CFDE](#CFDE) to represent experiments and datasets. Recycling a number of entities from the [DATS specification](#DATS)
 
-### [CFDE Data Dashboard](https://cfde.derivacloud.org/deriva-webapps/plot/)
+### [CFDE Data Dashboard](https://www.nih-cfde.org/)
 - an interface that monitors DCC data upload to the cloud and usage statistics to support cross-DCC search and ecosystem integration.
 
 ### <u>CFDE Query Portal</u>
@@ -159,7 +159,7 @@
 - [`Data Article Tag Suite`](https://github.com/datatagsuite/README) is a data model for representing key information about datasets with an emphasis on data discovery and data findability, which has inspired the creation of the NIH-C2M2 model. [The DATS model is expressed as a JSON schema](https://datatagsuite.github.io/docs/html/dats.html). Associated JSON-LD context files support search engine optimization because they map into [schema.org](https://schema.org) and [DCAT](www.w3.org/TR/vocab-dcat-2/). Mappings into biological entities are also available via [OBO Foundry resources](http://www.obofoundry.org). 
 
 ### [Data Citation Rubric]()
-- a collection of rules to assess [FAIRness](#FAIR-Evaluation) of data citation using the [FAIRshake tool](#FAIRshake) available from the following [github repository](https://github.com/nih-cfde/FAIR/blob/master/Demos/FAIRAssessment/data_citation_rubric.py)
+- a collection of rules to assess [FAIRness](#FAIR-Evaluation) of data citation using the [FAIRshake tool](#FAIRshake) available from the following [github repository](https://github.com/nih-cfde/FAIR/blob/v0.1/Demos/FAIRAssessment/data_citation_rubric.py)
 
 ### [dbGaP](https://www.ncbi.nlm.nih.gov/gap/)
 - `Database of Genotypes and Phenotypes`. The database of Genotypes and Phenotypes (dbGaP) was developed to archive and distribute the data and results from studies that have investigated the interaction of genotype and phenotype in Humans.
@@ -167,7 +167,7 @@
 ### [DERIVA](https://docs.derivacloud.org/platform.html)
 - `Discovery Environment for Relational Information and Versioned Assets`. A suite of tools and services that are designed to significantly reduce the overhead and complexity of creating and managing complex, big datasets. DERIVA provides a digital asset management system for scientific data to streamline the acquisition, modeling, management, and sharing of complex, big data, and provides interfaces so that these data can be delivered to diverse external tools for big-data analysis and analytic tools.
 
-### [DERIVA Catalog](https://cfde.derivacloud.org/)
+### [DERIVA Catalog](https://app.nih-cfde.org/)
 - a group of assets that may be digital objects (i.e., files) or references to physical objects. DERIVA uses an entity-relationship data model to catalog and organize these assets. 
 
 ### <u>Entity-relationship-model</u>
@@ -185,7 +185,7 @@
 ### [Figshare](https://figshare.com/)
 - an online open access repository where researchers can preserve and share their research outputs, including figures, datasets, images, and videos.
 
-### [Frictionless Data Package](http://frictionlessdata.io/data-package/)
+### [Frictionless Data Package](https://specs.frictionlessdata.io/data-package/)
 - a format specification produced by the [Open Knowledge Foundation](https://okfn.org/) and supported by the Frictionlessdata.io organization. It aims to shorten the path from data to insight with a collection of specifications and software for the publication, transport, and consumption of data. This kills the cycle of find/improve/share that makes for a dynamic and productive data ecosystem.
 
 ### [GitHub](https://github.com/)

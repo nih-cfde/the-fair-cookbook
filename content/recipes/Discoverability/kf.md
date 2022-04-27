@@ -43,7 +43,7 @@
 ### Step 2: Data pre-processing
 
 * Initial preprocessing: remove all the columns that do NOT have any headers. 
-* Look at the KF datasets and select KF column names that correspond to the right C2M2 table column names. For the first, only the "core" C2M2 tables (Tables 1-4) and one association table (Table 5) were filled in. Core tables are the [blue and black tables](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels#Level-1) shown in the C2M2 [documentation page](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels#Level-1). 
+* Look at the KF datasets and select KF column names that correspond to the right C2M2 table column names. For the first, only the "core" C2M2 tables (Tables 1-4) and one association table (Table 5) were filled in. Core tables are the [blue and black tables](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1) shown in the C2M2 [documentation page](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1). 
 
 The mapping used for the first pass of KF data is shown in the following tables. The number of rows for each table corresponds to the number of unique `id` entries. 
 
@@ -149,12 +149,12 @@ WXS: OBI:0002118, exome sequencing assay
 
 ### Step 3: Find the gold tables
 
-* The [gold tables](https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-C2M2_ER_diagrams/Level-1-C2M2-model.png) are supplied by CFDE to the DCC and contain information that goes into the blue and green tables. They can be [downloaded here](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_internal_CFDE_CV_tables).
+* The [gold tables](https://github.com/nih-cfde/c2m2/blob/master/ER_diagrams/C2M2.png) are supplied by CFDE to the DCC and contain information that goes into the blue and green tables. They can be [downloaded here](https://github.com/nih-cfde/c2m2/tree/master/backups_for_OSF.io_reference_files/internal_CFDE_CV_reference_tables).
 * If you are using the default Git repo structure for KF trial dataset, ensure that the three gold tables are in the folder titled `KF_sample_C2M2_Level_1_bdbag.contents`
 
 ### Step 4: Add empty association tables
 
-* All [association tables](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels#Level-1) (i.e. all lighter blue and grey tables in the diagrams) must be provided in the folder containing the gold tables mentioned in step 3.
+* All [association tables](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1) (i.e. all lighter blue and grey tables in the diagrams) must be provided in the folder containing the gold tables mentioned in step 3.
 * These tables must have the right column names, in the right order, but may remain otherwise empty.  
 
 ### Step 5: Running R script to wrangle data
@@ -169,8 +169,8 @@ WXS: OBI:0002118, exome sequencing assay
 
 ### Step 6: Building 'green' tables from core entity tables
 
-* This [term-scanner script](https://github.com/abhijna/KF_Data_C2M2/blob/master/model/build_term_tables.py) (with modifications to input/output path code) is used to auto-generate the green tables for the C2M2 Model [Level 1 model](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels#Level-1). Currently, this script generates four of the five green tables for Level 1.
-* Default paths direct to the HMP example [tsv files](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_example_submission_data/HMP__sample_C2M2_Level_1_bdbag.contents).
+* This [term-scanner script](https://github.com/abhijna/KF_Data_C2M2/blob/master/model/build_term_tables.py) (with modifications to input/output path code) is used to auto-generate the green tables for the C2M2 Model [Level 1 model](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1). Currently, this script generates four of the five green tables for Level 1.
+* Default paths direct to the HMP example [tsv files](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/).
 
 **Inputs**
 

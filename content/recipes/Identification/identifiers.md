@@ -82,7 +82,7 @@ This works well to address the semantic markup needs that arise in the data cura
 
 1. Klump, J. and Huber, R., 2017. 20 Years of Persistent Identifiers – Which Systems are Here to Stay?. Data Science Journal, 16, p.9. [http://doi.org/10.5334/dsj-2017-009](http://doi.org/10.5334/dsj-2017-009)
 2. McMurry JA, Juty N, Blomberg N, et al. Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data. PLoS Biol. 2017;15(6):e2001414. Published 2017 Jun 29. [http://doi.org/10.1371/journal.pbio.2001414](http://doi.org/10.1371/journal.pbio.2001414)
-3. Martin Fenner, Mercè Crosas, Jeffrey S Grethe, David Kennedy, Henning Herm-jakob, Philippe Rocca-Serra, Gustavo Durand, Robin Berjon, Sebastian Karcher,Maryann Martone, and Tim Clark. 2019. A data citation roadmap for scholarly data repositories. Scientific Data6, 1 (2019), 1–9.[http://doi.org/10.1038/s41597-019-0031-80](http://doi.org/10.1038/s41597-019-0031-80)
+3. Martin Fenner, Mercè Crosas, Jeffrey S Grethe, David Kennedy, Henning Herm-jakob, Philippe Rocca-Serra, Gustavo Durand, Robin Berjon, Sebastian Karcher,Maryann Martone, and Tim Clark. 2019. A data citation roadmap for scholarly data repositories. Scientific Data6, 1 (2019), 1–9.[http://doi.org/10.1038/s41597-019-0031-8](http://doi.org/10.1038/s41597-019-0031-8)
 4.https://www.pidforum.org/
 5. John Kunze. The Entity (N2T) Resolver: low-risk, low-cost persistent identifica-tion.[https://hdl.handle.net/1813/3688](https://hdl.handle.net/1813/3688)
 6. Wimalaratne, S., Juty, N., Kunze, J. et al. Uniform resolution of compact identifiers for biomedical data. Sci Data 5, 180029 (2018). [https://doi.org/10.1038/sdata.2018.29](https://doi.org/10.1038/sdata.2018.29)

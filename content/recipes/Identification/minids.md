@@ -76,7 +76,7 @@ ___ -->
 
 ## Installing the minid 2.0 client
 
-This is a prerequisite to be able to call the minid API hosted on a server at the following url [http://minid.bd2k.org/minid](http://minid.bd2k.org/minid)
+This is a prerequisite to be able to call the minid API hosted on a server at the following url [http://minid.bd2k.org/](http://minid.bd2k.org/)
 
 ### installing with pip
 

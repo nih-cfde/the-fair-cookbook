@@ -59,7 +59,7 @@ Examples:
 
 > **Compact URI:** doi:10.25490/a97f-egyk 
 
-* **`Resolution`**:  Persistent identifiers using compact URIs must use prefixes (also known as URI schemes) registered with [N2T](https://n2t.net) or [Identifiers.org](https://identifiers.org) [5]. This permits the resolution of compact URIs in a consistent manner and helps to ensure uniqueness of identifiers by defining identifier naming authorities. Instructions on how to register prefixes are on the N2T and Identifiers.org sites. The joint list of registered prefixes is available at http://n2t.net/e/cdl_ebi_prefixes.yaml. 
+* **`Resolution`**:  Persistent identifiers using compact URIs must use prefixes (also known as URI schemes) registered with [N2T](https://n2t.net) or [Identifiers.org](https://identifiers.org) [5]. This permits the resolution of compact URIs in a consistent manner and helps to ensure uniqueness of identifiers by defining identifier naming authorities. Instructions on how to register prefixes are on the N2T and Identifiers.org sites. The joint list of registered prefixes is available at <http://n2t.net/e/cdl_ebi_prefixes.yaml>. 
 
 Examples: 
 
