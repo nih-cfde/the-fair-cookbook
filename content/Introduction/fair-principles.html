@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to FAIR Principles &#8212; NIH-CFDE FAIR COOKBOOK</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/Introduction/fair-principles.html" />
+    <link rel="shortcut icon" href="../../_static/CFDE-logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Engaging with CFDE" href="cfde.html" />
+    <link rel="prev" title="The FAIR cookbook by the NIH-CFDE" href="../../intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/CFDE-logo-contrast.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NIH-CFDE FAIR COOKBOOK</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   The FAIR cookbook by the NIH-CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction to FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cfde.html">
+   Engaging with CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Recipes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../recipes/Discoverability/discoverability.html">
+   Discoverability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Discoverability/c2m2.html">
+     C2M2 model:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Discoverability/C2M2-L1-description.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Discoverability/cfde-namespaces.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Discoverability/seo.html">
+     Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Discoverability/kf.html">
+     Experience from Kids First (KF)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Discoverability/lincs.html">
+     Experience from LINCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../recipes/Identification/identifiers.html">
+   The need for identifiers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Identification/pids.html">
+     Recommendations for minting persistent and resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Identification/minids.html">
+     Identifier Minting Service with Minid Client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../recipes/Semantics/semantics.html">
+   Semantics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Semantics/ontologies.html">
+     Controlled Terminologies &amp; Ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Semantics/onto-services.html">
+     Ontology services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Semantics/cfde-terminologies.html">
+     NIH CFDE selected terminologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../recipes/Compliance/compliance.html">
+   FAIR Compliance
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Compliance/fairshake.html">
+     Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Compliance/fairshake-rubric.html">
+     Evaluating FAIRness with the CFDE rubric on FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../recipes/Compliance/fair-api.html">
+     Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/Introduction/fair-principles.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/Introduction/fair-principles.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fair-in-5-questions">
+   FAIR in 5 Questions:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-fair">
+     What is FAIR?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-was-fair-established">
+     When was FAIR established?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-do-we-care-about-fair">
+     Why do we care about FAIR?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-fair-evaluated">
+     How is FAIR evaluated?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-fair-evaluated-in-the-context-of-the-cfde">
+     How is FAIR evaluated in the context of the CFDE?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-evaluate-fair">
+     Why evaluate FAIR?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-contribute-reform-evolve-evaluation-rules">
+     How to contribute, reform, evolve evaluation rules?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction to FAIR Principles</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fair-in-5-questions">
+   FAIR in 5 Questions:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-fair">
+     What is FAIR?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-was-fair-established">
+     When was FAIR established?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-do-we-care-about-fair">
+     Why do we care about FAIR?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-fair-evaluated">
+     How is FAIR evaluated?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-fair-evaluated-in-the-context-of-the-cfde">
+     How is FAIR evaluated in the context of the CFDE?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-evaluate-fair">
+     Why evaluate FAIR?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-contribute-reform-evolve-evaluation-rules">
+     How to contribute, reform, evolve evaluation rules?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-fair-principles">
+<h1>Introduction to FAIR Principles<a class="headerlink" href="#introduction-to-fair-principles" title="Permalink to this headline">¶</a></h1>
+<p><strong>Author(s):</strong> <a class="reference external" href="https://orcid.org/0000-0002-0106-4415">John Cheadle</a></p>
+<p><strong>Maintainer(s):</strong> <a class="reference external" href="https://orcid.org/0000-0002-0106-4415">John Cheadle</a></p>
+<p><strong>Version:</strong> 1.0</p>
+<p><strong>License:</strong> <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
+<div class="section" id="objectives">
+<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<p>The aim of this recipe is to summarize the <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">Guiding</span> <span class="pre">Principles</span></code> as well as define terminology and provide additional resources for individuals who are new to FAIR.  The recipe also touches on how FAIR is evaluated in general and in the context of <a class="reference external" href="https://commonfund.nih.gov/dataecosystem">NIH CFDE</a>, and provides both internal and external links to pertinent resources.</p>
+</div>
+<div class="section" id="fair-in-5-questions">
+<h2>FAIR in 5 Questions:<a class="headerlink" href="#fair-in-5-questions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-fair">
+<h3>What is FAIR?<a class="headerlink" href="#what-is-fair" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">principles</span></code> are a collection of guidelines by which to improve the  <strong>Findability</strong>, <strong>Accessibility</strong>, <strong>Interoperability</strong>, and <strong>Reusability</strong> of data objects. These principles emphasize discovery and reuse of data objects with minimal or no human intervention (i.e. automated and machine-actionable), but are targeted at human entities as well.</p>
+<p>FAIR principles are described in detail <a class="reference external" href="https://www.go-fair.org/fair-principles/">from the GO-FAIR organization</a>. The permanent URL that resolves to the previous link can be found from the <a class="reference external" href="https://doi.org/10.25504/FAIRsharing.WWI10U">FAIRsharing.org record</a>.</p>
+</div>
+<div class="section" id="when-was-fair-established">
+<h3>When was FAIR established?<a class="headerlink" href="#when-was-fair-established" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">guiding</span> <span class="pre">principles</span></code> were first formally published in 2016 by <a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">Wilkinson, et al.</a>  Since then, two additional publications centering around metrics and maturity indicators for FAIRness have been authored. A permanent link to these papers is provided below:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a></p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1038/sdata.2018.118">https://doi.org/10.1038/sdata.2018.118</a></p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1038/s41597-019-0184-5">https://doi.org/10.1038/s41597-019-0184-5</a></p></li>
+</ul>
+</div>
+<div class="section" id="why-do-we-care-about-fair">
+<h3>Why do we care about FAIR?<a class="headerlink" href="#why-do-we-care-about-fair" title="Permalink to this headline">¶</a></h3>
+<p>The potential benefits to adhering to the FAIR principles are myriad. The rationale outlined in the first published paper includes:</p>
+<ul class="simple">
+<li><p>Facilitation of ongoing discovery, evaluation, and reuse in downstream studies after initial publication of a digital object.</p></li>
+<li><p>Deep and broad knowledge integration by human and computational stakeholders alike to advance scientific discovery.</p></li>
+<li><p>Recent work hints at citation benefits of making data and metadata more accessing as documented in this recent publication <a class="reference external" href="https://doi.org/10.1371/journal.pone.0230416">https://doi.org/10.1371/journal.pone.0230416</a></p></li>
+</ul>
+</div>
+<div class="section" id="how-is-fair-evaluated">
+<h3>How is FAIR evaluated?<a class="headerlink" href="#how-is-fair-evaluated" title="Permalink to this headline">¶</a></h3>
+<p>In 2018, Wilkinson et al. published a <a class="reference external" href="https://doi.org/10.1038/sdata.2018.118">paper</a> detailing the evaluation of FAIR using <code class="docutils literal notranslate"><span class="pre">14</span> <span class="pre">exemplar</span> <span class="pre">metrics</span></code>, which corresponds to each of the FAIR sub-principles. Metrics are manually scored tests of individual FAIR principles, in the form of a questionnaire.</p>
+<p>A <a class="reference external" href="https://doi.org/10.1038/s41597-019-0184-5">2019 paper</a> from the group was published which introduced an automatable framework composed of <code class="docutils literal notranslate"><span class="pre">maturity</span> <span class="pre">indicators</span> <span class="pre">(MIs)</span></code>, their corresponding compliance tests, and a web evaluator to run sets of compliance tests and report the results.  In contrast to metrics, MIs must be evaluated by machine; the focus here is primarily on automation and objective assessment.</p>
+<p>Metrics and MIs are open to feedback from the community at large.  The dedicated public GitHub repository is located <a class="reference external" href="https://github.com/FAIRMetrics">here</a>.</p>
+<p>Another <a class="reference external" href="https://doi.org/10.1016/j.cels.2019.09.011">2019 paper by Clark et al. and led by Dr Ma’ayan</a> introduces  an alternative set of tools and interpretation of the FAIR guidelines, developing the notion or <code class="docutils literal notranslate"><span class="pre">rubric</span></code>, which are detailed in the section below.</p>
+</div>
+<div class="section" id="how-is-fair-evaluated-in-the-context-of-the-cfde">
+<h3>How is FAIR evaluated in the context of the CFDE?<a class="headerlink" href="#how-is-fair-evaluated-in-the-context-of-the-cfde" title="Permalink to this headline">¶</a></h3>
+<p>In the context of the CFDE, aspects of FAIR are evaluated using the <a class="reference external" href="https://fairshake.cloud/">FAIRshake tool</a>, which interrogates a digital object using an appropriate <a class="reference external" href="https://fairshake.cloud/rubric/">rubric of metrics</a>. The metrics are questionnaire-style. Many digital objects have already been evaluated with the <a class="reference external" href="https://fairshake.cloud/rubric/36/">NIH-CFDE FAIR Rubric</a>. Within FAIRshake other organizations define rubrics containing metrics that are more appropriate for evaluating their own digital objects.</p>
+</div>
+<div class="section" id="why-evaluate-fair">
+<h3>Why evaluate FAIR?<a class="headerlink" href="#why-evaluate-fair" title="Permalink to this headline">¶</a></h3>
+<p>As we hinted, the FAIR principles are <code class="docutils literal notranslate"><span class="pre">broad</span> <span class="pre">guiding</span> <span class="pre">principles</span></code>, sometimes providing <code class="docutils literal notranslate"><span class="pre">very</span> <span class="pre">specific</span> <span class="pre">directions</span></code> but sometimes also <code class="docutils literal notranslate"><span class="pre">leaving</span> <span class="pre">room</span> <span class="pre">for</span> <span class="pre">interpretation</span></code> or <code class="docutils literal notranslate"><span class="pre">customization</span> <span class="pre">to</span> <span class="pre">local,</span> <span class="pre">community</span> <span class="pre">specific</span> <span class="pre">needs</span></code>. For instance, <code class="docutils literal notranslate"><span class="pre">'enough</span> <span class="pre">metadata'</span></code> is highly dependent on the domain of application. Therefore, a <code class="docutils literal notranslate"><span class="pre">one</span> <span class="pre">size</span> <span class="pre">fits</span> <span class="pre">all</span> <span class="pre">approach</span></code> is not applicable hence the decoupling between the software agent performing the evaluation (FAIRShake or FAIREvaluator) from the need to build a framework to express the evaluation rules (e.g. <code class="docutils literal notranslate"><span class="pre">rubrics</span></code> or <code class="docutils literal notranslate"><span class="pre">maturity</span> <span class="pre">indicators</span></code> as consumed respectively by the cited evaluation engines).</p>
+</div>
+<div class="section" id="how-to-contribute-reform-evolve-evaluation-rules">
+<h3>How to contribute, reform, evolve evaluation rules?<a class="headerlink" href="#how-to-contribute-reform-evolve-evaluation-rules" title="Permalink to this headline">¶</a></h3>
+<p>While it is possible to assess FAIR on general terms, specific domains of knowledge requires dedicated extensions. To give a practical example, <code class="docutils literal notranslate"><span class="pre">Findability</span></code> and <code class="docutils literal notranslate"><span class="pre">Interoperability</span></code> mandate that <code class="docutils literal notranslate"><span class="pre">sufficient</span> <span class="pre">metadata</span></code> is provided. However the amount of metadata varies depending on the application and content, so requirements for the description of <em>transcriptomics experiments</em> differs from <em>medical imaging</em> ones.
+It is therefore necessary to craft domain specific profiles which can be used by the FAIR assessor tools to determine the level of compliance. When using <a class="reference external" href="https://fairshake.cloud/">FAIRShake</a>, this is achieved by the creation of dedicated <code class="docutils literal notranslate"><span class="pre">rubrics</span></code>.</p>
+<p>As the field of scoring FAIR is still relatively new, several groups, e.g. <a class="reference external" href="https://www.rd-alliance.org/groups/fair-data-maturity-model-wg">RDA FAIR Maturity Model working group</a>,  have been established to evolve the metrics or maturity indicators in an attempt to resolve differences in interpretation of the FAIR principles and also to create a forum where discussions can take place.</p>
+<ul class="simple">
+<li><p>FAIR rubrics: <a class="reference external" href="https://fairshake.cloud/rubric/">https://fairshake.cloud/rubric/</a><br/></p></li>
+<li><p>FAIR metrics github repository: <a class="reference external" href="https://github.com/FAIRMetrics/Metrics">https://github.com/FAIRMetrics/Metrics</a><br/></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>FAIR principles, first officially published in 2016, are meant to be guideposts for rendering a digital object more discoverable and (re)usable.  The CFDE evaluates FAIRness using FAIRshake, which leverage collections of metrics that interrogate one or more of the FAIR principles.  Community adherence to FAIR principles provides benefits to human and computational stakeholders alike by facilitating ongoing discovery and reuse of digital objects after initial publication and enabling knowledge integration to further scientific discovery.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/Introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The FAIR cookbook by the NIH-CFDE</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cfde.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Engaging with CFDE</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      <div class="extra_footer">
+        This project is supported by NIH CFDE program <img src="images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

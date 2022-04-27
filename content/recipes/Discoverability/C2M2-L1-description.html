@@ -1,0 +1,979 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conceptual Description of the Level 1 C2M2 &#8212; NIH-CFDE FAIR COOKBOOK</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/Discoverability/C2M2-L1-description.html" />
+    <link rel="shortcut icon" href="../../../_static/CFDE-logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Conceptual Description of the Level 1 C2M2" href="cfde-namespaces.html" />
+    <link rel="prev" title="C2M2 model:" href="c2m2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/CFDE-logo-contrast.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NIH-CFDE FAIR COOKBOOK</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   The FAIR cookbook by the NIH-CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/fair-principles.html">
+   Introduction to FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/cfde.html">
+   Engaging with CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Recipes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="discoverability.html">
+   Discoverability
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="c2m2.html">
+     C2M2 model:
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cfde-namespaces.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="seo.html">
+     Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kf.html">
+     Experience from Kids First (KF)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lincs.html">
+     Experience from LINCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Identification/identifiers.html">
+   The need for identifiers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/pids.html">
+     Recommendations for minting persistent and resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/minids.html">
+     Identifier Minting Service with Minid Client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Semantics/semantics.html">
+   Semantics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/ontologies.html">
+     Controlled Terminologies &amp; Ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/onto-services.html">
+     Ontology services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/cfde-terminologies.html">
+     NIH CFDE selected terminologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Compliance/compliance.html">
+   FAIR Compliance
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake.html">
+     Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake-rubric.html">
+     Evaluating FAIRness with the CFDE rubric on FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fair-api.html">
+     Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/Discoverability/C2M2-L1-description.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/Discoverability/C2M2-L1-description.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#things-proper-nouns-described">
+   Things (Proper Nouns) Described
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#namespaces">
+     Namespaces
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#attributes">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project">
+     Project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file">
+     File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subject">
+     Subject
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#biosample">
+     Biosample
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collection">
+     Collection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relationships">
+   Relationships
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#things-in-collections">
+     Things in Collections
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#biosamples-and-subjects">
+     Biosamples and Subjects
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#files-describing-subjects-and-biosamples">
+     Files Describing Subjects and Biosamples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subject-role-and-taxonomy">
+     Subject Role and Taxonomy
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cfde-controlled-vocabularies">
+   CFDE Controlled Vocabularies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subject-granularity">
+     Subject Granularity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subject-role">
+     Subject Role
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     What to read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Conceptual Description of the Level 1 C2M2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#things-proper-nouns-described">
+   Things (Proper Nouns) Described
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#namespaces">
+     Namespaces
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#attributes">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project">
+     Project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file">
+     File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subject">
+     Subject
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#biosample">
+     Biosample
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collection">
+     Collection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relationships">
+   Relationships
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#things-in-collections">
+     Things in Collections
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#biosamples-and-subjects">
+     Biosamples and Subjects
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#files-describing-subjects-and-biosamples">
+     Files Describing Subjects and Biosamples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subject-role-and-taxonomy">
+     Subject Role and Taxonomy
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Attributes
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cfde-controlled-vocabularies">
+   CFDE Controlled Vocabularies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subject-granularity">
+     Subject Granularity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subject-role">
+     Subject Role
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     What to read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="conceptual-description-of-the-level-1-c2m2">
+<h1>Conceptual Description of the Level 1 C2M2<a class="headerlink" href="#conceptual-description-of-the-level-1-c2m2" title="Permalink to this headline">¶</a></h1>
+<p><strong>authors</strong>: <a class="reference external" href="https://orcid.org/0000-0003-1291-5876">Rick Wagner</a></p>
+<p><strong>maintainers</strong>: <a class="reference external" href="https://orcid.org/0000-0003-1291-5876">Rick Wagner</a></p>
+<p><strong>version</strong>: initial draft</p>
+<p><strong>license</strong>: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
+<hr class="docutils" />
+<div class="section" id="objectives">
+<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<p>This is a conceptual and narrative description of the Level 1 crosscut metadata model (C2M2). It
+covers the things (proper nouns) in the Level 1 C2M2 and their
+relationships, and describes the tables used to
+represent them. The last section covers the internal controlled vocabularies used for
+a few attributes. These notes do not go heavily into things like the
+format (syntax) of the columns or the specific primary key and foreign
+key relationships.</p>
+</div>
+<div class="section" id="things-proper-nouns-described">
+<h2>Things (Proper Nouns) Described<a class="headerlink" href="#things-proper-nouns-described" title="Permalink to this headline">¶</a></h2>
+<p>The Level 1 C2M2 includes tables to describe the following things (entities), and the relationships among them.</p>
+<ul class="simple">
+<li><p>Namespaces</p></li>
+<li><p>Project</p></li>
+<li><p>File</p></li>
+<li><p>Subject</p></li>
+<li><p>Biosample</p></li>
+<li><p>Collection</p></li>
+</ul>
+<p>This section has descriptions of each thing and a list of its attributes (fields).</p>
+<div class="section" id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h3>
+<p>A namespace is a logical groupings of things, used to avoid collisions among the names used by different DCCs.
+We assume that each DCC assigns a unique local name to each thing that it manages.
+(If this assumption is violated–if, for example, biosamples and files may be assigned the same local name–then additional local structure may be needed.)
+Then, any thing from any DCC can be given a unique global name by concatenating the namespace id for the DCC from which
+the thing originates with the local name assigned to the thing by that DCC.
+Thus, for example, two things originating from DCC1 and DCC2, and each assigned a local name Sample1,
+will have distinct C2M2 names: DCC1:Sample1 and DCC2:Sample1.</p>
+<div class="section" id="attributes">
+<h4>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>namespace</strong> A globally unique ID representing this namespace</p></li>
+<li><p><strong>abbreviation</strong> A very short display label for this namespace</p></li>
+<li><p><strong>name</strong> A short, human-readable, machine-read-friendly label for this namespace</p></li>
+<li><p><strong>description</strong> A human-readable description of this namespace</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="project">
+<h3>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h3>
+<p>There can be a single project for each DCC, or things like studies can be represented as subprojects. The field persistent id could be a website for project, or a DOI for a paper. When we get to collections to describe datasets or cohorts, we’ll show what project they were part of.</p>
+<ul class="simple">
+<li><p><strong>abbreviation</strong> A very short display label for this project</p></li>
+<li><p><strong>name</strong> A short, human-readable, machine-read-friendly label for this project</p></li>
+<li><p><strong>description</strong> A human-readable description of this project</p></li>
+<li><p><strong>persistent id</strong> A persistent, resolvable (not nec. retrievable) URI generated by a DCC and attached to this project</p></li>
+</ul>
+</div>
+<div class="section" id="file">
+<h3>File<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>file id</strong> The unique name for this file, compromised of</p>
+<ul>
+<li><p><strong>namespace</strong> namespace for the DCC or file creator</p></li>
+<li><p><strong>id</strong> An ID representing this file, unique within this namespace</p></li>
+</ul>
+</li>
+<li><p><strong>project</strong> Which project or subproject created this file</p></li>
+<li><p><strong>persistent id</strong> A persistent, resolvable (not nec. retrievable) URI generated by a DCC (using, e.g., our minid server) and attached to this file</p></li>
+<li><p><strong>creation_time</strong> An ISO 8601 – RFC 3339 (subset)-compliant timestamp documenting this file’s creation time: YYYY-MM-DDTHH:MM:SS±NN:NN</p></li>
+<li><p><strong>size_in_bytes</strong> The size of a file in bytes</p></li>
+<li><p><strong>sha256</strong> The output of the SHA-256 cryptographic hash function after being run on this file: one or both of sha256 and md5 is required; sha256 is preferred</p></li>
+<li><p><strong>md5</strong> The output of the MD5 message-digest algorithm after being run as a cryptographic hash function on this file: one or both of</p></li>
+<li><p><strong>filename</strong> A filename with no prepended PATH information</p></li>
+<li><p><strong>file_format</strong> An EDAM CV term ID identifying the digital format of this file (e.g. TSV or FASTQ)</p></li>
+<li><p><strong>data_type</strong> An EDAM CV term ID identifying the type of information stored in this file (e.g. RNA sequence reads)</p></li>
+</ul>
+</div>
+<div class="section" id="subject">
+<h3>Subject<a class="headerlink" href="#subject" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>subject id</strong> The unique name for this subject, compromised of</p>
+<ul>
+<li><p><strong>namespace</strong> namespace for the DCC or subject provider</p></li>
+<li><p><strong>id</strong> An ID representing this subject, unique within this namespace</p></li>
+</ul>
+</li>
+<li><p><strong>project</strong> Which project or subproject created this file</p></li>
+<li><p><strong>persistent id</strong> A persistent, resolvable (not nec. retrievable) URI generated by a DCC and attached to this subject</p></li>
+<li><p><strong>creation_time</strong> An ISO 8601 – RFC 3339 (subset)-compliant timestamp documenting this subject record’s creation time: YYYY-MM-DDTHH:MM:SS±NN:NN</p></li>
+<li><p><strong>granularity</strong> A CFDE CV term categorizing this subject by multiplicity (see Subject Granularity under Controlled Vocabularies). One of</p></li>
+</ul>
+<ul class="simple">
+<li><p>single organism</p></li>
+<li><p>symbiont system</p></li>
+<li><p>host-pathogen system</p></li>
+<li><p>microbiome</p></li>
+<li><p>cell line</p></li>
+<li><p>synthetic</p></li>
+</ul>
+</div>
+<div class="section" id="biosample">
+<h3>Biosample<a class="headerlink" href="#biosample" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>biosample id</strong> The unique name for this biosample, compromised of</p>
+<ul>
+<li><p><strong>namespace</strong> namespace for the DCC or biosample owner</p></li>
+<li><p><strong>id</strong> An ID representing this biosample, unique within this namespace</p></li>
+</ul>
+</li>
+<li><p><strong>project</strong> Which project or subproject created this biosample</p></li>
+<li><p><strong>persistent id</strong> A persistent, resolvable (not nec. retrievable) URI generated by a DCC and attached to this biosample</p></li>
+<li><p><strong>creation_time</strong> An ISO 8601 – RFC 3339 (subset)-compliant timestamp documenting this biosample’s creation time: YYYY-MM-DDTHH:MM:SS±NN:NN</p></li>
+<li><p><strong>assay_type</strong> An OBI CV term ID describing the type of material represented by this biosample</p></li>
+<li><p><strong>anatomy</strong> An UBERON CV term ID used to locate the origin of this biosample within the physiology of its source or host organism</p></li>
+</ul>
+</div>
+<div class="section" id="collection">
+<h3>Collection<a class="headerlink" href="#collection" title="Permalink to this headline">¶</a></h3>
+<p>Like projects, collections can have subcollections. Collections can hold files, biosamples, or subjects, which is done using a relationship.</p>
+<ul class="simple">
+<li><p><strong>collection id</strong> The unique name for this collection compromised of</p>
+<ul>
+<li><p><strong>namespace</strong> namespace for the DCC or collection creator</p></li>
+<li><p><strong>id</strong> An ID representing this collection, unique within this namespace</p></li>
+</ul>
+</li>
+<li><p><strong>persistent id</strong> A persistent, resolvable (not nec. retrievable) URI generated by a DCC and attached to this collection</p></li>
+<li><p><strong>abbreviation</strong> A very short display label for this collection</p></li>
+<li><p><strong>name</strong> A short, human-readable, machine-read-friendly label for this collection</p></li>
+<li><p><strong>description</strong> A human-readable description of this collection</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="relationships">
+<h2>Relationships<a class="headerlink" href="#relationships" title="Permalink to this headline">¶</a></h2>
+<p>There are several relationships between things that can be described, like which subject a biosample comes from. These a often mapping tables between the unique names (namespace, id) of different things.</p>
+<div class="section" id="things-in-collections">
+<h3>Things in Collections<a class="headerlink" href="#things-in-collections" title="Permalink to this headline">¶</a></h3>
+<p>Collections can contain one or more files, biosamples, or subjects. A collection may contain a combination of different types. There are tables for each type that map the items into their collections. The item is identified by its namespace and id, so is the collection. Effectively, the tables look like the following:</p>
+<div class="section" id="id1">
+<h4>Attributes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Files in collection</p>
+<ul class="simple">
+<li><p><strong>subject id</strong> The unique name (namespace, id) of the subject</p></li>
+<li><p><strong>collection id</strong> The unique name (namespace, id) of the collection</p></li>
+</ul>
+<p>Biosamples in collection</p>
+<ul class="simple">
+<li><p><strong>biosample id</strong> The unique name (namespace, id) of the biosample</p></li>
+<li><p><strong>collection id</strong> The unique name (namespace, id) of the collection</p></li>
+</ul>
+<p>Subjects in collection</p>
+<ul class="simple">
+<li><p><strong>subject id</strong> The unique name (namespace, id) of the subject</p></li>
+<li><p><strong>collection id</strong> The unique name (namespace, id) of the collection</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="biosamples-and-subjects">
+<h3>Biosamples and Subjects<a class="headerlink" href="#biosamples-and-subjects" title="Permalink to this headline">¶</a></h3>
+<p>To allow for multiple subjects to be represented in a single biosample and vice versa, there is a mapping table between biosamples and subjects.</p>
+<div class="section" id="id2">
+<h4>Attributes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>biosample id</strong> The unique name (namespace, id) of the biosample</p></li>
+<li><p><strong>subject id</strong> The unique name (namespace, id) of the subject</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="files-describing-subjects-and-biosamples">
+<h3>Files Describing Subjects and Biosamples<a class="headerlink" href="#files-describing-subjects-and-biosamples" title="Permalink to this headline">¶</a></h3>
+<p>To show a relationship between a file and a subject a or biosample, like a sequence file generated from a biosample, there are two more mapping tables.</p>
+<div class="section" id="id3">
+<h4>Attributes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Files describing biosamples</p>
+<ul class="simple">
+<li><p><strong>file id</strong> The unique name (namespace, id) of the file</p></li>
+<li><p><strong>biosample id</strong> The unique name (namespace, id) of the biosample</p></li>
+</ul>
+<p>Files describing subjects</p>
+<ul class="simple">
+<li><p><strong>file id</strong> The unique name (namespace, id) of the file</p></li>
+<li><p><strong>subject id</strong> The unique name (namespace, id) of the subject</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="subject-role-and-taxonomy">
+<h3>Subject Role and Taxonomy<a class="headerlink" href="#subject-role-and-taxonomy" title="Permalink to this headline">¶</a></h3>
+<p>A table linking a subject, a subject_role (a named organism-level constituent component of a subject, like ‘host’, ‘pathogen’, ‘endosymbiont’, ‘taxon detected inside a microbiome subject’, etc.) and a taxonomic label (which is hereby assigned to this particular subject_role within this particular subject)”.</p>
+<div class="section" id="id4">
+<h4>Attributes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>subject</strong></p>
+<ul>
+<li><p><strong>namespace</strong> The namespaec of the subject</p></li>
+<li><p><strong>id</strong> The ID of this subject</p></li>
+</ul>
+</li>
+<li><p><strong>role</strong> The role assigned to this organism-level constituent component of this subject (see Subject Role under Controlled Vocabularies). One of:</p>
+<ul>
+<li><p>single organism</p></li>
+<li><p>host</p></li>
+<li><p>symbiont</p></li>
+<li><p>pathogen</p></li>
+<li><p>microbiome taxon</p></li>
+<li><p>cell line ancestor</p></li>
+<li><p>synthetic</p></li>
+</ul>
+</li>
+<li><p><strong>taxonomy_id</strong> An NCBI Taxonomy Database ID identifying this taxon</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="cfde-controlled-vocabularies">
+<h2>CFDE Controlled Vocabularies<a class="headerlink" href="#cfde-controlled-vocabularies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="subject-granularity">
+<h3>Subject Granularity<a class="headerlink" href="#subject-granularity" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>single organism</p></td>
+<td><p>One organism</p></td>
+</tr>
+<tr class="row-odd"><td><p>symbiont system</p></td>
+<td><p>A mixed system of consisting of two or more organisms (symbionts) in symbiosis (living colocated in time and space): one such symbiont may optionally be identified as a host</p></td>
+</tr>
+<tr class="row-even"><td><p>host-pathogen system</p></td>
+<td><p>A special case of a symbiont system consisting of one symbiont, designated as a host, plus one or more other symbionts acting to create or sustain disease within the host organism</p></td>
+</tr>
+<tr class="row-odd"><td><p>microbiome</p></td>
+<td><p>A symbiont system consisting of a collection of (potentially unknown or partially characterized) taxa, where the environment in which the system resides is well-characterized, but the taxonomic composition of the system may be unknown; optionally contains one symbiont specially identified as a host</p></td>
+</tr>
+<tr class="row-even"><td><p>cell line</p></td>
+<td><p>A cell line derived from one or more species or strains</p></td>
+</tr>
+<tr class="row-odd"><td><p>synthetic</p></td>
+<td><p>A synthetic biological entity</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="subject-role">
+<h3>Subject Role<a class="headerlink" href="#subject-role" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>single organism</p></td>
+<td><p>The organism represented by a subject in the ‘single organism’ granularity category</p></td>
+</tr>
+<tr class="row-odd"><td><p>host</p></td>
+<td><p>Any organism identified as a host for a subject assigned to the ‘symbiont system’, ‘host-pathogen system’, or ‘microbiome’ granularity categories</p></td>
+</tr>
+<tr class="row-even"><td><p>microbiome taxon</p></td>
+<td><p>A constituent taxon of either (a) a subject assigned to the ‘environmental microbiome’ granularity category or (b) the microbiome (non-host) portion of a subject assigned to the ‘host-associated microbiome’ granularity category [NB: This role is probably not appropriate for Level 1, because it necessitates the post-facto attachment of downstream analysis procedures (subject -&gt; sample -&gt; library prep -&gt; sequencing -&gt; bioinformatics -&gt; taxonomic classification results) to a subject which was originally uncharacterized at this level]</p></td>
+</tr>
+<tr class="row-odd"><td><p>symbiont</p></td>
+<td><p>An organism identified as a symbiont within a subject assigned to the ‘symbiont system’ granularity category</p></td>
+</tr>
+<tr class="row-even"><td><p>pathogen</p></td>
+<td><p>An organism identified as a pathogen symbiont in a subject assigned to the ‘host-pathogen system’ granularity category</p></td>
+</tr>
+<tr class="row-odd"><td><p>cell line ancestor</p></td>
+<td><p>A taxon identified as a source organism for a subject assigned to the ‘cell line’ granularity category</p></td>
+</tr>
+<tr class="row-even"><td><p>synthetic</p></td>
+<td><p>A synthetic biological entity</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="conclusions">
+<h2>Conclusions:<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>This section provides a concise overview of the key objects and concepts covered by the C2M2 model and should be viewed as an initial contact point for anyone interested in mapping data into the C2M2 model, thereby getting ready for a full ETL process.</p>
+<blockquote>
+<div></div></blockquote>
+<div class="section" id="what-to-read-next">
+<h3>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="xref myst">CFDE namespaces</span></p></li>
+<li><p><span class="xref myst">CFDE selected terminologies?</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/Discoverability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="c2m2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">C2M2 model:</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cfde-namespaces.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Conceptual Description of the Level 1 C2M2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      <div class="extra_footer">
+        This project is supported by NIH CFDE program <img src="images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

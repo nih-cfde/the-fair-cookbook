@@ -1,0 +1,1693 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS &#8212; NIH-CFDE FAIR COOKBOOK</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/Discoverability/seo.html" />
+    <link rel="shortcut icon" href="../../../_static/CFDE-logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Experience from Kids First (KF)" href="kf.html" />
+    <link rel="prev" title="Conceptual Description of the Level 1 C2M2" href="cfde-namespaces.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/CFDE-logo-contrast.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NIH-CFDE FAIR COOKBOOK</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   The FAIR cookbook by the NIH-CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/fair-principles.html">
+   Introduction to FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/cfde.html">
+   Engaging with CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Recipes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="discoverability.html">
+   Discoverability
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="c2m2.html">
+     C2M2 model:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C2M2-L1-description.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cfde-namespaces.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kf.html">
+     Experience from Kids First (KF)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lincs.html">
+     Experience from LINCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Identification/identifiers.html">
+   The need for identifiers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/pids.html">
+     Recommendations for minting persistent and resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/minids.html">
+     Identifier Minting Service with Minid Client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Semantics/semantics.html">
+   Semantics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/ontologies.html">
+     Controlled Terminologies &amp; Ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/onto-services.html">
+     Ontology services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/cfde-terminologies.html">
+     NIH CFDE selected terminologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Compliance/compliance.html">
+   FAIR Compliance
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake.html">
+     Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake-rubric.html">
+     Evaluating FAIRness with the CFDE rubric on FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fair-api.html">
+     Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/Discoverability/seo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/Discoverability/seo.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivations">
+   Motivations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingredients">
+   Ingredients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparation">
+   Preparation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dats-conversion">
+   DATS Conversion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-1-what-do-you-mean-by-dataset">
+     Challenge 1: What do you mean by Dataset?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivations">
+   Motivations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingredients">
+   Ingredients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparation">
+   Preparation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dats-conversion">
+   DATS Conversion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-1-what-do-you-mean-by-dataset">
+     Challenge 1: What do you mean by Dataset?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="schema-org-bioschemas-jsonschema-json-ld-and-dats">
+<h1>Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS<a class="headerlink" href="#schema-org-bioschemas-jsonschema-json-ld-and-dats" title="Permalink to this headline">¶</a></h1>
+<p>A case study with KidsFirst is considered for asset metadata serialization as DATS, and validation with JSONSchema</p>
+<p><strong>Authors</strong>: <a class="reference external" href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
+<p><strong>Maintainers</strong>: <a class="reference external" href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
+<p><strong>Version</strong>: 1.0</p>
+<p><strong>License</strong>: GPLv2+</p>
+<div class="section" id="motivations">
+<h2>Motivations<a class="headerlink" href="#motivations" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">Data Tag Suite (DATS)</a> metadata model as described in <a class="reference external" href="https://doi.org/10.1093/gigascience/giz165">this paper</a> and fully codefied in <a class="reference external" href="https://github.com/datatagsuite/schema">this repository</a> strives to model datasets irrespective of their domains. <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> embodies several key elements making it extroudinarily useful for <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIRification</a>:</p>
+<ul class="simple">
+<li><p>Machine Readibility: Datasets described with a consistent <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> format permit machines to resolve <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIR</a> metadata such as identifiers, authorship, funding, citation, license, consent, access, provenance, and ultimatly topic as well.</p></li>
+<li><p><a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#RDF">RDF</a> Interoperability: Serialized in strict <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON-LD">JSON-LD</a>, the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> format is renderable as an <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#RDF">RDF</a> graph permitting interoperability with ontological vocabularies and existing dataset description formats including <a class="reference external" href="https://schema.org/">schema.org</a> and the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#OBO">Open Biological and Biomedical Ontology (OBO)</a>.</p></li>
+<li><p>Findability: The utilization of these consistent formats will permit various existing services and endless future ones to be able to identify aspects of the dataset for the purposes of indexing and searching. One such service is <a class="reference external" href="https://datasetsearch.research.google.com/">google dataset search</a> which <a class="reference external" href="https://developers.google.com/search/docs/data-types/dataset">utilizes schema.org metadata</a>.</p></li>
+<li><p><a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#CFDE">CFDE</a> Compatibility: Tooling has been created to convert <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> to the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#C2M2">C2M2</a> and for automatically evaluating the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIRness">FAIRness</a> of Datasets through the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> metadata model.</p></li>
+</ul>
+</div>
+<div class="section" id="ingredients">
+<h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Access to a manifest or <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#API">API</a> for serving your existing datasets.</p></li>
+</ol>
+</div>
+<div class="section" id="objectives">
+<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Convert your existing <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> into the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> schema</p></li>
+<li><p>Check the validity of your <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> schema</p></li>
+</ol>
+</div>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<p>We need to get the manifest or access to an <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#API">API</a> serving the existing
+<a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a>. In our case study, <a class="reference external" href="https://commonfund.nih.gov/kidsfirst">KidsFirst</a>,
+the assets are browsable in the <a class="reference external" href="https://portal.kidsfirstdrc.org/search/file">file repository</a>
+After enabling all “Columns” click the “Export TSV” button and save that file to
+<code class="docutils literal notranslate"><span class="pre">./data/file-table.tsv</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python tool for data table processing</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1"># Jupyter Notebook display helper</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/file-table.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>File ID</th>
+      <th>Participants ID</th>
+      <th>Study Name</th>
+      <th>Proband</th>
+      <th>Family Id</th>
+      <th>Data Type</th>
+      <th>File Format</th>
+      <th>File Size</th>
+      <th>Participant External ID</th>
+      <th>File Name</th>
+      <th>File External ID</th>
+      <th>Aliquot External ID</th>
+      <th>Sample External ID</th>
+      <th>Biospecimen ID</th>
+      <th>Tissue Type (Source Text)</th>
+      <th>Diagnosis (Source Text)</th>
+      <th>Study ID</th>
+      <th>Latest DID</th>
+      <th>Observed</th>
+      <th>Repository</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GF_000VDK42</td>
+      <td>PT_PR4YBBH3</td>
+      <td>Pediatric Brain Tumor Atlas: CBTTC</td>
+      <td>Yes</td>
+      <td>--</td>
+      <td>Aligned Reads</td>
+      <td>bam</td>
+      <td>11041645308</td>
+      <td>C29274</td>
+      <td>62c0c6fe-99f8-4ff7-b3b5-233e6cc2ff0f.bam</td>
+      <td>62c0c6fe-99f8-4ff7-b3b5-233e6cc2ff0f.bam</td>
+      <td>746063</td>
+      <td>7316-126-T-112502.RNA-Seq</td>
+      <td>BS_A7Q8G0Y1</td>
+      <td>Tumor</td>
+      <td>Brainstem glioma- Diffuse intrinsic pontine gl...</td>
+      <td>SD_BHJXBDQK</td>
+      <td>bdf6c2f6-1500-4693-ae32-fd18dc4ab9e1</td>
+      <td>--</td>
+      <td>gen3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GF_000WBJCD</td>
+      <td>PT_NK8A49X5</td>
+      <td>Pediatric Brain Tumor Atlas: PNOC</td>
+      <td>Yes</td>
+      <td>--</td>
+      <td>Annotated Somatic Mutations</td>
+      <td>maf</td>
+      <td>122552</td>
+      <td>P-06</td>
+      <td>77af1324-3754-4e34-a208-d1342a2f2ca6.mutect2_s...</td>
+      <td>harmonized/simple-variants/77af1324-3754-4e34-...</td>
+      <td>A08713, A08710</td>
+      <td>A08692-T.WXS, A08691-N.WXS</td>
+      <td>BS_6DT506HY, BS_5DPMQQVG</td>
+      <td>Tumor, Normal</td>
+      <td>Brainstem glioma- Diffuse intrinsic pontine gl...</td>
+      <td>SD_M3DBXD12</td>
+      <td>16712090-50f7-4cd1-bf2d-90ce989c2139</td>
+      <td>--</td>
+      <td>gen3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GF_001JWT9N</td>
+      <td>PT_G16VK7FR</td>
+      <td>Pediatric Brain Tumor Atlas: PNOC</td>
+      <td>Yes</td>
+      <td>--</td>
+      <td>Gene Fusions</td>
+      <td>pdf</td>
+      <td>5779507</td>
+      <td>P-37</td>
+      <td>9f586dc1-1df8-4f59-9a01-803141fffb94.arriba.fu...</td>
+      <td>harmonized/gene-fusions/9f586dc1-1df8-4f59-9a0...</td>
+      <td>A19683</td>
+      <td>A19649-T.RNA-Seq</td>
+      <td>BS_XGDPK33A</td>
+      <td>Tumor</td>
+      <td>Brainstem glioma- Diffuse intrinsic pontine gl...</td>
+      <td>SD_M3DBXD12</td>
+      <td>49f7aead-ce23-4c38-b566-1d99cb5a5435</td>
+      <td>--</td>
+      <td>gen3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GF_002DRSGP</td>
+      <td>PT_2HN13G42</td>
+      <td>Kids First: Congenital Diaphragmatic Hernia</td>
+      <td>Yes</td>
+      <td>FM_F9S808PW</td>
+      <td>Aligned Reads</td>
+      <td>cram</td>
+      <td>23537329440</td>
+      <td>CDH14-0006</td>
+      <td>CDH14-0006.cram</td>
+      <td>s3://kf-study-us-east-1-prd-sd-46sk55a3/source...</td>
+      <td>CDH14-0006</td>
+      <td>CDH14-0006</td>
+      <td>BS_BKH9S8YN</td>
+      <td>Normal</td>
+      <td>congential diaphragmatic hernia</td>
+      <td>SD_46SK55A3</td>
+      <td>c4c9d542-21fb-487d-ac07-916d466774a8</td>
+      <td>true, false, false, false</td>
+      <td>gen3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GF_004J173A</td>
+      <td>PT_MH56TZJD</td>
+      <td>Kids First: Congenital Diaphragmatic Hernia</td>
+      <td>No</td>
+      <td>FM_1EFM6M40</td>
+      <td>Aligned Reads</td>
+      <td>cram</td>
+      <td>17290282717</td>
+      <td>CDH4-84F</td>
+      <td>CDH4-84F.cram</td>
+      <td>s3://kf-study-us-east-1-prd-sd-46sk55a3/source...</td>
+      <td>CDH4-84F</td>
+      <td>CDH4-84F</td>
+      <td>BS_MP5P3ZPH</td>
+      <td>Normal</td>
+      <td>--</td>
+      <td>SD_46SK55A3</td>
+      <td>02642bc8-ae46-45a1-8932-2765cf1df480</td>
+      <td>--</td>
+      <td>gen3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="dats-conversion">
+<h2><a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> Conversion<a class="headerlink" href="#dats-conversion" title="Permalink to this headline">¶</a></h2>
+<p>The full <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> schema is available <a class="reference external" href="https://github.com/datatagsuite/schema">here</a>,
+it includes a <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON-Schema">JSON Schema</a> definition as well as a visualization of how things fit together.</p>
+ <!-- ![DATS Schema Definition](https://raw.githubusercontent.com/datatagsuite/docs/master/source/_static/DATS-revised-overview.jpg) -->
+ <div>
+<img src="https://raw.githubusercontent.com/datatagsuite/docs/master/source/_static/DATS-revised-overview.jpg" width="750px" style="padding:1px;border:thin solid black;"/>
+</div> 
+  The root schema for datasets is: <https://github.com/datatagsuite/schema/blob/master/dataset_schema.json>.
+<p><a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> uses a strict <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON-LD">JSON-LD</a> serialization.</p>
+<p>There are several ways to get a sense of what the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> model entails, in some cases starting
+with an example is easier, but everything is easier with autocompletion and type-hints. Several
+code editors support <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#JSON-Schema">JSON Schema</a> for auto completion (see <a class="reference external" href="http://schemastore.org/json/">this</a>).</p>
+<p>With <a class="reference external" href="https://code.visualstudio.com/">visual studio code</a>, you can set this up by linking to the
+schema with a <code class="docutils literal notranslate"><span class="pre">$schema</span></code> field.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sh</span>
+# Create a file DATS-Validation.json with the following contents
+#  this is a simple json-schema which references the public DATS schema validator
+cat &gt; DATS-Validation.json &lt;&lt; EOF
+{
+  &quot;\$schema&quot;: &quot;http://json-schema.org/draft-04/schema&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;dats&quot;: {
+      &quot;\$ref&quot;: &quot;https://raw.githubusercontent.com/datatagsuite/schema/master/dataset_schema.json&quot;
+    }
+  }
+}
+EOF
+
+# Create a file to edit which will validate against the file from the DATS-Validation file
+cat &gt; my-dats.json &lt;&lt; EOF
+{
+  &quot;\$schema&quot;: &quot;./DATS-Validation.json&quot;,
+  &quot;dats&quot;: {
+    &quot;title&quot;: &quot;My First Json-Schema Validated DATS Object&quot;
+  }
+}
+EOF
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modifying the created <code class="docutils literal notranslate"><span class="pre">my-dats.json</span></code>, you should be able to explore the fields
+through autocompletion with an editor that supports it.</p>
+<div>
+<img src="../images/ss1.png" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
+</div> 
+<div>
+<img src="../images/ss2.png" width="650px" style="padding:1px;border:thin solid black;" alt="Auto completion for property fields" />
+</div> 
+<p>Another way, or perhaps also, is to learn by example. Several <em>other</em> DCC’s assets were
+processed and converted to <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> <a class="reference external" href="https://github.com/nih-cfde/FAIR/">here</a>, example files
+and scripts can be found in the <code class="docutils literal notranslate"><span class="pre">DCC_name/output</span></code> and <code class="docutils literal notranslate"><span class="pre">DCC_name/scripts</span></code> directories
+respectively.</p>
+<p>It’s now time to convert what we can into <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a>, striving to capture as much as possible
+from the original table.</p>
+<div class="section" id="challenge-1-what-do-you-mean-by-dataset">
+<h3>Challenge 1: What do you mean by Dataset?<a class="headerlink" href="#challenge-1-what-do-you-mean-by-dataset" title="Permalink to this headline">¶</a></h3>
+<p>Even in this case, the definition of a Dataset becomes problematic and unclear. Remember
+that things we codify are often <strong>models</strong> and as such are not always perfect. Rather than
+thinking about Dataset with your interpretation of what it is, think of it in terms of
+how it will end up being used.</p>
+<p>This is what a ‘dataset’ looks like on Google Dataset Search; the same fields will be
+used, and more; for your own assets.</p>
+<div>
+<img src="../images/ss3.png?raw=true" width="650px" style="padding:1px;border:thin solid black;" alt="Google Dataset Search" />
+</div>
+<p>In other words, irrespective of what your definition is of a ‘dataset’, you should
+consider using something that is identifiable enough to have its own unique <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a>
+including dedicated landing page, unique identifier, citation, license, and more. File
+assets <em>associated</em> with that dataset will be listed under the dataset.</p>
+<p>Importantly, Datasets should ideally be associatable with singular biosamples when possible,
+so in some cases, it may make sense to consider each individual file to be its own dataset if
+each individual file is actually established for each biosample.</p>
+<p>Do note that <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> also supports Dataset in Dataset relationships if that becomes necessary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The KidsFirst table has 5 primary entity types in this file and a unique identifier</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;File ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Participants ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Study ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Biospecimen ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Latest DID&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Using JSON-LD and keeping in mind the arbitrary DATS structure,</span>
+<span class="c1">#  things should end up looking like so:</span>
+<span class="k">def</span> <span class="nf">dats_from_record</span><span class="p">(</span><span class="n">record</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Dataset&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Latest DID&#39;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;producedBy&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="c1"># The dataset in question was produced as part of a study</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Study&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Study ID&#39;</span><span class="p">],</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;isAbout&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="c1"># The dataset in question has a biospecimen</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;BiologicalEntity&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Biospecimen ID&#39;</span><span class="p">],</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="c1"># The dataset in question is about this participant</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;StudyGroup&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Participants ID&#39;</span><span class="p">],</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;distributions&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="c1"># The dataset in question has this file</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;DatasetDistribution&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File ID&#39;</span><span class="p">],</span>
+        <span class="p">},</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+  <span class="p">}</span>
+
+<span class="c1"># Converting each element to DATS</span>
+<span class="n">dats</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1"># schema.org context, gives RDF meaning to `@type` and `predicates` as defined by schema.org</span>
+  <span class="s1">&#39;@context&#39;</span><span class="p">:</span> <span class="s1">&#39;http://w3id.org/dats/context/sdo/dataset_sdo_context.jsonld&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;@graph&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="n">dats_from_record</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dats</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>File ID</th>
+      <th>Participants ID</th>
+      <th>Study ID</th>
+      <th>Biospecimen ID</th>
+      <th>Latest DID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GF_000VDK42</td>
+      <td>PT_PR4YBBH3</td>
+      <td>SD_BHJXBDQK</td>
+      <td>BS_A7Q8G0Y1</td>
+      <td>bdf6c2f6-1500-4693-ae32-fd18dc4ab9e1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GF_000WBJCD</td>
+      <td>PT_NK8A49X5</td>
+      <td>SD_M3DBXD12</td>
+      <td>BS_6DT506HY, BS_5DPMQQVG</td>
+      <td>16712090-50f7-4cd1-bf2d-90ce989c2139</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GF_001JWT9N</td>
+      <td>PT_G16VK7FR</td>
+      <td>SD_M3DBXD12</td>
+      <td>BS_XGDPK33A</td>
+      <td>49f7aead-ce23-4c38-b566-1d99cb5a5435</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GF_002DRSGP</td>
+      <td>PT_2HN13G42</td>
+      <td>SD_46SK55A3</td>
+      <td>BS_BKH9S8YN</td>
+      <td>c4c9d542-21fb-487d-ac07-916d466774a8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GF_004J173A</td>
+      <td>PT_MH56TZJD</td>
+      <td>SD_46SK55A3</td>
+      <td>BS_MP5P3ZPH</td>
+      <td>02642bc8-ae46-45a1-8932-2765cf1df480</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;@context&#39;: &#39;http://w3id.org/dats/context/sdo/dataset_sdo_context.jsonld&#39;,
+ &#39;@graph&#39;: [{&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;bdf6c2f6-1500-4693-ae32-fd18dc4ab9e1&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;SD_BHJXBDQK&#39;}},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;BS_A7Q8G0Y1&#39;}},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;PT_PR4YBBH3&#39;}}],
+   &#39;distributions&#39;: [{&#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;GF_000VDK42&#39;}}]},
+  {&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;16712090-50f7-4cd1-bf2d-90ce989c2139&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;SD_M3DBXD12&#39;}},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;BS_6DT506HY, BS_5DPMQQVG&#39;}},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;PT_NK8A49X5&#39;}}],
+   &#39;distributions&#39;: [{&#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;GF_000WBJCD&#39;}}]},
+  {&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;49f7aead-ce23-4c38-b566-1d99cb5a5435&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;SD_M3DBXD12&#39;}},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;BS_XGDPK33A&#39;}},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;PT_G16VK7FR&#39;}}],
+   &#39;distributions&#39;: [{&#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;GF_001JWT9N&#39;}}]},
+  {&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;c4c9d542-21fb-487d-ac07-916d466774a8&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;SD_46SK55A3&#39;}},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;BS_BKH9S8YN&#39;}},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;PT_2HN13G42&#39;}}],
+   &#39;distributions&#39;: [{&#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;GF_002DRSGP&#39;}}]},
+  {&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;02642bc8-ae46-45a1-8932-2765cf1df480&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;SD_46SK55A3&#39;}},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;BS_MP5P3ZPH&#39;}},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;PT_MH56TZJD&#39;}}],
+   &#39;distributions&#39;: [{&#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;GF_004J173A&#39;}}]}]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are several improvements we can make to the above:</p>
+<ol class="simple">
+<li><p>Give context to our identifiers, which only make sense in the context of KidsFirst</p></li>
+<li><p>Provide more <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> as available in our table</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dats_from_record</span><span class="p">(</span><span class="n">record</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Dataset&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Latest DID&#39;</span><span class="p">],</span>
+      <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;storedIn&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;DataRepository&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Repository&#39;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;producedBy&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Study&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Study ID&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/&#39;</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Study Name&#39;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;isAbout&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;BiologicalEntity&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Biospecimen ID&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;alternateIdentifiers&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;AlternateIdentifier&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Sample External ID&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred identifierSource with globally unique semantic URI</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;AlternateIdentifier&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Aliquot External ID&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred identifierSource with globally unique semantic URI</span>
+          <span class="p">},</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;StudyGroup&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="c1"># NOTE: Ideally, `${identifierSource}${identifier}` resolves to a landing page for this entity</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Participants ID&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/participant/&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;alternateIdentifiers&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;AlternateIdentifier&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Participant External ID&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred identifierSource with globally unique semantic URI</span>
+          <span class="p">},</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;distributions&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="c1"># NOTE: Ideally, `${identifierSource}${identifier}` resolves to a landing page for this entity</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File ID&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/file/&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;DatasetDistribution&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;formats&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File Format&#39;</span><span class="p">],</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File Size&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;unit&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;bytes&#39;</span><span class="p">,</span>
+          <span class="c1"># NOTE: Preferred valueIRI with globally unique semantic URI</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;access&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Access&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File Name&#39;</span><span class="p">],</span>
+          <span class="p">},</span>
+          <span class="s1">&#39;alternateIdentifiers&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;AlternateIdentifier&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File External ID&#39;</span><span class="p">],</span>
+              <span class="c1"># NOTE: Preferred identifierSource with globally unique semantic URI</span>
+            <span class="p">},</span>
+          <span class="p">],</span>
+          <span class="s1">&#39;landingPage&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/file/&#39;</span> <span class="o">+</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File ID&#39;</span><span class="p">],</span>
+          <span class="c1"># NOTE: Ideally accessURL would be specified</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;types&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;DataType&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;information&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Data Type&#39;</span><span class="p">],</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;extraProperties&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">*</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">[</span>
+      <span class="c1"># Metadata that doesn&#39;t fit anywhere else in DATS but may be relevant</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;CategoryValuesPair&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;tissue&#39;</span><span class="p">,</span>
+        <span class="c1"># NOTE: Preferred categoryIRI with globally unique semantic URI</span>
+        <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Tissue Type (Source Text)&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred valueIRI with globally unique semantic URI</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span> <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Tissue Type (Source Text)&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;--&#39;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;CategoryValuesPair&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;diagnosis&#39;</span><span class="p">,</span>
+        <span class="c1"># NOTE: Preferred categoryIRI with globally unique semantic URI</span>
+        <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Diagnosis (Source Text)&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred valueIRI with globally unique semantic URI</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span> <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Diagnosis (Source Text)&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;--&#39;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="c1"># Don&#39;t create entries for junk</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;CategoryValuesPair&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;proband&#39;</span><span class="p">,</span>
+        <span class="c1"># NOTE: Preferred categoryIRI with globally unique semantic URI</span>
+        <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Proband&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred valueIRI with globally unique semantic URI</span>
+          <span class="p">},</span>
+        <span class="p">],</span>
+      <span class="p">}</span> <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Proband&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;--&#39;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="c1"># Don&#39;t create entries for junk,</span>
+    <span class="p">])],</span>
+  <span class="p">}</span>
+
+<span class="c1"># Converting each element to DATS</span>
+<span class="n">dats</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1"># schema.org context, gives RDF meaning to `@type` and `predicates` as defined by schema.org</span>
+  <span class="s1">&#39;@context&#39;</span><span class="p">:</span> <span class="s1">&#39;http://w3id.org/dats/context/sdo/dataset_sdo_context.jsonld&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;@graph&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="n">dats_from_record</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dats</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;@context&#39;: &#39;http://w3id.org/dats/context/sdo/dataset_sdo_context.jsonld&#39;,
+ &#39;@graph&#39;: [{&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;bdf6c2f6-1500-4693-ae32-fd18dc4ab9e1&#39;,
+    &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+   &#39;storedIn&#39;: {&#39;@type&#39;: &#39;DataRepository&#39;, &#39;name&#39;: &#39;gen3&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+     &#39;identifier&#39;: &#39;SD_BHJXBDQK&#39;,
+     &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+    &#39;name&#39;: &#39;Pediatric Brain Tumor Atlas: CBTTC&#39;},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;BS_A7Q8G0Y1&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;7316-126-T-112502.RNA-Seq&#39;},
+      {&#39;@type&#39;: &#39;AlternateIdentifier&#39;, &#39;identifier&#39;: &#39;746063&#39;}]},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;PT_PR4YBBH3&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/participant/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;C29274&#39;}]}],
+   &#39;distributions&#39;: [{&#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;GF_000VDK42&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/file/&#39;},
+     &#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;formats&#39;: [&#39;bam&#39;],
+     &#39;size&#39;: 11041645308,
+     &#39;unit&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;bytes&#39;},
+     &#39;access&#39;: {&#39;@type&#39;: &#39;Access&#39;,
+      &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+       &#39;identifier&#39;: &#39;62c0c6fe-99f8-4ff7-b3b5-233e6cc2ff0f.bam&#39;},
+      &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+        &#39;identifier&#39;: &#39;62c0c6fe-99f8-4ff7-b3b5-233e6cc2ff0f.bam&#39;}],
+      &#39;landingPage&#39;: &#39;https://portal.kidsfirstdrc.org/file/GF_000VDK42&#39;}}],
+   &#39;types&#39;: [{&#39;@type&#39;: &#39;DataType&#39;,
+     &#39;information&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Aligned Reads&#39;}}],
+   &#39;extraProperties&#39;: [{&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;tissue&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Tumor&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;diagnosis&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;,
+       &#39;value&#39;: &#39;Brainstem glioma- Diffuse intrinsic pontine glioma, Brainstem glioma- Diffuse intrinsic pontine glioma&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;proband&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Yes&#39;}]}]},
+  {&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;16712090-50f7-4cd1-bf2d-90ce989c2139&#39;,
+    &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+   &#39;storedIn&#39;: {&#39;@type&#39;: &#39;DataRepository&#39;, &#39;name&#39;: &#39;gen3&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+     &#39;identifier&#39;: &#39;SD_M3DBXD12&#39;,
+     &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+    &#39;name&#39;: &#39;Pediatric Brain Tumor Atlas: PNOC&#39;},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;BS_6DT506HY, BS_5DPMQQVG&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;A08692-T.WXS, A08691-N.WXS&#39;},
+      {&#39;@type&#39;: &#39;AlternateIdentifier&#39;, &#39;identifier&#39;: &#39;A08713, A08710&#39;}]},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;PT_NK8A49X5&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/participant/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;P-06&#39;}]}],
+   &#39;distributions&#39;: [{&#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;GF_000WBJCD&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/file/&#39;},
+     &#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;formats&#39;: [&#39;maf&#39;],
+     &#39;size&#39;: 122552,
+     &#39;unit&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;bytes&#39;},
+     &#39;access&#39;: {&#39;@type&#39;: &#39;Access&#39;,
+      &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+       &#39;identifier&#39;: &#39;77af1324-3754-4e34-a208-d1342a2f2ca6.mutect2_somatic.vep.maf&#39;},
+      &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+        &#39;identifier&#39;: &#39;harmonized/simple-variants/77af1324-3754-4e34-a208-d1342a2f2ca6.mutect2_somatic.vep.maf&#39;}],
+      &#39;landingPage&#39;: &#39;https://portal.kidsfirstdrc.org/file/GF_000WBJCD&#39;}}],
+   &#39;types&#39;: [{&#39;@type&#39;: &#39;DataType&#39;,
+     &#39;information&#39;: {&#39;@type&#39;: &#39;Annotation&#39;,
+      &#39;value&#39;: &#39;Annotated Somatic Mutations&#39;}}],
+   &#39;extraProperties&#39;: [{&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;tissue&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Tumor, Normal&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;diagnosis&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;,
+       &#39;value&#39;: &#39;Brainstem glioma- Diffuse intrinsic pontine glioma&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;proband&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Yes&#39;}]}]},
+  {&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;49f7aead-ce23-4c38-b566-1d99cb5a5435&#39;,
+    &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+   &#39;storedIn&#39;: {&#39;@type&#39;: &#39;DataRepository&#39;, &#39;name&#39;: &#39;gen3&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+     &#39;identifier&#39;: &#39;SD_M3DBXD12&#39;,
+     &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+    &#39;name&#39;: &#39;Pediatric Brain Tumor Atlas: PNOC&#39;},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;BS_XGDPK33A&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;A19649-T.RNA-Seq&#39;},
+      {&#39;@type&#39;: &#39;AlternateIdentifier&#39;, &#39;identifier&#39;: &#39;A19683&#39;}]},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;PT_G16VK7FR&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/participant/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;P-37&#39;}]}],
+   &#39;distributions&#39;: [{&#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;GF_001JWT9N&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/file/&#39;},
+     &#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;formats&#39;: [&#39;pdf&#39;],
+     &#39;size&#39;: 5779507,
+     &#39;unit&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;bytes&#39;},
+     &#39;access&#39;: {&#39;@type&#39;: &#39;Access&#39;,
+      &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+       &#39;identifier&#39;: &#39;9f586dc1-1df8-4f59-9a01-803141fffb94.arriba.fusions.pdf&#39;},
+      &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+        &#39;identifier&#39;: &#39;harmonized/gene-fusions/9f586dc1-1df8-4f59-9a01-803141fffb94.arriba.fusions.pdf&#39;}],
+      &#39;landingPage&#39;: &#39;https://portal.kidsfirstdrc.org/file/GF_001JWT9N&#39;}}],
+   &#39;types&#39;: [{&#39;@type&#39;: &#39;DataType&#39;,
+     &#39;information&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Gene Fusions&#39;}}],
+   &#39;extraProperties&#39;: [{&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;tissue&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Tumor&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;diagnosis&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;,
+       &#39;value&#39;: &#39;Brainstem glioma- Diffuse intrinsic pontine glioma&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;proband&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Yes&#39;}]}]},
+  {&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;c4c9d542-21fb-487d-ac07-916d466774a8&#39;,
+    &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+   &#39;storedIn&#39;: {&#39;@type&#39;: &#39;DataRepository&#39;, &#39;name&#39;: &#39;gen3&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+     &#39;identifier&#39;: &#39;SD_46SK55A3&#39;,
+     &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+    &#39;name&#39;: &#39;Kids First: Congenital Diaphragmatic Hernia&#39;},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;BS_BKH9S8YN&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;CDH14-0006&#39;},
+      {&#39;@type&#39;: &#39;AlternateIdentifier&#39;, &#39;identifier&#39;: &#39;CDH14-0006&#39;}]},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;PT_2HN13G42&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/participant/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;CDH14-0006&#39;}]}],
+   &#39;distributions&#39;: [{&#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;GF_002DRSGP&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/file/&#39;},
+     &#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;formats&#39;: [&#39;cram&#39;],
+     &#39;size&#39;: 23537329440,
+     &#39;unit&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;bytes&#39;},
+     &#39;access&#39;: {&#39;@type&#39;: &#39;Access&#39;,
+      &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;CDH14-0006.cram&#39;},
+      &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+        &#39;identifier&#39;: &#39;s3://kf-study-us-east-1-prd-sd-46sk55a3/source/GMKF_Gabriel_Chung_CDH_WGS/RP-1370/WGS/CDH14-0006/v2/CDH14-0006.cram&#39;}],
+      &#39;landingPage&#39;: &#39;https://portal.kidsfirstdrc.org/file/GF_002DRSGP&#39;}}],
+   &#39;types&#39;: [{&#39;@type&#39;: &#39;DataType&#39;,
+     &#39;information&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Aligned Reads&#39;}}],
+   &#39;extraProperties&#39;: [{&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;tissue&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Normal&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;diagnosis&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;,
+       &#39;value&#39;: &#39;congential diaphragmatic hernia&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;proband&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Yes&#39;}]}]},
+  {&#39;@type&#39;: &#39;Dataset&#39;,
+   &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+    &#39;identifier&#39;: &#39;02642bc8-ae46-45a1-8932-2765cf1df480&#39;,
+    &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+   &#39;storedIn&#39;: {&#39;@type&#39;: &#39;DataRepository&#39;, &#39;name&#39;: &#39;gen3&#39;},
+   &#39;producedBy&#39;: {&#39;@type&#39;: &#39;Study&#39;,
+    &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+     &#39;identifier&#39;: &#39;SD_46SK55A3&#39;,
+     &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+    &#39;name&#39;: &#39;Kids First: Congenital Diaphragmatic Hernia&#39;},
+   &#39;isAbout&#39;: [{&#39;@type&#39;: &#39;BiologicalEntity&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;BS_MP5P3ZPH&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;CDH4-84F&#39;},
+      {&#39;@type&#39;: &#39;AlternateIdentifier&#39;, &#39;identifier&#39;: &#39;CDH4-84F&#39;}]},
+    {&#39;@type&#39;: &#39;StudyGroup&#39;,
+     &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;PT_MH56TZJD&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/participant/&#39;},
+     &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+       &#39;identifier&#39;: &#39;CDH4-84F&#39;}]}],
+   &#39;distributions&#39;: [{&#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;,
+      &#39;identifier&#39;: &#39;GF_004J173A&#39;,
+      &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/file/&#39;},
+     &#39;@type&#39;: &#39;DatasetDistribution&#39;,
+     &#39;formats&#39;: [&#39;cram&#39;],
+     &#39;size&#39;: 17290282717,
+     &#39;unit&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;bytes&#39;},
+     &#39;access&#39;: {&#39;@type&#39;: &#39;Access&#39;,
+      &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;CDH4-84F.cram&#39;},
+      &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;,
+        &#39;identifier&#39;: &#39;s3://kf-study-us-east-1-prd-sd-46sk55a3/source/GMKF_Gabriel_Chung_CDH_WGS/RP-1370/WGS/CDH4-84F/v2/CDH4-84F.cram&#39;}],
+      &#39;landingPage&#39;: &#39;https://portal.kidsfirstdrc.org/file/GF_004J173A&#39;}}],
+   &#39;types&#39;: [{&#39;@type&#39;: &#39;DataType&#39;,
+     &#39;information&#39;: {&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Aligned Reads&#39;}}],
+   &#39;extraProperties&#39;: [{&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;tissue&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;Normal&#39;}]},
+    {&#39;@type&#39;: &#39;CategoryValuesPair&#39;,
+     &#39;category&#39;: &#39;proband&#39;,
+     &#39;values&#39;: [{&#39;@type&#39;: &#39;Annotation&#39;, &#39;value&#39;: &#39;No&#39;}]}]}]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we see, with some mapping effort, we were able to get all of the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a>
+from the file manifest table into <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a>. It’s important to note that there are
+<strong>lots</strong> of fields missing including license, authorship information, and more which
+need to be found from other places to further complete and improve this model.
+With our newly created object, let’s check to make sure we didn’t make any mistakes!
+For this purpose, just as we can use json-schema for auto completion help in our editor,
+we can also use it for programatic validation of our <code class="docutils literal notranslate"><span class="pre">dats</span></code> object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jsonschema</span> <span class="kn">import</span> <span class="n">Draft4Validator</span>
+
+<span class="c1"># Get the first record</span>
+<span class="n">record</span> <span class="o">=</span> <span class="n">dats</span><span class="p">[</span><span class="s1">&#39;@graph&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Validate it against DATS dataset schema</span>
+<span class="n">validator</span> <span class="o">=</span> <span class="n">Draft4Validator</span><span class="p">({</span><span class="s1">&#39;$ref&#39;</span><span class="p">:</span> <span class="s1">&#39;https://raw.githubusercontent.com/datatagsuite/schema/master/dataset_schema.json&#39;</span><span class="p">})</span>
+<span class="k">for</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">validator</span><span class="o">.</span><span class="n">iter_errors</span><span class="p">(</span><span class="n">record</span><span class="p">):</span>
+  <span class="n">display</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;{&#39;@type&#39;: &#39;BiologicalEntity&#39;, &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;BS_A7Q8G0Y1&#39;, &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/&#39;}, &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;, &#39;identifier&#39;: &#39;7316-126-T-112502.RNA-Seq&#39;}, {&#39;@type&#39;: &#39;AlternateIdentifier&#39;, &#39;identifier&#39;: &#39;746063&#39;}]} is not valid under any of the given schemas&quot;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;{&#39;@type&#39;: &#39;StudyGroup&#39;, &#39;identifier&#39;: {&#39;@type&#39;: &#39;Identifier&#39;, &#39;identifier&#39;: &#39;PT_PR4YBBH3&#39;, &#39;identifierSource&#39;: &#39;https://portal.kidsfirstdrc.org/participant/&#39;}, &#39;alternateIdentifiers&#39;: [{&#39;@type&#39;: &#39;AlternateIdentifier&#39;, &#39;identifier&#39;: &#39;C29274&#39;}]} is not valid under any of the given schemas&quot;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;&#39;title&#39; is a required property&quot;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;&#39;creators&#39; is a required property&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Uh-oh; we’ve got some errors.</p>
+<p>Let’s fix them and try again.</p>
+<p>For readability, the changes we had to make below are here:</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -1,6 +1,7 @@</span><span class="w"></span>
+<span class="w"> </span>def dats_from_record(record):<span class="w"></span>
+<span class="w"> </span>  return {<span class="w"></span>
+<span class="w"> </span>    &#39;@type&#39;: &#39;Dataset&#39;,<span class="w"></span>
+<span class="gi">+    &#39;title&#39;: record[&#39;Study Name&#39;],</span><span class="w"></span>
+<span class="w"> </span>    &#39;identifier&#39;: {<span class="w"></span>
+<span class="w"> </span>      &#39;@type&#39;: &#39;Identifier&#39;,<span class="w"></span>
+<span class="w"> </span>      &#39;identifier&#39;: record[&#39;Latest DID&#39;],<span class="w"></span>
+<span class="gu">@@ -10,6 +11,12 @@</span><span class="w"></span>
+<span class="w"> </span>      &#39;@type&#39;: &#39;DataRepository&#39;,<span class="w"></span>
+<span class="w"> </span>      &#39;name&#39;: record[&#39;Repository&#39;],<span class="w"></span>
+<span class="w"> </span>    },<span class="w"></span>
+<span class="gi">+    &#39;creators&#39;: [</span><span class="w"></span>
+<span class="gi">+      {</span><span class="w"></span>
+<span class="gi">+        &quot;@type&quot;: &quot;Organization&quot;,</span><span class="w"></span>
+<span class="gi">+        &quot;name&quot;: &quot;KidsFirst&quot;,</span><span class="w"></span>
+<span class="gi">+      }</span><span class="w"></span>
+<span class="gi">+    ],</span><span class="w"></span>
+<span class="w"> </span>    &#39;producedBy&#39;: {<span class="w"></span>
+<span class="w"> </span>      &#39;@type&#39;: &#39;Study&#39;,<span class="w"></span>
+<span class="w"> </span>      &#39;identifier&#39;: {<span class="w"></span>
+<span class="gu">@@ -22,6 +29,8 @@</span><span class="w"></span>
+<span class="w"> </span>    &#39;isAbout&#39;: [<span class="w"></span>
+<span class="w"> </span>      {<span class="w"></span>
+<span class="w"> </span>        &#39;@type&#39;: &#39;BiologicalEntity&#39;,<span class="w"></span>
+<span class="gi">+        # NOTE: name is a required field</span><span class="w"></span>
+<span class="gi">+        &#39;name&#39;: record[&#39;Biospecimen ID&#39;],</span><span class="w"></span>
+<span class="w"> </span>        &#39;identifier&#39;: {<span class="w"></span>
+<span class="w"> </span>          &#39;@type&#39;: &#39;Identifier&#39;,<span class="w"></span>
+<span class="w"> </span>          &#39;identifier&#39;: record[&#39;Biospecimen ID&#39;],<span class="w"></span>
+<span class="gu">@@ -42,6 +51,8 @@</span><span class="w"></span>
+<span class="w"> </span>      },<span class="w"></span>
+<span class="w"> </span>      {<span class="w"></span>
+<span class="w"> </span>        &#39;@type&#39;: &#39;StudyGroup&#39;,<span class="w"></span>
+<span class="gi">+        # NOTE: name is a required field</span><span class="w"></span>
+<span class="gi">+        &#39;name&#39;: record[&#39;Participants ID&#39;],</span><span class="w"></span>
+<span class="w"> </span>        &#39;identifier&#39;: {<span class="w"></span>
+<span class="w"> </span>          # NOTE: Ideally, `${identifierSource}${identifier}` resolves to a landing page for this entity<span class="w"></span>
+<span class="w"> </span>          &#39;@type&#39;: &#39;Identifier&#39;,<span class="w"></span>
+<span class="gu">@@ -69,7 +80,7 @@</span><span class="w"></span>
+<span class="w"> </span>        &#39;formats&#39;: [<span class="w"></span>
+<span class="w"> </span>          record[&#39;File Format&#39;],<span class="w"></span>
+<span class="w"> </span>        ],<span class="w"></span>
+<span class="gd">-        &#39;size&#39;: record[&#39;File Size&#39;],</span><span class="w"></span>
+<span class="gi">+        &#39;size&#39;: int(record[&#39;File Size&#39;]),</span><span class="w"></span>
+<span class="w"> </span>        &#39;unit&#39;: {<span class="w"></span>
+<span class="w"> </span>          &#39;@type&#39;: &#39;Annotation&#39;,<span class="w"></span>
+<span class="w"> </span>          &#39;value&#39;: &#39;bytes&#39;,<span class="w"></span>
+<span class="gu">@@ -141,4 +152,4 @@</span><span class="w"></span>
+<span class="w"> </span>        ],<span class="w"></span>
+<span class="w"> </span>      } if record[&#39;Proband&#39;] != &#39;--&#39; else None, # Don&#39;t create entries for junk,<span class="w"></span>
+<span class="w"> </span>    ])],<span class="w"></span>
+<span class="gd">-  }</span><span class="w"></span>
+<span class="gi">+  }</span><span class="w"></span>
+</pre></div>
+</div>
+<p>You can see that we put in an invalid type and were missing some fields.
+In some cases, we need to add <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> that wasn’t in the original
+table such as <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> about our own organization!</p>
+<p>This is relevant in a catalog of many datasets but often isn’t present
+in your own data; it’s best if you determine how your own data will
+link back to your organization, than us trying to figure it out! That’s why
+<a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> requires that <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dats_from_record</span><span class="p">(</span><span class="n">record</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Dataset&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Study Name&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Latest DID&#39;</span><span class="p">],</span>
+      <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;storedIn&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;DataRepository&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Repository&#39;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;creators&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;KidsFirst&quot;</span><span class="p">,</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;producedBy&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Study&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Study ID&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/&#39;</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Study Name&#39;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;isAbout&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;BiologicalEntity&#39;</span><span class="p">,</span>
+        <span class="c1"># NOTE: name is a required field</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Biospecimen ID&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Biospecimen ID&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;alternateIdentifiers&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;AlternateIdentifier&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Sample External ID&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred identifierSource with globally unique semantic URI</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;AlternateIdentifier&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Aliquot External ID&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred identifierSource with globally unique semantic URI</span>
+          <span class="p">},</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;StudyGroup&#39;</span><span class="p">,</span>
+        <span class="c1"># NOTE: name is a required field</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Participants ID&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="c1"># NOTE: Ideally, `${identifierSource}${identifier}` resolves to a landing page for this entity</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Participants ID&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/participant/&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;alternateIdentifiers&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;AlternateIdentifier&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Participant External ID&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred identifierSource with globally unique semantic URI</span>
+          <span class="p">},</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;distributions&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="c1"># NOTE: Ideally, `${identifierSource}${identifier}` resolves to a landing page for this entity</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File ID&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;identifierSource&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/file/&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;DatasetDistribution&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;formats&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File Format&#39;</span><span class="p">],</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="s1">&#39;File Size&#39;</span><span class="p">]),</span>
+        <span class="s1">&#39;unit&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;bytes&#39;</span><span class="p">,</span>
+          <span class="c1"># NOTE: Preferred valueIRI with globally unique semantic URI</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;access&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Access&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Identifier&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File Name&#39;</span><span class="p">],</span>
+          <span class="p">},</span>
+          <span class="s1">&#39;alternateIdentifiers&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;AlternateIdentifier&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File External ID&#39;</span><span class="p">],</span>
+              <span class="c1"># NOTE: Preferred identifierSource with globally unique semantic URI</span>
+            <span class="p">},</span>
+          <span class="p">],</span>
+          <span class="s1">&#39;landingPage&#39;</span><span class="p">:</span> <span class="s1">&#39;https://portal.kidsfirstdrc.org/file/&#39;</span> <span class="o">+</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;File ID&#39;</span><span class="p">],</span>
+          <span class="c1"># NOTE: Ideally accessURL would be specified</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;types&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;DataType&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;information&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Data Type&#39;</span><span class="p">],</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;extraProperties&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">*</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">[</span>
+      <span class="c1"># Metadata that doesn&#39;t fit anywhere else in DATS but may be relevant</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;CategoryValuesPair&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;tissue&#39;</span><span class="p">,</span>
+        <span class="c1"># NOTE: Preferred categoryIRI with globally unique semantic URI</span>
+        <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Tissue Type (Source Text)&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred valueIRI with globally unique semantic URI</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span> <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Tissue Type (Source Text)&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;--&#39;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;CategoryValuesPair&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;diagnosis&#39;</span><span class="p">,</span>
+        <span class="c1"># NOTE: Preferred categoryIRI with globally unique semantic URI</span>
+        <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Diagnosis (Source Text)&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred valueIRI with globally unique semantic URI</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span> <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Diagnosis (Source Text)&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;--&#39;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="c1"># Don&#39;t create entries for junk</span>
+      <span class="p">{</span>
+        <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;CategoryValuesPair&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;proband&#39;</span><span class="p">,</span>
+        <span class="c1"># NOTE: Preferred categoryIRI with globally unique semantic URI</span>
+        <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s1">&#39;@type&#39;</span><span class="p">:</span> <span class="s1">&#39;Annotation&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Proband&#39;</span><span class="p">],</span>
+            <span class="c1"># NOTE: Preferred valueIRI with globally unique semantic URI</span>
+          <span class="p">},</span>
+        <span class="p">],</span>
+      <span class="p">}</span> <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;Proband&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;--&#39;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="c1"># Don&#39;t create entries for junk,</span>
+    <span class="p">])],</span>
+  <span class="p">}</span>
+
+<span class="c1"># Converting each element to DATS</span>
+<span class="n">dats</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1"># schema.org context, gives RDF meaning to `@type` and `predicates` as defined by schema.org</span>
+  <span class="s1">&#39;@context&#39;</span><span class="p">:</span> <span class="s1">&#39;http://w3id.org/dats/context/sdo/dataset_sdo_context.jsonld&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;@graph&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="n">dats_from_record</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s validate *all records*</span>
+<span class="n">record</span> <span class="o">=</span> <span class="n">dats</span><span class="p">[</span><span class="s1">&#39;@graph&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Validate it against DATS dataset schema</span>
+<span class="n">validator</span> <span class="o">=</span> <span class="n">Draft4Validator</span><span class="p">({</span>
+  <span class="s1">&#39;$ref&#39;</span><span class="p">:</span> <span class="s1">&#39;https://raw.githubusercontent.com/datatagsuite/schema/master/dataset_schema.json&#39;</span>
+<span class="p">})</span>
+
+<span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">dats</span><span class="p">[</span><span class="s1">&#39;@graph&#39;</span><span class="p">]:</span>
+  <span class="k">for</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">validator</span><span class="o">.</span><span class="n">iter_errors</span><span class="p">(</span><span class="n">record</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">({</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="n">error</span><span class="o">.</span><span class="n">message</span> <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>As hoped, everything validates and we’ve successfully produced <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a>.
+Though we now know our <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> is “valid”, we’re still not done. As with everything
+there are levels; the more fields we fill out in the <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a> the better off
+we will be. This is where a <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIR</a> assessment comes in – we can write metrics
+that <em>also speak <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a></em> but are looking for presence of certain fields,
+or checking that our <code class="docutils literal notranslate"><span class="pre">identifier</span></code> can actually be verified against the given <code class="docutils literal notranslate"><span class="pre">identifierSource</span></code>
+<a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#metadata">metadata</a> attributes.</p>
+<p>Nonetheless, we’ve taken a step in the right direction. Future recipes will discuss
+performing <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#FAIR">FAIR</a> assessments on this <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#DATS">DATS</a>, converting it to CFDE’s <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#C2M2">C2M2</a> Frictionless Metadata model
+and more.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/Discoverability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="cfde-namespaces.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Conceptual Description of the Level 1 C2M2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="kf.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Experience from Kids First (KF)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      <div class="extra_footer">
+        This project is supported by NIH CFDE program <img src="images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

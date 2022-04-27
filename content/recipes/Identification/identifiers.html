@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The need for identifiers &#8212; NIH-CFDE FAIR COOKBOOK</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/Identification/identifiers.html" />
+    <link rel="shortcut icon" href="../../../_static/CFDE-logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Recommendations for minting persistent and resolvable identifiers" href="pids.html" />
+    <link rel="prev" title="Experience from LINCS" href="../Discoverability/lincs.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/CFDE-logo-contrast.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NIH-CFDE FAIR COOKBOOK</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   The FAIR cookbook by the NIH-CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/fair-principles.html">
+   Introduction to FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/cfde.html">
+   Engaging with CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Recipes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Discoverability/discoverability.html">
+   Discoverability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/c2m2.html">
+     C2M2 model:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/C2M2-L1-description.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/cfde-namespaces.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/seo.html">
+     Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/kf.html">
+     Experience from Kids First (KF)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/lincs.html">
+     Experience from LINCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   The need for identifiers
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pids.html">
+     Recommendations for minting persistent and resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="minids.html">
+     Identifier Minting Service with Minid Client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Semantics/semantics.html">
+   Semantics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/ontologies.html">
+     Controlled Terminologies &amp; Ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/onto-services.html">
+     Ontology services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/cfde-terminologies.html">
+     NIH CFDE selected terminologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Compliance/compliance.html">
+   FAIR Compliance
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake.html">
+     Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake-rubric.html">
+     Evaluating FAIRness with the CFDE rubric on FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fair-api.html">
+     Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/Identification/identifiers.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/Identification/identifiers.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definitions">
+   Definitions:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-importance-of-pids-in-fair-and-in-the-context-of-cfde">
+   The importance of PIDs in FAIR and in the context of CFDE:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliographic-references">
+   Bibliographic References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The need for identifiers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definitions">
+   Definitions:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-importance-of-pids-in-fair-and-in-the-context-of-cfde">
+   The importance of PIDs in FAIR and in the context of CFDE:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliographic-references">
+   Bibliographic References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-need-for-identifiers">
+<h1>The need for identifiers<a class="headerlink" href="#the-need-for-identifiers" title="Permalink to this headline">¶</a></h1>
+<p><strong>authors</strong>: <a class="reference external" href="https://orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a></p>
+<p><strong>maintainers</strong>: <a class="reference external" href="https://orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a></p>
+<p><strong>version</strong>: Initial Draft</p>
+<p><strong>license</strong>: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
+<div class="section" id="objectives">
+<h2>Objectives:<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<p>The aim of the recipe is to provide an introduction to the notion of identifiers, the different kind of identifiers and the kind of infrastructure required to support their use in the context of CFDE and in the context of producing and consuming FAIR data.</p>
+</div>
+<div class="section" id="definitions">
+<h2>Definitions:<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<p><strong>identifier</strong>: an identifier is a chain of characters (number, letter, symbol, or any combination of those) which is associated to an entity or a type of entities and which is used to refer to those entities in an indexing system.</p>
+<p><strong>unique identifier</strong>: a unique identifier (UID) is an identifier which  refers to only one instance of thing</p>
+<p><strong>locally unique identifier</strong>: a locally unique identifier (LUID) is an  identifier which is unique to a given context (hence, local) but which may clash if moved out of this specific context. By clash, we mean that if dereferenced in the wrong context, it could return an instance different from the one it pointed to when it was minted in its original context.</p>
+<p><strong>globally unique identifier</strong>: a globally unique identifier  (GUID) is an identifier which is produced such that the probability of the exact same string is extremely low (but not null), hence global. Also known as <code class="docutils literal notranslate"><span class="pre">universally</span> <span class="pre">unique</span> <span class="pre">identifier</span></code> (UUID). Their production does not depend on central registration and relies on the generation of a 128-bit string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uuid</span>
+<span class="nb">id</span> <span class="o">=</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span> 
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="mi">5</span><span class="n">b6d0be2</span><span class="o">-</span><span class="n">d47f</span><span class="o">-</span><span class="mf">11e8</span><span class="o">-</span><span class="mi">9</span><span class="n">f9d</span><span class="o">-</span><span class="n">ccaf789d94a0</span>
+</pre></div>
+</div>
+<p><strong>persistent identifier</strong>: a persistent identifier (PID) is an identifier which provides a long-lasting reference to a digital resource. The key notion introduced is that of<code class="docutils literal notranslate"><span class="pre">persistence</span></code>, which can only exist if a <code class="docutils literal notranslate"><span class="pre">resolution</span> <span class="pre">service</span></code> exists. Well known examples are <code class="docutils literal notranslate"><span class="pre">persistent</span> <span class="pre">identifiers</span></code> are <code class="docutils literal notranslate"><span class="pre">Digital</span> <span class="pre">Object</span> <span class="pre">Identifiers</span> <span class="pre">(DOI)</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span> <span class="pre">Retrieval</span> <span class="pre">Keys</span> <span class="pre">(ARK)</span></code>, <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Researcher</span> <span class="pre">and</span> <span class="pre">Contributor</span> <span class="pre">ID(ORCID)</span></code> or <code class="docutils literal notranslate"><span class="pre">Persistent</span> <span class="pre">Uniform</span> <span class="pre">Resource</span> <span class="pre">Locator</span> <span class="pre">(PURL)</span></code>. More examples can be found on the <a class="reference external" href="https://www.pidforum.org/">PID forum</a>.</p>
+<p><strong>compact identifier</strong>: a <code class="docutils literal notranslate"><span class="pre">compact</span> <span class="pre">identifier</span></code> is a unique string consisting of a <code class="docutils literal notranslate"><span class="pre">Prefix</span></code> (assigned by curator), a <code class="docutils literal notranslate"><span class="pre">colon</span> <span class="pre">(‘:’)</span></code>, and an <code class="docutils literal notranslate"><span class="pre">Accession</span> <span class="pre">(e.g.</span> <span class="pre">local</span> <span class="pre">identifier</span> <span class="pre">string)</span></code>. The prefix is composed of an optional <code class="docutils literal notranslate"><span class="pre">Provider</span> <span class="pre">Code</span></code>, and an assigned <code class="docutils literal notranslate"><span class="pre">Namespace</span></code>, separated by a slash (‘/’).</p>
+<p><strong>identifier minting service</strong>: an <code class="docutils literal notranslate"><span class="pre">identifier</span> <span class="pre">minting</span> <span class="pre">service</span></code> is a piece of software infrastructure which allows the production of an identifier. It can be as <code class="docutils literal notranslate"><span class="pre">simple</span></code> as as UUID generator (see above) or random number generator.</p>
+<p><strong>identifier resolution service</strong>: an identifier resolution service is a piece of software infrastructure which given an identifier can return a web resource about the entity designated by the identifier. Such service is essential to realize the notion of <code class="docutils literal notranslate"><span class="pre">persistence</span></code> of identifiers.</p>
+</div>
+<div class="section" id="the-importance-of-pids-in-fair-and-in-the-context-of-cfde">
+<h2>The importance of PIDs in FAIR and in the context of CFDE:<a class="headerlink" href="#the-importance-of-pids-in-fair-and-in-the-context-of-cfde" title="Permalink to this headline">¶</a></h2>
+<p>Data interoperability as described by FAIR assumes that entities and information about them can be retrieved through<code class="docutils literal notranslate"><span class="pre">internet</span> <span class="pre">communication</span> <span class="pre">protocol</span></code>. This can thus only be realized by relying on PIDs and resolution service to obtain the resources of interest.</p>
+<p>For a number of digital objects (<code class="docutils literal notranslate"><span class="pre">scholarly</span> <span class="pre">articles</span></code>, <code class="docutils literal notranslate"><span class="pre">grants</span></code>), persistent identifiers such DOI exist and for research <code class="docutils literal notranslate"><span class="pre">organizations</span></code> and <code class="docutils literal notranslate"><span class="pre">persons</span></code>, RORID and ORCID are gaining popularity becoming more widely used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Datasets</span></code> are another type of digital objects which are being identified by DOI with services such as <a class="reference external" href="https://figshare.com/">Figshare</a> or <a class="reference external" href="https://zenodo.org">Zenodo</a>.</p>
+<p>But <code class="docutils literal notranslate"><span class="pre">interoperability</span></code> goes far beyond reliable identification of these entities. For research scientists, entities such as:</p>
+<ul class="simple">
+<li><p>Taxonomic Information</p></li>
+<li><p>Anatomical Information</p></li>
+<li><p>Diseases and Conditions</p></li>
+<li><p>Molecular Entities, such as:</p>
+<ul>
+<li><p>Chemicals</p></li>
+<li><p>Metabolites</p></li>
+<li><p>Genes</p></li>
+<li><p>Transcripts</p></li>
+<li><p>Protein</p></li>
+<li><p>Lipids</p></li>
+</ul>
+</li>
+<li><p>Pathways and Biochemical reactions</p></li>
+<li><p>Assays</p></li>
+<li><p>Instruments</p></li>
+<li><p>Licenses</p></li>
+</ul>
+<p>For all these entities, the <strong>NIH CFDE</strong> has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the <a class="reference external" href="https://www.nih-cfde.org/product/cfde-c2m2/">C2M2 model</a> and made available through the <span class="xref myst">Deriva system</span>.</p>
+<ul class="simple">
+<li><p>This specific <span class="xref myst">NIH-CFDE recipe</span> details which ontologies have been selected and how their use will be rolled out as the program progresses.</p></li>
+</ul>
+<p>It is important to notice that for such resources, a central authority is responsible for issueing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
+This works well to address the semantic markup needs that arise in the data curation, data extraction transform load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands, for instance to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of <a class="reference external" href="https://fair-research.org/">minids</a></p>
+<ul class="simple">
+<li><p>Refer to the specific recipe on <span class="xref myst">MINIDS</span> to learn how to mint such resolvable identifiers for your resources.</p></li>
+</ul>
+</div>
+<div class="section" id="bibliographic-references">
+<h2>Bibliographic References<a class="headerlink" href="#bibliographic-references" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Klump, J. and Huber, R., 2017. 20 Years of Persistent Identifiers – Which Systems are Here to Stay?. Data Science Journal, 16, p.9. <a class="reference external" href="http://doi.org/10.5334/dsj-2017-009">http://doi.org/10.5334/dsj-2017-009</a></p></li>
+<li><p>McMurry JA, Juty N, Blomberg N, et al. Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data. PLoS Biol. 2017;15(6):e2001414. Published 2017 Jun 29. <a class="reference external" href="http://doi.org/10.1371/journal.pbio.2001414">http://doi.org/10.1371/journal.pbio.2001414</a></p></li>
+<li><p>Martin Fenner, Mercè Crosas, Jeffrey S Grethe, David Kennedy, Henning Herm-jakob, Philippe Rocca-Serra, Gustavo Durand, Robin Berjon, Sebastian Karcher,Maryann Martone, and Tim Clark. 2019. A data citation roadmap for scholarly data repositories. Scientific Data6, 1 (2019), 1–9.<a class="reference external" href="http://doi.org/10.1038/s41597-019-0031-80">http://doi.org/10.1038/s41597-019-0031-80</a>
+4.https://www.pidforum.org/</p></li>
+<li><p>John Kunze. The Entity (N2T) Resolver: low-risk, low-cost persistent identifica-tion.<a class="reference external" href="https://hdl.handle.net/1813/3688">https://hdl.handle.net/1813/3688</a></p></li>
+<li><p>Wimalaratne, S., Juty, N., Kunze, J. et al. Uniform resolution of compact identifiers for biomedical data. Sci Data 5, 180029 (2018). <a class="reference external" href="https://doi.org/10.1038/sdata.2018.29">https://doi.org/10.1038/sdata.2018.29</a></p></li>
+<li><p>Research Organization Registry</p></li>
+</ol>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/Identification"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../Discoverability/lincs.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Experience from LINCS</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="pids.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Recommendations for minting persistent and resolvable identifiers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      <div class="extra_footer">
+        This project is supported by NIH CFDE program <img src="images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

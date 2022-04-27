@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conceptual Description of the Level 1 C2M2 &#8212; NIH-CFDE FAIR COOKBOOK</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/Discoverability/cfde-namespaces.html" />
+    <link rel="shortcut icon" href="../../../_static/CFDE-logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS" href="seo.html" />
+    <link rel="prev" title="Conceptual Description of the Level 1 C2M2" href="C2M2-L1-description.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/CFDE-logo-contrast.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NIH-CFDE FAIR COOKBOOK</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   The FAIR cookbook by the NIH-CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/fair-principles.html">
+   Introduction to FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/cfde.html">
+   Engaging with CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Recipes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="discoverability.html">
+   Discoverability
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="c2m2.html">
+     C2M2 model:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C2M2-L1-description.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="seo.html">
+     Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kf.html">
+     Experience from Kids First (KF)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lincs.html">
+     Experience from LINCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Identification/identifiers.html">
+   The need for identifiers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/pids.html">
+     Recommendations for minting persistent and resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/minids.html">
+     Identifier Minting Service with Minid Client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Semantics/semantics.html">
+   Semantics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/ontologies.html">
+     Controlled Terminologies &amp; Ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/onto-services.html">
+     Ontology services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/cfde-terminologies.html">
+     NIH CFDE selected terminologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Compliance/compliance.html">
+   FAIR Compliance
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake.html">
+     Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake-rubric.html">
+     Evaluating FAIRness with the CFDE rubric on FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fair-api.html">
+     Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/Discoverability/cfde-namespaces.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/Discoverability/cfde-namespaces.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validation">
+   Validation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespace-selection">
+   Namespace Selection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#declaration">
+   Declaration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     What to read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Conceptual Description of the Level 1 C2M2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validation">
+   Validation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespace-selection">
+   Namespace Selection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#declaration">
+   Declaration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     What to read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="conceptual-description-of-the-level-1-c2m2">
+<h1>Conceptual Description of the Level 1 C2M2<a class="headerlink" href="#conceptual-description-of-the-level-1-c2m2" title="Permalink to this headline">¶</a></h1>
+<p><strong>authors</strong>: <a class="reference external" href="https://orcid.org/0000-0003-1291-5876">Rick Wagner</a></p>
+<p><strong>maintainers</strong>: <a class="reference external" href="https://orcid.org/0000-0003-1291-5876">Rick Wagner</a></p>
+<p><strong>version</strong>: initial draft</p>
+<p><strong>license</strong>: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
+<hr class="docutils" />
+<div class="section" id="objectives">
+<h2>Objectives:<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<p>Resources (files, subjects, biosamples, etc.) are uniquely
+named in the context of the C2M2 using a namespace and an local name
+(the id column of the entity tables). When
+combined, the namespace and local name form a unique name for the
+resource through the CFDE. In principle, this could be done using a
+only a full URI for the resource. In practice, the use of namespaces
+is a mechanism to allow DCCs to name their resources in a simple
+manner without collision. The CFDE CC defines a process for DCCs to
+define their own namespaces in a manner that avoids collions, without
+requiring CFDE CC involvement. DCCs are welcome to engage the CFDE CC
+with questions before investing significant effort in creating their ETL process.</p>
+</div>
+<div class="section" id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h2>
+<p>The namespace must be a valid URI (not necessarily resolvable) that is
+under the control of the DCC or a trusted naming authority, and may
+contain an intial path information. Examples of valid namespaces</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">https://project-a.example.org/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">https://project-a.example.org/samples/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag:project-a.example.org,2020:/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag:project-a.example.org,2020:samples#</span></code></p></li>
+</ul>
+<p>The namespace itself does not need (nor should) have any
+semantic meaning on its own, though the namespaces table in the C2M2 may contain
+descriptive text. Nor does the namespace define relationships between
+resources, such as project membership or type. Files, biosamples,
+subjects, and collections declare what project they are associated
+with. The relationship between entities, such as a file produced from
+a biosample, is defined separately from what project or namespace
+those entities are associated with.</p>
+</div>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>The local name of a resource is concatenated with the namespace to form the full resource name. To ensure
+this, the namespace must be a valid URI and may include a trailing separation character, such as <code class="docutils literal notranslate"><span class="pre">?</span></code> or <code class="docutils literal notranslate"><span class="pre">#</span></code>. The local name of a resource may have any syntax, so long as when concatenate with the namespace the full names is also a valid URI.</p>
+<p>Given the local name <code class="docutils literal notranslate"><span class="pre">8675/REAMDE</span></code> and the previous namespace
+examples, the full resouces names would be:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">https://project-a.example.org/8675/REAMDE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">https://project-a.example.org/samples/8675/REAMDE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag:project-a.example.org,2020:/8675/REAMDE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag:project-a.example.org,2020:samples#8675/REAMDE</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>There are tools for validating and introspecting URIs, like the <a class="reference external" href="https://pypi.org/project/rfc3986/">Python rfc3986 package</a>. Using our examples above, we can valid the namespaces, the full names, and look at the breakdown of the elements.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rfc3986</span>
+
+<span class="c1"># https://project-a.example.org/</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">is_valid_uri</span><span class="p">(</span><span class="s1">&#39;https://project-a.example.org/&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">uri_reference</span><span class="p">(</span><span class="s1">&#39;https://project-a.example.org/&#39;</span><span class="p">)</span>
+<span class="n">URIReference</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;https&#39;</span><span class="p">,</span> <span class="n">authority</span><span class="o">=</span><span class="s1">&#39;project-a.example.org&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fragment</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># https://project-a.example.org/samples/</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">is_valid_uri</span><span class="p">(</span><span class="s1">&#39;https://project-a.example.org/samples/&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">uri_reference</span><span class="p">(</span><span class="s1">&#39;https://project-a.example.org/samples/&#39;</span><span class="p">)</span>
+<span class="n">URIReference</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;https&#39;</span><span class="p">,</span> <span class="n">authority</span><span class="o">=</span><span class="s1">&#39;project-a.example.org&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;/samples/&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fragment</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># tag:project-a.example.org,2020:/</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">is_valid_uri</span><span class="p">(</span><span class="s1">&#39;tag:project-a.example.org,2020:/&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">uri_reference</span><span class="p">(</span><span class="s1">&#39;tag:project-a.example.org,2020:/&#39;</span><span class="p">)</span>
+<span class="n">URIReference</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;tag&#39;</span><span class="p">,</span> <span class="n">authority</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;project-a.example.org,2020:/&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fragment</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># tag:project-a.example.org,2020:samples#</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">is_valid_uri</span><span class="p">(</span><span class="s1">&#39;tag:project-a.example.org,2020:samples#&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">uri_reference</span><span class="p">(</span><span class="s1">&#39;tag:project-a.example.org,2020:samples#&#39;</span><span class="p">)</span>
+<span class="n">URIReference</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;tag&#39;</span><span class="p">,</span> <span class="n">authority</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;project-a.example.org,2020:samples&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fragment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># https://project-a.example.org/8675/REAMDE</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">is_valid_uri</span><span class="p">(</span><span class="s1">&#39;https://project-a.example.org/8675/REAMDE&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">uri_reference</span><span class="p">(</span><span class="s1">&#39;https://project-a.example.org/8675/REAMDE&#39;</span><span class="p">)</span>
+<span class="n">URIReference</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;https&#39;</span><span class="p">,</span> <span class="n">authority</span><span class="o">=</span><span class="s1">&#39;project-a.example.org&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;/8675/REAMDE&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fragment</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># https://project-a.example.org/samples/8675/REAMDE</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">is_valid_uri</span><span class="p">(</span><span class="s1">&#39;https://project-a.example.org/samples/8675/REAMDE&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">uri_reference</span><span class="p">(</span><span class="s1">&#39;https://project-a.example.org/samples/8675/REAMDE&#39;</span><span class="p">)</span>
+<span class="n">URIReference</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;https&#39;</span><span class="p">,</span> <span class="n">authority</span><span class="o">=</span><span class="s1">&#39;project-a.example.org&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;/samples/8675/REAMDE&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fragment</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># tag:project-a.example.org,2020:/8675/REAMDE</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">is_valid_uri</span><span class="p">(</span><span class="s1">&#39;tag:project-a.example.org,2020:/8675/REAMDE&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">uri_reference</span><span class="p">(</span><span class="s1">&#39;tag:project-a.example.org,2020:/8675/REAMDE&#39;</span><span class="p">)</span>
+<span class="n">URIReference</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;tag&#39;</span><span class="p">,</span> <span class="n">authority</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;project-a.example.org,2020:/8675/REAMDE&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fragment</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># tag:project-a.example.org,2020:samples#8675/REAMDE</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">is_valid_uri</span><span class="p">(</span><span class="s1">&#39;tag:project-a.example.org,2020:samples#8675/REAMDE&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="n">rfc3986</span><span class="o">.</span><span class="n">uri_reference</span><span class="p">(</span><span class="s1">&#39;tag:project-a.example.org,2020:samples#8675/REAMDE&#39;</span><span class="p">)</span>
+<span class="n">URIReference</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;tag&#39;</span><span class="p">,</span> <span class="n">authority</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;project-a.example.org,2020:samples&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fragment</span><span class="o">=</span><span class="s1">&#39;8675/REAMDE&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="namespace-selection">
+<h2>Namespace Selection<a class="headerlink" href="#namespace-selection" title="Permalink to this headline">¶</a></h2>
+<p>There are two recommended ways to choose a namespace, <a class="reference external" href="https://en.wikipedia.org/wiki/Tag_URI_scheme">tag URIs</a>
+or HTTPS and an FQDN. Tag URIs and HTTPS URLs using an FQDN allow DCCs
+to define their own namespaces, while splitting a persitent identifier
+permits enternal use of the full resource name.</p>
+<p>Tag URIs have a simple syntax with the scheme “<code class="docutils literal notranslate"><span class="pre">tag:</span></code>”, the entity
+defining the URI, and the local name:
+<code class="docutils literal notranslate"><span class="pre">tag:&lt;naming</span> <span class="pre">authority&gt;:&lt;local</span> <span class="pre">name&gt;</span></code>
+The <code class="docutils literal notranslate"><span class="pre">&lt;naming</span> <span class="pre">authority&gt;</span></code> may be an FQDN and a date that FQDN was managed
+by the DCC. E.g., for Example.org’s Project A, their namespace may be
+<code class="docutils literal notranslate"><span class="pre">tag:project-a.example.org,2020:</span></code></p>
+<p>HTTPS URLs are similar to XML namespace, where the DCC must have control of the FQDN,
+but the URI does not need to be a resolvable URL. Example.org could
+use this to declare a namespace for their samples from the Project A study.
+<code class="docutils literal notranslate"><span class="pre">https://project-a.example.org/samples</span></code></p>
+</div>
+<div class="section" id="declaration">
+<h2>Declaration<a class="headerlink" href="#declaration" title="Permalink to this headline">¶</a></h2>
+<p>Namespaces are declared in the <code class="docutils literal notranslate"><span class="pre">id_namespace</span></code> table</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>URI</p></td>
+<td><p>A globally unique ID representing this namespace. Used as a foreign key by entities.</p></td>
+</tr>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>slug</p></td>
+<td><p>A short, human-readable, machine-read-friendly label for this namespace.</p></td>
+</tr>
+<tr class="row-even"><td><p>description</p></td>
+<td><p>string</p></td>
+<td><p>A human-readable description of this namespace.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;id&quot;</span><span class="p">:</span>          <span class="s2">&quot;tag:project-a.example.org,2020:samples&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span>        <span class="s2">&quot;Samples from the Example.org Project A study&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The sample identifiers sample were derived from the</span>
+                 <span class="n">Example</span><span class="o">.</span><span class="n">org</span> <span class="n">Project</span> <span class="n">A</span> <span class="n">accession</span> <span class="n">numbers</span><span class="o">.</span><span class="s2">&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The descriptive text (name and description) should related to the
+namespce and the local names of the resources.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusions">
+<h2>Conclusions:<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>This section provides a concise overview of the mechanism to declaring a <code class="docutils literal notranslate"><span class="pre">namespace</span></code> associated with a DCC in the context of the CFDE project. It is an important <code class="docutils literal notranslate"><span class="pre">harmonization</span></code> process, which aims to avoid collisions between identifiers, while enhancing <code class="docutils literal notranslate"><span class="pre">interoperability</span></code> and <code class="docutils literal notranslate"><span class="pre">findability</span></code>. It also represents a key process in mapping data into the C2M2 model, thereby getting ready for a full ETL process from a DCC to the CFDE model and future indexing in the CDFE Deriva system.</p>
+<blockquote>
+<div></div></blockquote>
+<div class="section" id="what-to-read-next">
+<h3>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../Semantics/cfde-terminologies.html"><span class="doc std std-doc">CFDE selected terminologies</span></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/Discoverability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="C2M2-L1-description.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Conceptual Description of the Level 1 C2M2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="seo.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      <div class="extra_footer">
+        This project is supported by NIH CFDE program <img src="images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

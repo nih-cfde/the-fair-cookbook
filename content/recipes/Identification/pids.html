@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recommendations for minting persistent and resolvable identifiers &#8212; NIH-CFDE FAIR COOKBOOK</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/Identification/pids.html" />
+    <link rel="shortcut icon" href="../../../_static/CFDE-logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Identifier Minting Service with Minid Client" href="minids.html" />
+    <link rel="prev" title="The need for identifiers" href="identifiers.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/CFDE-logo-contrast.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NIH-CFDE FAIR COOKBOOK</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   The FAIR cookbook by the NIH-CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/fair-principles.html">
+   Introduction to FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/cfde.html">
+   Engaging with CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Recipes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Discoverability/discoverability.html">
+   Discoverability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/c2m2.html">
+     C2M2 model:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/C2M2-L1-description.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/cfde-namespaces.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/seo.html">
+     Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/kf.html">
+     Experience from Kids First (KF)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/lincs.html">
+     Experience from LINCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="identifiers.html">
+   The need for identifiers
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Recommendations for minting persistent and resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="minids.html">
+     Identifier Minting Service with Minid Client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Semantics/semantics.html">
+   Semantics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/ontologies.html">
+     Controlled Terminologies &amp; Ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/onto-services.html">
+     Ontology services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/cfde-terminologies.html">
+     NIH CFDE selected terminologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Compliance/compliance.html">
+   FAIR Compliance
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake.html">
+     Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake-rubric.html">
+     Evaluating FAIRness with the CFDE rubric on FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fair-api.html">
+     Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/Identification/pids.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/Identification/pids.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#required-identifier-characteristics">
+     1. Required Identifier Characteristics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recommended-identifier-characteristics">
+     2. Recommended Identifier Characteristics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#specifics-about-identifiers-for-files">
+       <strong>
+        Specifics about identifiers for Files
+       </strong>
+       :
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References:
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Recommendations for minting persistent and resolvable identifiers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#required-identifier-characteristics">
+     1. Required Identifier Characteristics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recommended-identifier-characteristics">
+     2. Recommended Identifier Characteristics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#specifics-about-identifiers-for-files">
+       <strong>
+        Specifics about identifiers for Files
+       </strong>
+       :
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References:
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="recommendations-for-minting-persistent-and-resolvable-identifiers">
+<h1>Recommendations for minting persistent and resolvable identifiers<a class="headerlink" href="#recommendations-for-minting-persistent-and-resolvable-identifiers" title="Permalink to this headline">¶</a></h1>
+<p><strong>authors</strong>: <a class="reference external" href="https://orcid.org/0000-0003-1291-5876">Rick Wagner</a>
+<a class="reference external" href="https://orcid.org/0000-0003-0937-8141">Robert Carter</a>
+<a class="reference external" href="https://orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a></p>
+<p><strong>maintainers</strong>: <a class="reference external" href="https://orcid.org/0000-0003-1291-5876">Rick Wagner</a></p>
+<p><strong>version</strong>: initial draft</p>
+<p><strong>license</strong>: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
+<hr class="docutils" />
+<div class="section" id="objectives">
+<h2>Objectives:<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The main objective of this recipe is to provide a set guidelines and recommendations for producing or using resolvable identifiers. This is a key element as it provides <code class="docutils literal notranslate"><span class="pre">interoperability</span></code> and ‘reusability’, the I and R in FAIR.</p>
+</div></blockquote>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction:<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">persistent</span> <span class="pre">identifier</span></code> is a <strong>globally unique name for a resource within the CFDE</strong>. This name can be used to retrieve a description of the resource or to identify an entity like a file or dataset without dereferencing the identifier (i.e., accessing the resource itself). Persistent identifiers are created and maintained by the DCC responsible for the data and must be defined using the characteristics described in this document to ensure their data is <code class="docutils literal notranslate"><span class="pre">Findable</span></code>, <code class="docutils literal notranslate"><span class="pre">Accessible</span></code>, <code class="docutils literal notranslate"><span class="pre">Interoperable</span></code>, and <code class="docutils literal notranslate"><span class="pre">Reusable</span></code> (FAIR) [1]. Because DCCs need to be able to define and choose different identifiers for additional use cases, this document provides a minimum set of requirements that are intended to be flexible and fit within the existing practices of data repositories, publishers, and libraries [2, 3].</p>
+<p>As part of the Crosscut Metadata Model (C2M2), persistent identifiers can enable several use cases:</p>
+<ul class="simple">
+<li><p>Unambiguously referring to a resource</p></li>
+<li><p>Estimating the amount of data stored by a DCC</p></li>
+<li><p>Accessing descriptions of named resources</p></li>
+<li><p>Verifying that a file is the one referenced by a persistent identifier</p></li>
+<li><p>Determining if two identifiers refer to the same file or files</p></li>
+<li><p>Citing data</p></li>
+</ul>
+<p>At present, the scope of these requirements is limited to two entities within the C2M2, files and collection (a grouping of files). These requirements may be extended to support other use cases, in particular data citation. Some of the information provided by the persistent identifier may be duplicated within the C2M2; over time, the C2M2 itself may be built in part from sets of persistent identifiers.
+Persistent Identifier Recommendations The CFDE promotes the following recommendation towards improving the FAIRness of Common Fund sponsored data:</p>
+<ul class="simple">
+<li><p>All data identifiers should be expressed as a URL</p></li>
+<li><p>Identifier URLs should resolve to landing pages with human-readable metadata</p></li>
+<li><p>Data metadata should be embedded in the landing page by using JSON-LD and Schema.org [4]</p></li>
+<li><p>Metadata should be available via <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> at the same URL</p></li>
+<li><p>All data, even temporary or intermediate data, should be associated with an identifier</p></li>
+<li><p>Different types of identifiers can be assigned to the same data</p></li>
+<li><p>Identifiers must capture data checksums to enable verification of data integrity</p></li>
+<li><p>Identifier creation and resolution must become part of the research data lifecycle and, where possible, be integrated with tools and applications that can automate this process</p></li>
+</ul>
+<div class="section" id="required-identifier-characteristics">
+<h3>1. Required Identifier Characteristics<a class="headerlink" href="#required-identifier-characteristics" title="Permalink to this headline">¶</a></h3>
+<p>All persistent identifiers used within the CFDE <strong>must</strong> meet the following requirements regarding their uniqueness, format, resolution, and description.</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Uniqueness</span></code></strong>: Persistent identifiers must unique within the CFDE and only refer to single file or collection. Multiple identifiers (of the same or different types) may refer to the same file or collection. Identifiers should provide a means (preferably checksums) to determine if multiple identifiers refer to the same resource.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Format</span></code></strong>:  Persistent identifiers must comply with the IETF standard for URIs, <a class="reference external" href="https://tools.ietf.org/html/rfc3986">RFC 3986</a>. This may be either be as an HTTPS URL or a compact URI. The use of HTTPS URLs is strongly preferred.</p></li>
+</ul>
+<p>Examples:</p>
+<blockquote>
+<div><p><strong>HTTPS URL:</strong> https://doi.org/10.25490/a97f-egyk</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Compact URI:</strong> doi:10.25490/a97f-egyk</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Resolution</span></code></strong>:  Persistent identifiers using compact URIs must use prefixes (also known as URI schemes) registered with <a class="reference external" href="https://n2t.net">N2T</a> or <a class="reference external" href="https://identifiers.org">Identifiers.org</a> [5]. This permits the resolution of compact URIs in a consistent manner and helps to ensure uniqueness of identifiers by defining identifier naming authorities. Instructions on how to register prefixes are on the N2T and Identifiers.org sites. The joint list of registered prefixes is available at http://n2t.net/e/cdl_ebi_prefixes.yaml.</p></li>
+</ul>
+<p>Examples:</p>
+<blockquote>
+<div><p><strong>N2T:</strong> https://n2t.net/doi:10.25490/a97f-egyk</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Identifiers.org:</strong> https://identifiers.org/doi:10.25490/a97f-egyk</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Description</span></code></strong>: When an identifier is resolved, either as a HTTPS URL or from a compact URI to a URL, the minimum result must be an HTML landing page, with human-readable metadata describing the referenced object.</p></li>
+</ul>
+</div>
+<div class="section" id="recommended-identifier-characteristics">
+<h3>2. Recommended Identifier Characteristics<a class="headerlink" href="#recommended-identifier-characteristics" title="Permalink to this headline">¶</a></h3>
+<p>Beyond these minimal requirements, there are several recommendations that contribute to the CFDE use cases and can improve the reuse and citation of the data referred to by persistent identifiers. Many of these recommendations are drawn from the <span class="xref myst">ref data citation roadmap</span>. They primarily focus on the descriptive metadata provided by the persistent identifier by its landing page, especially in a machine- readable format.</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Readability</span></code></strong>: In addition to the <span class="xref myst">HTML landing page</span>, intended to be read by a person using a browser, the identifier and metadata associated with the resource should be embedded in the landing page in <span class="xref myst">JSON-LD</span>. The metadata should also be retrievable as JSON-LD using the <code class="docutils literal notranslate"><span class="pre">Accept</span></code> header to allow clients to retrieve the metadata without unnecessarily parsing HTML.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Metadata</span> <span class="pre">Schema</span></code></strong>:  The CFDE use cases for <strong>file</strong> and <strong>collection metadata</strong> include validation, disambiguation, and metrics around storage utilization and locality, e.g., Google vs. Amazon. Later, the use of the location attribute for the file identifiers with a list of URIs for data protocols may allow for data access. The recommended metadata for collections also includes the elements to allow for data citation, primarily to reduce the amount metadata required for individual files.</p></li>
+</ul>
+<p>DCCs may choose to use different identifiers for files and collections based on their own needs. For example, a DCC may choose to use DOIs for their collections and ARKs for their files. And because resources may be referenced by multiple persistent identifiers, some files may also be referenced by DOIs so that the files may be cited as a citable dataset [6].</p>
+<div class="section" id="specifics-about-identifiers-for-files">
+<h4><strong>Specifics about identifiers for Files</strong>:<a class="headerlink" href="#specifics-about-identifiers-for-files" title="Permalink to this headline">¶</a></h4>
+<p>File identifier metadata should include the following:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">identifier</span></code></strong>: The persistent identifier.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">filename</span></code></strong>: The name of the file without addition path information.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong>: The size of the file in bytes.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">checksum</span></code></strong>: The output of a cryptographic hash function run on the file, preferably SHA256, which can be used to verify data integrity and identify files regardless of a data repository’s naming conventions.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">checksum_algorithm</span></code></strong>: The checksum algorithm used, one of md5, sha256, or sha512.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">location</span></code></strong>: One or more locations using RFC 7595 schemes (e.g., HTTPS, SCP, FTP) or other agreed upon conventions (S3, GS) that map to access protocols. Collections Collection identifier metadata should include the following</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">identifier</span></code></strong>: The persistent identifier.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong>: The human-readable name of the collection.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">author</span></code></strong>: The person(s) publishing the collection.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">publisher</span></code></strong>: The organization or entity publishing the collection.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">datePublished</span></code></strong>: The date published.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">version</span></code></strong>: Version of the collection.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">type</span></code></strong>: Must be dataset.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">filename</span></code></strong>: The name of a manifest file without addition path information. The manifest file should contain a list of the persistent identifiers for the individual files in the collection.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong>: The size of the manifest file in bytes.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">checksum</span></code></strong>: The output of a cryptographic hash function run on the manifest file, preferably SHA256, which can be used to verify data integrity and identify files regardless of a data repository’s naming conventions.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">checksum_algorithm</span></code></strong>: The checksum algorithm used, one of md5, sha256, or sha512.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">location</span></code></strong>: One or more locations using RFC 7595 schemes (e.g., HTTPS, SCP, FTP) or other agreed upon conventions (S3, GS) that map to access protocols. CFDE Resources The CFDE Coordinating Center is evaluating the operation a persistent identifier service for files and collections based on different identifier schemes including Handles, DOIs, and ARKs. DCCs interested in creating persistent identifiers for files and collections using this service may contact the CFDE CC for further details.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>The section draws the attention to essential properties identifiers must have in order to deliver <code class="docutils literal notranslate"><span class="pre">interoperability</span></code>. These will be implemented for all key objects and some of their key qualifiers.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[1] Wilkinson MD, Dumontier M, Aalbersberg IjJ, Appleton G, Axton M, Baak A, Blomberg N, Boiten J-W, da Silva Santos LB, Bourne PE, Bouwman J, Brookes AJ, Clark T, Crosas M, Dillo I, Dumon O, Edmunds S, Evelo CT, Finkers R, Gonzalez-Beltran A, Gray AJG, Groth P, Goble C, Grethe JS, Heringa J, ’t Hoen PA., Hooft R, Kuhn T, Kok R, Kok J, Lusher SJ, Martone ME, Mons A, Packer AL, Persson B, Rocca-Serra P, Roos M, van Schaik R, Sansone S-A, Schultes E, Sengstag T, Slater T, Strawn G, Swertz MA, Thompson M, van der Lei J, van Mulligen E, Velterop J, Waagmeester A, Wittenburg P, Wolstencroft K, Zhao J, Mons B. The FAIR Guiding Principles for scientific data management and stewardship. Scientific Data [Internet]. Springer Science and Business Media LLC; 2016 Mar 15;3(1). Available from: http://dx.doi.org/10.1038/sdata.2016.18</p></li>
+<li><p>[2] Data Citation Synthesis Group. Joint Declaration of Data Citation Principles [Internet]. Force11; 2014. Available from: https://www.force11.org/group/joint-declaration-data-citation-principles-final</p></li>
+<li><p>[3] Fenner M, Crosas M, Grethe JS, Kennedy D, Hermjakob H, Rocca-Serra P, Durand G, Berjon R, Karcher S, Martone M, Clark T. A data citation roadmap for scholarly data repositories. Scientific Data [Internet]. Springer Science and Business Media LLC; 2019 Apr 10;6(1). Available from: http://dx.doi.org/10.1038/s41597-019-0031-8</p></li>
+<li><p>[4] Guha RV, Brickley D, Macbeth S. Schema.org. Communications of the ACM [Internet]. Association for Computing Machinery (ACM); 2016 Jan 25;59(2):44–51. Available from: http://dx.doi.org/10.1145/2844544</p></li>
+<li><p>[5] Wimalaratne SM, Juty N, Kunze J, Janée G, McMurry JA, Beard N, Jimenez R, Grethe JS, Hermjakob H, Martone ME, Clark T. Uniform resolution of compact identifiers for biomedical data. Scientific Data [Internet]. Springer Science and Business Media LLC; 2018 May 8;5(1). Available from: http://dx.doi.org/10.1038/sdata.2018.29</p></li>
+<li><p>[6] DataCite Metadata Working Group. DataCite Metadata Schema Documentation for the Publication and Citation of Research Data v4.3. DataCite [Internet]. DataCite; 2019; Available from: https://schema.datacite.org/meta/kernel-4.3/</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/Identification"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="identifiers.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The need for identifiers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="minids.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Identifier Minting Service with Minid Client</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      <div class="extra_footer">
+        This project is supported by NIH CFDE program <img src="images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

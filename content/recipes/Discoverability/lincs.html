@@ -1,0 +1,1156 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience from LINCS &#8212; NIH-CFDE FAIR COOKBOOK</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/Discoverability/lincs.html" />
+    <link rel="shortcut icon" href="../../../_static/CFDE-logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="The need for identifiers" href="../Identification/identifiers.html" />
+    <link rel="prev" title="Experience from Kids First (KF)" href="kf.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/CFDE-logo-contrast.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NIH-CFDE FAIR COOKBOOK</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   The FAIR cookbook by the NIH-CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/fair-principles.html">
+   Introduction to FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/cfde.html">
+   Engaging with CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Recipes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="discoverability.html">
+   Discoverability
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="c2m2.html">
+     C2M2 model:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C2M2-L1-description.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cfde-namespaces.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="seo.html">
+     Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kf.html">
+     Experience from Kids First (KF)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Experience from LINCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Identification/identifiers.html">
+   The need for identifiers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/pids.html">
+     Recommendations for minting persistent and resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/minids.html">
+     Identifier Minting Service with Minid Client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Semantics/semantics.html">
+   Semantics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/ontologies.html">
+     Controlled Terminologies &amp; Ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/onto-services.html">
+     Ontology services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/cfde-terminologies.html">
+     NIH CFDE selected terminologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Compliance/compliance.html">
+   FAIR Compliance
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake.html">
+     Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake-rubric.html">
+     Evaluating FAIRness with the CFDE rubric on FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fair-api.html">
+     Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/Discoverability/lincs.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/Discoverability/lincs.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-process">
+   Step by Step Process
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-setting-up-your-environment">
+     Step 1: Setting up your environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-setup-an-etl-script">
+     Step 2: Setup an ETL script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-extracting-and-transforming-your-metadata-for-the-c2m2">
+     Step 3: Extracting and transforming your metadata for the C2M2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-1-projects">
+       Step 3.1: Projects
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-2-collections-files">
+       Step 3.2: Collections &amp; Files
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-3-subjects-biosamples">
+       Step 3.3: Subjects &amp; Biosamples
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-4-ontology-mapping">
+       Step 3.4: Ontology mapping
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-running-and-validating-our-extraction-and-transformation">
+     Step 4: Running and validating our extraction and transformation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-pushing-our-validated-c2m2-datapackage">
+     Step 5: Pushing our validated C2M2 datapackage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-name-fair-repo-a-a-name-fair-repo-report-a-a-name-fair-repo-assessments-a-fair-repo">
+     <a name="fair-repo">
+     </a>
+     <a name="fair-repo-report">
+     </a>
+     <a name="fair-repo-assessments">
+     </a>
+     FAIR Repo
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Experience from LINCS</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-process">
+   Step by Step Process
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-setting-up-your-environment">
+     Step 1: Setting up your environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-setup-an-etl-script">
+     Step 2: Setup an ETL script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-extracting-and-transforming-your-metadata-for-the-c2m2">
+     Step 3: Extracting and transforming your metadata for the C2M2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-1-projects">
+       Step 3.1: Projects
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-2-collections-files">
+       Step 3.2: Collections &amp; Files
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-3-subjects-biosamples">
+       Step 3.3: Subjects &amp; Biosamples
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-4-ontology-mapping">
+       Step 3.4: Ontology mapping
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-running-and-validating-our-extraction-and-transformation">
+     Step 4: Running and validating our extraction and transformation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-pushing-our-validated-c2m2-datapackage">
+     Step 5: Pushing our validated C2M2 datapackage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-name-fair-repo-a-a-name-fair-repo-report-a-a-name-fair-repo-assessments-a-fair-repo">
+     <a name="fair-repo">
+     </a>
+     <a name="fair-repo-report">
+     </a>
+     <a name="fair-repo-assessments">
+     </a>
+     FAIR Repo
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="experience-from-lincs">
+<h1>Experience from LINCS<a class="headerlink" href="#experience-from-lincs" title="Permalink to this headline">¶</a></h1>
+<p>A cookbook recipe documenting the easy extract &amp; transform (ETL) process of fitting the LINCS data into the C2M2 model.</p>
+<p><strong>Authors</strong>: <a class="reference external" href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
+<p><strong>Maintainers</strong>: <a class="reference external" href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
+<p><strong>Version</strong>: 1.2</p>
+<p><strong>License</strong>: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
+<div class="section" id="objectives">
+<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Demonstrate an example of an ETL process for preparing data for the C2M2</p></li>
+<li><p>Introduce tooling that can make this process easier</p></li>
+<li><p>Discuss necessary tradeoffs made to ensure maximal harmonization in the LINCS case</p></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="http://lincsportal.ccs.miami.edu/dcic-portal/">LINCS Data Portal</a> provides various ways to browse the existing LINCS data and highlight which small molecules, cell lines, genes, proteins, and antibodies are featured in a given dataset.</p>
+<p>While LINCS revolves around <em>Datasets</em>, encompassing in some cases several files for each data level, the <a class="reference external" href="https://www.nih-cfde.org/product/cfde-c2m2/">C2M2</a> models information revolving around files. Fortunately, the <a class="reference external" href="https://www.nih-cfde.org/product/level-1-asset-manifest-specification/">C2M2 Level 1</a> provides collections, which enable arbitrary meaningful groupings of files, which is how the LINCS datasets can fit.</p>
+</div>
+<div class="section" id="step-by-step-process">
+<h2>Step by Step Process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1-setting-up-your-environment">
+<h3>Step 1: Setting up your environment<a class="headerlink" href="#step-1-setting-up-your-environment" title="Permalink to this headline">¶</a></h3>
+<p>The C2M2 is described using a <a class="reference external" href="http://frictionlessdata.io/data-package/">Frictionless datapackage specification</a>, which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.</p>
+<p>A python helper class was devised to simplify codification of C2M2-compliant datapackages using <a class="reference external" href="https://docs.python.org/3/library/dataclasses.html">python3.7’s dataclasses</a> which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available <a class="reference external" href="https://github.com/nih-cfde/FAIR/tree/master/Demos/FrictionlessDataclass">here</a> and is easily updated to future C2M2 schemas.</p>
+<p>Given that you have access to the <a class="reference external" href="#fair-repo">FAIR repository</a>, this can be installed directly from GitHub with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3 install <span class="s1">&#39;c2m2-frictionless-dataclass[full] @ git+https://github.com/nih-cfde/c2m2-frictionless-dataclass&#39;</span>
+</pre></div>
+</div>
+<p>This is also the time to install any relevant packages for interacting with your DCC’s API, in our case we will use urllib to access the REST API.</p>
+</div>
+<div class="section" id="step-2-setup-an-etl-script">
+<h3>Step 2: Setup an ETL script<a class="headerlink" href="#step-2-setup-an-etl-script" title="Permalink to this headline">¶</a></h3>
+<p>Here we will outline the skeleton of an ETL script which utilizes the <code class="docutils literal notranslate"><span class="pre">c2m2-frictionless</span></code> package. For more complete examples for LINCS and other DCCs using this package, see the <a class="reference external" href="#fair-repo">FAIR repository</a>.</p>
+<p>extract_transform.py:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="c1"># Import C2M2 Frictionless Helper package</span>
+<span class="c1">## dataclasses</span>
+<span class="kn">import</span> <span class="nn">c2m2_frictionless</span>
+<span class="kn">from</span> <span class="nn">c2m2_frictionless</span> <span class="kn">import</span> <span class="n">C2M2</span>
+
+<span class="c1"># TODO: Import other helper methods/setup DCC API</span>
+
+<span class="k">def</span> <span class="nf">extract_transform</span><span class="p">():</span>
+  <span class="sd">&#39;&#39;&#39; Generate c2m2 dataclasses to be added to the datapackage</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="c1"># Construct the core id_namespace separating this DCC&#39;s ids from the ids of</span>
+  <span class="c1">#  all other DCCs</span>
+  <span class="n">ns</span> <span class="o">=</span> <span class="s1">&#39;http://www.lincsproject.org/&#39;</span>
+  <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span>
+    <span class="n">abbreviation</span><span class="o">=</span><span class="s1">&#39;LINCS&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Library of Integrated Network-Based Cellular Signatures&#39;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;The Library of Integrated Network-Based Cellular Signatures (LINCS) Program aims to create a network-based understanding of biology by cataloging changes in gene expression and other cellular processes that occur when cells are exposed to a variety of perturbing agents.&#39;</span><span class="p">,</span>
+  <span class="p">)</span>
+  <span class="c1"># TODO: yield additional resources, using `ns` for `id_namespace`</span>
+
+<span class="k">def</span> <span class="nf">extract_transform_validate</span><span class="p">(</span><span class="n">outdir</span><span class="p">):</span>
+  <span class="c1"># use the extract_transform generator to produce a datapackage</span>
+  <span class="n">pkg</span> <span class="o">=</span> <span class="n">c2m2_frictionless</span><span class="o">.</span><span class="n">create_datapackage</span><span class="p">(</span><span class="s1">&#39;C2M2&#39;</span><span class="p">,</span> <span class="n">extract_transform</span><span class="p">(),</span> <span class="n">outdir</span><span class="p">)</span>
+  <span class="c1"># identify ontological terms in the datapackage, and complete the term tables</span>
+  <span class="n">c2m2_frictionless</span><span class="o">.</span><span class="n">build_term_tables</span><span class="p">(</span><span class="n">outdir</span><span class="p">)</span>
+  <span class="c1"># validate assertion that the frictionless tableschema is complied with</span>
+  <span class="n">c2m2_frictionless</span><span class="o">.</span><span class="n">validate_datapackage</span><span class="p">(</span><span class="n">pkg</span><span class="p">)</span>
+  <span class="c1"># validate assertion that (id_namespace, name) is unique in each resource</span>
+  <span class="n">c2m2_frictionless</span><span class="o">.</span><span class="n">validate_id_namespace_name_uniqueness</span><span class="p">(</span><span class="n">pkg</span><span class="p">)</span>
+  <span class="c1">#</span>
+  <span class="k">return</span> <span class="n">pkg</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="kn">import</span> <span class="nn">sys</span>
+  <span class="c1"># grab an output directory off the command line</span>
+  <span class="n">extract_transform_validate</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>With the above skeleton in place, we can already run this script <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">etl.py</span> <span class="pre">output</span></code> to produce and validate a C2M2 datapackage, though this package will only contain one element: the <code class="docutils literal notranslate"><span class="pre">id_namespace</span></code>. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the C2M2 <a class="reference external" href="https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/">documentation</a>.</p>
+<p>Now we are ready to expand the <code class="docutils literal notranslate"><span class="pre">extract_transform</span></code> function such that we walk through the DCC’s pertinent dataset descriptions and yield C2M2 equivalent dataclasses.</p>
+</div>
+<div class="section" id="step-3-extracting-and-transforming-your-metadata-for-the-c2m2">
+<h3>Step 3: Extracting and transforming your metadata for the C2M2<a class="headerlink" href="#step-3-extracting-and-transforming-your-metadata-for-the-c2m2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="step-3-1-projects">
+<h4>Step 3.1: Projects<a class="headerlink" href="#step-3-1-projects" title="Permalink to this headline">¶</a></h4>
+<p>We will first focus on grabbing the <code class="docutils literal notranslate"><span class="pre">project</span></code> structure. It is recommended that a primary project for which all other projects point to is used for your DCC for logical grouping in the UI. Please see the <a class="reference external" href="https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/">C2M2 documentation</a> for a full description of what a “project” should represent, in short it is the groupings of datasets based essentially on funding awards.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lincs_fetchdata_iter</span><span class="p">():</span>
+  <span class="sd">&#39;&#39;&#39; This method paginates through the LINCS API yielding LINCS datasets</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="c1"># ...</span>
+
+<span class="c1"># ...</span>
+<span class="k">def</span> <span class="nf">extract_transform</span><span class="p">():</span>
+  <span class="c1"># ...</span>
+  <span class="c1"># Projects refer to collections of items that were produced i.e. under the same award</span>
+  <span class="c1">#  for a more complete definition of this and other C2M2 constructs,</span>
+  <span class="c1">#  please refer to the C2M2 docs (https://www.nih-cfde.org/product/cfde-c2m2/)</span>
+  <span class="n">primary_project</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">project</span><span class="p">(</span>
+    <span class="c1"># The namespace from before, ensuring any ids we choose don&#39;t clash</span>
+    <span class="n">id_namespace</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span>
+    <span class="n">local_id</span><span class="o">=</span><span class="s1">&#39;lincs&#39;</span><span class="p">,</span>
+    <span class="c1"># the persistent id here enables you to point to a specific id,</span>
+    <span class="c1">#  ideally a resolvable one, that behaves as a landing page for the project</span>
+    <span class="n">persistent_id</span><span class="o">=</span><span class="s1">&#39;http://www.lincsproject.org/&#39;</span><span class="p">,</span>
+    <span class="c1"># this abbreviation may be used in the display of your project</span>
+    <span class="n">abbreviation</span><span class="o">=</span><span class="s1">&#39;LINCS&#39;</span><span class="p">,</span>
+    <span class="c1"># this is the full name of your project</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Library of Integrated Network-based Cellular Signatures&#39;</span><span class="p">,</span>
+    <span class="c1"># this is the full description of your project</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;The Library of Integrated Network-Based Cellular Signatures (LINCS) Program aims to create a network-based understanding of biology by cataloging changes in gene expression and other cellular processes that occur when cells are exposed to a variety of perturbing agents.&#39;</span><span class="p">,</span>
+  <span class="p">)</span>
+  <span class="k">yield</span> <span class="n">primary_project</span>
+  <span class="c1"># ...</span>
+  <span class="n">projects</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="c1"># ...</span>
+  <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">lincs_fetchdata_iter</span><span class="p">():</span>
+    <span class="c1"># LINCS datasets each refer to a `project`</span>
+    <span class="c1">#  LINCS phase 1, 2, MCF10A, and more, these also fit as C2M2 project</span>
+    <span class="c1">#</span>
+    <span class="c1"># We will register the project if not done so already ensuring we</span>
+    <span class="c1">#  don&#39;t end up with duplicates</span>
+    <span class="k">if</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;projectname&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">projects</span><span class="p">:</span>
+      <span class="n">project</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">project</span><span class="p">(</span>
+        <span class="c1"># we&#39;ll use the same namespace of our primary project</span>
+        <span class="n">id_namespace</span><span class="o">=</span><span class="n">primary_project</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+        <span class="c1"># we&#39;ll use the project name as the identifier with lack of a better</span>
+        <span class="c1">#  solution</span>
+        <span class="n">local_id</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;projectname&#39;</span><span class="p">],</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;projectname&#39;</span><span class="p">],</span>
+        <span class="c1"># we&#39;ve omitted the optional persistent_id here because we currently</span>
+        <span class="c1">#  don&#39;t have landing pages for these project names and as such</span>
+        <span class="c1">#  cannot produce a persistent id referring to them. Ideally however</span>
+        <span class="c1">#  we would use those urls.</span>
+      <span class="p">)</span>
+      <span class="c1"># we&#39;ll save the project for de-duplication purposes</span>
+      <span class="n">projects</span><span class="p">[</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;projectname&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">project</span>
+      <span class="c1"># we&#39;ll yield it so it gets included in our datapackage</span>
+      <span class="k">yield</span> <span class="n">project</span>
+      <span class="c1"># we&#39;ll also create a project_in_project associating our primary project</span>
+      <span class="c1">#  to the project we just made</span>
+      <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">project_in_project</span><span class="p">(</span>
+        <span class="n">parent_project_id_namespace</span><span class="o">=</span><span class="n">primary_project</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+        <span class="n">parent_project_local_id</span><span class="o">=</span><span class="n">primary_project</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+        <span class="n">child_project_id_namespace</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+        <span class="n">child_project_local_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+      <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="c1"># grab the already created project</span>
+      <span class="n">project</span> <span class="o">=</span> <span class="n">projects</span><span class="p">[</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;projectname&#39;</span><span class="p">]]</span>
+    <span class="c1"># ...</span>
+  <span class="c1"># ...</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-2-collections-files">
+<h4>Step 3.2: Collections &amp; Files<a class="headerlink" href="#step-3-2-collections-files" title="Permalink to this headline">¶</a></h4>
+<p>With our project structure in place, we are now ready to walk through bringing the datasets and files into the package.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
+<span class="k">def</span> <span class="nf">extract_transform</span><span class="p">():</span>
+  <span class="c1"># ...</span>
+  <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">lincs_fetchdata_iter</span><span class="p">():</span>
+    <span class="c1"># ...</span>
+    <span class="c1"># grab creation time as iso 8601</span>
+    <span class="n">creation_time</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;datereleased&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">creation_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="n">creation_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
+        <span class="n">creation_time</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span>
+      <span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+        <span class="n">tzinfo</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span>
+      <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+    <span class="c1"># each LINCS dataset group has multiple datasets,</span>
+    <span class="c1">#  each LINCS dataset has multiple files.</span>
+    <span class="c1"># We can model this with two collections referring to the independent</span>
+    <span class="c1">#  sets of files</span>
+    <span class="c1">#</span>
+    <span class="c1"># LINCS Dataset Group</span>
+    <span class="n">collection</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span>
+      <span class="n">id_namespace</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span>
+      <span class="n">local_id</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;datasetgroup&#39;</span><span class="p">],</span>
+      <span class="n">persistent_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;http://lincsportal.ccs.miami.edu/datasets/view/</span><span class="si">{</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;datasetgroup&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+      <span class="n">name</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;datasetname&#39;</span><span class="p">],</span>
+      <span class="n">description</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+      <span class="n">creation_time</span><span class="o">=</span><span class="n">creation_time</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">yield</span> <span class="n">collection</span>
+    <span class="c1"># we can associate our collection with our project</span>
+    <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">collection_defined_by_project</span><span class="p">(</span>
+      <span class="n">collection_id_namespace</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+      <span class="n">collection_local_id</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+      <span class="n">project_id_namespace</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+      <span class="n">project_local_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># each dataset level (corresponding to a file) is specified in the metadata</span>
+    <span class="k">for</span> <span class="n">dataset_id</span><span class="p">,</span> <span class="n">dataset_version</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;datasetlevels&#39;</span><span class="p">,</span> <span class="p">[]),</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;latestversions&#39;</span><span class="p">,</span> <span class="p">[])):</span>
+      <span class="n">file</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">file</span><span class="p">(</span>
+        <span class="n">id_namespace</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span>
+        <span class="c1"># the LINCS dataset id is used as the id</span>
+        <span class="n">local_id</span><span class="o">=</span><span class="n">dataset_id</span><span class="p">,</span>
+        <span class="c1"># The file is necessarily associated with the project</span>
+        <span class="n">project_id_namespace</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+        <span class="n">project_local_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+        <span class="c1"># The landing page of the dataset is used as the persistent id</span>
+        <span class="n">persistent_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;http://lincsportal.ccs.miami.edu/datasets/view/</span><span class="si">{</span><span class="n">dataset_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="c1"># the creation time we converted to ISO8601 before</span>
+        <span class="n">creation_time</span><span class="o">=</span><span class="n">creation_time</span><span class="p">,</span>
+        <span class="c1"># File filename, note that C2M2 doesn&#39;t currently have a distinction between</span>
+        <span class="c1">#  download and landing page, we opted to put the download url in the filename.</span>
+        <span class="n">filename</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;http://lincsportal.ccs.miami.edu/dcic/api/download?path=LINCS_Data/</span><span class="si">{</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;centername&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&amp;amp;file=</span><span class="si">{</span><span class="n">dataset_id</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">dataset_version</span><span class="si">}</span><span class="s2">.tar.gz&quot;</span><span class="p">,</span>
+        <span class="c1"># Following are additional optional fields that we were unable</span>
+        <span class="c1">#  to easily map with LINCS but should be filled in if possible.</span>
+        <span class="c1"># size_in_bytes=0,</span>
+        <span class="c1"># sha256=&#39;&#39;,</span>
+        <span class="c1"># md5=&#39;&#39;,</span>
+        <span class="c1"># file_format=&#39;&#39;, # EDAM format:</span>
+        <span class="c1"># data_type=&#39;&#39;,   # EDAM data:</span>
+      <span class="p">)</span>
+      <span class="k">yield</span> <span class="n">file</span>
+      <span class="c1"># each file is in the collection</span>
+      <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">file_in_collection</span><span class="p">(</span>
+        <span class="n">file_id_namespace</span><span class="o">=</span><span class="n">file</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+        <span class="n">file_local_id</span><span class="o">=</span><span class="n">file</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+        <span class="n">collection_id_namespace</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+        <span class="n">collection_local_id</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+      <span class="p">)</span>
+
+</pre></div>
+</div>
+<p>With this, we have already satisfied a valid C2M2 instance, but ideally we’ll go a step further to C2M2 which has more annotations including information about Subjects and Biosamples, for more information refer to the <a class="reference external" href="https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/">C2M2 documentation</a>.</p>
+</div>
+<div class="section" id="step-3-3-subjects-biosamples">
+<h4>Step 3.3: Subjects &amp; Biosamples<a class="headerlink" href="#step-3-3-subjects-biosamples" title="Permalink to this headline">¶</a></h4>
+<p>The LINCS data associates Datasets with small molecules, cell lines, genes, proteins, antibodies, and other entities related to experimental conditions and readouts, a dataset consists of a series of experiments mostly carried out in high throughput with a goal of capturing changes in expression or other phenotypic changes that may be captured via images in various contexts under various conditions (for example, perturbed by small molecules in different cell lines).</p>
+<p>Due to the sheer number of experiments performed in high throughput, LINCS stores the whole set of experiments in a few files representing the data level (level of processing performed on the raw data). It might be possible to extract these files and produce massive amounts of biosamples, but this information is not currently directly available on the website for the practical reason that having landing pages for each micro-experiment is not useful for the users of this data.</p>
+<p>Because of this, LINCS lumps all the biosamples together into one “biosample” referring to the whole experiment, this allows annotating that biosample with the assay used to perform the experiment and associate that biosample with the subjects of the experiment (cell line, small molecules, etc..) that were studied. This closely matches how the LINCS portal serves this data and fits in the C2M2.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">def</span> <span class="nf">lincs_fetchstats</span><span class="p">(</span><span class="n">datasetid</span><span class="p">,</span> <span class="n">fields</span><span class="p">):</span>
+  <span class="c1"># ...</span>
+<span class="c1">#</span>
+<span class="c1"># This dictionary describes how to get metadata for a given &quot;stattype&quot; (subject)</span>
+<span class="n">statstypes</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;cellline&#39;</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;StatType&#39;</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(),</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="c1"># this describes the &quot;type of subject&quot; and is defined in the model</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;cfde_subject_granularity:4&#39;</span><span class="p">,</span>
+    <span class="n">include</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;cell line&#39;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;A cell line derived from one or more species or strains&#39;</span><span class="p">,</span>
+    <span class="c1"># this is the landing page for this subject</span>
+    <span class="n">download_url</span><span class="o">=</span><span class="k">lambda</span> <span class="n">datasetid</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;http://lincsportal.ccs.miami.edu/dcic/api/Results?searchTerm=%22</span><span class="si">{</span><span class="n">datasetid</span><span class="si">}</span><span class="s2">%22&amp;category=cellline&quot;</span><span class="p">,</span>
+    <span class="c1"># this is the id we should use for this subject</span>
+    <span class="n">id_from_meta</span><span class="o">=</span><span class="k">lambda</span> <span class="n">meta</span><span class="p">:</span> <span class="n">meta</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;CL_LINCS_ID&#39;</span><span class="p">),</span>
+  <span class="p">)),</span>
+  <span class="c1"># ...</span>
+<span class="p">}</span>
+<span class="c1"># ...</span>
+<span class="k">def</span> <span class="nf">extract_transform</span><span class="p">():</span>
+  <span class="c1"># ...</span>
+  <span class="c1"># Each &quot;stattype&quot; corresponds to a &quot;subject granularity&quot; in the C2M2, we&#39;ll</span>
+  <span class="c1">#  register those subject granularities now</span>
+  <span class="n">subject_granularities</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="c1"># Add all subject granularities from `stattypes`</span>
+  <span class="k">for</span> <span class="n">stat_key</span><span class="p">,</span> <span class="n">stat</span> <span class="ow">in</span> <span class="n">statstypes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">subject_granularities</span><span class="p">[</span><span class="n">stat_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">stat</span><span class="o">.</span><span class="n">id</span>
+  <span class="c1"># ...</span>
+  <span class="n">subjects</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="c1"># ...</span>
+  <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">lincs_fetchdata_iter</span><span class="p">():</span>
+    <span class="c1"># ...</span>
+    <span class="c1"># we&#39;ll associate a single biosample for the purpose of listing assay</span>
+    <span class="n">biosample_id</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">local_id</span>
+    <span class="c1"># NOTE: We defer biosample creation till after we have the anatomy</span>
+    <span class="c1"># the biosample is in the collection</span>
+    <span class="c1">#</span>
+    <span class="c1"># a dataset_group has a number of aspects that are associated with it</span>
+    <span class="c1"># including small molecules, proteins, cell lines, etc.. these are the subjects of the</span>
+    <span class="c1"># experiment. We will create all of these and associate them with our single &#39;super&#39; biosample</span>
+    <span class="n">dataset_group_subjects</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">all_stats</span> <span class="o">=</span> <span class="n">lincs_fetchstats</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;datasetid&#39;</span><span class="p">],</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">datum</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;statsfields&#39;</span><span class="p">,</span> <span class="p">[])))</span>
+    <span class="k">for</span> <span class="n">stat_name</span><span class="p">,</span> <span class="n">stats</span> <span class="ow">in</span> <span class="n">all_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+      <span class="k">for</span> <span class="n">stat</span> <span class="ow">in</span> <span class="n">stats</span><span class="p">:</span>
+        <span class="n">subject</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">subject_id</span> <span class="o">=</span> <span class="n">statstypes</span><span class="p">[</span><span class="n">stat_name</span><span class="p">]</span><span class="o">.</span><span class="n">id_from_meta</span><span class="p">(</span><span class="n">stat</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">subject_id</span><span class="p">:</span>
+          <span class="k">if</span> <span class="n">stat_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+            <span class="n">subjects</span><span class="p">[</span><span class="n">stat_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+          <span class="k">if</span> <span class="n">subject_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">[</span><span class="n">stat_name</span><span class="p">]:</span>
+            <span class="n">subject</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">subject</span><span class="p">(</span>
+              <span class="n">id_namespace</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span>
+              <span class="c1"># in an effort to ensure id uniqueness, we&#39;ll use the stat_name as a prefix</span>
+              <span class="n">local_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">stat_name</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">subject_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+              <span class="c1"># our subject must be a part of the project, but because these subjects</span>
+              <span class="c1">#   are re-used across all projects, we&#39;ll associate them with</span>
+              <span class="c1">#   the primary project instead of just the project</span>
+              <span class="n">project_id_namespace</span><span class="o">=</span><span class="n">primary_project</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+              <span class="n">project_local_id</span><span class="o">=</span><span class="n">primary_project</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+              <span class="c1"># here we associate this subject with the subject granularity</span>
+              <span class="n">granularity</span><span class="o">=</span><span class="n">subject_granularities</span><span class="p">[</span><span class="n">stat_name</span><span class="p">],</span>
+            <span class="p">)</span>
+            <span class="k">yield</span> <span class="n">subject</span>
+            <span class="n">subjects</span><span class="p">[</span><span class="n">stat_name</span><span class="p">][</span><span class="n">subject_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">subject</span>
+          <span class="k">else</span><span class="p">:</span>
+            <span class="n">subject</span> <span class="o">=</span> <span class="n">subjects</span><span class="p">[</span><span class="n">stat_name</span><span class="p">][</span><span class="n">subject_id</span><span class="p">]</span>
+          <span class="c1">#</span>
+        <span class="c1"># if we were able to get a subject out of this we&#39;ll add it as an</span>
+        <span class="c1">#  association to the biosample</span>
+        <span class="k">if</span> <span class="n">subject</span> <span class="ow">and</span> <span class="n">subject</span><span class="o">.</span><span class="n">local_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dataset_group_subjects</span><span class="p">:</span>
+          <span class="n">dataset_group_subjects</span><span class="p">[</span><span class="n">subject</span><span class="o">.</span><span class="n">local_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">subject</span>
+          <span class="c1"># the biosample was derived from this subject</span>
+          <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">biosample_from_subject</span><span class="p">(</span>
+            <span class="n">biosample_id_namespace</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span>
+            <span class="n">biosample_local_id</span><span class="o">=</span><span class="n">biosample_id</span><span class="p">,</span>
+            <span class="n">subject_id_namespace</span><span class="o">=</span><span class="n">subject</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+            <span class="n">subject_local_id</span><span class="o">=</span><span class="n">subject</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+          <span class="p">)</span>
+          <span class="c1"># the subject is in the collection (lincs dataset group)</span>
+          <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">subject_in_collection</span><span class="p">(</span>
+            <span class="n">subject_id_namespace</span><span class="o">=</span><span class="n">subject</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+            <span class="n">subject_local_id</span><span class="o">=</span><span class="n">subject</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+            <span class="n">collection_id_namespace</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+            <span class="n">collection_local_id</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+          <span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="n">biosample</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">biosample</span><span class="p">(</span>
+      <span class="n">id_namespace</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span>
+      <span class="n">local_id</span><span class="o">=</span><span class="n">biosample_id</span><span class="p">,</span>
+      <span class="n">project_id_namespace</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+      <span class="n">project_local_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+      <span class="c1"># TODO: ontological mappings</span>
+      <span class="c1"># assay_type=&#39;&#39;,</span>
+      <span class="c1"># anatomy=&#39;&#39;</span>
+    <span class="p">)</span>
+    <span class="k">yield</span> <span class="n">biosample</span>
+    <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">biosample_in_collection</span><span class="p">(</span>
+      <span class="n">biosample_id_namespace</span><span class="o">=</span><span class="n">biosample</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+      <span class="n">biosample_local_id</span><span class="o">=</span><span class="n">biosample_id</span><span class="p">,</span>
+      <span class="n">collection_id_namespace</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+      <span class="n">collection_local_id</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># ...</span>
+    <span class="k">for</span> <span class="n">dataset_id</span><span class="p">,</span> <span class="n">dataset_version</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">datum</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;datasetlevels&#39;</span><span class="p">,</span> <span class="p">[]),</span> <span class="n">datum</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;latestversions&#39;</span><span class="p">,</span> <span class="p">[])):</span>
+      <span class="c1"># ...</span>
+      <span class="c1"># each file describes the biosample</span>
+      <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">file_describes_biosample</span><span class="p">(</span>
+        <span class="n">file_id_namespace</span><span class="o">=</span><span class="n">file</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+        <span class="n">file_local_id</span><span class="o">=</span><span class="n">file</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+        <span class="n">biosample_id_namespace</span><span class="o">=</span><span class="n">biosample</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+        <span class="n">biosample_local_id</span><span class="o">=</span><span class="n">biosample</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+      <span class="p">)</span>
+      <span class="c1"># each file also describes all of the subjects in the study</span>
+      <span class="k">for</span> <span class="n">subject</span> <span class="ow">in</span> <span class="n">dataset_group_subjects</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">file_describes_subject</span><span class="p">(</span>
+          <span class="n">file_id_namespace</span><span class="o">=</span><span class="n">file</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+          <span class="n">file_local_id</span><span class="o">=</span><span class="n">file</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+          <span class="n">subject_id_namespace</span><span class="o">=</span><span class="n">subject</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+          <span class="n">subject_local_id</span><span class="o">=</span><span class="n">subject</span><span class="o">.</span><span class="n">local_id</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-4-ontology-mapping">
+<h4>Step 3.4: Ontology mapping<a class="headerlink" href="#step-3-4-ontology-mapping" title="Permalink to this headline">¶</a></h4>
+<p>Without subjects and biosamples in place, we can now add ontological terms which will be a point of harmonization between the different DCCs. For some, this will be simple, especially if the CFDE is prescribing an ontology that is already being used. For others, this may be a more complicated mapping effort. In LINCS, assays were described in a much more specific manner than OBI, the currently prescribed ontology for assays in the C2M2–as such we need to collapse many of the assay descriptions into broader terms.</p>
+<p>On the other hand, the organs were specified on the cell line in raw text, so these were mapped to the UBERON ontology.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
+<span class="n">lincs_assay_obi_lookup</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Aggregated small molecule biochemical target activity&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000070&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;ATAC-seq&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0002020&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Bead-based immunoassay&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0001632&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;ELISA&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0001632&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Fluorescence imaging&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0001501&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;KiNativ&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0001146&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;KINOMEscan&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0001146&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;L1000&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000424&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;LC-MS&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000470&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Mass spectrometry&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000470&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;MEMA (fluorescence imaging)&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0001501&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Microwestern&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000615&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;P100 (mass spectrometry)&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000615&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;PCR&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0001146&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;RNA-seq&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0001271&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;RPPA&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000615&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;SWATH-MS&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000615&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Tandem Mass Tag (TMT) Mass Spectrometry&#39;</span><span class="p">:</span> <span class="s1">&#39;OBI:0000470&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;To Be Classified&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">lincs_anatomy_lookup</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Ovary&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000992&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;cervix&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000002&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;kidney&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002113&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;vulva&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000997&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;gall bladder&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002110&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;urinary bladder&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0001255&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;nervous system&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0001016&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Lung&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002048&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;skin&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002097&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Intestine&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000160&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Peripheral blood&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000178&#39;</span><span class="p">,</span> <span class="c1"># WARNING: not &#39;peripheral&#39;</span>
+  <span class="s1">&#39;miscellaneous&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;adrenal gland&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002369&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;lung&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002048&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;thyroid&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002046&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;urinary tract&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0011143, UBERON:0001556&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;uterus&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000995&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;pancreas&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0001264&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;lymphatic system&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0006558&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;muscle&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0001630&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;biliary tract&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;blood&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000178&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;stomach&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000945&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;intestine&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000160&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;head and neck&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000974&#39;</span><span class="p">,</span> <span class="c1">#&#39;UBERON:0000974, UBERON:0000974&#39;,</span>
+  <span class="s1">&#39;human&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Brain&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000955&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;testes&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000473&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bone&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002481&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;large intestine&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000059&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;endometrium&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0001295&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;ureter&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000056&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;pleura&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000977&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Skin&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002097&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;breast&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000310&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;liver&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002107&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Mammary gland&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0001911&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;ovary&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000992&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;prostate&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0002367&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;esophagus&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0001043&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;brain&#39;</span><span class="p">:</span> <span class="s1">&#39;UBERON:0000955&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">lincs_organism_lookup</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Homo sapiens&#39;</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;NCBI:taxid9606&#39;</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(),</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;NCBI:taxid9606&#39;</span><span class="p">,</span>
+    <span class="n">clade</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span>
+  <span class="p">)),</span>
+  <span class="s1">&#39;Homo Sapiens&#39;</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;NCBI:taxid9606&#39;</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(),</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;NCBI:taxid9606&#39;</span><span class="p">,</span>
+    <span class="n">clade</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span>
+  <span class="p">)),</span>
+  <span class="s1">&#39;Homo Sapien&#39;</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;NCBI:taxid9606&#39;</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(),</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;NCBI:taxid9606&#39;</span><span class="p">,</span>
+    <span class="n">clade</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span>
+  <span class="p">)),</span>
+<span class="p">}</span>
+<span class="c1"># ...</span>
+<span class="k">def</span> <span class="nf">first_or_none</span><span class="p">(</span><span class="n">it</span><span class="p">):</span>
+  <span class="sd">&#39;&#39;&#39; A simple helper for safely returning the first element of a potentially empty iterator</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
+  <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">None</span>
+<span class="c1"># ...</span>
+<span class="k">def</span> <span class="nf">extract_transform</span><span class="p">():</span>
+  <span class="c1"># ...</span>
+  <span class="n">taxonomies</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="c1"># https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-C2M2_internal_CFDE_CV_tables/subject_granularity.tsv#L2</span>
+  <span class="n">cfde_subject_role_organism</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">subject_role</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;cfde_subject_role:0&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;single organism&#39;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;The organism represented by a subject in the &#39;single organism&#39; granularity category&quot;</span><span class="p">,</span>
+  <span class="p">)</span>
+  <span class="k">yield</span> <span class="n">cfde_subject_role_organism</span>
+  <span class="c1"># ...</span>
+  <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">lincs_fetchdata_iter</span><span class="p">():</span>
+    <span class="c1"># ...</span>
+    <span class="n">anatomies</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="k">for</span> <span class="n">stat_name</span><span class="p">,</span> <span class="n">stats</span> <span class="ow">in</span> <span class="n">all_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+      <span class="c1"># ...</span>
+      <span class="k">if</span> <span class="n">subject</span><span class="p">:</span>
+        <span class="c1"># ...</span>
+        <span class="c1"># In order to capture anatomy at the biosample level, we need to catch</span>
+        <span class="c1">#  the anatomy on the subject</span>
+        <span class="k">if</span> <span class="n">stat_name</span> <span class="o">==</span> <span class="s1">&#39;cellline&#39;</span><span class="p">:</span>
+          <span class="c1"># in the case of cell lines, we&#39;d have a taxonomy</span>
+          <span class="n">lincs_taxon</span> <span class="o">=</span> <span class="n">lincs_organism_lookup</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;organism&#39;</span><span class="p">))</span>
+          <span class="k">if</span> <span class="n">lincs_taxon</span> <span class="ow">and</span> <span class="n">lincs_taxon</span><span class="o">.</span><span class="n">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">taxonomies</span><span class="p">:</span>
+            <span class="n">taxon</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">ncbi_taxonomy</span><span class="p">(</span>
+              <span class="nb">id</span><span class="o">=</span><span class="n">lincs_taxon</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+              <span class="n">clade</span><span class="o">=</span><span class="n">lincs_taxon</span><span class="o">.</span><span class="n">clade</span><span class="p">,</span>
+              <span class="n">name</span><span class="o">=</span><span class="n">lincs_taxon</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">taxonomies</span><span class="p">[</span><span class="n">lincs_taxon</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">taxon</span>
+            <span class="k">yield</span> <span class="n">taxon</span>
+          <span class="k">elif</span> <span class="n">lincs_taxon</span><span class="p">:</span>
+            <span class="n">taxon</span> <span class="o">=</span> <span class="n">taxonomies</span><span class="p">[</span><span class="n">lincs_taxon</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+          <span class="k">else</span><span class="p">:</span>
+            <span class="n">taxon</span> <span class="o">=</span> <span class="kc">None</span>
+          <span class="c1">#</span>
+          <span class="k">if</span> <span class="n">taxon</span><span class="p">:</span>
+            <span class="c1"># associate the subject with the taxon</span>
+            <span class="k">yield</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">subject_role_taxonomy</span><span class="p">(</span>
+              <span class="n">subject_id_namespace</span><span class="o">=</span><span class="n">subject</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+              <span class="n">subject_id</span><span class="o">=</span><span class="n">subject</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+              <span class="n">role_id</span><span class="o">=</span><span class="n">subject_role_organism</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+              <span class="n">taxonomy_id</span><span class="o">=</span><span class="n">taxon</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="p">)</span>
+          <span class="c1"># in the case of cell lines, we&#39;d have an anatomy</span>
+          <span class="k">if</span> <span class="n">subject_id</span> <span class="ow">in</span> <span class="n">lincs_anatomy_lookup</span><span class="p">:</span>
+            <span class="n">anatomies</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">lincs_cellline_anatomy</span><span class="p">(</span><span class="n">lincs_anatomy_lookup</span><span class="p">[</span><span class="n">subject_id</span><span class="p">]))</span>
+          <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WARNING: </span><span class="si">{</span><span class="n">subject_id</span><span class="si">}</span><span class="s2"> not in celllines&quot;</span><span class="p">)</span>
+    <span class="c1"># ...</span>
+    <span class="n">biosample</span> <span class="o">=</span> <span class="n">C2M2</span><span class="o">.</span><span class="n">biosample</span><span class="p">(</span>
+      <span class="n">id_namespace</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span>
+      <span class="n">local_id</span><span class="o">=</span><span class="n">biosample_id</span><span class="p">,</span>
+      <span class="n">project_id_namespace</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id_namespace</span><span class="p">,</span>
+      <span class="n">project</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+      <span class="c1"># Lookup assay name to get OBI</span>
+      <span class="n">assay_type</span><span class="o">=</span><span class="n">lincs_assay_obi_lookup</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;assayname&#39;</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+      <span class="c1"># NOTE: we have several anatomies at this point and are forced to choose one</span>
+      <span class="c1"># this will require improvements to either the model or to our conversion</span>
+      <span class="c1"># perhaps we could instead have several biosamples for each file corresponding</span>
+      <span class="c1"># to each subject. This will be left for future directions</span>
+      <span class="n">anatomy</span><span class="o">=</span><span class="n">first_or_none</span><span class="p">(</span><span class="n">anatomies</span><span class="p">),</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>Here we show how we were able to capture an anatomy, taxonomies on cell lines, and assays on biosamples. While not complete and not perfect, this provides the much needed interoperation layer with the other DCCs. With this type of annotation, we can look at files across different DCCs by assay, anatomy, or subjects by taxonomy. It improves the findability of these files even if the model does not perfectly capture the real structure of the original page. The CFDE is meant to catalog and provide federated search to all of the DCCs, directing users to the DCC’s pages, not to replace the catalogs already in place.</p>
+</div>
+</div>
+<div class="section" id="step-4-running-and-validating-our-extraction-and-transformation">
+<h3>Step 4: Running and validating our extraction and transformation<a class="headerlink" href="#step-4-running-and-validating-our-extraction-and-transformation" title="Permalink to this headline">¶</a></h3>
+<p>Our script is now ready to be run, tested, and refactored. During this phase it is ideal to cache network requests if hitting API endpoints. Every run of the script will re-construct the entire data package and run through the various checks, reporting any errors that occur.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 extract_transform.py output
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-5-pushing-our-validated-c2m2-datapackage">
+<h3>Step 5: Pushing our validated C2M2 datapackage<a class="headerlink" href="#step-5-pushing-our-validated-c2m2-datapackage" title="Permalink to this headline">¶</a></h3>
+<p>A client for facilitating the ingestion of your data into the CFDE portal exists, for more information about this, check <a class="reference external" href="https://docs.nih-cfde.org/en/latest/cfde-submit/docs/">here</a>. Once installed, the output directory we produced with the <code class="docutils literal notranslate"><span class="pre">etl.py</span></code> script can be sent to DERIVA.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># install the DERIVA loader script</span>
+pip install cfde-submit
+
+<span class="c1"># output here is the directory with the output of the etl.py script</span>
+cfde run output
+
+<span class="c1"># check the status of the ingestion</span>
+cfde status
+</pre></div>
+</div>
+<p>This tool facilitates authentication, manual preview verification when loaded on the server side (you will get an email), followed by CFDE verification and ultimate incorporation of your data into the unified portal.</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date <a class="reference external" href="https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/">C2M2 documentation</a> and it may also be useful to review and perform <a class="reference external" href="https://nih-cfde.github.io/the-fair-cookbook/recipes/Compliance/fairshake.html">FAIR assessments</a> which include more elaborate assertions for compliance with FAIRness beyond the C2M2.</p>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-name-fair-repo-a-a-name-fair-repo-report-a-a-name-fair-repo-assessments-a-fair-repo">
+<h3><a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo<a class="headerlink" href="#a-name-fair-repo-a-a-name-fair-repo-report-a-a-name-fair-repo-assessments-a-fair-repo" title="Permalink to this headline">¶</a></h3>
+<p>The CFDE FAIR repository is currently private given that it contains details about DCCs that have not yet been verified.
+Please submit a request to <a class="reference external" href="https://www.nih-cfde.org/contact/">https://www.nih-cfde.org/contact/</a> if you need access to the repository.</p>
+<p>If you have access to the repository, you can access it <a class="reference external" href="https://github.com/nih-cfde/FAIR">here</a>. It contains C2M2 conversion scripts much like the one described here for several DCC’s publicly facing metadata, organized into directories with each DCC name.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/Discoverability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="kf.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Experience from Kids First (KF)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Identification/identifiers.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The need for identifiers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      <div class="extra_footer">
+        This project is supported by NIH CFDE program <img src="images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

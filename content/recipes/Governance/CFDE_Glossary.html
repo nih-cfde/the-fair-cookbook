@@ -1,0 +1,2260 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CFDE Glossary &#8212; NIH-CFDE FAIR COOKBOOK</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://nih-cfde.github.io/the-fair-cookbook/content/recipes/Governance/CFDE_Glossary.html" />
+    <link rel="shortcut icon" href="../../../_static/CFDE-logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/CFDE-logo-contrast.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NIH-CFDE FAIR COOKBOOK</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   The FAIR cookbook by the NIH-CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/fair-principles.html">
+   Introduction to FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Introduction/cfde.html">
+   Engaging with CFDE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Recipes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Discoverability/discoverability.html">
+   Discoverability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/c2m2.html">
+     C2M2 model:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/C2M2-L1-description.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/cfde-namespaces.html">
+     Conceptual Description of the Level 1 C2M2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/seo.html">
+     Schema.org, BioSchemas, JSONSchema, JSON-LD and DATS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/kf.html">
+     Experience from Kids First (KF)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Discoverability/lincs.html">
+     Experience from LINCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Identification/identifiers.html">
+   The need for identifiers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/pids.html">
+     Recommendations for minting persistent and resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Identification/minids.html">
+     Identifier Minting Service with Minid Client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Semantics/semantics.html">
+   Semantics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/ontologies.html">
+     Controlled Terminologies &amp; Ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/onto-services.html">
+     Ontology services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Semantics/cfde-terminologies.html">
+     NIH CFDE selected terminologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Compliance/compliance.html">
+   FAIR Compliance
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake.html">
+     Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fairshake-rubric.html">
+     Evaluating FAIRness with the CFDE rubric on FAIRshake
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compliance/fair-api.html">
+     Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/Governance/CFDE_Glossary.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://nih-cfde.github.io/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/Governance/CFDE_Glossary.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   CFDE Glossary
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-content">
+   Table of Content
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#common-fund-projects-programs-organizations">
+     Common Fund Projects - Programs - Organizations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-a2cps-u">
+       <u>
+        A2CPS
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-ashg-u">
+       <u>
+        ASHG
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-bic-u">
+       <u>
+        BIC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cc-u">
+       <u>
+        CC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-u">
+       <u>
+        CFDE
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-common-fund-programs-u">
+       <u>
+        Common Fund Programs
+       </u>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#dn">
+         4DN
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#gtex">
+         GTEx
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#hmp">
+         HMP
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#kids-first">
+         Kids First
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#lincs">
+         LINCS
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#metabolomics">
+         <span class="xref myst">
+          Metabolomics
+         </span>
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#sparc">
+         <span class="xref myst">
+          SPARC
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dccs-u">
+       <u>
+        DCCs
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dcic-u">
+       <u>
+        DCIC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dtc-u">
+       <u>
+        DTC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#era-commons">
+       eRA Commons
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-m3c-u">
+       <u>
+        M3C
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-mgp-u">
+       <u>
+        MGP
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-motrpac-u">
+       <u>
+        MoTrPAC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-mw-u">
+       <u>
+        MW
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-metabolomics-workbench-metabolite-database-u">
+       <u>
+        Metabolomics Workbench Metabolite Database
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-nmdr-u">
+       <u>
+        NMDR
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-ras-u">
+       <u>
+        RAS
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-rcmrc-u">
+       <u>
+        RCMRC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-refmet-u">
+       <u>
+        RefMet
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-strides-u">
+       <u>
+        STRIDES
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-tcc-u">
+       <u>
+        TCC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-topmed-u">
+       <u>
+        TOPMed
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-case-terms">
+     Use Case Terms
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-objective-u">
+       <u>
+        Objective
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-persona-u">
+       <u>
+        Persona
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-requirement-u">
+       <u>
+        Requirement
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-summary-u">
+       <u>
+        Summary
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-use-case-u">
+       <u>
+        Use Case
+       </u>
+       :
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-user-task-u">
+       <u>
+        User Task
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-models-software-tools">
+     Data Models - Software - Tools
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-api-u">
+       <u>
+        API
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#c2m2">
+       C2M2
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cfde-data-dashboard">
+       CFDE Data Dashboard
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-query-portal-u">
+       <u>
+        CFDE Query Portal
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cv-u">
+       <u>
+        CV
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dats-u">
+       <u>
+        DATS
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-citation-rubric">
+       <span class="xref myst">
+        Data Citation Rubric
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dbgap">
+       dbGaP
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deriva">
+       DERIVA
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deriva-catalog">
+       DERIVA Catalog
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-entity-relationship-model-u">
+       <u>
+        Entity-relationship-model
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fair-insignia">
+       <span class="xref myst">
+        FAIR Insignia
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fairshake">
+       FAIRshake
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figshare">
+       Figshare
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#frictionless-data-package">
+       Frictionless Data Package
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#github">
+       GitHub
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#globus-automate">
+       <span class="xref myst">
+        Globus Automate
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#jupyter-notebook">
+       Jupyter Notebook
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#npm">
+       NPM
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-richness-levels-u">
+       <u>
+        Richness-levels
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-sso-u">
+       <u>
+        SSO
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cross-cut-metadata-model-core-concepts">
+     Cross Cut Metadata Model Core Concepts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-asset-u">
+       <u>
+        Asset
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-asset-inventory-u">
+       <u>
+        Asset Inventory
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-biospecimens-u">
+       <u>
+        Biospecimens
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-data-object-u">
+       <u>
+        Data Object
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dataset-u">
+       <u>
+        Dataset
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fair">
+       FAIR
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-file-u">
+       <u>
+        File
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-guid-u">
+       <u>
+        GUID
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-metadata-u">
+       <u>
+        Metadata
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-organization-u">
+       <u>
+        Organization
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-project-u">
+       <u>
+        Project
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-sample-u">
+       <u>
+        Sample
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-subject-u">
+       <u>
+        Subject
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-subject-group-u">
+       <u>
+        Subject Group
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cfde-model-types-and-file-formats">
+     CFDE Model Types and File Formats
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-asset-manifest-u">
+       <u>
+        CFDE Asset Manifest
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-asset-specification-u">
+       <u>
+        CFDE Asset Specification
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cfde-common-metadata-format">
+       CFDE Common Metadata Format
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-core-er-diagram-u">
+       <u>
+        CFDE Core ER Diagram
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-core-table-schema-u">
+       <u>
+        CFDE Core Table Schema
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-entity-relation-diagram-u">
+       <u>
+        CFDE Entity-Relation Diagram
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-metadata-manifest-u">
+       <u>
+        Metadata Manifest
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       <u>
+        CFDE-asset-manifest
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processes">
+     Processes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-c2m2-creation-flow-u">
+       <u>
+        C2M2 Creation Flow
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-c2m2-extractor-flow-u">
+       <u>
+        C2M2 Extractor Flow
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-data-generating-event-u">
+       <u>
+        Data-Generating Event
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-fair-assessment-u">
+       <u>
+        FAIR Assessment
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-globus-automate-flow-u">
+       <u>
+        Globus Automate Flow
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dcc-data-ingestion-process-u">
+       <u>
+        DCC-data-ingestion-process
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-metadata-ingest-u">
+       <u>
+        Metadata Ingest
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-proof-of-concept-poc-u">
+       <u>
+        Proof of Concept (POC)
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-table-schema-to-deriva-translation-u">
+       <u>
+        Table Schema to DERIVA Translation
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>CFDE Glossary</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   CFDE Glossary
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-content">
+   Table of Content
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#common-fund-projects-programs-organizations">
+     Common Fund Projects - Programs - Organizations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-a2cps-u">
+       <u>
+        A2CPS
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-ashg-u">
+       <u>
+        ASHG
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-bic-u">
+       <u>
+        BIC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cc-u">
+       <u>
+        CC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-u">
+       <u>
+        CFDE
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-common-fund-programs-u">
+       <u>
+        Common Fund Programs
+       </u>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#dn">
+         4DN
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#gtex">
+         GTEx
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#hmp">
+         HMP
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#kids-first">
+         Kids First
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#lincs">
+         LINCS
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#metabolomics">
+         <span class="xref myst">
+          Metabolomics
+         </span>
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#sparc">
+         <span class="xref myst">
+          SPARC
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dccs-u">
+       <u>
+        DCCs
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dcic-u">
+       <u>
+        DCIC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dtc-u">
+       <u>
+        DTC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#era-commons">
+       eRA Commons
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-m3c-u">
+       <u>
+        M3C
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-mgp-u">
+       <u>
+        MGP
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-motrpac-u">
+       <u>
+        MoTrPAC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-mw-u">
+       <u>
+        MW
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-metabolomics-workbench-metabolite-database-u">
+       <u>
+        Metabolomics Workbench Metabolite Database
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-nmdr-u">
+       <u>
+        NMDR
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-ras-u">
+       <u>
+        RAS
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-rcmrc-u">
+       <u>
+        RCMRC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-refmet-u">
+       <u>
+        RefMet
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-strides-u">
+       <u>
+        STRIDES
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-tcc-u">
+       <u>
+        TCC
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-topmed-u">
+       <u>
+        TOPMed
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-case-terms">
+     Use Case Terms
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-objective-u">
+       <u>
+        Objective
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-persona-u">
+       <u>
+        Persona
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-requirement-u">
+       <u>
+        Requirement
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-summary-u">
+       <u>
+        Summary
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-use-case-u">
+       <u>
+        Use Case
+       </u>
+       :
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-user-task-u">
+       <u>
+        User Task
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-models-software-tools">
+     Data Models - Software - Tools
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-api-u">
+       <u>
+        API
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#c2m2">
+       C2M2
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cfde-data-dashboard">
+       CFDE Data Dashboard
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-query-portal-u">
+       <u>
+        CFDE Query Portal
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cv-u">
+       <u>
+        CV
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dats-u">
+       <u>
+        DATS
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-citation-rubric">
+       <span class="xref myst">
+        Data Citation Rubric
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dbgap">
+       dbGaP
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deriva">
+       DERIVA
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deriva-catalog">
+       DERIVA Catalog
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-entity-relationship-model-u">
+       <u>
+        Entity-relationship-model
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fair-insignia">
+       <span class="xref myst">
+        FAIR Insignia
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fairshake">
+       FAIRshake
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figshare">
+       Figshare
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#frictionless-data-package">
+       Frictionless Data Package
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#github">
+       GitHub
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#globus-automate">
+       <span class="xref myst">
+        Globus Automate
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#jupyter-notebook">
+       Jupyter Notebook
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#npm">
+       NPM
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-richness-levels-u">
+       <u>
+        Richness-levels
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-sso-u">
+       <u>
+        SSO
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cross-cut-metadata-model-core-concepts">
+     Cross Cut Metadata Model Core Concepts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-asset-u">
+       <u>
+        Asset
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-asset-inventory-u">
+       <u>
+        Asset Inventory
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-biospecimens-u">
+       <u>
+        Biospecimens
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-data-object-u">
+       <u>
+        Data Object
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dataset-u">
+       <u>
+        Dataset
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fair">
+       FAIR
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-file-u">
+       <u>
+        File
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-guid-u">
+       <u>
+        GUID
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-metadata-u">
+       <u>
+        Metadata
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-organization-u">
+       <u>
+        Organization
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-project-u">
+       <u>
+        Project
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-sample-u">
+       <u>
+        Sample
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-subject-u">
+       <u>
+        Subject
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-subject-group-u">
+       <u>
+        Subject Group
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cfde-model-types-and-file-formats">
+     CFDE Model Types and File Formats
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-asset-manifest-u">
+       <u>
+        CFDE Asset Manifest
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-asset-specification-u">
+       <u>
+        CFDE Asset Specification
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cfde-common-metadata-format">
+       CFDE Common Metadata Format
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-core-er-diagram-u">
+       <u>
+        CFDE Core ER Diagram
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-core-table-schema-u">
+       <u>
+        CFDE Core Table Schema
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-cfde-entity-relation-diagram-u">
+       <u>
+        CFDE Entity-Relation Diagram
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-metadata-manifest-u">
+       <u>
+        Metadata Manifest
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       <u>
+        CFDE-asset-manifest
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processes">
+     Processes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-c2m2-creation-flow-u">
+       <u>
+        C2M2 Creation Flow
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-c2m2-extractor-flow-u">
+       <u>
+        C2M2 Extractor Flow
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-data-generating-event-u">
+       <u>
+        Data-Generating Event
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-fair-assessment-u">
+       <u>
+        FAIR Assessment
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-globus-automate-flow-u">
+       <u>
+        Globus Automate Flow
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-dcc-data-ingestion-process-u">
+       <u>
+        DCC-data-ingestion-process
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-metadata-ingest-u">
+       <u>
+        Metadata Ingest
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-proof-of-concept-poc-u">
+       <u>
+        Proof of Concept (POC)
+       </u>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-table-schema-to-deriva-translation-u">
+       <u>
+        Table Schema to DERIVA Translation
+       </u>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="cfde-glossary">
+<h1>CFDE Glossary<a class="headerlink" href="#cfde-glossary" title="Permalink to this headline">¶</a></h1>
+<!-- <details> -->
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="table-of-content">
+<h1>Table of Content<a class="headerlink" href="#table-of-content" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p><a class="reference external" href="#Common-Fund-Projects---Programs---Organizations">Common Fund Projects - Programs - Organizations</a></p></li>
+<li><p><a class="reference external" href="#Use-Case-Terms">Use Case Terms</a></p></li>
+<li><p><a class="reference external" href="#Data-Models---Software---Tools">Data Models - Software - Tools</a></p></li>
+<li><p><a class="reference external" href="#Cross-Cut-Metadata-Model-Core-Concepts">Cross Cut Metadata Model Core Concepts</a></p></li>
+<li><p><a class="reference external" href="#CFDE-Model-Types-and-File-Formats">CFDE Model Types and File Formats</a></p></li>
+<li><p><a class="reference external" href="#Processes">Processes</a></p></li>
+</ol>
+<div class="section" id="common-fund-projects-programs-organizations">
+<h2>Common Fund Projects - Programs - Organizations<a class="headerlink" href="#common-fund-projects-programs-organizations" title="Permalink to this headline">¶</a></h2>
+<!-- <summary>Click to expand!</summary> -->
+<div class="section" id="u-a2cps-u">
+<h3><u>A2CPS</u><a class="headerlink" href="#u-a2cps-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://commonfund.nih.gov/pain"><code class="docutils literal notranslate"><span class="pre">Acute</span> <span class="pre">to</span> <span class="pre">Chronic</span> <span class="pre">Pain</span> <span class="pre">Signatures</span> <span class="pre">program</span></code></a>. The most comprehensive study to date to investigate the connections of peripheral biology, brain, psychological, and bio-behavioral risk factors. Composed of a consortium of organizations and scientists throughout the U.S. and Canada, A2CPS is part of the multi-pronged <a class="reference external" href="https://heal.nih.gov/">NIH HEAL</a> (Helping to End Addiction Long-Term) initiative, an aggressive effort to speed scientific solutions to stem the national opioid public health crisis.</p></li>
+</ul>
+</div>
+<div class="section" id="u-ashg-u">
+<h3><u>ASHG</u><a class="headerlink" href="#u-ashg-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">American</span> <span class="pre">Society</span> <span class="pre">of</span> <span class="pre">Human</span> <span class="pre">Genetics</span></code>. They hold an annual conference that is the largest human genetics and genomics meeting and exposition in the world.</p></li>
+</ul>
+</div>
+<div class="section" id="u-bic-u">
+<h3><u>BIC</u><a class="headerlink" href="#u-bic-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Bioinformatics</span> <span class="pre">Center</span></code>. The BIC is responsible for the task of harmonizing the large quantity and diversity of data and metadata being generated by the consortium and performing meaningful integrative analyses across these omics data types.</p></li>
+</ul>
+</div>
+<div class="section" id="u-cc-u">
+<h3><u>CC</u><a class="headerlink" href="#u-cc-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Coordinating</span> <span class="pre">Center</span></code>. The <a class="reference external" href="#CFDE">CFDE</a>-CC’s purpose is to improve growth in use and reuse of CF program data by supporting <a class="reference external" href="#DCC">DCC</a>s that participate in the Common Fund Data Ecosystem.</p></li>
+</ul>
+</div>
+<div class="section" id="u-cfde-u">
+<h3><u>CFDE</u><a class="headerlink" href="#u-cfde-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Common</span> <span class="pre">Fund</span> <span class="pre">Data</span> <span class="pre">Ecosystem</span></code>. A data ecosystem is a collection of data silos or commons joined together by a set of standards and services that facilitate findability, accessibility, reuse, and interoperability of datasets between silos/commons. A data ecosystem is focused on enabling multi-way connectivity between datasets, in a horizontal fashion, rather than deeper vertical analysis within each dataset. The goal of an ecosystem is to enable use cases between data silos, not within.</p></li>
+</ul>
+</div>
+<div class="section" id="u-common-fund-programs-u">
+<h3><u>Common Fund Programs</u><a class="headerlink" href="#u-common-fund-programs-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>the intent of the CF programs is to provide a strategic and nimble approach to address key roadblocks in biomedical research that impede basic scientific discovery and its translation into improved human health. In addition, these programs capitalize on emerging opportunities to catalyze the rate of progress across multiple biomedical fields. The CF programs include:</p></li>
+</ul>
+<div class="section" id="dn">
+<h4><a class="reference external" href="https://www.4dnucleome.org/">4DN</a><a class="headerlink" href="#dn" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- The `4D Nucleome program`&#39;s goal is to study the three-dimensional organization of the nucleus in space and time (the 4th dimension). 
+</pre></div>
+</div>
+</div>
+<div class="section" id="gtex">
+<h4><a class="reference external" href="https://www.gtexportal.org/home/">GTEx</a><a class="headerlink" href="#gtex" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- the `Genotype-Tissue Expression` project is an ongoing effort to build a comprehensive public resource to study tissue-specific gene expression and regulation.
+</pre></div>
+</div>
+</div>
+<div class="section" id="hmp">
+<h4><a class="reference external" href="https://www.hmpdacc.org/">HMP</a><a class="headerlink" href="#hmp" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- the `Human Microbiome Project` whose mission is to generate resources to facilitate characterization of the human microbiota to further our understanding of how the microbiome impacts human health and disease. 
+</pre></div>
+</div>
+</div>
+<div class="section" id="kids-first">
+<h4><a class="reference external" href="https://kidsfirstdrc.org/">Kids First</a><a class="headerlink" href="#kids-first" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- the `Kids First Pediatric Research Program` Data Resource Center enables researchers, clinicians, and patients to work together to accelerate research and promote new discoveries for children affected with cancer and structural birth defects. 
+</pre></div>
+</div>
+</div>
+<div class="section" id="lincs">
+<h4><a class="reference external" href="http://lincsproject.org/">LINCS</a><a class="headerlink" href="#lincs" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- the `Library of Integrated Network-based Cellular Signatures project` is based on the premise that disrupting any one of the many steps of a given biological process will cause related changes in the molecular and cellular characteristics, behavior, and/or function of the cell – the observable composite of which is known as the cellular phenotype. Observing how and when a cell’s phenotype is altered by specific stressors can provide clues about the underlying mechanisms involved in perturbation and, ultimately, disease.
+</pre></div>
+</div>
+</div>
+<div class="section" id="metabolomics">
+<h4><span class="xref myst">Metabolomics</span><a class="headerlink" href="#metabolomics" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- the `Metabolomics program` was developed with the goal of increasing national capacity in metabolomics by supporting the development of next generation technologies, providing training and mentoring opportunities, increasing the inventory and availability of high quality reference standards, and promoting data sharing and collaboration.
+</pre></div>
+</div>
+</div>
+<div class="section" id="sparc">
+<h4><span class="xref myst">SPARC</span><a class="headerlink" href="#sparc" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- the `Stimulating Peripheral Activity to Relieve Conditions program` seeks to accelerate development of therapeutic devices that modulate electrical activity in nerves to improve organ function.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="u-dccs-u">
+<h3><u>DCCs</u><a class="headerlink" href="#u-dccs-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Coordinating/Resource</span> <span class="pre">Center</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="u-dcic-u">
+<h3><u>DCIC</u><a class="headerlink" href="#u-dcic-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Data generated by <a class="reference external" href="#4DN">4DN</a> partner institutions are integrated, curated, analyzed, and disseminated by the 4DN Data Coordination and Integration Center (DCIC).</p></li>
+</ul>
+</div>
+<div class="section" id="u-dtc-u">
+<h3><u>DTC</u><a class="headerlink" href="#u-dtc-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">and</span> <span class="pre">Tools</span> <span class="pre">Cores</span></code>. The <a class="reference external" href="#Metabolomics">Metabolomics Program</a> consortium consists of six RCMRCs and seven DTCs that are overseen by the Metabolomics Consortium Coordinating Center at the University of Florida.</p></li>
+</ul>
+</div>
+<div class="section" id="era-commons">
+<h3><a class="reference external" href="https://public.era.nih.gov/commons">eRA Commons</a><a class="headerlink" href="#era-commons" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eRA</span> <span class="pre">Commons</span></code> is an online interface where signing officials, principal investigators, trainees and post-docs at institutions/organizations can access and share administrative information relating to research grants. It is the <code class="docutils literal notranslate"><span class="pre">designated</span> <span class="pre">ID</span> <span class="pre">provider</span></code> for the whitelist of DCCs.</p></li>
+</ul>
+<!-- ##### <u>HMP</u>
+- Human Microbiome Project.  -->
+</div>
+<div class="section" id="u-m3c-u">
+<h3><u>M3C</u><a class="headerlink" href="#u-m3c-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">Metabolomics</span> <span class="pre">Consortium</span> <span class="pre">Coordinating</span> <span class="pre">Center</span></code> at the University of Florida, which handles overall coordination for the Metabolomics program.</p></li>
+</ul>
+</div>
+<div class="section" id="u-mgp-u">
+<h3><u>MGP</u><a class="headerlink" href="#u-mgp-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.metabolomicsworkbench.org/databases/proteome/MGP.php"><code class="docutils literal notranslate"><span class="pre">Human</span> <span class="pre">Metabolome</span> <span class="pre">Gene/Protein</span> <span class="pre">Database</span></code></a>. Developed by the Common Fund Metabolomics program and part of Metabolomics Workbench. A database of metabolome-related genes and proteins containing over 7,300 genes and over 15,500 proteins. Users can search by gene (name, symbol, entrez ID, etc.), HMDB Pathway, or Reactome Pathway. MGP displays genes/proteins and metabolites associated with a pathway of interest. Searching by gene displays information about the gene’s associated proteins and pathways, including a summary of the function and metabolites involved in the pathway.</p></li>
+</ul>
+</div>
+<div class="section" id="u-motrpac-u">
+<h3><u>MoTrPAC</u><a class="headerlink" href="#u-motrpac-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.motrpac.org/"><code class="docutils literal notranslate"><span class="pre">Molecular</span> <span class="pre">Transducers</span> <span class="pre">of</span> <span class="pre">Physical</span> <span class="pre">Activity</span> <span class="pre">Consortium</span></code></a>. MoTrPAC is a national research consortium designed to discover and perform preliminary characterization of the range of molecular transducers (the “molecular map”) that underlie the effects of physical activity in humans. The program’s goal is to study the molecular changes that occur during and after exercise and ultimately to advance the understanding of how physical activity improves and preserves health. The six-year program is the largest targeted NIH investment of funds into the mechanisms of how physical activity improves health and prevents disease.</p></li>
+</ul>
+</div>
+<div class="section" id="u-mw-u">
+<h3><u>MW</u><a class="headerlink" href="#u-mw-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.metabolomicsworkbench.org/"><code class="docutils literal notranslate"><span class="pre">Metabolomics</span> <span class="pre">Workbench</span></code></a>. The MW is an online interface to the <a class="reference external" href="#NMDR">NMDR</a> developed at UCSD, by the Common Fund <a class="reference external" href="#Metabolomics">Metabolomics</a> program, . It allows users to manage and upload studies as well as browse and search available studies. Using the MW interface, submitters upload data and results, including metadata, targeted data measurements, protocols/methods files, untargeted data measurements, and raw data (MS/NMR files, etc.). Other researchers can then use the MW website to browse, search, analyze, and download data as well as view summary figures of key study search parameters (e.g., bubble chart showing studies by sample source). For example, studies can be filtered by study metadata (disease, sample source, species, instrumentation) or metabolite information (metabolite classification, biochemical pathways, retention time, etc.) to identify data relevant to the user’s needs. Additionally, it provides analysis tools and access to metabolite standards, protocols, tutorials, training, and other resources to support metabolomic researchers (such as <a class="reference external" href="#RefMet">RefMet</a>, <a class="reference external" href="#Metabolomics-Workbench-Metabolite-Database">Metabolomics Workbench Metabolite Database</a>).</p></li>
+</ul>
+</div>
+<div class="section" id="u-metabolomics-workbench-metabolite-database-u">
+<h3><u>Metabolomics Workbench Metabolite Database</u><a class="headerlink" href="#u-metabolomics-workbench-metabolite-database-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a PostgreSQL database containing over 65,000 structures and annotations of biologically relevant metabolites collected from public repositories (e.g., LIPID MAPS, ChEBI, HMDB, BMRB, PubChem, KEGG). Users can search for metabolites in the database by substructure, text, or mass (m/z ratio). Each entry contains key information about the metabolite, including structure, molecular weight, common and systematic names, PubChem compound ID, and classification. Entries also contain cross references to external databases and repositories (e.g., HMDB, ChEBI, LIPID MAPS, METLIN, ChemSpider, KEGG, etc.) as well as links to the MoNA MS spectra and human metabolic pathways containing the metabolite. Additionally, the open-source chemistry cartridge enables substructure searching, generation of chemistry-centric attributes (formula, exact mass), and interconversion of molecular formats.</p></li>
+</ul>
+</div>
+<div class="section" id="u-nmdr-u">
+<h3><u>NMDR</u><a class="headerlink" href="#u-nmdr-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">National</span> <span class="pre">Metabolomics</span> <span class="pre">Data</span> <span class="pre">Repository</span></code>. Responsible for collating, analyzing, and distributing the data gathered by the RCMRCs and hosting the tools and methods created by the <a class="reference external" href="#DTC">DTC</a>s.</p></li>
+</ul>
+</div>
+<div class="section" id="u-ras-u">
+<h3><u>RAS</u><a class="headerlink" href="#u-ras-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Researcher</span> <span class="pre">Auth</span> <span class="pre">Service</span></code>. A service under development by the NIH’s Center for Information Technology that will facilitate access to controlled data assets and repositories.</p></li>
+</ul>
+</div>
+<div class="section" id="u-rcmrc-u">
+<h3><u>RCMRC</u><a class="headerlink" href="#u-rcmrc-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Regional</span> <span class="pre">Comprehensive</span> <span class="pre">Metabolomics</span> <span class="pre">Resource</span> <span class="pre">Cores</span></code>. The Metabolomics Program consortium consists of six RCMRCs, also called the Compound Identification Cores (CIDCs), and seven Data and Tools Cores (<a class="reference external" href="#DTC">DTC</a>s) that are overseen by the Metabolomics Consortium Coordinating Center at the University of Florida.</p></li>
+</ul>
+</div>
+<div class="section" id="u-refmet-u">
+<h3><u>RefMet</u><a class="headerlink" href="#u-refmet-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.metabolomicsworkbench.org/databases/refmet/index.php"><code class="docutils literal notranslate"><span class="pre">Reference</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">Metabolite</span> <span class="pre">names</span></code></a>. Developed by the Common Fund Metabolomics program. Effectively, a large spreadsheet that provides a standard nomenclature for over 95,500 chemical species. From the Metabolomics Workbench website, it can be browsed and searched directly or a user can input a list of metabolite names and have them automatically converted to RefMet nomenclature. A user can also directly download the data, either in whole or after filtering as one would with a simple Excel sheet. Or the entire dataset can be downloaded as part of a Shiny R app and queried locally.</p></li>
+</ul>
+</div>
+<div class="section" id="u-strides-u">
+<h3><u>STRIDES</u><a class="headerlink" href="#u-strides-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Science</span> <span class="pre">and</span> <span class="pre">Technology</span> <span class="pre">Research</span> <span class="pre">Infrastructure</span> <span class="pre">for</span> <span class="pre">Discovery,</span> <span class="pre">Experimentation,</span> <span class="pre">and</span> <span class="pre">Sustainability</span></code> initiative by the NIH. Common Fund leadership has partnered with the STRIDES initiative, which provides lower-cost cloud services to NIH projects.</p></li>
+</ul>
+</div>
+<div class="section" id="u-tcc-u">
+<h3><u>TCC</u><a class="headerlink" href="#u-tcc-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Training</span> <span class="pre">Coordination</span> <span class="pre">Center</span></code>. This center is staffed by experts in bioinformatics curriculum development, teaching, and community building. It provides support and resources for the development of DCC-specific training programs as well as end-user training on CFDE products and general topics of interest to the Common Fund research community. The TCC can help with logistical support for hosting workshops, as well as providing guidance on how to grow and build a sustainable training program. The TCC provides instructor training for the <a class="reference external" href="#DCC">DCC</a>s and assists with creating useful qualitative and quantitative feedback and assessment tools. In addition to site-specific training, the TCC offers training on CFDE products as they become available, and pilots a general bioinformatics workshop curriculum on topics of broad interest within the Common Fund.</p></li>
+</ul>
+</div>
+<div class="section" id="u-topmed-u">
+<h3><u>TOPMed</u><a class="headerlink" href="#u-topmed-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.nhlbiwgs.org/"><code class="docutils literal notranslate"><span class="pre">Trans-Omics</span> <span class="pre">for</span> <span class="pre">Precision</span> <span class="pre">Medicine</span></code></a>.  The Trans-Omics for Precision Medicine (TOPMed) program, sponsored by the National Institutes of Health (NIH) National Heart, Lung and Blood Institute (NHLBI), is part of a broader Precision Medicine Initiative, which aims to provide disease treatments tailored to an individual’s unique genes and environment. TOPMed contributes to this Initiative through the integration of whole-genome sequencing (WGS) and other omics (e.g., metabolic profiles, epigenomics, protein and RNA expression patterns) data with molecular, behavioral, imaging, environmental, and clinical data.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="use-case-terms">
+<h2>Use Case Terms<a class="headerlink" href="#use-case-terms" title="Permalink to this headline">¶</a></h2>
+<!-- <details> -->
+<div class="section" id="u-objective-u">
+<h3><u>Objective</u><a class="headerlink" href="#u-objective-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a description of a scientific process, told without reference to a specific technology solution. Focuses on resources required, method(s) followed, and outcome(s) targeted. Can be validated with scientific stakeholders.</p></li>
+</ul>
+</div>
+<div class="section" id="u-persona-u">
+<h3><u>Persona</u><a class="headerlink" href="#u-persona-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a type of user who will appear in the epics and stories that follow.</p></li>
+</ul>
+</div>
+<div class="section" id="u-requirement-u">
+<h3><u>Requirement</u><a class="headerlink" href="#u-requirement-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a well-scoped and defined piece of software or data engineering work that is needed to support a User Task. These should be small tasks that can be verified with engineering teams (e.g. <code class="docutils literal notranslate"><span class="pre">did</span> <span class="pre">we</span> <span class="pre">deliver</span> <span class="pre">it?</span></code> <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">no</span></code>). A single requirement may be important for any number of different <a class="reference external" href="#User-Task">User Task</a>s, and various collections of Requirements can be grouped to support different User Tasks.</p></li>
+</ul>
+</div>
+<div class="section" id="u-summary-u">
+<h3><u>Summary</u><a class="headerlink" href="#u-summary-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a high-level, non-technical description of an entire <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">case</span></code>. The user in each summary has a name, a scientific or administrative problem, and both proximate and ultimate goals. The focus is on the problem and what is generally needed to solve it.</p></li>
+</ul>
+</div>
+<div class="section" id="u-use-case-u">
+<h3><u>Use Case</u>:<a class="headerlink" href="#u-use-case-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">case</span></code>, in software and systems engineering, is a list of actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system.</p></li>
+</ul>
+</div>
+<div class="section" id="u-user-task-u">
+<h3><u>User Task</u><a class="headerlink" href="#u-user-task-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a <code class="docutils literal notranslate"><span class="pre">user</span> <span class="pre">story</span></code> is a story told from the user’s perspective that captures a concrete step in a user’s interactions with tools (e.g., software solutions) in the service of achieving the scientific objective. A <code class="docutils literal notranslate"><span class="pre">user</span> <span class="pre">task</span></code> ++must be written in terms that are meaningful to the user, from their perspective++. This can be thought of as one in a series of medium scale tasks that must be completed to answer the question posed in the scientific objective. The list of <code class="docutils literal notranslate"><span class="pre">user</span> <span class="pre">tasks</span></code> in a <a class="reference external" href="#Use-Case"><code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">case</span></code></a> should cover everything the users needs to achieve their goals, even interactions that do not involve the software or data from the Common Fund.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="data-models-software-tools">
+<h2>Data Models - Software - Tools<a class="headerlink" href="#data-models-software-tools" title="Permalink to this headline">¶</a></h2>
+<!-- <details> -->
+<div class="section" id="u-api-u">
+<h3><u>API</u><a class="headerlink" href="#u-api-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Programmer</span> <span class="pre">Interface</span></code>. Allows developers to manipulate (query, update) remote data sources through specific protocols or specific standards for communication (e.g., REST,SOAP). An important element of the ecosystem will be the standardization and publishing of an API that can be used by data consumers to retrieve the inventories, the data asset specification, and additional metadata associated with the assets. This will allow for consumers of these inventories to programmatically interrogate the federated system for information that may be relevant to a consuming service.</p></li>
+</ul>
+</div>
+<div class="section" id="c2m2">
+<h3><a class="reference external" href="https://www.nih-cfde.org/product/full-c2m2-er-model/">C2M2</a><a class="headerlink" href="#c2m2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Cross</span> <span class="pre">Cut</span> <span class="pre">Metadata</span> <span class="pre">Model</span></code>. A data model specification developed by NIH <a class="reference external" href="#CFDE">CFDE</a> to represent experiments and datasets. Recycling a number of entities from the <a class="reference external" href="#DATS">DATS specification</a></p></li>
+</ul>
+</div>
+<div class="section" id="cfde-data-dashboard">
+<h3><a class="reference external" href="https://cfde.derivacloud.org/deriva-webapps/plot/">CFDE Data Dashboard</a><a class="headerlink" href="#cfde-data-dashboard" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>an interface that monitors DCC data upload to the cloud and usage statistics to support cross-DCC search and ecosystem integration.</p></li>
+</ul>
+</div>
+<div class="section" id="u-cfde-query-portal-u">
+<h3><u>CFDE Query Portal</u><a class="headerlink" href="#u-cfde-query-portal-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a portal enabling users and administrators to search all the federated data assets at each Common Fund Program. The CFDE portal increases a user’s ability to find these important resources, as well as mix and match sets of data from each site to use in subsequent analysis. Administrators and Program Officers at Common Fund can use a single website to view the growth of data from their program over time, review objective FAIR metrics for these assets, understand download statistics and geographic distribution, and view the degree of harmonization of these data in comparison to other sites.</p></li>
+</ul>
+</div>
+<div class="section" id="u-cv-u">
+<h3><u>CV</u><a class="headerlink" href="#u-cv-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Controlled</span> <span class="pre">Vocabulary</span></code>: an organized arrangement of words and phrases used to index content and/or to retrieve content through browsing or searching. It typically includes preferred and variant terms and has a defined scope or describes a specific domain. For example, the <a class="reference external" href="#DCIC">DCIC</a> curates an internal <a class="reference external" href="#4DN">4DN</a> controlled vocabulary to provide definitions for emerging technologies and techniques, metadata terms, and captures important data features not defined by previous ontologies.</p></li>
+</ul>
+</div>
+<div class="section" id="u-dats-u">
+<h3><u>DATS</u><a class="headerlink" href="#u-dats-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/datatagsuite/README"><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Article</span> <span class="pre">Tag</span> <span class="pre">Suite</span></code></a> is a data model for representing key information about datasets with an emphasis on data discovery and data findability, which has inspired the creation of the NIH-C2M2 model. <a class="reference external" href="https://datatagsuite.github.io/docs/html/dats.html">The DATS model is expressed as a JSON schema</a>. Associated JSON-LD context files support search engine optimization because they map into <a class="reference external" href="https://schema.org">schema.org</a> and <span class="xref myst">DCAT</span>. Mappings into biological entities are also available via <a class="reference external" href="http://www.obofoundry.org">OBO Foundry resources</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="data-citation-rubric">
+<h3><span class="xref myst">Data Citation Rubric</span><a class="headerlink" href="#data-citation-rubric" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a collection of rules to assess <a class="reference external" href="#FAIR-Evaluation">FAIRness</a> of data citation using the <a class="reference external" href="#FAIRshake">FAIRshake tool</a> available from the following <a class="reference external" href="https://github.com/nih-cfde/FAIR/blob/master/Demos/FAIRAssessment/data_citation_rubric.py">github repository</a></p></li>
+</ul>
+</div>
+<div class="section" id="dbgap">
+<h3><a class="reference external" href="https://www.ncbi.nlm.nih.gov/gap/">dbGaP</a><a class="headerlink" href="#dbgap" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Database</span> <span class="pre">of</span> <span class="pre">Genotypes</span> <span class="pre">and</span> <span class="pre">Phenotypes</span></code>. The database of Genotypes and Phenotypes (dbGaP) was developed to archive and distribute the data and results from studies that have investigated the interaction of genotype and phenotype in Humans.</p></li>
+</ul>
+</div>
+<div class="section" id="deriva">
+<h3><a class="reference external" href="https://docs.derivacloud.org/platform.html">DERIVA</a><a class="headerlink" href="#deriva" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Discovery</span> <span class="pre">Environment</span> <span class="pre">for</span> <span class="pre">Relational</span> <span class="pre">Information</span> <span class="pre">and</span> <span class="pre">Versioned</span> <span class="pre">Assets</span></code>. A suite of tools and services that are designed to significantly reduce the overhead and complexity of creating and managing complex, big datasets. DERIVA provides a digital asset management system for scientific data to streamline the acquisition, modeling, management, and sharing of complex, big data, and provides interfaces so that these data can be delivered to diverse external tools for big-data analysis and analytic tools.</p></li>
+</ul>
+</div>
+<div class="section" id="deriva-catalog">
+<h3><a class="reference external" href="https://cfde.derivacloud.org/">DERIVA Catalog</a><a class="headerlink" href="#deriva-catalog" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a group of assets that may be digital objects (i.e., files) or references to physical objects. DERIVA uses an entity-relationship data model to catalog and organize these assets.</p></li>
+</ul>
+</div>
+<div class="section" id="u-entity-relationship-model-u">
+<h3><u>Entity-relationship-model</u><a class="headerlink" href="#u-entity-relationship-model-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>an <code class="docutils literal notranslate"><span class="pre">Entity-relationship-model</span></code> (or ER model) describes interrelated things of interest in a specific domain of knowledge. A basic ER model is composed of entity types (which classify the things of interest) and specifies relationships that can exist between entities (instances of those entity types). In software engineering, an ER model is commonly formed to represent things a business needs to remember in order to perform business processes. Consequently, the ER model becomes an abstract data model, that defines a data or information structure which can be implemented in a database, typically a relational database. source: Wikipedia).</p></li>
+</ul>
+</div>
+<div class="section" id="fair-insignia">
+<h3><span class="xref myst">FAIR Insignia</span><a class="headerlink" href="#fair-insignia" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A grid of colored squares developed to visually communicate FAIRness level. The <a class="reference external" href="#FAIR">FAIR</a> insignia identifies areas of strength and weakness in the FAIRness level of digital objects, guiding digital object producers on how to improve the FAIRness of their products. FAIR insignia is an output of the <a class="reference external" href="#FAIRshake">FAIRshake</a></p></li>
+</ul>
+<!-- <img src="./images/logo/FAIRinsignia.png" alt="drawing" style="border:1px solid black;" width="100"  align="top" /> -->
+</div>
+<div class="section" id="fairshake">
+<h3><a class="reference external" href="https://fairshake.cloud/">FAIRshake</a><a class="headerlink" href="#fairshake" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a tool produced for carrying out <em>FAIR Assessment</em>. Under the <a class="reference external" href="#CFDE">CFDE</a>, each data center’s inventory will be evaluated consistently based on FAIRshake, and the Coordinating Center will work with the individual Common Fund programs to adjust <a class="reference external" href="#FAIR">FAIR</a> measures to meet the needs of the Common Fund. FAIRshake includes evaluating the FAIRness of digital objects including datasets, tools, and repositories.</p></li>
+</ul>
+</div>
+<div class="section" id="figshare">
+<h3><a class="reference external" href="https://figshare.com/">Figshare</a><a class="headerlink" href="#figshare" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>an online open access repository where researchers can preserve and share their research outputs, including figures, datasets, images, and videos.</p></li>
+</ul>
+</div>
+<div class="section" id="frictionless-data-package">
+<h3><a class="reference external" href="http://frictionlessdata.io/data-package/">Frictionless Data Package</a><a class="headerlink" href="#frictionless-data-package" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a format specification produced by the <a class="reference external" href="https://okfn.org/">Open Knowledge Foundation</a> and supported by the Frictionlessdata.io organization. It aims to shorten the path from data to insight with a collection of specifications and software for the publication, transport, and consumption of data. This kills the cycle of find/improve/share that makes for a dynamic and productive data ecosystem.</p></li>
+</ul>
+</div>
+<div class="section" id="github">
+<h3><a class="reference external" href="https://github.com/">GitHub</a><a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>an online hub for storing and sharing computer programs and other plain text files. The <a class="reference external" href="#CFDE">CFDE</a> team uses it for storage, hosting websites, communications, and project management.</p></li>
+</ul>
+</div>
+<div class="section" id="globus-automate">
+<h3><span class="xref myst">Globus Automate</span><a class="headerlink" href="#globus-automate" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a distributed research automation platform that addresses the problem of securely and reliably automating, for many thousands of scientists, sequences of data management tasks that may span locations, storage systems, administrative domains, and timescales, and integrate both mechanical and human inputs.</p></li>
+</ul>
+</div>
+<div class="section" id="jupyter-notebook">
+<h3><a class="reference external" href="https://jupyter.org/">Jupyter Notebook</a><a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a web-based interactive environment for organizing data, performing computation, and visualizing output.</p></li>
+</ul>
+</div>
+<div class="section" id="npm">
+<h3><a class="reference external" href="https://www.npmjs.com/">NPM</a><a class="headerlink" href="#npm" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Node</span> <span class="pre">Package</span> <span class="pre">Manager</span></code>: a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry.</p></li>
+</ul>
+</div>
+<div class="section" id="u-richness-levels-u">
+<h3><u>Richness-levels</u><a class="headerlink" href="#u-richness-levels-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a qualifier indicative of the depth and granularity of an object model or <a class="reference external" href="#Entity-relationship-model">Entity-Relationship model</a>. In the context of <a class="reference external" href="#CFDE">CFDE</a>, the <a class="reference external" href="#C2M2">C2M2</a> model is described by the following increasing richness levels: [Level-0, Level-1, Level-2]</p></li>
+</ul>
+</div>
+<div class="section" id="u-sso-u">
+<h3><u>SSO</u><a class="headerlink" href="#u-sso-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">Sign-On</span></code>: An authentication scheme that allows a user to log in with a single ID and password to any of several related, yet independent, software systems. It is often accomplished by using the <a class="reference external" href="https://ldap.com/">Lightweight Directory Access Protocol (LDAP)</a> and stored LDAP databases on (directory) servers. A simple version of single sign-on can be achieved over IP networks using cookies but only if the sites share a common DNS parent domain.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="cross-cut-metadata-model-core-concepts">
+<h2>Cross Cut Metadata Model Core Concepts<a class="headerlink" href="#cross-cut-metadata-model-core-concepts" title="Permalink to this headline">¶</a></h2>
+<!-- <details> -->
+<div class="section" id="u-asset-u">
+<h3><u>Asset</u><a class="headerlink" href="#u-asset-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a <code class="docutils literal notranslate"><span class="pre">sample</span> <span class="pre">or</span> <span class="pre">a</span> <span class="pre">file</span></code>, which are also known as <code class="docutils literal notranslate"><span class="pre">material</span> <span class="pre">asset</span></code> or <code class="docutils literal notranslate"><span class="pre">digital</span> <span class="pre">asset</span></code> respectively.</p></li>
+</ul>
+</div>
+<div class="section" id="u-asset-inventory-u">
+<h3><u>Asset Inventory</u><a class="headerlink" href="#u-asset-inventory-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>an asset inventory is a collection of digital asset  distributed by the DCCs through a portal.</p></li>
+</ul>
+</div>
+<div class="section" id="u-biospecimens-u">
+<h3><u>Biospecimens</u><a class="headerlink" href="#u-biospecimens-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a <code class="docutils literal notranslate"><span class="pre">material</span> <span class="pre">asset</span></code>, collected from an organism, a cell culture, or a material containing organisms, such as an environmental material. syn: <a class="reference external" href="#Sample">Sample</a></p></li>
+</ul>
+</div>
+<div class="section" id="u-data-object-u">
+<h3><u>Data Object</u><a class="headerlink" href="#u-data-object-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a region of storage that contains a value or group of values. Each value can be accessed using its identifier or a more complex expression that refers to the object. In addition, each object has a unique data type.</p></li>
+</ul>
+</div>
+<div class="section" id="u-dataset-u">
+<h3><u>Dataset</u><a class="headerlink" href="#u-dataset-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a <code class="docutils literal notranslate"><span class="pre">collection</span> <span class="pre">of</span> <span class="pre">data</span></code>, published or curated by a single agent, and available for access or download in one or more formats.</p></li>
+</ul>
+</div>
+<div class="section" id="fair">
+<h3><a class="reference external" href="https://www.go-fair.org/fair-principles/">FAIR</a><a class="headerlink" href="#fair" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Findable,</span> <span class="pre">Accessible,</span> <span class="pre">Interoperable,</span> <span class="pre">and</span> <span class="pre">Reusable</span></code>. Making data FAIR is the main goal of the DCCs.</p></li>
+</ul>
+</div>
+<div class="section" id="u-file-u">
+<h3><u>File</u><a class="headerlink" href="#u-file-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a <code class="docutils literal notranslate"><span class="pre">digital</span> <span class="pre">asset</span></code>, that is a type of digital object that each of the <a class="reference external" href="#DCC">DCCs</a> hosts, such as genomic, metagenomic, RNA-Seq sequence data, physiological, and metabolic data or generic metadata electronic document.</p></li>
+</ul>
+</div>
+<div class="section" id="u-guid-u">
+<h3><u>GUID</u><a class="headerlink" href="#u-guid-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Globally</span> <span class="pre">Unique</span> <span class="pre">IDentifier</span></code>. a chain of characters, usually 128-bit long used to uniquely identify an entity. Modern hashing functions used to generate GUIDs make <code class="docutils literal notranslate"><span class="pre">identifier</span> <span class="pre">collisions</span></code> (the event of the function producing the same sequence) highly unlikely (but not impossible), hence those can only be <code class="docutils literal notranslate"><span class="pre">nearly</span> <span class="pre">guaranteed</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">unique</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="u-metadata-u">
+<h3><u>Metadata</u><a class="headerlink" href="#u-metadata-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a type of information entity usually defined as <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">about</span> <span class="pre">the</span> <span class="pre">data</span></code>, understood as <code class="docutils literal notranslate"><span class="pre">descriptors</span> <span class="pre">to</span> <span class="pre">understand</span> <span class="pre">the</span> <span class="pre">context</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">dataset</span></code>. For example, metadata about an FASTQ file may be <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">size</span></code> or <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">creator</span></code>. Metadata is often classified into <code class="docutils literal notranslate"><span class="pre">descriptive</span> <span class="pre">metadata</span></code>, <code class="docutils literal notranslate"><span class="pre">structural</span> <span class="pre">metadata</span></code>, <code class="docutils literal notranslate"><span class="pre">administrative</span> <span class="pre">metadata</span></code>, and <code class="docutils literal notranslate"><span class="pre">provenance</span> <span class="pre">metadata</span></code>, all of which provide ++<code class="docutils literal notranslate"><span class="pre">context</span></code>++ to the actual data/dataset.</p></li>
+</ul>
+</div>
+<div class="section" id="u-organization-u">
+<h3><u>Organization</u><a class="headerlink" href="#u-organization-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>an entity comprising of multiple people, such as an institution or an association, that has a particular purpose.</p></li>
+</ul>
+</div>
+<div class="section" id="u-project-u">
+<h3><u>Project</u><a class="headerlink" href="#u-project-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a entity to describe administrative/funding/contract/etc. hierarchy governing ownership/management/purview/responsibility of/for subcollections of experimental resources and metadata</p></li>
+</ul>
+</div>
+<div class="section" id="u-sample-u">
+<h3><u>Sample</u><a class="headerlink" href="#u-sample-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a material collected from an organism, a cell culture, or a material containing organisms, such as an environmental material. syn: <em><a class="reference external" href="#Biospecimens">Biospecimens</a></em>.</p></li>
+</ul>
+</div>
+<div class="section" id="u-subject-u">
+<h3><u>Subject</u><a class="headerlink" href="#u-subject-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a study participant (human, animal) from which samples may be obtained.</p></li>
+</ul>
+</div>
+<div class="section" id="u-subject-group-u">
+<h3><u>Subject Group</u><a class="headerlink" href="#u-subject-group-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a set of study subjects sharing some characteristics or undergoing the same type of study intervention.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="cfde-model-types-and-file-formats">
+<h2>CFDE Model Types and File Formats<a class="headerlink" href="#cfde-model-types-and-file-formats" title="Permalink to this headline">¶</a></h2>
+<!-- <details> -->
+<div class="section" id="u-cfde-asset-manifest-u">
+<h3><u>CFDE Asset Manifest</u><a class="headerlink" href="#u-cfde-asset-manifest-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a collection of <em>Assets</em> described by the <em>CFDE Asset Specification</em>. The ecosystem will support the concept of a manifest that describes a collection of files. The manifests enable bundling lists of CFDE data assets into a machine-readable file using a common format. Manifests will also be used to publish the complete inventories of data from each DCC, and will enable uniform collection of asset metadata to support indexing of the assets in the CFDE portal.</p></li>
+</ul>
+</div>
+<div class="section" id="u-cfde-asset-specification-u">
+<h3><u>CFDE Asset Specification</u><a class="headerlink" href="#u-cfde-asset-specification-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>defines the set of attributes used to charaterize an <em>Asset</em>. The specification simplifies the discovery of assets hosted at the DCCs with a minimal set of descriptors for each of these files. The types of files that are referenced (e.g., genomic sequence, metagenomic, RNA-Seq, physiological and metabolic data) are flexible and contain a small number of essential elements such as a <em>GUID</em>, originating institution (e.g., Broad Institute), assay type (e.g., whole genome/exome, transcriptome, epigenome), file type (e.g., fastq, alignment, vcf, counts), and tissue source and species name for the sample.</p></li>
+</ul>
+<!-- ![data asset specification](https://user-images.githubusercontent.com/40363469/66134046-ac16bc80-e5c5-11e9-9b30-66407a3446e5.png) -->
+</div>
+<div class="section" id="cfde-common-metadata-format">
+<h3><a class="reference external" href="https://fair-research.org/deliverables/cfde-metadata-format.html">CFDE Common Metadata Format</a><a class="headerlink" href="#cfde-common-metadata-format" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>specifies a minimal set of attributes (metadata) related to an <em>Asset</em>.</p></li>
+</ul>
+<!-- ![common metadata format](https://user-images.githubusercontent.com/40363469/66134031-a8833580-e5c5-11e9-9cc8-5e4b275fa20c.png) -->
+</div>
+<div class="section" id="u-cfde-core-er-diagram-u">
+<h3><u>CFDE Core ER Diagram</u><a class="headerlink" href="#u-cfde-core-er-diagram-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">CFDE</span> <span class="pre">Core</span> <span class="pre">Entity</span> <span class="pre">Relationship</span> <span class="pre">diagram</span></code> corresponds to a  <code class="docutils literal notranslate"><span class="pre">Level</span> <span class="pre">0</span> <span class="pre">representation</span> <span class="pre">richness</span></code> and is available from the following <a class="reference external" href="https://github.com/nih-cfde/cfde-deriva/blob/2019-08/diagrams/cfde-core-model.png">github repository</a></p></li>
+</ul>
+</div>
+<div class="section" id="u-cfde-core-table-schema-u">
+<h3><u>CFDE Core Table Schema</u><a class="headerlink" href="#u-cfde-core-table-schema-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">CFDE</span> <span class="pre">Core</span> <span class="pre">Table</span> <span class="pre">Schema</span></code> corresponds to a  <code class="docutils literal notranslate"><span class="pre">Level</span> <span class="pre">0</span> <span class="pre">representation</span> <span class="pre">richness</span></code>, expressed as a <a class="reference external" href="#Frictionless">Frictionless Data Package</a> represenstation and is available from the following <a class="reference external" href="https://github.com/nih-cfde/cfde-deriva/blob/2019-08/table-schema/cfde-core-model.json">github repository</a></p></li>
+</ul>
+</div>
+<div class="section" id="u-cfde-entity-relation-diagram-u">
+<h3><u>CFDE Entity-Relation Diagram</u><a class="headerlink" href="#u-cfde-entity-relation-diagram-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">CFDE</span> <span class="pre">Core</span> <span class="pre">Entity</span> <span class="pre">Relationship</span> <span class="pre">diagram</span></code> corresponds to a  <code class="docutils literal notranslate"><span class="pre">Level</span> <span class="pre">2</span> <span class="pre">representation</span> <span class="pre">richness</span></code> and is available from the following <a class="reference external" href="https://github.com/nih-cfde/cfde-deriva/blob/2019-10/extractors_and_metadata.GTEx/cfde-core-model.2019.10.21.1430.png">github repository</a></p></li>
+</ul>
+</div>
+<div class="section" id="u-metadata-manifest-u">
+<h3><u>Metadata Manifest</u><a class="headerlink" href="#u-metadata-manifest-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a file that includes metadata for a group of accompanying files that are part of a coherent unit (manifest), such as name, version, background scripts, and browser actions.</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3><u>CFDE-asset-manifest</u><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a type of Metadata Manifest describing an  <a class="reference external" href="#Asset-Inventory">Asset Inventory</a></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="processes">
+<h2>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">¶</a></h2>
+<!-- <details>
+ -->
+<div class="section" id="u-c2m2-creation-flow-u">
+<h3><u>C2M2 Creation Flow</u><a class="headerlink" href="#u-c2m2-creation-flow-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>the process which generated the C2M2 model.</p></li>
+</ul>
+</div>
+<div class="section" id="u-c2m2-extractor-flow-u">
+<h3><u>C2M2 Extractor Flow</u><a class="headerlink" href="#u-c2m2-extractor-flow-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a process which transforms information stored in a given DCC representation format into the CFDE C2M2 model instances.</p></li>
+</ul>
+</div>
+<div class="section" id="u-data-generating-event-u">
+<h3><u>Data-Generating Event</u><a class="headerlink" href="#u-data-generating-event-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a process, such as a data acquisition or a data transformation, resulting in the creation of a file (digital asset).</p></li>
+</ul>
+</div>
+<div class="section" id="u-fair-assessment-u">
+<h3><u>FAIR Assessment</u><a class="headerlink" href="#u-fair-assessment-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a process which evaluates the level of compliance of a dataset with the FAIR principles. The assessment may be performed with tools such as <a class="reference external" href="https://fairshake.cloud">FAIRshake</a> or <a class="reference external" href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#%21/">FAIREvaluator</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="u-globus-automate-flow-u">
+<h3><u>Globus Automate Flow</u><a class="headerlink" href="#u-globus-automate-flow-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a process which relies on Globus Automate, a software service created and based at the University of Chicago, to help scientists simplify their workflow by automating data transfer and synchronization tasks. Users can create automated sequences initiated by events, known as <code class="docutils literal notranslate"><span class="pre">Globus</span> <span class="pre">Automate</span> <span class="pre">Flows</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="u-dcc-data-ingestion-process-u">
+<h3><u>DCC-data-ingestion-process</u><a class="headerlink" href="#u-dcc-data-ingestion-process-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a process which converts a dataset obtained from a <a class="reference external" href="#DCC">DCC</a> and transforms its data and metadata into a <a class="reference external" href="#C2M2">C2M2</a> model instance representation and persists it to a <a class="reference external" href="#DERIVA">DERIVA</a> endpoint</p></li>
+</ul>
+<!-- ##### <u>Master Flow</u> -->
+</div>
+<div class="section" id="u-metadata-ingest-u">
+<h3><u>Metadata Ingest</u><a class="headerlink" href="#u-metadata-ingest-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a process which assigns identifiers to the objects, then extracts or creates metadata for these objects and persists them.</p></li>
+</ul>
+</div>
+<div class="section" id="u-proof-of-concept-poc-u">
+<h3><u>Proof of Concept (POC)</u><a class="headerlink" href="#u-proof-of-concept-poc-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a process or realization of a certain method or idea in order to demonstrate its feasibility.</p></li>
+</ul>
+</div>
+<div class="section" id="u-table-schema-to-deriva-translation-u">
+<h3><u>Table Schema to DERIVA Translation</u><a class="headerlink" href="#u-table-schema-to-deriva-translation-u" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a process of metadata ingest which uses tabular formatted data such as Frictionless data package to persist information in the <a class="reference external" href="#DERIVA">DERIVA system</a>. The code for such a process is available from Github from <span class="xref myst">this repository</span></p></li>
+</ul>
+<!-- # DRAFT - list of term anchors currently linked from spec documents -->
+<!-- CFDE-asset-manifest -->
+<!-- DCCs -->
+<!-- DCC-data-ingestion-process -->
+<!-- Entity-relationship-model -->
+<!-- Metadata -->
+<!-- *[A2CPS]: Acute to Chronic Pain Signatures program
+*[SSO]: Single Sign-On
+*[DATS]: Data Article Tag Suite
+*[DERIVA]: Discovery Environment for Relational Information and Versioned Assets
+*[C2M2]: Cross Cut Metadata Model
+*[CFDE]: Common Fund Data Ecosystem
+*[GUID]: Globally Unique Identifier
+*[CC]: Coordinating Center
+*[ASHG]: American Society of Human Genetics
+*[BIC]: Bioinformatics Center
+*[LDAP]: Lightweight Directory Access Protocol
+*[DCC]: Data Coordination Center.
+*[TCC]: Training Coordination Center.
+*[FAIR]: Findable Accessible Interoperable Reusable
+*[DCAT]: Data Catalog Vocabulary
+*[OBO]: Open Biomedical Ontology
+*[POC]: Proof of Concept
+*[NIH]: National Institutes of Health
+*[NHLBI]: National Heart, Lung and Blood Institute
+*[WGS]: Whole Genome Sequencing
+*[STRIDES]: Science and Technology Research Infrastructure for Discovery, Experimentation 
+*[DNS]: Domain Name System 
+*[RNA]: ribonucleic acid
+ --></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/Governance"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      <div class="extra_footer">
+        This project is supported by NIH CFDE program <img src="images/logo/CFDE-logo.png" alt="NIH flag" height="20" />
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
