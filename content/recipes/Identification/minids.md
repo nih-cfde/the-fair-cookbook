@@ -34,11 +34,8 @@ ___
 
 <!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
 
-<<<<<<< HEAD
-<div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/minid-mermaid.png" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>  
-=======
-![drawing](./images/minid-mermaid.png)
->>>>>>> upstream/update
+![drawing](../images/minid-mermaid.png)
+
 <!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
 <!-- graph TD; -->
 <!--  A([file creation]):::box --> <!-- B(New File):::box  -->
