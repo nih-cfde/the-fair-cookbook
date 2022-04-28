@@ -463,6 +463,6 @@ The CFDE FAIR repository is currently private given that it contains details abo
 Please submit a request to <https://www.nih-cfde.org/contact/> if you need access to the repository.
 
 If you have access to the repository, you can access information in it about:
-- [scripts](https://github.com/nih-cfde/FAIR) to convert several DCC's publicly facing metadata into C2M2 compatible frictionless datapackages organized by DCC name
-- [scripts](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment) to automatically assess C2M2 compatible frictionless datapackages against the C2M2 rubric on FAIRshake
-- [reports](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment/report) showing the satisfaction of the converted DCC metadata with the C2M2 rubric over time (FAIR assessments over time)
+- [Scripts](https://github.com/nih-cfde/FAIR) to convert several DCC's publicly facing metadata into C2M2 compatible frictionless datapackages organized by DCC name
+- [Scripts](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment) to automatically assess C2M2 compatible frictionless datapackages against the C2M2 rubric on FAIRshake
+- [Reports](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment/report) showing the satisfaction of the converted DCC metadata with the C2M2 rubric over time (FAIR assessments over time)
