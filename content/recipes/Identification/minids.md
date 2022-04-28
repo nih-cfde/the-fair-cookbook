@@ -222,9 +222,9 @@ Minids can only be assigned to a single file. In order to assign a minid to a co
 The minid file manifest format is a JSON-based format that enumerates a list of files as JSON objects that have the following attributes:
 
 
-* length: The length of the file in bytes.
+* Length: The length of the file in bytes.
 
-* filename: The filename (or path) relative to the manifest file.
+* Filename: The filename (or path) relative to the manifest file.
 
 * One or more (only one of each) of the following `algorithm:checksum` key-value pairs:
 
@@ -234,7 +234,7 @@ The minid file manifest format is a JSON-based format that enumerates a list of 
 
   * sha512:\<sha512 hex value\>
 
-* url: the URL to the file.
+* URL: The URL to the file.
 
 The manifest may be used to create a minid for a collection of files or alternatively as input to the minid batch-register command.
 
