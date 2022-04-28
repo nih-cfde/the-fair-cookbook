@@ -24,7 +24,9 @@
 
 <!-- ![](https://i.imgur.com/9yQDHyu.png) -->
 
-![Dashboard](/images/kf_dash.png) 
+<div>
+<img src="https://github.com/beagan-svg/the-fair-cookbook/blob/master/content/recipes/Discoverability/images/kf_dash.png" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
+</div> 
 <br/>
 
 * Download the Kids First Data by:
@@ -34,7 +36,9 @@
 
 <!-- ![](https://i.imgur.com/6OGEA83.png) -->
 
-![Download](/images/kf_download.png) 
+<div>
+<img src="https://github.com/beagan-svg/the-fair-cookbook/blob/master/content/recipes/Discoverability/images/kf_download.png" width="650px" style="padding:1px;border:thin solid black;" alt="Validation hints of missing properties" />
+</div> 
 <br/>
 
 ### Step 2: Data pre-processing:
