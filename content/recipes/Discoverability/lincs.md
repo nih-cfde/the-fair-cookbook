@@ -29,9 +29,10 @@ While LINCS revolves around *Datasets*, encompassing in some cases several files
 
 ### Step 1: Setting up your environment
 
-The C2M2 is described using a [Frictionless datapackage specification](https://specs.frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
+The C2M2 Level 1 is described using a [Frictionless datapackage specification](http://frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the [LINCS REST API](https://maayanlab.cloud/sigcom-lincs/static/tutorial/ldp3/LDP3Tutorial.html).
 
-A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/c2m2-frictionless-dataclass) and is easily updated to future C2M2 schemas.
+A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/c2m2-frictionless-dataclass/tree/main/frictionless-dataclass) and is easily updated to future C2M2 schemas.
+
 
 Given that you have access to the [FAIR repository](#fair-repo), this can be installed directly from GitHub with:
 
@@ -91,7 +92,8 @@ if __name__ == '__main__':
 
 ```
 
-With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the C2M2 [documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/).
+With the above skeleton in place, we can already run this script `python3 etl.py output` to produce and validate a C2M2 Level 1 datapackage, though this package will only contain one element: the `id_namespace`. As described in the comments, this should be used to make sure that the ids within your DCC will not clash with the ids in another, for more about this please refer to the [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/).
+
 
 Now we are ready to expand the `extract_transform` function such that we walk through the DCC's pertinent dataset descriptions and yield C2M2 equivalent dataclasses.
 
@@ -253,11 +255,11 @@ With this, we have already satisfied a valid C2M2 instance, but ideally we'll go
 
 #### Step 3.3: Subjects & Biosamples
 
-The LINCS data associates Datasets with small molecules, cell lines, genes, proteins, antibodies, and other entities related to experimental conditions and readouts, a dataset consists of a series of experiments mostly carried out in high throughput with a goal of capturing changes in expression or other phenotypic changes that may be captured via images in various contexts under various conditions (for example, perturbed by small molecules in different cell lines).
+The LINCS data associates Datasets with small molecules, cell lines, genes, proteins, antibodies, and other entities related to experimental conditions and readouts. A dataset consists of a series of experiments mostly carried out in high throughput with a goal of capturing changes in expression or other phenotypic changes that may be captured via images in various contexts under various conditions. For example, perturbed by small molecules in different cell lines.
 
 Due to the sheer number of experiments performed in high throughput, LINCS stores the whole set of experiments in a few files representing the data level (level of processing performed on the raw data). It might be possible to extract these files and produce massive amounts of biosamples, but this information is not currently directly available on the website for the practical reason that having landing pages for each micro-experiment is not useful for the users of this data.
 
-Because of this, LINCS lumps all the biosamples together into one "biosample" referring to the whole experiment, this allows annotating that biosample with the assay used to perform the experiment and associate that biosample with the subjects of the experiment (cell line, small molecules, etc..) that were studied. This closely matches how the LINCS portal serves this data and fits in the C2M2.
+Because of this, LINCS lumps all the biosamples together into one "biosample" referring to the whole experiment. This allows annotating that biosample with the assay used to perform the experiment and associate that biosample with the subjects of the experiment that were studied. Subjects includes cell line, small molecules, and etc. This closely matches how the LINCS portal serves this data and fits in the C2M2.
 
 ```python
 #
@@ -384,10 +386,9 @@ def extract_transform():
     # ...
 ```
 
-
 #### Step 3.4: Ontology mapping
 
-Without subjects and biosamples in place, we can now add ontological terms which will be a point of harmonization between the different DCCs. For some, this will be simple, especially if the CFDE is prescribing an ontology that is already being used. For others, this may be a more complicated mapping effort. In LINCS, assays were described in a much more specific manner than OBI, the currently prescribed ontology for assays in the C2M2--as such we need to collapse many of the assay descriptions into broader terms.
+Without subjects and biosamples in place, we can now add ontological terms which will be a point of harmonization between the different DCCs. For some, this will be simple, especially if the CFDE is prescribing an ontology that is already being used. For others, this may be a more complicated mapping effort. In LINCS, assays were described in a much more specific manner than the ontology for Biomedical Investigations (OBI). OBI is the currently prescribed ontology for assays in the C2M2--as such we need to collapse many of the assay descriptions into broader terms.
 
 On the other hand, the organs were specified on the cell line in raw text, so these were mapped to the UBERON ontology.
 
@@ -551,7 +552,7 @@ def extract_transform():
     )
 ```
 
-Here we show how we were able to capture an anatomy, taxonomies on cell lines, and assays on biosamples. While not complete and not perfect, this provides the much needed interoperation layer with the other DCCs. With this type of annotation, we can look at files across different DCCs by assay, anatomy, or subjects by taxonomy. It improves the findability of these files even if the model does not perfectly capture the real structure of the original page. The CFDE is meant to catalog and provide federated search to all of the DCCs, directing users to the DCC's pages, not to replace the catalogs already in place.
+Here we show how we were able to capture an anatomy, taxonomies on cell lines, and assays on biosamples. While not complete nor perfect, this provides the much needed interoperation layer with the other DCCs. With this type of annotation, we can look at files across different DCCs by assay, anatomy, or subjects by taxonomy. It improves the findability of these files even if the model does not perfectly capture the real structure of the original page. The CFDE is meant to catalog and provide federated search to all of the DCCs, directing users to the DCC's pages, not to replace the catalogs already in place.
 
 
 ### Step 4: Running and validating our extraction and transformation
@@ -562,10 +563,9 @@ Our script is now ready to be run, tested, and refactored. During this phase it 
 python3 extract_transform.py output
 ```
 
-
 ### Step 5: Pushing our validated C2M2 datapackage
 
-A client for facilitating the ingestion of your data into the CFDE portal exists, for more information about this, check [here](https://docs.nih-cfde.org/en/latest/cfde-submit/docs/). Once installed, the output directory we produced with the `etl.py` script can be sent to DERIVA.
+A client for facilitating the ingestion of your data into the CFDE portal exists. For more information about this, check [here](https://docs.nih-cfde.org/en/latest/cfde-submit/docs/). Once installed, the output directory we produced with the `etl.py` script can be sent to [DERIVA](https://docs.nih-cfde.org/en/latest/CFDE-glossary/#deriva).
 
 ```bash
 # install the DERIVA loader script
@@ -583,7 +583,8 @@ This tool facilitates authentication, manual preview verification when loaded on
 
 ## Conclusion
 
-Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/) and it may also be useful to review and perform [FAIR assessments](../Compliance/fairshake.md) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
+Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/) and it may also be useful to review and perform [FAIR assessments](./../Compliance/fairshake.md), which includes more elaborate assertions for compliance with FAIRness beyond the C2M2.
+
 
 ## Reference
 

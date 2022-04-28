@@ -9,14 +9,10 @@
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
----
+## Objectives:
+> This is a cookbook recipe documenting the process of inputting the Kids First data into the C2M2 model to produce `Level 1 tables`. 
 
-## Objectives
-
-This is a cookbook recipe documenting the extract & transform (ETL) process of converting the Kids First data into the C2M2 model.
-
-In other words, process Kids First data for input into C2M2 model to produce `Level 1 tables`
-
+> This conversion process is also known as the ETL, which stands for Extract, Transform, and Load.
 
 ## Step by Step Process
 
@@ -27,28 +23,21 @@ In other words, process Kids First data for input into C2M2 model to produce `Le
 * Select the `File Repository` tab on the main navigation bar at the top of the website.
 
 <!-- ![](https://i.imgur.com/9yQDHyu.png) -->
+![FAIRshake login page](./images/kf_dash.png)
 
-<div><img src="https://i.imgur.com/9yQDHyu.png" alt="drawing" style="border:1px solid black;" width="650"  align="top"/></div>
-<br/>
-
-* Data can and must be downloaded a couple of different ways:
-  - Click the columns option and select all columns. Click `Export TSV`.
-  - Click `Download` and choose the option `File Manifest` (4th option of the dropdown menu).
+* Download the Kids First Data by:
+  - Clicking the columns options and select all columns. Then click `Export TSV`.
+  - Click `File Manifest`.
   - Click `Download` and choose the option `Biospecimen Data` (3rd option of the dropdown menu)
 
-
 <!-- ![](https://i.imgur.com/6OGEA83.png) -->
-
-<div><img src="https://i.imgur.com/6OGEA83.png" alt="drawing" style="border:1px solid black;" width="650"  align="top"/></div>
-<br/>
+![FAIRshake login page](./images/kf_download.png)
 
 
 ### Step 2: Data pre-processing
 
 * Initial preprocessing: remove all the columns that do NOT have any headers. 
-* Look at the KF datasets and select KF column names that correspond to the right C2M2 table column names. For the first, only the "core" C2M2 tables (Tables 1-4) and one association table (Table 5) were filled in. Core tables are the [blue and black tables](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1) shown in the C2M2 [documentation page](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1). 
-
-The mapping used for the first pass of KF data is shown in the following tables. The number of rows for each table corresponds to the number of unique `id` entries. 
+* Go to the [C2M2 documentation page](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/#c2m2-technical-specification) and look for the diagram labeled "C2M2 model diagram". This diagram is important as it shows the "core tables", colored blue and black, as well as the associate tables needed to map the KF datasets to the C2M2 model. Tables 1-4 shown below are examples of mapping used for the "core tables" and table 5 is an examples used for the associate tables. The number of rows for each table coressponds to the number of unique `id` entries. 
 
 *Note: id_namespace and project_id_namespace have repeating values of cfde_id_namespace:3.*
 
@@ -102,7 +91,6 @@ source: exported TSV file
 |creation_time | |
 |granularity | . |
 
-
 *Note: granularity has this repeating value: cfde_subject_granularity:0. persistent_id and creation_time were left empty.*
 
 #### Table 4: project.tsv
@@ -131,8 +119,6 @@ source: exported TSV file
 |role_id |  |
 |taxonomy_id | . |
 
-
-
 > :octocat:  warning:
 > `role_id` has this repeating value: `cfde_id_namespace:3` 
 > `taxonomy_id` has this repeating value: `NCBI:txid9606`
@@ -152,12 +138,12 @@ WXS: OBI:0002118, exome sequencing assay
 
 ### Step 3: Find the gold tables
 
-* The [gold tables](https://github.com/nih-cfde/c2m2/blob/master/ER_diagrams/C2M2.png) are supplied by CFDE to the DCC and contain information that goes into the blue and green tables. They can be [downloaded here](https://github.com/nih-cfde/c2m2/tree/master/backups_for_OSF.io_reference_files/internal_CFDE_CV_reference_tables).
+* The gold tables are supplied by CFDE to the DCC and contain information that goes into the blue and green tables. They can be downloaded there.
 * If you are using the default Git repo structure for KF trial dataset, ensure that the three gold tables are in the folder titled `KF_sample_C2M2_Level_1_bdbag.contents`
 
 ### Step 4: Add empty association tables
 
-* All [association tables](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1) (i.e. all lighter blue and grey tables in the diagrams) must be provided in the folder containing the gold tables mentioned in step 3.
+* All association tables (i.e. all lighter blue and grey tables in the diagrams) must be provided in the folder containing the gold tables mentioned in step 3.
 * These tables must have the right column names, in the right order, but may remain otherwise empty.  
 
 ### Step 5: Running R script to wrangle data
@@ -172,7 +158,7 @@ WXS: OBI:0002118, exome sequencing assay
 
 ### Step 6: Building 'green' tables from core entity tables
 
-* This [term-scanner script](https://github.com/abhijna/KF_Data_C2M2/blob/master/model/build_term_tables.py) (with modifications to input/output path code) is used to auto-generate the green tables for the C2M2 Model [Level 1 model](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1). Currently, this script generates four of the five green tables for Level 1.
+* This [term-scanner script](https://github.com/abhijna/KF_Data_C2M2/blob/master/model/build_term_tables.py) (with modifications to input/output path code) is used to auto-generate the green tables for the C2M2 Model [Level 1 model](https://www.nih-cfde.org/product/level-1-asset-manifest-specification/). Currently, this script generates four of the five green tables for Level 1.
 * Default paths direct to the HMP example [tsv files](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/).
 
 **Inputs**
