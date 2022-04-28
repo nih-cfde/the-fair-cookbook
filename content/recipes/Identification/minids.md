@@ -101,7 +101,6 @@ $ cd .minid
 $ touch minid-config.cfg
 ```
 
-
 2. Create a GlobusID account
   
   Before using the API you first need to create a [globus account](https://www.globusid.org/create)
@@ -121,15 +120,15 @@ $ touch minid-config.cfg
 
   This will open the GlobusID login page. Simply enter your credentials obtained from 2.
 
-  ![drawing](../images/globus/globus-account-login.png)
+  ![drawing](./images/globus/globus-account-login.png)
   
   followed by:
 
-  ![drawing](../images/globus/globus-account-allow.png)
+  ![drawing](./images/globus/globus-account-allow.png)
   
   If all goes well, the following browser screen will be shown:
 
-  ![drawing](../images/globus/globus-account-login-success.png)
+  ![drawing](./images/globus/globus-account-login-success.png)
   
   While the terminal will show the following:
 
