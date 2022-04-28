@@ -1,4 +1,4 @@
-# Ontology services
+# Ontology Services
 
 **Authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
