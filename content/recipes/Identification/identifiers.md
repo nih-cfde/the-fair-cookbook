@@ -17,13 +17,13 @@ The aim of the recipe is to provide an introduction to the notion of identifiers
 
 ## Definitions:
 
-**identifier**: an identifier is a chain of characters (number, letter, symbol, or any combination of those) which is associated to an entity or a type of entities and which is used to refer to those entities in an indexing system.
+**identifier**: An identifier is a chain of characters (number, letter, symbol, or any combination of those) which is associated to an entity or a type of entities and which is used to refer to those entities in an indexing system.
 
-**unique identifier**: a unique identifier (UID) is an identifier which  refers to only one instance of thing 
+**unique identifier**: A unique identifier (UID) is an identifier which  refers to only one instance of thing 
 
-**locally unique identifier**: a locally unique identifier (LUID) is an  identifier which is unique to a given context (hence, local) but which may clash if moved out of this specific context. By clash, we mean that if dereferenced in the wrong context, it could return an instance different from the one it pointed to when it was minted in its original context.
+**locally unique identifier**: A locally unique identifier (LUID) is an  identifier which is unique to a given context (hence, local) but which may clash if moved out of this specific context. By clash, we mean that if dereferenced in the wrong context, it could return an instance different from the one it pointed to when it was minted in its original context.
 
-**globally unique identifier**: a globally unique identifier  (GUID) is an identifier which is produced such that the probability of the exact same string is extremely low (but not null), hence global. Also known as `universally unique identifier` (UUID). Their production does not depend on central registration and relies on the generation of a 128-bit string.
+**globally unique identifier**: A globally unique identifier  (GUID) is an identifier which is produced such that the probability of the exact same string is extremely low (but not null), hence global. Also known as `universally unique identifier` (UUID). Their production does not depend on central registration and relies on the generation of a 128-bit string.
 
 ```python
 import uuid
@@ -32,13 +32,13 @@ print(id)
 5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
-**persistent identifier**: a persistent identifier (PID) is an identifier which provides a long-lasting reference to a digital resource. The key notion introduced is that of`persistence`, which can only exist if a `resolution service` exists. Well known examples are `persistent identifiers` are `Digital Object Identifiers (DOI)`, `Archive Retrieval Keys (ARK)`, `Open Researcher and Contributor ID(ORCID)` or `Persistent Uniform Resource Locator (PURL)`. More examples can be found on the [PID forum](https://www.pidforum.org/).
+**persistent identifier**: A persistent identifier (PID) is an identifier which provides a long-lasting reference to a digital resource. The key notion introduced is that of`persistence`, which can only exist if a `resolution service` exists. Well known examples are `persistent identifiers` are `Digital Object Identifiers (DOI)`, `Archive Retrieval Keys (ARK)`, `Open Researcher and Contributor ID(ORCID)` or `Persistent Uniform Resource Locator (PURL)`. More examples can be found on the [PID forum](https://www.pidforum.org/).
 
-**compact identifier**: a `compact identifier` is a unique string consisting of a `Prefix` (assigned by curator), a `colon (‘:’)`, and an `Accession (e.g. local identifier string)`. The prefix is composed of an optional `Provider Code`, and an assigned `Namespace`, separated by a slash (‘/’).
+**compact identifier**: A `compact identifier` is a unique string consisting of a `Prefix` (assigned by curator), a `colon (‘:’)`, and an `Accession (e.g. local identifier string)`. The prefix is composed of an optional `Provider Code`, and an assigned `Namespace`, separated by a slash (‘/’).
 
-**identifier minting service**: an `identifier minting service` is a piece of software infrastructure which allows the production of an identifier. It can be as `simple` as as UUID generator (see above) or random number generator.
+**identifier minting service**: An `identifier minting service` is a piece of software infrastructure which allows the production of an identifier. It can be as `simple` as as UUID generator (see above) or random number generator.
 
-**identifier resolution service**: an identifier resolution service is a piece of software infrastructure which given an identifier can return a web resource about the entity designated by the identifier. Such service is essential to realize the notion of `persistence` of identifiers.
+**identifier resolution service**: An identifier resolution service is a piece of software infrastructure which given an identifier can return a web resource about the entity designated by the identifier. Such service is essential to realize the notion of `persistence` of identifiers.
 
 
     
@@ -73,7 +73,7 @@ For all these entities, the **NIH CFDE** has identified a set of semantics artef
 It is important to notice that for such resources, a central authority is responsible for issuing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
 This works well to address the semantic markup needs that arise in the data curation, data extraction, transform, and load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands. For instance, to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/)
 
-* Refer to the specific recipe on [MINIDS](./2/minids.md) to learn how to mint such resolvable identifiers for your resources.
+* Refer to the specific recipe on [MINIDS](./minids.md) to learn how to mint such resolvable identifiers for your resources.
 
 
 
