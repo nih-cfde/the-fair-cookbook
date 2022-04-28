@@ -71,7 +71,7 @@ For all these entities, the **NIH CFDE** has identified a set of semantics artef
 * This specific [NIH-CFDE recipe](../14/cfde-terminologies.md) details which ontologies have been selected and how their use will be rolled out as the program progresses.
 
 It is important to notice that for such resources, a central authority is responsible for issuing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
-This works well to address the semantic markup needs that arise in the data curation, data extraction, transform, and load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands. For instance, to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/)
+This works well to address the semantic markup needs that arise in the data curation, data extraction, transform, and load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands. For instance, to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/).
 
 * Refer to the specific recipe on [MINIDS](./minids.md) to learn how to mint such resolvable identifiers for your resources.
 
