@@ -7,7 +7,7 @@ The **[Discoverability](./Discoverability/discoverability.md)** section highligh
 
 The **[Identification](./Identification/identifiers.md)** section discusses the significance of assigning unique, persistent, and resolvable identifiers to entities within the context of FAIR data, how those identifiers are used within the CFDE infrastructure to enable data interoperability, and how to generate identifiers using Minid. 
 
-THe **[Semantics](./Semantics/semantics.md)** section introduces controlled vocabularies and ontologies, how they are built, and why they are important for data harmonization. A brief overview is provided of existing ontologies and ontology-related services, as well as of the terminologies and ontologies currently used in the CFDE. 
+The **[Semantics](./Semantics/semantics.md)** section introduces controlled vocabularies and ontologies, how they are built, and why they are important for data harmonization. A brief overview is provided of existing ontologies and ontology-related services, as well as of the terminologies and ontologies currently used in the CFDE. 
 
 The **[FAIR Compliance](./Compliance/compliance.md)** section addresses how adherence to the FAIR principles can be assessed using FAIRshake, a service that catalogs digital objects and measures their FAIR compliance based on some set of criteria. This section also outlines the CFDE FAIR Rubric, the set of metrics specifically designed to evaluate the FAIRness of datasets from different Common Fund DCCs. A tutorial on building FAIR Application Programming Interfaces (API) is included. 
 
