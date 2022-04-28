@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* # Landing page */
+
+/* ## Move the image to the top */
+#the-nih-cfde-fair-cookbook {
+  display: flex;
+  flex-flow: column;
+}
+#the-nih-cfde-fair-cookbook p:first-of-type {
+  order: -1;
+}
+/* ## Center heading */
+#the-nih-cfde-fair-cookbook img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#the-nih-cfde-fair-cookbook > h1 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

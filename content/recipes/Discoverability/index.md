@@ -8,4 +8,5 @@ It includes:
 
 - [The CFDE namespace conventions](./cfde-namespaces.md)
 
-- [An ETL example to an early version of the C2M2 model in the DATS form.](./seo.ipynb)
+- [an ETL example to an early version of the C2M2 model in the DATS form.](./seo.ipynb)
+

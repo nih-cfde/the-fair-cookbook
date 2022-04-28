@@ -1,17 +1,12 @@
----
-pdf_options:
-  format: Letter
----
-
 # Conceptual Description of the Level 1 C2M2
 
-**authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
+**Authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 
-**maintainers**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
+**Maintainers**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 
-**version**: initial draft
+**Version**: initial draft
 
-**license**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 ---
 
@@ -215,14 +210,12 @@ A table linking a subject, a subject_role (a named organism-level constituent co
 | synthetic | A synthetic biological entity |
 
 
-## Conclusions:
+## Conclusions
 
 This section provides a concise overview of the key objects and concepts covered by the C2M2 model and should be viewed as an initial contact point for anyone interested in mapping data into the C2M2 model, thereby getting ready for a full ETL process.
 
-> ####  What to read next?
-> * [CFDE namespaces](../06/cfde-namespaces.md)
-> * [CFDE selected terminologies?](../14/cfde-terminologies.md)
+> ##  What to read next?
+> * [CFDE namespaces](./cfde-namespaces.md)
+> * [CFDE selected terminologies?](../Semantics/cfde-terminologies.md)
 
 
-
----

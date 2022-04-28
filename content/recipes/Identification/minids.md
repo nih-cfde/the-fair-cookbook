@@ -1,10 +1,10 @@
 # Identifier Minting Service with Minid Client
 
 **Authors**: 
-  * [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
+  * [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
   * [Mike D'Arcy ](http://orcid.org/0000-0003-2280-917X)
 
-**Maintainers**: [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
+**Maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
 **Version**: 1.0
 
@@ -34,7 +34,11 @@ ___
 
 <!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
 
+<<<<<<< HEAD
 <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/minid-mermaid.png" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>  
+=======
+![drawing](./images/minid-mermaid.png)
+>>>>>>> upstream/update
 <!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
 <!-- graph TD; -->
 <!--  A([file creation]):::box --> <!-- B(New File):::box  -->
@@ -73,7 +77,7 @@ ___ -->
 
 ## Installing the minid 2.0 client
 
-This is a prerequisite to be able to call the minid API hosted on a server at the following url [http://minid.bd2k.org/minid](http://minid.bd2k.org/minid)
+This is a prerequisite to be able to call the minid API hosted on a server at the following url [http://minid.bd2k.org/](http://minid.bd2k.org/)
 
 ### installing with pip
 
@@ -81,14 +85,13 @@ This is a prerequisite to be able to call the minid API hosted on a server at th
 pip3 install --pre minid
 ```
 
-### building from source:
+### building from source
 
 use the dev branch to obtain to source
 [minid github repository](https://github.com/fair-research/minid)
 
 
 ## Configuration
--------------
 
 1. Prerequisite: create a minig-config.cfg file
   
@@ -105,15 +108,7 @@ $ touch minid-config.cfg
 2. Create a GlobusID account
   
   Before using the API you first need to create a [globus account](https://www.globusid.org/create)
-  <!-- <kbd>![](./images/globus/globus-account-create.png)<kbd/> -->
-
- <!--  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>   -->
-<div>
-  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/globus/globus-account-create.png" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
-</div> 
-
-  <!-- ![](https://i.imgur.com/B5UbkpF.png) -->
-
+  ![drawing](../images/globus/globus-account-create.png)
 
   and validate your email address, as part of the registration process. A unique code will be sent to your email address. You must present this code along with your email address when accessing the API.
 
@@ -129,36 +124,15 @@ $ touch minid-config.cfg
 
   This will open the GlobusID login page. Simply enter your credentials obtained from 2.
 
-<!-- ![](./images/globus/globus-account-login.png) -->
-<!-- ![](https://i.imgur.com/2OZFcJa.png) -->
-<!-- <div>
-<img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
-</div>  -->
-<div>
-  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/globus/globus-account-login.png" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
-</div> 
+  ![drawing](../images/globus/globus-account-login.png)
   
   followed by:
 
-<!-- ![](./images/globus/globus-account-allow.png) -->
-<!-- ![](https://i.imgur.com/avzyAFZ.png) -->
-<!-- <div>
-<img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
-</div>  -->
-<div>
-<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
-</div>
+  ![drawing](../images/globus/globus-account-allow.png)
   
   If all goes well, the following browser screen will be shown:
 
-<!-- ![](./images/globus/globus-account-login-success.png) -->
-<!-- ![](https://i.imgur.com/THYPg4E.png) -->
-<!-- <div>
-<img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
-</div>  -->
-<div>
-<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/Identification/images/globus/globus-account-login-success.png" width="900px" style="padding:1px;border:thin solid black;"/>
-</div>
+  ![drawing](../images/globus/globus-account-login-success.png)
   
   While the terminal will show the following:
 
@@ -171,7 +145,6 @@ $ touch minid-config.cfg
 
 
 ## Usage
------
 
 The CLI supports the following simple operations (Note: the `--test` flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.):
 
@@ -258,7 +231,7 @@ Below is a sample file manifest configuration file:
   ]
 ```
 
-## Conclusions:
+## Conclusions
 
 Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets get be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 

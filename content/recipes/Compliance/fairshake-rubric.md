@@ -12,13 +12,13 @@
 
 All projects that are part of the Common Fund Data Ecosystem (CFDE) are evaluated using the CFDE FAIR Rubric, which is a set of 17 metrics that evaluate the Findability, Accessibility, Interoperability, and Reusability (FAIR) of each datasets across the different CF data coordination centers (DCCs). This Rubric is available via the [FAIRshake tool](https://fairshake.cloud/rubric/36/) and it is described in detail below. It should be noted that this Rubric is an initial draft and can be adjusted based on feedback and input from the DCCs.
 
-![CFDE FAIR Rubric](rubric-images/image_0.png) 
+![CFDE FAIR Rubric](./rubric-images/image_0.png) 
 
 ## Understanding the FAIRshake Insignia
 
 The FAIRshake insignia (pictured above) is a visual representation of a score given to a digital object based on a scoring rubric composed of metrics. It offers users a quick graphical view of the evaluation of the FAIR principles for that object. The number of colored boxes (non-gray) corresponds to the number of metrics in the rubric, whereas the color of the box indicates how well a metric adheres to FAIR principles (blue means full adherence and red not). Users can hover over the boxes to observe the score for each metric. The image below is from the [FAIRshake documentation page](https://fairshake.cloud/documentation/).
 
-![FAIRshake Insignia](rubric-images/image_1.png)
+![FAIRshake Insignia](./rubric-images/image_1.png)
 
 ## FAIR Principles and Metrics Resources
 

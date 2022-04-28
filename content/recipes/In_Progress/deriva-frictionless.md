@@ -10,16 +10,16 @@
 
         
 
-## Objectives:
+## Objectives
 
-## Step by Step Process:
+## Step by Step Process
 
-### Step1:
+### Step1
     
-### Step2:
+### Step2
     
-### Step3:
+### Step3
   
-### Step4:
+### Step4
     
-### Step5:
+### Step5

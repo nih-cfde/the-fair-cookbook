@@ -1,4 +1,4 @@
-# License:
+# License
 
 # DEDICATED TO THE PUBLIC DOMAIN
 
