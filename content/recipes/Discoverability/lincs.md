@@ -594,6 +594,8 @@ The LINCS DCC has additionally created video tutorials to show how the LINCS L10
 
 **[Building a Datapackage](https://youtu.be/ObuQ98LR3vQ )** - This video walks through the steps of building each type of C2M2-compliant metadata table using the processed LINCS L1000 data. 
 
+**[Code Demo](https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/April-CrossPollination-Demo/lincs_c2m2_demo_04052022.ipynb)** - Jupyter Notebook containing demo code from video tutorials, showing how to set up the C2M2 metadata tables for LINCS L1000 data. 
+
 ## Reference
 
 ### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo
