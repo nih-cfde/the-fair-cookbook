@@ -34,7 +34,7 @@ ___
 
 <!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
 
-![drawing](../images/minid-mermaid.png)
+![drawing](./images/minid-mermaid.png)
 
 <!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
 <!-- graph TD; -->
