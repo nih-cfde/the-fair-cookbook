@@ -8,6 +8,8 @@
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
+---
+
 ## Background
 
 An [Application Programming Interface (API)](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#api)  refers to a mechanism for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application enables your application to be more interoperable with, and ultimately more reused, by other applications. Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be documented well. We will not cover [FAIR](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) APIs of software libraries but instead focus on developing FAIR APIs for the web.
@@ -40,17 +42,16 @@ We will look at the existing REST service provided by the Metabolomics Workbench
 Though OpenAPI can be edited by most standards editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html) (a slightly 'nicer' version of [JSON](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json) that is equivalent), it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
 
 
-An example endpoint in an OpenAPI Editor:
-<br/>
-<div><img src="../fair-api-images/ss1.png" width="750px" style="padding:1px;border:thin solid black;" alt="An example endpoint in an OpenAPI Editor" /></div>
+An example endpoint in an OpenAPI Editor:  
+![An example endpoint in an OpenAPI Editor](./fair-api-images/ss1.png)
 
-A real response in an OpenAPI Editor:<br/>
-<div><img src="../fair-api-images/ss2.png" width="750px" style="padding:1px;border:thin solid black;" alt="A real response in an OpenAPI Editor" /></div>
+A real response in an OpenAPI Editor:  
+![A real response in an OpenAPI Editor](./fair-api-images/ss2.png)
 
 
 ## Recipe
 
-The complete `swagger.yaml` constructed in this recipe is available [here](swagger.yaml) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
+The complete `swagger.yaml` constructed in this recipe is available [here](https://gist.github.com/u8sand/292c363274ff6e609fadb369c26ca9b6) for your reference, it will be valuable to follow the tutorial and construct it iteratively.
 
 ### Step 1: Setting up the OpenAPI Editor
 Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs that are enabled to support CORS.
@@ -59,16 +60,16 @@ Unfortunately the API we'll work with here **does not**, so we'll need to obtain
 Until our pull request is merged, the modified extension can be accessed [here](https://github.com/MaayanLab/vs-swagger-viewer/releases). The `vsix` file can be installed with [visual studio code](https://code.visualstudio.com/).
 
 It can be installed from `Ctrl+Shift+P` with the action "Install from VSIX"
-![Install from VSIX dialog](fair-api-images/ss3.png)
+![Install from VSIX dialog](./fair-api-images/ss3.png)
 
 And selecting the `.vsix` file you downloaded.
 
 Once installed a swagger file can be edited by opening the swagger.yaml (that we'll be writing throughout the rest of the recipe), using `Ctrl+Shift+P` again and choosing the action "Preview Swagger"
-![Previewing swagger](fair-api-images/ss4.png)
+![Previewing swagger](./fair-api-images/ss4.png)
 
 The result will be a webview that opens to the side with the Swagger Editor.
 
-![Swagger Editor](fair-api-images/ss5.png)
+![Swagger Editor](./fair-api-images/ss5.png)
 
 Edits to the file will update the view **in real time**, and the view may be used to craft/test API requests.
 
@@ -77,7 +78,7 @@ We start by annotating useful descriptions for the API in the `info` field, this
 
 The `servers` field has the base url(s) for accessing the API we're about to describe.
 
-```yml
+```yaml
 openapi: 3.0.0
 info:
   title: Metabolomics Workbench REST API
@@ -116,7 +117,7 @@ The path is relative to the server url, and `get` refers to the REST method (`GE
 curl -v -X GET -H 'Content-Type: application/json' https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available
 ```
 
-```raw
+```
 ...
 > GET /rest/study/study_id/ST/available HTTP/1.1 # PATH HERE
 > Host: www.metabolomicsworkbench.org            # REQUEST HEADERS HERE
@@ -248,7 +249,7 @@ Again, each of these parameters is validatable with JSONSchema, in our current e
 
 Finally, we've included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
 
-<div><img src="../fair-api-images/ss2.png" width="750px" style="padding:1px;border:thin solid black;"/></div>
+![](./fair-api-images/ss2.png)
 
 With the output, we can complete our path by annotating the response:
 

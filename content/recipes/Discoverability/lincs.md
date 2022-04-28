@@ -10,6 +10,7 @@ A cookbook recipe documenting the easy extract & transform (ETL) process of fitt
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
+---
 
 ## Objectives
 - Demonstrate an example of an ETL process for preparing data for the C2M2
@@ -28,9 +29,9 @@ While LINCS revolves around *Datasets*, encompassing in some cases several files
 
 ### Step 1: Setting up your environment
 
-The C2M2 is described using a [Frictionless datapackage specification](http://frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
+The C2M2 is described using a [Frictionless datapackage specification](https://specs.frictionlessdata.io/data-package/), which permits various additional tooling to be devised around it. In the case that your data is already accessible in a large table, it may, in some cases, be simpler to construct mysql views from your data that are oriented in a C2M2 compliant manner and can be validated with datapackages. Here however, we will demonstrate producing a C2M2-compliant datapackage directly from the LINCS REST API.
 
-A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/FAIR/tree/master/Demos/FrictionlessDataclass) and is easily updated to future C2M2 schemas.
+A python helper class was devised to simplify codification of C2M2-compliant datapackages using [python3.7's dataclasses](https://docs.python.org/3/library/dataclasses.html) which provide convenient syntax highlighting and runtime assertions to catch errors early and easily introspect the C2M2 model with python docstrings. This package is available [here](https://github.com/nih-cfde/c2m2-frictionless-dataclass) and is easily updated to future C2M2 schemas.
 
 Given that you have access to the [FAIR repository](#fair-repo), this can be installed directly from GitHub with:
 
@@ -487,7 +488,7 @@ def first_or_none(it):
 def extract_transform():
   # ...
   taxonomies = {}
-  # https://github.com/nih-cfde/specifications-and-documentation/blob/master/draft-C2M2_internal_CFDE_CV_tables/subject_granularity.tsv#L2
+  # https://osf.io/gpf3d/
   cfde_subject_role_organism = C2M2.subject_role(
     id='cfde_subject_role:0',
     name='single organism',
@@ -582,7 +583,7 @@ This tool facilitates authentication, manual preview verification when loaded on
 
 ## Conclusion
 
-Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/) and it may also be useful to review and perform [FAIR assessments](https://nih-cfde.github.io/the-fair-cookbook/recipes/Compliance/fairshake.html) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
+Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/) and it may also be useful to review and perform [FAIR assessments](../Compliance/fairshake.md) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
 
 ## Reference
 

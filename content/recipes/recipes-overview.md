@@ -1,9 +1,3 @@
----
-layout: page
-hide:
-  - toc
----
-
 The FAIR Cookbook Recipes
 =========================
 

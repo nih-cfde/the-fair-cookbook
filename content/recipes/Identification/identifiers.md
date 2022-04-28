@@ -1,21 +1,21 @@
 # The need for identifiers
 
-**authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
+**Authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
+**Maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**version**: Initial Draft
+**Version**: Initial Draft
 
-**license**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
-        
+---
 
-## Objectives:
+## Objectives
 
 The aim of the recipe is to provide an introduction to the notion of identifiers, the different kind of identifiers and the kind of infrastructure required to support their use in the context of CFDE and in the context of producing and consuming FAIR data.
 
 
-## Definitions:
+## Definitions
 
 **identifier**: an identifier is a chain of characters (number, letter, symbol, or any combination of those) which is associated to an entity or a type of entities and which is used to refer to those entities in an indexing system.
 
@@ -42,7 +42,7 @@ print(id)
 
 
     
-## The importance of PIDs in FAIR and in the context of CFDE:
+## The importance of PIDs in FAIR and in the context of CFDE
 
 Data interoperability as described by FAIR assumes that entities and information about them can be retrieved through`internet communication protocol`. This can thus only be realized by relying on PIDs and resolution service to obtain the resources of interest.
 
@@ -66,14 +66,14 @@ But `interoperability` goes far beyond reliable identification of these entities
 - Instruments
 - Licenses
 
-For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [Deriva system](TODO:ADD_URL).
+For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [Deriva system](https://www.nih-cfde.org/).
 
-* This specific [NIH-CFDE recipe](../14/cfde-terminologies.md) details which ontologies have been selected and how their use will be rolled out as the program progresses.
+* This specific [NIH-CFDE recipe](../Semantics/cfde-terminologies.md) details which ontologies have been selected and how their use will be rolled out as the program progresses.
 
 It is important to notice that for such resources, a central authority is responsible for issueing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
 This works well to address the semantic markup needs that arise in the data curation, data extraction transform load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands, for instance to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/)
 
-* Refer to the specific recipe on [MINIDS](./2/minids.md) to learn how to mint such resolvable identifiers for your resources.
+* Refer to the specific recipe on [MINIDS](./minids.md) to learn how to mint such resolvable identifiers for your resources.
 
 
 
@@ -82,7 +82,7 @@ This works well to address the semantic markup needs that arise in the data cura
 
 1. Klump, J. and Huber, R., 2017. 20 Years of Persistent Identifiers – Which Systems are Here to Stay?. Data Science Journal, 16, p.9. [http://doi.org/10.5334/dsj-2017-009](http://doi.org/10.5334/dsj-2017-009)
 2. McMurry JA, Juty N, Blomberg N, et al. Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data. PLoS Biol. 2017;15(6):e2001414. Published 2017 Jun 29. [http://doi.org/10.1371/journal.pbio.2001414](http://doi.org/10.1371/journal.pbio.2001414)
-3. Martin Fenner, Mercè Crosas, Jeffrey S Grethe, David Kennedy, Henning Herm-jakob, Philippe Rocca-Serra, Gustavo Durand, Robin Berjon, Sebastian Karcher,Maryann Martone, and Tim Clark. 2019. A data citation roadmap for scholarly data repositories. Scientific Data6, 1 (2019), 1–9.[http://doi.org/10.1038/s41597-019-0031-80](http://doi.org/10.1038/s41597-019-0031-80)
+3. Martin Fenner, Mercè Crosas, Jeffrey S Grethe, David Kennedy, Henning Herm-jakob, Philippe Rocca-Serra, Gustavo Durand, Robin Berjon, Sebastian Karcher,Maryann Martone, and Tim Clark. 2019. A data citation roadmap for scholarly data repositories. Scientific Data6, 1 (2019), 1–9.[http://doi.org/10.1038/s41597-019-0031-8](http://doi.org/10.1038/s41597-019-0031-8)
 4.https://www.pidforum.org/
 5. John Kunze. The Entity (N2T) Resolver: low-risk, low-cost persistent identifica-tion.[https://hdl.handle.net/1813/3688](https://hdl.handle.net/1813/3688)
 6. Wimalaratne, S., Juty, N., Kunze, J. et al. Uniform resolution of compact identifiers for biomedical data. Sci Data 5, 180029 (2018). [https://doi.org/10.1038/sdata.2018.29](https://doi.org/10.1038/sdata.2018.29)
