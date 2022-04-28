@@ -37,7 +37,7 @@
 ### Step 2: Data pre-processing:
 
 * Initial preprocessing: remove all the columns that do NOT have any headers. 
-* Go to the [C2M2 documentation page](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/#c2m2-technical-specification) and look for the diagram labeled "C2M2 model diagram". This diagram is important as it shows the "core tables", colored blue and black, as well as the associate tables needed to map the KF datasets to the C2M2 model. Tables 1-4 shown below are examples of mapping used for the "core ables" and table 5 is an examples used for the associate tables. The number of rows for each table coressponds to the number of unique `id` entries. 
+* Go to the [C2M2 documentation page](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/#c2m2-technical-specification) and look for the diagram labeled "C2M2 model diagram". This diagram is important as it shows the "core tables", colored blue and black, as well as the associate tables needed to map the KF datasets to the C2M2 model. Tables 1-4 shown below are examples of mapping used for the "core tables" and table 5 is an examples used for the associate tables. The number of rows for each table coressponds to the number of unique `id` entries. 
 
 *Note: id_namespace and project_id_namespace have repeating values of cfde_id_namespace:3.*
 
