@@ -14,7 +14,7 @@
 
 > This conversion process is also known as the ETL, which stands for Extract, Transform, and Load.
 
-## Step by Step Process:
+## Step by Step Process
 
 ### Step 1: Download data from the Kids First (KF) portal
 
@@ -34,7 +34,7 @@
 ![FAIRshake login page](./images/kf_download.png)
 
 
-### Step 2: Data pre-processing:
+### Step 2: Data pre-processing
 
 * Initial preprocessing: remove all the columns that do NOT have any headers. 
 * Go to the [C2M2 documentation page](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/#c2m2-technical-specification) and look for the diagram labeled "C2M2 model diagram". This diagram is important as it shows the "core tables", colored blue and black, as well as the associate tables needed to map the KF datasets to the C2M2 model. Tables 1-4 shown below are examples of mapping used for the "core tables" and table 5 is an examples used for the associate tables. The number of rows for each table coressponds to the number of unique `id` entries. 
@@ -90,7 +90,6 @@ source: exported TSV file
 |persistent_id| | 
 |creation_time | |
 |granularity | . |
-
 
 *Note: granularity has this repeating value: cfde_subject_granularity:0. persistent_id and creation_time were left empty.*
 
@@ -159,8 +158,8 @@ WXS: OBI:0002118, exome sequencing assay
 
 ### Step 6: Building 'green' tables from core entity tables
 
-* This [term-scanner script](https://github.com/abhijna/KF_Data_C2M2/blob/master/model/build_term_tables.py) (with modifications to input/output path code) is used to auto-generate the green tables for the C2M2 Model [Level 1 model](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_specification_with_Levels#Level-1). Currently, this script generates four of the five green tables for Level 1.
-* Default paths direct to the HMP example [tsv files](https://github.com/nih-cfde/specifications-and-documentation/tree/master/draft-C2M2_example_submission_data/HMP__sample_C2M2_Level_1_bdbag.contents).
+* This [term-scanner script](https://github.com/abhijna/KF_Data_C2M2/blob/master/model/build_term_tables.py) (with modifications to input/output path code) is used to auto-generate the green tables for the C2M2 Model [Level 1 model](https://www.nih-cfde.org/product/level-1-asset-manifest-specification/). Currently, this script generates four of the five green tables for Level 1.
+* Default paths direct to the HMP example [tsv files](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/).
 
 **Inputs**
 
@@ -202,12 +201,12 @@ It will produce these four green tables for Level 1: `file_format.tsv`,`data_typ
 * Add the `C2M2_Level_1.datapackage.json` file to this folder.
 * Send the repo to CFDE tech folks. 
 
-## Conclusion:
+## Conclusion
 
 * This recipe provides an examplar of how to convert a dataset from a DCC, KidsFirst in this example, into the format used by CFDE format for persistence into the DERIVA system.
 * Other examples of transformation are available or will be made available as guidance.
 
-> ####  What to read next?
+> ##  What to read next?
 > * [CFDE C2M2 model](./c2m2.md)
-> * [ETL to CFDE C2M2 model](./seo.md)
+> * [ETL to CFDE C2M2 model](./seo.ipynb)
 

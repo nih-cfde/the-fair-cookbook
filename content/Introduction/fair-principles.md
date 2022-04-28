@@ -1,19 +1,21 @@
-# Introduction to FAIR Principles
+# The Introduction to FAIR Principles
 
-**Author(s):** [John Cheadle](https://orcid.org/0000-0002-0106-4415)
+**Authors:** [John Cheadle](https://orcid.org/0000-0002-0106-4415)
 
-**Maintainer(s):** [John Cheadle](https://orcid.org/0000-0002-0106-4415)
+**Maintainers:** [John Cheadle](https://orcid.org/0000-0002-0106-4415)
 
 **Version:** 1.0
 
 **License:** [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
+
+---
 
 ## Objectives
 
 The aim of this recipe is to summarize the `FAIR Guiding Principles` as well as define terminology and provide additional resources for individuals who are new to FAIR.  The recipe also touches on how FAIR is evaluated in general and in the context of [NIH CFDE](https://commonfund.nih.gov/dataecosystem), and provides both internal and external links to pertinent resources.
 
 
-## FAIR in 5 Questions:
+## FAIR in 5 Questions
 
 ### What is FAIR?
 
@@ -73,7 +75,7 @@ As the field of scoring FAIR is still relatively new, several groups, e.g. [RDA 
 * FAIR metrics github repository: [https://github.com/FAIRMetrics/Metrics](https://github.com/FAIRMetrics/Metrics)<br/>
 
 
-## Conclusion
+## Conclusions
 
 
 FAIR principles, first officially published in 2016, are meant to be guideposts for rendering a digital object more discoverable and (re)usable.  The CFDE evaluates FAIRness using FAIRshake, which leverage collections of metrics that interrogate one or more of the FAIR principles.  Community adherence to FAIR principles provides benefits to human and computational stakeholders alike by facilitating ongoing discovery and reuse of digital objects after initial publication and enabling knowledge integration to further scientific discovery.

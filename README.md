@@ -1,33 +1,35 @@
 # The FAIR Cookbook
 
+<https://nih-cfde.github.io/the-fair-cookbook/>
+
 ## Running Locally
 
-### Setup
 ```bash
-# Setup python environment
-python3 -m venv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
-
-# Setup Ruby environment
-bundle config set path 'vendor/bundle'
-bundle install
-
-# Setup jupyter book
-make install
+# Install necessary dependencies
+pip install -r requirements.txt
+# Book output goes to _build/html
+jupyter-book build .
 ```
 
-### Using
+## Publishing to gh-pages
 ```bash
-# compile book with
-make book
+ghp-import -n -p -f _build/html
+```
 
-# serve book locally with
-make serve
+## Deploying with docker
+```bash
+TAG=cookbook
+jupyter-book build .
+docker build -t $TAG .
+docker run -p 80:80 -it $TAG
+```
+
+## Build a pdf
+```bash
+jupyter-book build . --builder pdflatex
 ```
 
 ## Modifying things
 
 - `content/**/*`: The actual pages rendered as HTML but can be written in `*.md` or `*.ipynb`
-- `_data/toc.yml`: Configure the relative level of content as seen in the sidebar
-
+- `_toc.yml`: Configure the relative level of content as seen in the sidebar

@@ -1,16 +1,16 @@
 # Controlled Terminologies & Ontologies
 
-**authors**: [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
+**Authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**maintainers**: [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
+**Maintainers**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
-**version**: initial draft
+**Version**: initial draft
 
-**license**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-    
-___
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
-## Objectives:
+---
+
+## Objectives
 
 The aim of this recipe is to provide a compact introduction about `controlled terminologies` and `ontologies`, why these resources are central to the preservation of knowledge and data mining and how such resources are developed.
 
@@ -96,7 +96,7 @@ The use and implementation of common terminologies will enable a normalization/h
 
 ### Selection Criteria
 
-A set of widely accepted criteria for selecting terminologies (or other reporting standards) do not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and BioSharing ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point top define possible criteria for excluding and/or including a terminology resource.
+A set of widely accepted criteria for selecting terminologies (or other reporting standards) do not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and BioSharing has been used as starting point top define possible criteria for excluding and/or including a terminology resource.
 
 
 *   **Exclusion criteria**:
@@ -125,18 +125,18 @@ These criteria are simply indicative and need to be modulated depending on the `
 
 ---
 
-## Conclusions:
+## Conclusions
 
 Choosing ontology and semantic resources is a complex issue, which requires careful consideration, taking into account the research context of the data production workflow, regulatory requirements that may apply. The choices made affect the integrative potential of a dataset as they influence the level of `interoperability`. 
 Clearly declaring the semantic resources used to annotate a dataset also influence `findability` and `reusability` and it is good practice to do so.
 
-> ####  What to read next?
+> ##  What to read next?
 > * [Ontology services](./onto-services.md)
 > * [CFDE selected terminologies](./cfde-terminologies.md)
 
 ___
 
-## Bibliography:
+## Bibliography
 
 1. RDF.https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/
 2. SKOS. https://www.w3.org/2004/02/skos/
