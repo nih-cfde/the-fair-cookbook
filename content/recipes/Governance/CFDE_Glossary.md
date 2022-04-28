@@ -49,10 +49,10 @@
 #### [LINCS](http://lincsproject.org/) 
     - the `Library of Integrated Network-based Cellular Signatures project` is based on the premise that disrupting any one of the many steps of a given biological process will cause related changes in the molecular and cellular characteristics, behavior, and/or function of the cell – the observable composite of which is known as the cellular phenotype. Observing how and when a cell’s phenotype is altered by specific stressors can provide clues about the underlying mechanisms involved in perturbation and, ultimately, disease.
 
-#### [Metabolomics]() 
+#### Metabolomics
     - the `Metabolomics program` was developed with the goal of increasing national capacity in metabolomics by supporting the development of next generation technologies, providing training and mentoring opportunities, increasing the inventory and availability of high quality reference standards, and promoting data sharing and collaboration.
 
-#### [SPARC]() 
+#### SPARC 
     - the `Stimulating Peripheral Activity to Relieve Conditions program` seeks to accelerate development of therapeutic devices that modulate electrical activity in nerves to improve organ function.
 
 ### <u>DCCs</u>
