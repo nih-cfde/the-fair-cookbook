@@ -1,4 +1,4 @@
-# Evaluating FAIRness with the CFDE rubric on FAIRshake
+# Evaluating FAIRness with the CFDE Rubric on FAIRshake
 
 **Author(s)**: Steve Edwards, John Cheadle
 
