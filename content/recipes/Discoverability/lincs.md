@@ -584,6 +584,16 @@ This tool facilitates authentication, manual preview verification when loaded on
 
 Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/) and it may also be useful to review and perform [FAIR assessments](https://nih-cfde.github.io/the-fair-cookbook/recipes/Compliance/fairshake.html) which include more elaborate assertions for compliance with FAIRness beyond the C2M2.
 
+## Video Tutorials
+
+The LINCS DCC has additionally created video tutorials to show how the LINCS L1000 dataset can be converted to C2M2 format. The tutorials have been adapted from the demo presented at the April 5th, 2022 CFDE [Cross-Pollination Meeting](https://docs.google.com/document/d/1nYiJkrvwpOefg78qtYrwCROaD7Bur6FlkwJ-aZuuTYI/edit). These videos use the most recent release of the LINCS L1000 signatures as example data, and are intended to complement the protocol above as a separate demonstration of how a different dataset may be converted to the C2M2 model. 
+
+**[Introduction](https://youtu.be/vdjD_QpsQqs)** - This video briefly introduces the C2M2 model and the LINCS program, as well as provides an overview of the LINCS L1000 data.
+
+**[Consolidating Metadata](https://youtu.be/7_3l2wzKKEE)** - This video discusses how the LINCS L1000 dataset was processed, including how ontological mappings were generated.  
+
+**[Building a Datapackage](https://youtu.be/ObuQ98LR3vQ )** - This video walks through the steps of building each type of C2M2-compliant metadata table using the processed LINCS L1000 data. 
+
 ## Reference
 
 ### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo
