@@ -1,4 +1,4 @@
-# Recommendations for minting persistent and resolvable identifiers
+# Recommendations for Minting Persistent and Resolvable Identifiers
 
 **Authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 			 [Robert Carter](https://orcid.org/0000-0003-0937-8141)

@@ -1,4 +1,4 @@
-# The need for identifiers
+# The Need for Identifiers
 
 **Authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
@@ -42,7 +42,7 @@ print(id)
 
 
     
-## The importance of PIDs in FAIR and in the context of CFDE
+## The Importance of PIDs in FAIR and in the Context of CFDE
 
 Data interoperability as described by FAIR assumes that entities and information about them can be retrieved through`internet communication protocol`. This can thus only be realized by relying on PIDs and resolution service to obtain the resources of interest.
 
