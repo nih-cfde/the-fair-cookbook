@@ -24,6 +24,11 @@ docker build -t $TAG .
 docker run -p 80:80 -it $TAG
 ```
 
+## Build a pdf
+```bash
+jupyter-book build . --builder pdflatex
+```
+
 ## Modifying things
 
 - `content/**/*`: The actual pages rendered as HTML but can be written in `*.md` or `*.ipynb`
