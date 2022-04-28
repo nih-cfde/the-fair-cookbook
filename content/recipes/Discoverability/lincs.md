@@ -574,7 +574,7 @@ This tool facilitates authentication, manual preview verification when loaded on
 
 ## Conclusion
 
-Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/) and it may also be useful to review and perform [FAIR assessments](../Compliance/fairshake.md), which includes more elaborate assertions for compliance with FAIRness beyond the C2M2.
+Taking advantage of this tooling will simplify the process of ETL script development given that most things will be caught with dataclass assertions and datapackage validation. Nonetheless, this enforces minimal compliance with the C2M2 standard. For maximal compliance, it is essential that you review the most up to date [C2M2 documentation](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/spec-and-docs/C2M2-usage-guides-and-technical-documents/000-INTRODUCTION/) and it may also be useful to review and perform [FAIR assessments](../../Compliance/fairshake.md), which includes more elaborate assertions for compliance with FAIRness beyond the C2M2.
 
 ## Reference
 
