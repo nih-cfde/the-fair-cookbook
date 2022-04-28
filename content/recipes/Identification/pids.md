@@ -48,7 +48,7 @@ The CFDE's Persistent Identifier Recommendations promotes the following recommen
 
 All persistent identifiers used within the CFDE **must** meet the following requirements regarding their uniqueness, format, resolution, and description.
 
-* **`Uniqueness`**: Persistent identifiers must unique within the CFDE and only refer to single file or collection. Multiple identifiers (of the same or different types) may refer to the same file or collection. Identifiers should provide a means (preferably checksums) to determine if multiple identifiers refer to the same resource. 
+* **`Uniqueness`**: Persistent identifiers must be unique within the CFDE and only refer to single file or collection. Multiple identifiers (of the same or different types) may refer to the same file or collection. Identifiers should provide a means (preferably checksums) to determine if multiple identifiers refer to the same resource. 
 
 * **`Format`**:  Persistent identifiers must comply with the IETF standard for URIs, [RFC 3986](https://tools.ietf.org/html/rfc3986). This may be either be as an HTTPS URL or a compact URI. The use of HTTPS URLs is strongly preferred. 
 
