@@ -158,7 +158,7 @@ WXS: OBI:0002118, exome sequencing assay
 
 ### Step 6: Building 'green' tables from core entity tables
 
-* This [term-scanner script](https://github.com/abhijna/KF_Data_C2M2/blob/master/model/build_term_tables.py) (with modifications to input/output path code) is used to auto-generate the green tables for the C2M2 Model [Level 1 model](https://github.com/nih-cfde/c2m2/tree/master/draft-C2M2_specification#Level-1). Currently, this script generates four of the five green tables for Level 1.
+* This [term-scanner script](https://github.com/abhijna/KF_Data_C2M2/blob/master/model/build_term_tables.py) (with modifications to input/output path code) is used to auto-generate the green tables for the C2M2 Model [Level 1 model](https://www.nih-cfde.org/product/level-1-asset-manifest-specification/). Currently, this script generates four of the five green tables for Level 1.
 * Default paths direct to the HMP example [tsv files](https://docs.nih-cfde.org/en/latest/c2m2/draft-C2M2_specification/).
 
 **Inputs**
