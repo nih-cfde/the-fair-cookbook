@@ -20,3 +20,5 @@ Click the following to jump directly to a section of the cookbook:
 * [Semantics](./Semantics/semantics.md)
 
 * [FAIR Compliance](./Compliance/compliance.md)
+
+* [Governance](./Governance/index.md)
