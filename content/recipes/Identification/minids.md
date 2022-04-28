@@ -1,4 +1,4 @@
-# Identifier Minting Service with Minid Client
+# Identifier Minting Service with MINID Client
 
 **Authors**: 
   * [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
@@ -9,19 +9,16 @@
 **Version**: 1.0
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-
+<!-- 3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table) -->
+<!-- 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs) -->
 ## Table of Contents
 1. [Main Objectives](#Main%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-
-<!-- 3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table) -->
-<!-- 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs) -->
-
-5. [Installing the minid 2.0 client](#Installing%20the%20minid%202.0%20client)
-6. [Minid Client Configuration](#Minid%20Client%20Configuration)
-7. [Minid Client Usage](#Minid%20Client%20Usage)
-8. [Authors](#Authors)
-9. [License](#License)
+3. [Installing the minid 2.0 client](#Installing%20the%20minid%202.0%20client)
+4. [Minid Client Configuration](#Minid%20Client%20Configuration)
+5. [Minid Client Usage](#Minid%20Client%20Usage)
+6. [Authors](#Authors)
+7. [License](#License)
 ---
 
 ## Main Objectives
@@ -38,6 +35,7 @@ ___
 <!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
 
 ![drawing](./images/minid-mermaid.png)
+
 <!-- <div class="mermaid"  style="padding:1px;border:thin solid black;"> -->
 <!-- graph TD; -->
 <!--  A([file creation]):::box --> <!-- B(New File):::box  -->
@@ -92,7 +90,7 @@ use the dev branch to obtain to source
 
 ## Configuration
 
-1. prerequisite: create a minig-config.cfg file
+1. Prerequisite: create a minig-config.cfg file
   
   As a convenience you need specify this information in a minid configuration file (`~/.minid/minid-config.cfg`)
   To do so from the command line, issue the following:
@@ -103,12 +101,10 @@ $ cd .minid
 $ touch minid-config.cfg
 ```
 
-
 2. Create a GlobusID account
   
   Before using the API you first need to create a [globus account](https://www.globusid.org/create)
-
-  ![drawing](./images/globus/globus-account-create.png)
+  ![drawing](../images/globus/globus-account-create.png)
 
   and validate your email address, as part of the registration process. A unique code will be sent to your email address. You must present this code along with your email address when accessing the API.
 
@@ -187,16 +183,17 @@ $ minid -h
 Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>).
 
 
-### file manifest format
+### File Manifest Format
+------------------------
 
 Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a `BDBag <https://github.com/ini-bdds/bdbag>`_ or the minid file manifest format.
 
 The minid file manifest format is a JSON-based format that enumerates a list of files as JSON objects that have the following attributes:
 
 
-* length: The length of the file in bytes.
+* Length: The length of the file in bytes.
 
-* filename: The filename (or path) relative to the manifest file.
+* Filename: The filename (or path) relative to the manifest file.
 
 * One or more (only one of each) of the following `algorithm:checksum` key-value pairs:
 
@@ -206,7 +203,7 @@ The minid file manifest format is a JSON-based format that enumerates a list of 
 
   * sha512:\<sha512 hex value\>
 
-* url: the URL to the file.
+* URL: The URL to the file.
 
 The manifest may be used to create a minid for a collection of files or alternatively as input to the minid batch-register command.
 
@@ -237,7 +234,7 @@ Using the `Minid` service, resources can now generate stable, resolvable identif
 
 ___
 
-## Bibliography
+## References:
 
 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
 

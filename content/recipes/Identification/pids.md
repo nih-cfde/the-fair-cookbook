@@ -1,4 +1,4 @@
-# Recommendations for minting persistent and resolvable identifiers
+# Recommendations for Minting Persistent and Resolvable Identifiers
 
 **Authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 			 [Robert Carter](https://orcid.org/0000-0003-0937-8141)
@@ -32,7 +32,7 @@ As part of the Crosscut Metadata Model (C2M2), persistent identifiers can enable
 * Citing data 
 
 At present, the scope of these requirements is limited to two entities within the C2M2, files and collection (a grouping of files). These requirements may be extended to support other use cases, in particular data citation. Some of the information provided by the persistent identifier may be duplicated within the C2M2; over time, the C2M2 itself may be built in part from sets of persistent identifiers. 
-Persistent Identifier Recommendations The CFDE promotes the following recommendation towards improving the FAIRness of Common Fund sponsored data: 
+The CFDE's Persistent Identifier Recommendations promotes the following recommendation towards improving the FAIRness of Common Fund sponsored data: 
 
 * All data identifiers should be expressed as a URL 
 * Identifier URLs should resolve to landing pages with human-readable metadata 
@@ -48,7 +48,7 @@ Persistent Identifier Recommendations The CFDE promotes the following recommenda
 
 All persistent identifiers used within the CFDE **must** meet the following requirements regarding their uniqueness, format, resolution, and description.
 
-* **`Uniqueness`**: Persistent identifiers must unique within the CFDE and only refer to single file or collection. Multiple identifiers (of the same or different types) may refer to the same file or collection. Identifiers should provide a means (preferably checksums) to determine if multiple identifiers refer to the same resource. 
+* **`Uniqueness`**: Persistent identifiers must be unique within the CFDE and only refer to single file or collection. Multiple identifiers (of the same or different types) may refer to the same file or collection. Identifiers should provide a means (preferably checksums) to determine if multiple identifiers refer to the same resource. 
 
 * **`Format`**:  Persistent identifiers must comply with the IETF standard for URIs, [RFC 3986](https://tools.ietf.org/html/rfc3986). This may be either be as an HTTPS URL or a compact URI. The use of HTTPS URLs is strongly preferred. 
 
@@ -58,7 +58,8 @@ Examples:
 
 > **Compact URI:** doi:10.25490/a97f-egyk 
 
-* **`Resolution`**:  Persistent identifiers using compact URIs must use prefixes (also known as URI schemes) registered with [N2T](https://n2t.net) or [Identifiers.org](https://identifiers.org) [5]. This permits the resolution of compact URIs in a consistent manner and helps to ensure uniqueness of identifiers by defining identifier naming authorities. Instructions on how to register prefixes are on the N2T and Identifiers.org sites. The joint list of registered prefixes is available at <http://n2t.net/e/cdl_ebi_prefixes.yaml>. 
+* **`Resolution`**:  Persistent identifiers using compact URIs must use prefixes (also known as URI schemes) registered with [N2T](https://n2t.net) or [Identifiers.org](https://identifiers.org) [5]. This permits the resolution of compact URIs in a consistent manner and helps to ensure uniqueness of identifiers by defining identifier naming authorities. Instructions on how to register prefixes are on the N2T and Identifiers.org sites. The joint list of registered prefixes is available [here](http://n2t.net/e/cdl_ebi_prefixes.yaml). 
+
 
 Examples: 
 
@@ -71,17 +72,17 @@ Examples:
 
 ### 2. Recommended Identifier Characteristics
 
-Beyond these minimal requirements, there are several recommendations that contribute to the CFDE use cases and can improve the reuse and citation of the data referred to by persistent identifiers. Many of these recommendations are drawn from the [ref data citation roadmap](http://dx.doi.org/10.1038/s41597-019-0031-8). They primarily focus on the descriptive metadata provided by the persistent identifier by its landing page, especially in a machine- readable format. 
+Beyond these minimal requirements, there are several recommendations that contribute to the CFDE use cases and can improve the reuse and citation of the data referred to by persistent identifiers. Many of these recommendations are drawn from the [ref data citation roadmap](https://www.nature.com/articles/sdata2018259). They primarily focus on the descriptive metadata provided by the persistent identifier by its landing page, especially in a machine- readable format. 
 
-* **`Machine Readability`**: In addition to the HTML landing page, intended to be read by a person using a browser, the identifier and metadata associated with the resource should be embedded in the landing page in [JSON-LD](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json-ld). The metadata should also be retrievable as JSON-LD using the `Accept` header to allow clients to retrieve the metadata without unnecessarily parsing HTML. 
+* **`Machine Readability`**: In addition to the [HTML landing page](https://docs.nih-cfde.org/en/latest/CFDE-glossary/#landing-page), intended to be read by a person using a browser, the identifier and metadata associated with the resource should be embedded in the landing page in [JSON-LD](https://docs.nih-cfde.org/en/latest/CFDE-glossary/#json-ld). The metadata should also be retrievable as JSON-LD using the `Accept` header to allow clients to retrieve the metadata without unnecessarily parsing HTML. 
 
-* **`Metadata Schema`**:  The CFDE use cases for **file** and **collection metadata** include validation, disambiguation, and metrics around storage utilization and locality, e.g., Google vs. Amazon. Later, the use of the location attribute for the file identifiers with a list of URIs for data protocols may allow for data access. The recommended metadata for collections also includes the elements to allow for data citation, primarily to reduce the amount metadata required for individual files. 
+* **`Metadata Schema`**:  The CFDE use cases for **file** and **collection metadata** include validation, disambiguation, and metrics around storage utilization and locality. For example, Google vs. Amazon. Later, the use of the location attribute for the file identifiers with a list of URIs for data protocols may allow for data access. The recommended metadata for collections also includes the elements to allow for data citation, primarily to reduce the amount metadata required for individual files. 
 
 DCCs may choose to use different identifiers for files and collections based on their own needs. For example, a DCC may choose to use DOIs for their collections and ARKs for their files. And because resources may be referenced by multiple persistent identifiers, some files may also be referenced by DOIs so that the files may be cited as a citable dataset [6]. 
 
 #### **Specifics about identifiers for Files**
 
- File identifier metadata should include the following:
+File identifier metadata should include the following:
 
 - **`identifier`**: The persistent identifier. 
 - **`filename`**: The name of the file without addition path information. 

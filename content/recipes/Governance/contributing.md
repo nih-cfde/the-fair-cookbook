@@ -1,4 +1,4 @@
-# Contributing to the nih-cfde published-documentation Repository
+# Contributing to the NIH-CFDE Published-Documentation Repository
 
 Hello, and thank you for wanting to contribute to the CFDE published-documentation
 Repository\!

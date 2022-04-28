@@ -1,4 +1,4 @@
-# Conceptual Description of the Level 1 C2M2
+# Conceptual Description of the Level 2 C2M2
 
 **Authors**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 
@@ -16,13 +16,13 @@ Resources (files, subjects, biosamples, etc.) are uniquely
 named in the context of the C2M2 using a namespace and an local name
 (the id column of the entity tables). When
 combined, the namespace and local name form a unique name for the
-resource through the CFDE. In principle, this could be done using a
+resource through the CFDE. In principle, this could be done using 
 only a full URI for the resource. In practice, the use of namespaces
 is a mechanism to allow DCCs to name their resources in a simple
-manner without collision. The CFDE CC defines a process for DCCs to
+manner without collision. The Common Fund Data Ecosystem Coordinating Center (CFDE CC) defines a process for DCCs to
 define their own namespaces in a manner that avoids collions, without
 requiring CFDE CC involvement. DCCs are welcome to engage the CFDE CC
-with questions before investing significant effort in creating their ETL process.
+with questions before investing significant effort in creating their [ETL](https://docs.nih-cfde.org/en/latest/CFDE-glossary/#extract-transform-load-process-etl) process.
 
 ## Namespaces
 

@@ -1,4 +1,4 @@
-# The need for identifiers
+# The Need for Identifiers
 
 **Authors**: [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668)
 
@@ -17,13 +17,13 @@ The aim of the recipe is to provide an introduction to the notion of identifiers
 
 ## Definitions
 
-**identifier**: an identifier is a chain of characters (number, letter, symbol, or any combination of those) which is associated to an entity or a type of entities and which is used to refer to those entities in an indexing system.
+**identifier**: An identifier is a chain of characters (number, letter, symbol, or any combination of those) which is associated to an entity or a type of entities and which is used to refer to those entities in an indexing system.
 
-**unique identifier**: a unique identifier (UID) is an identifier which  refers to only one instance of thing 
+**unique identifier**: A unique identifier (UID) is an identifier which  refers to only one instance of thing 
 
-**locally unique identifier**: a locally unique identifier (LUID) is an  identifier which is unique to a given context (hence, local) but which may clash if moved out of this specific context. By clash, we mean that if dereferenced in the wrong context, it could return an instance different from the one it pointed to when it was minted in its original context.
+**locally unique identifier**: A locally unique identifier (LUID) is an  identifier which is unique to a given context (hence, local) but which may clash if moved out of this specific context. By clash, we mean that if dereferenced in the wrong context, it could return an instance different from the one it pointed to when it was minted in its original context.
 
-**globally unique identifier**: a globally unique identifier  (GUID) is an identifier which is produced such that the probability of the exact same string is extremely low (but not null), hence global. Also known as `universally unique identifier` (UUID). Their production does not depend on central registration and relies on the generation of a 128-bit string.
+**globally unique identifier**: A globally unique identifier  (GUID) is an identifier which is produced such that the probability of the exact same string is extremely low (but not null), hence global. Also known as `universally unique identifier` (UUID). Their production does not depend on central registration and relies on the generation of a 128-bit string.
 
 ```python
 import uuid
@@ -32,17 +32,17 @@ print(id)
 5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
-**persistent identifier**: a persistent identifier (PID) is an identifier which provides a long-lasting reference to a digital resource. The key notion introduced is that of`persistence`, which can only exist if a `resolution service` exists. Well known examples are `persistent identifiers` are `Digital Object Identifiers (DOI)`, `Archive Retrieval Keys (ARK)`, `Open Researcher and Contributor ID(ORCID)` or `Persistent Uniform Resource Locator (PURL)`. More examples can be found on the [PID forum](https://www.pidforum.org/).
+**persistent identifier**: A persistent identifier (PID) is an identifier which provides a long-lasting reference to a digital resource. The key notion introduced is that of`persistence`, which can only exist if a `resolution service` exists. Well known examples are `persistent identifiers` are `Digital Object Identifiers (DOI)`, `Archive Retrieval Keys (ARK)`, `Open Researcher and Contributor ID(ORCID)` or `Persistent Uniform Resource Locator (PURL)`. More examples can be found on the [PID forum](https://www.pidforum.org/).
 
-**compact identifier**: a `compact identifier` is a unique string consisting of a `Prefix` (assigned by curator), a `colon (‘:’)`, and an `Accession (e.g. local identifier string)`. The prefix is composed of an optional `Provider Code`, and an assigned `Namespace`, separated by a slash (‘/’).
+**compact identifier**: A `compact identifier` is a unique string consisting of a `Prefix` (assigned by curator), a `colon (‘:’)`, and an `Accession (e.g. local identifier string)`. The prefix is composed of an optional `Provider Code`, and an assigned `Namespace`, separated by a slash (‘/’).
 
-**identifier minting service**: an `identifier minting service` is a piece of software infrastructure which allows the production of an identifier. It can be as `simple` as as UUID generator (see above) or random number generator.
+**identifier minting service**: An `identifier minting service` is a piece of software infrastructure which allows the production of an identifier. It can be as `simple` as as UUID generator (see above) or random number generator.
 
-**identifier resolution service**: an identifier resolution service is a piece of software infrastructure which given an identifier can return a web resource about the entity designated by the identifier. Such service is essential to realize the notion of `persistence` of identifiers.
+**identifier resolution service**: An identifier resolution service is a piece of software infrastructure which given an identifier can return a web resource about the entity designated by the identifier. Such service is essential to realize the notion of `persistence` of identifiers.
 
 
     
-## The importance of PIDs in FAIR and in the context of CFDE
+## The Importance of PIDs in FAIR and in the Context of CFDE
 
 Data interoperability as described by FAIR assumes that entities and information about them can be retrieved through`internet communication protocol`. This can thus only be realized by relying on PIDs and resolution service to obtain the resources of interest.
 
@@ -51,27 +51,27 @@ For a number of digital objects (`scholarly articles`, `grants`), persistent ide
 `Datasets` are another type of digital objects which are being identified by DOI with services such as [Figshare](https://figshare.com/) or [Zenodo](https://zenodo.org).
 
 But `interoperability` goes far beyond reliable identification of these entities. For research scientists, entities such as:  
-- Taxonomic Information
-- Anatomical Information
-- Diseases and Conditions
-- Molecular Entities, such as:
+* Taxonomic Information
+* Anatomical Information
+* Diseases and Conditions
+* Molecular Entities, such as:
     - Chemicals
     - Metabolites
     - Genes
     - Transcripts
     - Protein
     - Lipids
-- Pathways and Biochemical reactions
-- Assays
-- Instruments
-- Licenses
+* Pathways and Biochemical reactions
+* Assays
+* Instruments
+* Licenses
 
-For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [Deriva system](https://www.nih-cfde.org/).
+For all these entities, the **NIH CFDE** has identified a set of semantics artefacts/ontologies, the classes of which are all identified by PIDs and are used to annotated the datasets which will be represented in the [C2M2 model](https://www.nih-cfde.org/product/cfde-c2m2/) and made available through the [DERIVA system](http://isrd.isi.edu/deriva/).
 
 * This specific [NIH-CFDE recipe](../Semantics/cfde-terminologies.md) details which ontologies have been selected and how their use will be rolled out as the program progresses.
 
-It is important to notice that for such resources, a central authority is responsible for issueing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
-This works well to address the semantic markup needs that arise in the data curation, data extraction transform load (ETL) processes. However, there is a need to be able to create resolvable identifiers on demands, for instance to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/)
+It is important to notice that for such resources, a central authority is responsible for issuing (minting) those identifiers as well as providing the landing pages for the different content types associated with these kind of PIDs.
+This works well to address the semantic markup needs that arise in the data curation, extraction, transformation, and load processes [ETL](https://docs.nih-cfde.org/en/latest/CFDE-glossary/#extract-transform-load-process-etl). However, there is a need to be able to create resolvable identifiers on demands. For instance, to uniquely identify data files. In order to discussion this specific use case, a specific document is available and details the use of [minids](https://fair-research.org/).
 
 * Refer to the specific recipe on [MINIDS](./minids.md) to learn how to mint such resolvable identifiers for your resources.
 

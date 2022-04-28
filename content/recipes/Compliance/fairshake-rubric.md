@@ -1,4 +1,4 @@
-# Evaluating FAIRness with the CFDE rubric on FAIRshake
+# Evaluating FAIRness with the CFDE Rubric on FAIRshake
 
 **Author(s)**: Steve Edwards, John Cheadle
 
@@ -84,7 +84,7 @@ The identifier that should explicitly appear in the metadata.
 
 **Metric(s)**: FM-F3
 
-**Rationale**: Metadata are intended to provide information about a digital resource. However, data and their metadata are created and published separated (they are in different files and in different formats). Since F1 specifies that metadata and data must have different identifiers, it is important that metadata contain the resource identifier so that the resource can be exactly accessed by its identifier (A1).
+**Rationale**: Metadata are intended to provide information about a digital resource. However, data and their metadata are created and published separated (they are in different files and in different formats). Since F1 specifies that metadata and data must have different identifiers, it is important that metadata contain the resource identifier, so that the resource can be exactly accessed by its identifier (A1).
 
 **URL(s):**
 
