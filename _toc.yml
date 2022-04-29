@@ -19,7 +19,7 @@ parts:
   - title: Discoverability
     file: content/recipes/Discoverability/index
     sections:
-      - title: Introducing the Cross-Cut Metadata Model (C2M2)
+      - title: Introducing the Crosscut Metadata Model (C2M2)
         file: content/recipes/Discoverability/c2m2
       - title: Description of the Level-1 C2M2
         file: content/recipes/Discoverability/C2M2-L1-description
