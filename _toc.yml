@@ -32,7 +32,7 @@ parts:
       - title: ETL to C2M2- the LINCS example
         file: content/recipes/Discoverability/lincs
   - title: Identification
-    file: content/recipes/Identification/identifiers
+    file: content/recipes/Identification/index
     sections:
       - title: Minting persistent and resolvable identifiers
         file: content/recipes/Identification/pids
