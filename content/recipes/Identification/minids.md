@@ -104,7 +104,7 @@ $ touch minid-config.cfg
 2. Create a GlobusID account
   
   Before using the API you first need to create a [globus account](https://www.globusid.org/create)
-  ![drawing](../images/globus/globus-account-create.png)
+  ![drawing](./images/globus/globus-account-create.png)
 
   and validate your email address, as part of the registration process. A unique code will be sent to your email address. You must present this code along with your email address when accessing the API.
 
