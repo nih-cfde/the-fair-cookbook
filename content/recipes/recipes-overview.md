@@ -7,7 +7,7 @@ Click the following to see sections of the cookbook regarding:
 
 * [Identification](./Identification/identifiers.md)
 
-* [FAIR compliance](./Compliance/compliance.md)
+* [FAIR compliance](./Compliance/index.md)
 
 * [Semantics](./Semantics/index.md)
 

@@ -1,4 +1,4 @@
-# FAIR Assessment
+# FAIR Compliance
 
 This section is dedicated to describing the processes and tools available to perform a quantitative assessment of the level of FAIR compliance of a given resource.
 It includes:

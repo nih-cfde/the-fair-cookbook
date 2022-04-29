@@ -56,7 +56,7 @@ parts:
   # - titke: ETL processes - Learnings and recommendations
   #   url: /recipes/15/etl
   - #title: FAIR compliance
-    file: content/recipes/Compliance/compliance
+    file: content/recipes/Compliance/index
     sections:
       - title: Evaluating FAIRness with FAIRshake
         file: content/recipes/Compliance/fairshake
