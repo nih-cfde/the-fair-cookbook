@@ -1,7 +1,7 @@
 # The FAIR Cookbook
 
-<https://fairshake.cloud/the-fair-cookbook/>
-<https://docs.nih-cfde.org/en/latest/the-fair-cookbook/intro/>
+<https://fairshake.cloud/the-fair-cookbook/>  
+<https://docs.nih-cfde.org/en/latest/the-fair-cookbook/intro/>  
 <https://nih-cfde.github.io/the-fair-cookbook/>
 
 ## Running Locally
