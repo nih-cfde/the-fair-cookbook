@@ -4,7 +4,7 @@
 
 **Maintainers**: [Rick Wagner](https://orcid.org/0000-0003-1291-5876)
 
-**Version**: initial draft
+**Version**: 0.1
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
@@ -12,7 +12,7 @@
 
 ## Objectives
 
-This is a conceptual and narrative description of the Level 1 crosscut metadata model (C2M2). It
+This is a conceptual and narrative description of the Level 1 Crosscut Metadata Model (C2M2). It
 covers the things (proper nouns) in the Level 1 C2M2 and their
 relationships, and describes the tables used to
 represent them. The last section covers the internal controlled vocabularies used for

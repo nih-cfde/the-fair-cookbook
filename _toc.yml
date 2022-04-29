@@ -17,7 +17,7 @@ parts:
   - title: Overview
     file: content/recipes/recipes-overview
   - title: Discoverability
-    file: content/recipes/Discoverability/discoverability
+    file: content/recipes/Discoverability/index
     sections:
       - title: Introducing the Cross-Cut Metadata Model (C2M2)
         file: content/recipes/Discoverability/c2m2
@@ -32,7 +32,7 @@ parts:
       - title: ETL to C2M2- the LINCS example
         file: content/recipes/Discoverability/lincs
   - title: Identification
-    file: content/recipes/Identification/identifiers
+    file: content/recipes/Identification/index
     sections:
       - title: Minting persistent and resolvable identifiers
         file: content/recipes/Identification/pids
@@ -41,7 +41,7 @@ parts:
       # - title: Obtaining DOIs
       #   url: /recipes/08/3/doi
   - title: Semantics
-    file: content/recipes/Semantics/semantics
+    file: content/recipes/Semantics/index
     sections:
       - title: Understanding terminologies
         file: content/recipes/Semantics/ontologies
@@ -56,7 +56,7 @@ parts:
   # - titke: ETL processes - Learnings and recommendations
   #   url: /recipes/15/etl
   - #title: FAIR compliance
-    file: content/recipes/Compliance/compliance
+    file: content/recipes/Compliance/index
     sections:
       - title: Evaluating FAIRness with FAIRshake
         file: content/recipes/Compliance/fairshake

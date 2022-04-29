@@ -1,6 +1,6 @@
 # Findability & Discoverability
 
-This section covers the F of the FAIR principles and thus describes the NIH CFDE CrossCut Metadata Model, abbreviated to C2M2 from now on.
+This section covers the F of the FAIR principles and thus describes the NIH CFDE Crosscut Metadata Model, abbreviated to C2M2 from now on.
 
 It includes:
 
