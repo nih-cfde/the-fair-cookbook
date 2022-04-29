@@ -8,6 +8,3 @@ It includes:
 - A chapter detailing existing tools as well as services supported hosting, serving, and using controlled terminologies.
 
 - A chapter highlighting the terminology requirements of the C2M2 model and place those in the context of the current practices of terminology use by a number of DCCs. 
-
-        
-

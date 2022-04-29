@@ -9,6 +9,6 @@ Click the following to see sections of the cookbook regarding:
 
 * [FAIR compliance](./Compliance/compliance.md)
 
-* [Semantics](./Semantics/semantics.md)
+* [Semantics](./Semantics/index.md)
 
 * [Governance](./Governance/index.md)

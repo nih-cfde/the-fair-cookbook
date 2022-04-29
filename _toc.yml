@@ -41,7 +41,7 @@ parts:
       # - title: Obtaining DOIs
       #   url: /recipes/08/3/doi
   - title: Semantics
-    file: content/recipes/Semantics/semantics
+    file: content/recipes/Semantics/index
     sections:
       - title: Understanding terminologies
         file: content/recipes/Semantics/ontologies
