@@ -3,7 +3,7 @@ The FAIR Cookbook Recipes
 
 Click the following to see sections of the cookbook regarding:
 
-* [Discoverability](./Discoverability/discoverability.md)
+* [Discoverability](./Discoverability/index.md)
 
 * [Identification](./Identification/identifiers.md)
 
